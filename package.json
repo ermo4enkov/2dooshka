@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ermo4enkov/habit_hero.git"
+    "url": "git+https://github.com/ermo4enkov/2dooshka.git"
   },
   "author": "Ermo4enkov",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ermo4enkov/habit_hero/issues"
+    "url": "https://github.com/ermo4enkov/2dooshka/issues"
   },
-  "homepage": "https://github.com/ermo4enkov/habit_hero#readme",
+  "homepage": "https://github.com/ermo4enkov/2dooshka#readme",
   "devDependencies": {
     "react": "^16.1.1",
     "react-dom": "^16.1.1",
