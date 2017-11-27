@@ -1,0 +1,19 @@
+{
+  "name": "habit_hero",
+  "version": "1.0.0",
+  "description": "App to create new habit",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ermo4enkov/habit_hero.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ermo4enkov/habit_hero/issues"
+  },
+  "homepage": "https://github.com/ermo4enkov/habit_hero#readme"
+}
