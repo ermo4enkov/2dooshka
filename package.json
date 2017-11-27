@@ -1,5 +1,5 @@
 {
-  "name": "habit_hero",
+  "name": "2dooshka",
   "version": "1.0.0",
   "description": "App to create new habit",
   "main": "index.js",
@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/ermo4enkov/habit_hero.git"
   },
-  "author": "",
+  "author": "Ermo4enkov",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/ermo4enkov/habit_hero/issues"
