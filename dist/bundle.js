@@ -81,6 +81,7 @@ var ReactDOM = __webpack_require__(2);
 __webpack_require__(3);
 var Hello_1 = __webpack_require__(4);
 ReactDOM.render(React.createElement(Hello_1.Hello, { compiler: "TypeScript", framework: "React" }), document.getElementById("example"));
+console.log(React);
 
 
 /***/ }),
