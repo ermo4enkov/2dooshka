@@ -22,16 +22,14 @@
         filter: brightness(80%);
     }
 
-    &.is-blocked,
-    &:blocked{
+    &.is-blocked{
         background-color: $grey-light;
         border: solid 1px $grey;
         color: $grey-dark;
         cursor: default;
         &:hover{
-            background-color: $grey-light;
-            border: solid 1px $grey;
-            color: $grey-dark;
+            filter: none;
+            box-shadow: none;
         }
     }
 

@@ -8,4 +8,5 @@ export const Hello = (props: HelloProps) =>
     <h1>Hello from {props.compiler} and {props.framework}!
         <ButtonAdd text="Добавь"/>
         <ButtonCancel text="Отменить"/>
+        <ButtonCancel text="Отменить" isBlocked={true}/>
     </h1>;
