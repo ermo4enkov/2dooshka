@@ -2,11 +2,15 @@ import * as React from "react";
 
 // export interface HelloProps { compiler: string; framework: string; }
 
-export interface ButtonProps {
+interface ButtonProps {
     text: string;
 }
 
-export class ButtonAdd extends React.Component<ButtonProps> {
+interface ButtonState {
+    isBlocked: boolean;
+}
+
+export class ButtonAdd extends React.Component<ButtonProps, ButtonState> {
     constructor(props: ButtonProps) {
         super(props);
     }
@@ -14,7 +18,6 @@ export class ButtonAdd extends React.Component<ButtonProps> {
         return (
             <div className="button button_add">
                 {this.props.text}
-                {/* sdsdds */}
             </div>
         );
     }

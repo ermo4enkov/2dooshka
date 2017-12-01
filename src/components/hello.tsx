@@ -7,5 +7,5 @@ export interface HelloProps { compiler: string; framework: string; }
 export const Hello = (props: HelloProps) =>
     <h1>Hello from {props.compiler} and {props.framework}!
         <ButtonAdd text="Добавь"/>
-        <ButtonCancel {...props} />
+        <ButtonCancel text="Отменить"/>
     </h1>;

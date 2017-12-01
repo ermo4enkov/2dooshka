@@ -1,17 +1,23 @@
 import * as React from "react";
 
 // export interface ButtonAddProps { name: string; }
+interface ButtonProps {
+    text: string;
+}
 
-export class ButtonCancel extends React.Component {
-    constructor(props: string) {
+interface ButtonState {
+    isBlocked: boolean;
+}
+
+export class ButtonCancel extends React.Component<ButtonProps, ButtonState> {
+    constructor(props: ButtonProps) {
 		super(props);
     }
 
     render() {
         return (
             <div className="button button_cancel">
-                {/* {this.props.name} */}
-                Отмена
+                {this.props.text}
             </div>
         );
     }
