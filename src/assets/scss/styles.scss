@@ -1,5 +1,7 @@
+@import "./variables/variables";
+
 $bg-color: pink;
 
 body {
- background: $bg-color;
+ background: $grey;
 }
