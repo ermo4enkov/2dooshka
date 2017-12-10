@@ -4,9 +4,9 @@ import * as ReactDOM from "react-dom";
 import "./assets/scss/styles.scss";
 // import "../node_modules/source-sans-pro/source-sans-pro.css";
 
-import { Hello } from "./components/Hello";
+import { Storybook } from "./components/storybook";
 
 ReactDOM.render(
-    <Hello compiler="TypeScript" framework="React"/>,
+    <Storybook/>,
     document.getElementById("example")
 );
