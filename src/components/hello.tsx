@@ -1,12 +1,11 @@
 import * as React from "react";
-import { ButtonAdd } from "../components/buttons/button_add/button_add";
-import { ButtonCancel } from "../components/buttons/button_cancel/button_cancel";
+import { Button } from "../components/buttons/button_add/button_add";
+
 
 export interface HelloProps { compiler: string; framework: string; }
 
 export const Hello = (props: HelloProps) =>
     <h1>Hello from {props.compiler} and {props.framework}!
-        <ButtonAdd text="Добавь"/>
-        <ButtonCancel text="Отменить"/>
-        <ButtonCancel text="Отменить" isBlocked={true}/>
+        <Button add text="Добавь"/>
+        <Button disable text="Disabled"/>
     </h1>;

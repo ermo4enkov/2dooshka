@@ -1,7 +1,7 @@
 {
   "name": "2dooshka",
   "version": "1.0.0",
-  "description": "App to create new habit",
+  "description": "App to create a new habit",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -29,14 +29,15 @@
     "style-loader": "^0.19.0",
     "typescript": "^2.6.2",
     "webpack": "^3.8.1",
-    "webpack-dev-server": "^2.9.5"
+    "webpack-dev-server": "^2.9.7"
   },
   "dependencies": {
     "@types/react": "^16.0.25",
     "@types/react-dom": "^16.0.3",
     "react": "^16.1.1",
     "react-dom": "^16.1.1",
-    "source-sans-pro": "git://github.com/adobe-fonts/source-sans-pro.git#release"
+    "source-sans-pro": "git://github.com/adobe-fonts/source-sans-pro.git#release",
+    "styled-components": "^2.2.4"
   },
   "keywords": [
     "React",
