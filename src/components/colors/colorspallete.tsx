@@ -27,7 +27,7 @@ const Pallete = styled.div`
                                                props.empty? '#1fb6ff': '#fff'
     };
 `
-export class ColorPallete extends React.Component<ColorProps> {
+export class ColorsPallete extends React.Component<ColorProps> {
     constructor(props: ColorProps){
         super(props);
     }
@@ -55,4 +55,4 @@ export class ColorPallete extends React.Component<ColorProps> {
 
 }
 
-export default ColorPallete;
+export default ColorsPallete;
