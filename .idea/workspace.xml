@@ -2,14 +2,104 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="63065591-dc1a-4a46-bd7c-33effbc5b00e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/button/index.tsx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/colors/colors.tsx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/colors/index.tsx" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/components/buttons/button_add/index.tsx" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/EOT/SourceSansPro-Black.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/EOT/SourceSansPro-BlackIt.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/EOT/SourceSansPro-Bold.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/EOT/SourceSansPro-BoldIt.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/EOT/SourceSansPro-ExtraLight.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/EOT/SourceSansPro-ExtraLightIt.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/EOT/SourceSansPro-It.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/EOT/SourceSansPro-Light.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/EOT/SourceSansPro-LightIt.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/EOT/SourceSansPro-Regular.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/EOT/SourceSansPro-Semibold.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/EOT/SourceSansPro-SemiboldIt.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/OTF/SourceSansPro-Black.otf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/OTF/SourceSansPro-BlackIt.otf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/OTF/SourceSansPro-Bold.otf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/OTF/SourceSansPro-BoldIt.otf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/OTF/SourceSansPro-ExtraLight.otf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/OTF/SourceSansPro-ExtraLightIt.otf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/OTF/SourceSansPro-It.otf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/OTF/SourceSansPro-Light.otf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/OTF/SourceSansPro-LightIt.otf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/OTF/SourceSansPro-Regular.otf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/OTF/SourceSansPro-Semibold.otf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/OTF/SourceSansPro-SemiboldIt.otf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/TTF/SourceSansPro-Black.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/TTF/SourceSansPro-BlackIt.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/TTF/SourceSansPro-Bold.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/TTF/SourceSansPro-BoldIt.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/TTF/SourceSansPro-ExtraLight.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/TTF/SourceSansPro-ExtraLightIt.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/TTF/SourceSansPro-It.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/TTF/SourceSansPro-Light.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/TTF/SourceSansPro-LightIt.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/TTF/SourceSansPro-Regular.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/TTF/SourceSansPro-Semibold.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/TTF/SourceSansPro-SemiboldIt.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/WOFF/OTF/SourceSansPro-Black.otf.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/WOFF/OTF/SourceSansPro-BlackIt.otf.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/WOFF/OTF/SourceSansPro-Bold.otf.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/WOFF/OTF/SourceSansPro-BoldIt.otf.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/WOFF/OTF/SourceSansPro-ExtraLight.otf.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/WOFF/OTF/SourceSansPro-ExtraLightIt.otf.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/WOFF/OTF/SourceSansPro-It.otf.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/WOFF/OTF/SourceSansPro-Light.otf.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/WOFF/OTF/SourceSansPro-LightIt.otf.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/WOFF/OTF/SourceSansPro-Regular.otf.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/WOFF/OTF/SourceSansPro-Semibold.otf.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/WOFF/OTF/SourceSansPro-SemiboldIt.otf.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/WOFF/TTF/SourceSansPro-Black.ttf.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/WOFF/TTF/SourceSansPro-BlackIt.ttf.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/WOFF/TTF/SourceSansPro-Bold.ttf.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/WOFF/TTF/SourceSansPro-BoldIt.ttf.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/WOFF/TTF/SourceSansPro-ExtraLight.ttf.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/WOFF/TTF/SourceSansPro-ExtraLightIt.ttf.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/WOFF/TTF/SourceSansPro-It.ttf.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/WOFF/TTF/SourceSansPro-Light.ttf.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/WOFF/TTF/SourceSansPro-LightIt.ttf.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/WOFF/TTF/SourceSansPro-Regular.ttf.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/WOFF/TTF/SourceSansPro-Semibold.ttf.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/WOFF/TTF/SourceSansPro-SemiboldIt.ttf.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/WOFF2/OTF/SourceSansPro-Black.otf.woff2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/WOFF2/OTF/SourceSansPro-BlackIt.otf.woff2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/WOFF2/OTF/SourceSansPro-Bold.otf.woff2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/WOFF2/OTF/SourceSansPro-BoldIt.otf.woff2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/WOFF2/OTF/SourceSansPro-ExtraLight.otf.woff2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/WOFF2/OTF/SourceSansPro-ExtraLightIt.otf.woff2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/WOFF2/OTF/SourceSansPro-It.otf.woff2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/WOFF2/OTF/SourceSansPro-Light.otf.woff2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/WOFF2/OTF/SourceSansPro-LightIt.otf.woff2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/WOFF2/OTF/SourceSansPro-Regular.otf.woff2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/WOFF2/OTF/SourceSansPro-Semibold.otf.woff2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/WOFF2/OTF/SourceSansPro-SemiboldIt.otf.woff2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/WOFF2/TTF/SourceSansPro-Black.ttf.woff2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/WOFF2/TTF/SourceSansPro-BlackIt.ttf.woff2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/WOFF2/TTF/SourceSansPro-Bold.ttf.woff2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/WOFF2/TTF/SourceSansPro-BoldIt.ttf.woff2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/WOFF2/TTF/SourceSansPro-ExtraLight.ttf.woff2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/WOFF2/TTF/SourceSansPro-ExtraLightIt.ttf.woff2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/WOFF2/TTF/SourceSansPro-It.ttf.woff2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/WOFF2/TTF/SourceSansPro-Light.ttf.woff2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/WOFF2/TTF/SourceSansPro-LightIt.ttf.woff2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/WOFF2/TTF/SourceSansPro-Regular.ttf.woff2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/WOFF2/TTF/SourceSansPro-Semibold.ttf.woff2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/WOFF2/TTF/SourceSansPro-SemiboldIt.ttf.woff2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/source-sans-pro.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/scss/lego/lego.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/scss/text/text.scss" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/scss/buttons/buttons.scss" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/index.html" afterPath="$PROJECT_DIR$/dist/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assets/scss/styles.scss" afterPath="$PROJECT_DIR$/src/assets/scss/styles.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assets/scss/variables/variables.scss" afterPath="$PROJECT_DIR$/src/assets/scss/variables/variables.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/button/index.tsx" afterPath="$PROJECT_DIR$/src/components/button/index.tsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/colors/colors.tsx" afterPath="$PROJECT_DIR$/src/components/colors/colors.tsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/storybook.tsx" afterPath="$PROJECT_DIR$/src/components/storybook.tsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.tsx" afterPath="$PROJECT_DIR$/src/index.tsx" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/components/buttons/button_add/button_add.tsx" afterPath="$PROJECT_DIR$/src/components/button/button_add.tsx" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/components/hello.tsx" afterPath="$PROJECT_DIR$/src/components/storybook.tsx" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/components/button/button_add.tsx" afterPath="$PROJECT_DIR$/src/components/button/button.tsx" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -33,8 +123,8 @@
       <file leaf-file-name="index.tsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/index.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+            <state relative-caret-position="153">
+              <caret line="9" column="14" lean-forward="false" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
@@ -42,22 +132,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="storybook.tsx" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/storybook.tsx">
+      <file leaf-file-name="button.tsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/button/button.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="26" lean-forward="false" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
-              <folding>
-                <element signature="e#0#31#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="button_add.tsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/button/button_add.tsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
+            <state relative-caret-position="-57">
               <caret line="7" column="4" lean-forward="false" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="32" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
@@ -66,11 +144,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="colors.tsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/colors/colors.tsx">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dist/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="20" lean-forward="false" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+            <state relative-caret-position="153">
+              <caret line="9" column="46" lean-forward="false" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="46" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="storybook.tsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/storybook.tsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="32" lean-forward="false" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
@@ -78,57 +166,65 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.tsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/colors/index.tsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="33" lean-forward="false" selection-start-line="0" selection-start-column="33" selection-end-line="0" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="variables.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/assets/scss/variables/variables.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="10" selection-end-column="16" />
+            <state relative-caret-position="119">
+              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="6" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.d.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/node_modules/@types/react/index.d.ts">
+      <file leaf-file-name="styles.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/assets/scss/styles.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="288" column="8" lean-forward="false" selection-start-line="288" selection-start-column="8" selection-end-line="288" selection-end-column="8" />
+            <state relative-caret-position="17">
+              <caret line="1" column="16" lean-forward="false" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
+      <file leaf-file-name="text.scss" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/assets/scss/text/text.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="colors.tsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/colors/colors.tsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="402">
+              <caret line="38" column="36" lean-forward="false" selection-start-line="38" selection-start-column="36" selection-end-line="38" selection-end-column="36" />
+              <folding>
+                <element signature="e#0#31#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="lego.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/assets/scss/lego/lego.scss">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="34">
-              <caret line="2" column="16" lean-forward="false" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tsconfig.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tsconfig.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="27" lean-forward="false" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
+              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>Sans Pro</find>
+      <find>Sans</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -142,12 +238,20 @@
         <option value="$PROJECT_DIR$/tsconfig.json" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/components/hello.tsx" />
-        <option value="$PROJECT_DIR$/src/index.tsx" />
         <option value="$PROJECT_DIR$/src/components/buttons/button_add/button_add.tsx" />
         <option value="$PROJECT_DIR$/src/components/button/button_add.tsx" />
         <option value="$PROJECT_DIR$/src/components/colors/index.tsx" />
-        <option value="$PROJECT_DIR$/src/components/colors/colors.tsx" />
+        <option value="$PROJECT_DIR$/dist/style.css" />
+        <option value="$PROJECT_DIR$/src/assets/scss/source-sans-pro.css" />
+        <option value="$PROJECT_DIR$/src/index.tsx" />
+        <option value="$PROJECT_DIR$/src/assets/scss/fonts/source-sans-pro.scss" />
+        <option value="$PROJECT_DIR$/dist/index.html" />
         <option value="$PROJECT_DIR$/src/components/storybook.tsx" />
+        <option value="$PROJECT_DIR$/src/assets/scss/lego/lego.scss" />
+        <option value="$PROJECT_DIR$/src/components/colors/colors.tsx" />
+        <option value="$PROJECT_DIR$/src/assets/scss/styles.scss" />
+        <option value="$PROJECT_DIR$/src/assets/scss/variables/variables.scss" />
+        <option value="$PROJECT_DIR$/src/assets/scss/text/text.scss" />
       </list>
     </option>
   </component>
@@ -183,8 +287,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -317,7 +419,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="variables" />
+              <option name="myItemId" value="text" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -331,24 +433,14 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scss" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="buttons" />
+              <option name="myItemId" value="dist" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -359,7 +451,12 @@
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Projects\2dooshka\dist" />
+      <recent name="D:\Projects\2dooshka\src\assets\scss" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Projects\2dooshka\src\assets\scss\fonts" />
       <recent name="D:\Projects\2dooshka\src\components\buttons" />
     </key>
   </component>
@@ -435,12 +532,13 @@
       <option name="presentableId" value="Default" />
       <updated>1512894593058</updated>
       <workItem from="1512894596424" duration="7600000" />
-      <workItem from="1512978373026" duration="1981000" />
+      <workItem from="1512978373026" duration="3017000" />
+      <workItem from="1513017280392" duration="2814000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9581000" />
+    <option name="totallyTimeSpent" value="13431000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1096" extended-state="6" />
@@ -465,6 +563,26 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916668" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916668" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916668" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32916668" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="processedProjectFiles" value="true" />
@@ -497,6 +615,86 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/index.tsx">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/storybook.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/button/button.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="7" column="4" lean-forward="false" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/colors/colors.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/colors/index.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="33" lean-forward="false" selection-start-line="0" selection-start-column="33" selection-end-line="0" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/scss/variables/variables.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="10" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/@types/react/index.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4896">
+          <caret line="288" column="8" lean-forward="false" selection-start-line="288" selection-start-column="8" selection-end-line="288" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="16" lean-forward="false" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tsconfig.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="27" lean-forward="false" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.tsx">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
@@ -515,7 +713,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/button/button_add.tsx">
+    <entry file="file://$PROJECT_DIR$/src/components/button/button.tsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -566,14 +764,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/scss/buttons/buttons.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="35" column="3" lean-forward="false" selection-start-line="0" selection-start-column="2" selection-end-line="35" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tsconfig.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -590,36 +780,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/@types/react/index.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="288" column="8" lean-forward="false" selection-start-line="288" selection-start-column="8" selection-end-line="288" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/button/index.tsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/scss/variables/variables.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="10" selection-end-column="16" />
           <folding />
         </state>
       </provider>
@@ -632,20 +796,53 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/colors/colors.tsx">
+    <entry file="file://$PROJECT_DIR$/src/assets/scss/buttons/buttons.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="20" lean-forward="false" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="595">
+          <caret line="35" column="3" lean-forward="false" selection-start-line="0" selection-start-column="2" selection-end-line="35" selection-end-column="3" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/button/button_add.tsx">
+    <entry file="file://$PROJECT_DIR$/dist/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="4" lean-forward="false" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="32" />
+        <state relative-caret-position="34">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/style.css.map">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="sourcemapFileViewerProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/@types/react/index.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="288" column="8" lean-forward="false" selection-start-line="288" selection-start-column="8" selection-end-line="288" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/scss/fonts/fonts.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1649">
+          <caret line="97" column="4" lean-forward="false" selection-start-line="97" selection-start-column="4" selection-end-line="97" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="14" lean-forward="false" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
@@ -654,11 +851,71 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/storybook.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="26" lean-forward="false" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+        <state relative-caret-position="153">
+          <caret line="9" column="32" lean-forward="false" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/scss/lego/lego.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/colors/colors.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="402">
+          <caret line="38" column="36" lean-forward="false" selection-start-line="38" selection-start-column="36" selection-end-line="38" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/button/button.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-57">
+          <caret line="7" column="4" lean-forward="false" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="46" lean-forward="false" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/scss/variables/variables.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/scss/styles.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="16" lean-forward="false" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/scss/text/text.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

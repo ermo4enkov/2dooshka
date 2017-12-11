@@ -29,14 +29,18 @@ const Pallete = styled.div`
 `
 export class ColorPallete extends React.Component<ColorProps> {
     constructor(props: ColorProps){
-        super(props)
+        super(props);
     }
 
     render () {
 
         return(
-            <Pallete {...this.props}>
-            </Pallete>
+            <div className="lego__element">
+                <h1 className="title">Цвета</h1>
+                <div className="colors__wrap">
+                    <Pallete {...this.props}></Pallete>
+                </div>
+            </div>
         )
     }
 

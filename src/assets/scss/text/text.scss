@@ -1,0 +1,9 @@
+@import "../variables/variables";
+
+.title{
+  font-size: $header;
+  font-weight: bold;
+  line-height: 0.89;
+  text-align: left;
+  color: $black;
+}
