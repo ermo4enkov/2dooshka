@@ -8,7 +8,7 @@ export class StoryBook extends React.Component {
 
         return(
             <div className="lego">
-                <ColorPallete grey/>
+                <ColorPallete/>
                 <Button add text="Добавь"/>
                 <Button disable text="Disabled"/>
             </div>

@@ -15,13 +15,13 @@ interface ColorProps{
 
 const Pallete = styled.div`
     display: inline-block;
-    width: 100px;
-    height: 100px;
+    width: 40px;
+    height: 40px;
     background-color: ${(props: ColorProps) => props.greyLight? "#f6f7f8":
                                                props.grey? "#d0d8dc": 
                                                props.greyDark? '#93a4ad':
                                                props.greyDarker? '#7c909b':
-                                               props.black? '#28323':
+                                               props.black? '#283238':
                                                props.mint? '#f2fef8':
                                                props.good? '#a9f6d0':
                                                props.empty? '#1fb6ff': '#fff'
@@ -38,7 +38,14 @@ export class ColorPallete extends React.Component<ColorProps> {
             <div className="lego__element">
                 <h1 className="title">Цвета</h1>
                 <div className="colors__wrap">
-                    <Pallete {...this.props}></Pallete>
+                    <Pallete greyLight></Pallete>
+                    <Pallete grey></Pallete>
+                    <Pallete greyDark></Pallete>
+                    <Pallete greyDarker></Pallete>
+                    <Pallete black></Pallete>
+                    <Pallete mint></Pallete>
+                    <Pallete good></Pallete>
+                    <Pallete empty></Pallete>
                 </div>
             </div>
         )

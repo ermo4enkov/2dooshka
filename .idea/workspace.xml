@@ -2,104 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="63065591-dc1a-4a46-bd7c-33effbc5b00e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/EOT/SourceSansPro-Black.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/EOT/SourceSansPro-BlackIt.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/EOT/SourceSansPro-Bold.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/EOT/SourceSansPro-BoldIt.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/EOT/SourceSansPro-ExtraLight.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/EOT/SourceSansPro-ExtraLightIt.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/EOT/SourceSansPro-It.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/EOT/SourceSansPro-Light.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/EOT/SourceSansPro-LightIt.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/EOT/SourceSansPro-Regular.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/EOT/SourceSansPro-Semibold.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/EOT/SourceSansPro-SemiboldIt.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/OTF/SourceSansPro-Black.otf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/OTF/SourceSansPro-BlackIt.otf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/OTF/SourceSansPro-Bold.otf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/OTF/SourceSansPro-BoldIt.otf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/OTF/SourceSansPro-ExtraLight.otf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/OTF/SourceSansPro-ExtraLightIt.otf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/OTF/SourceSansPro-It.otf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/OTF/SourceSansPro-Light.otf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/OTF/SourceSansPro-LightIt.otf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/OTF/SourceSansPro-Regular.otf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/OTF/SourceSansPro-Semibold.otf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/OTF/SourceSansPro-SemiboldIt.otf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/TTF/SourceSansPro-Black.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/TTF/SourceSansPro-BlackIt.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/TTF/SourceSansPro-Bold.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/TTF/SourceSansPro-BoldIt.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/TTF/SourceSansPro-ExtraLight.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/TTF/SourceSansPro-ExtraLightIt.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/TTF/SourceSansPro-It.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/TTF/SourceSansPro-Light.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/TTF/SourceSansPro-LightIt.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/TTF/SourceSansPro-Regular.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/TTF/SourceSansPro-Semibold.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/TTF/SourceSansPro-SemiboldIt.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/WOFF/OTF/SourceSansPro-Black.otf.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/WOFF/OTF/SourceSansPro-BlackIt.otf.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/WOFF/OTF/SourceSansPro-Bold.otf.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/WOFF/OTF/SourceSansPro-BoldIt.otf.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/WOFF/OTF/SourceSansPro-ExtraLight.otf.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/WOFF/OTF/SourceSansPro-ExtraLightIt.otf.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/WOFF/OTF/SourceSansPro-It.otf.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/WOFF/OTF/SourceSansPro-Light.otf.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/WOFF/OTF/SourceSansPro-LightIt.otf.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/WOFF/OTF/SourceSansPro-Regular.otf.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/WOFF/OTF/SourceSansPro-Semibold.otf.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/WOFF/OTF/SourceSansPro-SemiboldIt.otf.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/WOFF/TTF/SourceSansPro-Black.ttf.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/WOFF/TTF/SourceSansPro-BlackIt.ttf.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/WOFF/TTF/SourceSansPro-Bold.ttf.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/WOFF/TTF/SourceSansPro-BoldIt.ttf.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/WOFF/TTF/SourceSansPro-ExtraLight.ttf.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/WOFF/TTF/SourceSansPro-ExtraLightIt.ttf.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/WOFF/TTF/SourceSansPro-It.ttf.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/WOFF/TTF/SourceSansPro-Light.ttf.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/WOFF/TTF/SourceSansPro-LightIt.ttf.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/WOFF/TTF/SourceSansPro-Regular.ttf.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/WOFF/TTF/SourceSansPro-Semibold.ttf.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/WOFF/TTF/SourceSansPro-SemiboldIt.ttf.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/WOFF2/OTF/SourceSansPro-Black.otf.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/WOFF2/OTF/SourceSansPro-BlackIt.otf.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/WOFF2/OTF/SourceSansPro-Bold.otf.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/WOFF2/OTF/SourceSansPro-BoldIt.otf.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/WOFF2/OTF/SourceSansPro-ExtraLight.otf.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/WOFF2/OTF/SourceSansPro-ExtraLightIt.otf.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/WOFF2/OTF/SourceSansPro-It.otf.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/WOFF2/OTF/SourceSansPro-Light.otf.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/WOFF2/OTF/SourceSansPro-LightIt.otf.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/WOFF2/OTF/SourceSansPro-Regular.otf.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/WOFF2/OTF/SourceSansPro-Semibold.otf.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/WOFF2/OTF/SourceSansPro-SemiboldIt.otf.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/WOFF2/TTF/SourceSansPro-Black.ttf.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/WOFF2/TTF/SourceSansPro-BlackIt.ttf.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/WOFF2/TTF/SourceSansPro-Bold.ttf.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/WOFF2/TTF/SourceSansPro-BoldIt.ttf.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/WOFF2/TTF/SourceSansPro-ExtraLight.ttf.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/WOFF2/TTF/SourceSansPro-ExtraLightIt.ttf.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/WOFF2/TTF/SourceSansPro-It.ttf.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/WOFF2/TTF/SourceSansPro-Light.ttf.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/WOFF2/TTF/SourceSansPro-LightIt.ttf.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/WOFF2/TTF/SourceSansPro-Regular.ttf.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/WOFF2/TTF/SourceSansPro-Semibold.ttf.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/fonts/WOFF2/TTF/SourceSansPro-SemiboldIt.ttf.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/source-sans-pro.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/scss/lego/lego.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/scss/text/text.scss" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/style.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/scss/buttons/buttons.scss" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/scss/lego/colors.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/index.html" afterPath="$PROJECT_DIR$/dist/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assets/scss/styles.scss" afterPath="$PROJECT_DIR$/src/assets/scss/styles.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assets/scss/variables/variables.scss" afterPath="$PROJECT_DIR$/src/assets/scss/variables/variables.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/button/index.tsx" afterPath="$PROJECT_DIR$/src/components/button/index.tsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/colors/colors.tsx" afterPath="$PROJECT_DIR$/src/components/colors/colors.tsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/storybook.tsx" afterPath="$PROJECT_DIR$/src/components/storybook.tsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.tsx" afterPath="$PROJECT_DIR$/src/index.tsx" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/components/button/button_add.tsx" afterPath="$PROJECT_DIR$/src/components/button/button.tsx" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -157,8 +64,8 @@
       <file leaf-file-name="storybook.tsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/storybook.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="32" lean-forward="false" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
+            <state relative-caret-position="170">
+              <caret line="10" column="29" lean-forward="false" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
@@ -170,7 +77,7 @@
         <entry file="file://$PROJECT_DIR$/src/assets/scss/variables/variables.scss">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
-              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="6" />
+              <caret line="7" column="9" lean-forward="true" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="15" />
               <folding />
             </state>
           </provider>
@@ -179,8 +86,8 @@
       <file leaf-file-name="styles.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/assets/scss/styles.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="16" lean-forward="false" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+            <state relative-caret-position="136">
+              <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -189,8 +96,8 @@
       <file leaf-file-name="text.scss" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/assets/scss/text/text.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+            <state relative-caret-position="85">
+              <caret line="5" column="20" lean-forward="true" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -199,11 +106,21 @@
       <file leaf-file-name="colors.tsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/colors/colors.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="402">
-              <caret line="38" column="36" lean-forward="false" selection-start-line="38" selection-start-column="36" selection-end-line="38" selection-end-column="36" />
+            <state relative-caret-position="425">
+              <caret line="40" column="49" lean-forward="true" selection-start-line="40" selection-start-column="49" selection-end-line="40" selection-end-column="49" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="colors.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/assets/scss/lego/colors.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="13" lean-forward="true" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -246,12 +163,13 @@
         <option value="$PROJECT_DIR$/src/index.tsx" />
         <option value="$PROJECT_DIR$/src/assets/scss/fonts/source-sans-pro.scss" />
         <option value="$PROJECT_DIR$/dist/index.html" />
-        <option value="$PROJECT_DIR$/src/components/storybook.tsx" />
         <option value="$PROJECT_DIR$/src/assets/scss/lego/lego.scss" />
-        <option value="$PROJECT_DIR$/src/components/colors/colors.tsx" />
-        <option value="$PROJECT_DIR$/src/assets/scss/styles.scss" />
         <option value="$PROJECT_DIR$/src/assets/scss/variables/variables.scss" />
         <option value="$PROJECT_DIR$/src/assets/scss/text/text.scss" />
+        <option value="$PROJECT_DIR$/src/components/storybook.tsx" />
+        <option value="$PROJECT_DIR$/src/assets/scss/lego/colors.scss" />
+        <option value="$PROJECT_DIR$/src/assets/scss/styles.scss" />
+        <option value="$PROJECT_DIR$/src/components/colors/colors.tsx" />
       </list>
     </option>
   </component>
@@ -407,32 +325,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scss" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="text" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="2dooshka" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="2dooshka" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="dist" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -533,12 +425,12 @@
       <updated>1512894593058</updated>
       <workItem from="1512894596424" duration="7600000" />
       <workItem from="1512978373026" duration="3017000" />
-      <workItem from="1513017280392" duration="2814000" />
+      <workItem from="1513017280392" duration="3402000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13431000" />
+    <option name="totallyTimeSpent" value="14019000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1096" extended-state="6" />
@@ -839,20 +731,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/dist/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="46" lean-forward="false" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/index.tsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="14" lean-forward="false" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/storybook.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="32" lean-forward="false" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
@@ -867,16 +757,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/colors/colors.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="38" column="36" lean-forward="false" selection-start-line="38" selection-start-column="36" selection-end-line="38" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/button/button.tsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-57">
@@ -887,34 +767,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dist/index.html">
+    <entry file="file://$PROJECT_DIR$/src/components/storybook.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="46" lean-forward="false" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="46" />
-          <folding />
+        <state relative-caret-position="170">
+          <caret line="10" column="29" lean-forward="false" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/assets/scss/variables/variables.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="6" />
+          <caret line="7" column="9" lean-forward="true" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="15" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/assets/scss/styles.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="16" lean-forward="false" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+        <state relative-caret-position="136">
+          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/scss/lego/colors.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="13" lean-forward="true" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/colors/colors.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="40" column="49" lean-forward="true" selection-start-line="40" selection-start-column="49" selection-end-line="40" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/assets/scss/text/text.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        <state relative-caret-position="85">
+          <caret line="5" column="20" lean-forward="true" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
           <folding />
         </state>
       </provider>
