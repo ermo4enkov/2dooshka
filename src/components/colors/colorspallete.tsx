@@ -27,6 +27,13 @@ const Pallete = styled.div`
                                                props.empty? '#1fb6ff': '#fff'
     };
 `
+
+
+const App: React.StatelessComponent<{ color: string }> =
+    ({ color }) => <div>{color}</div>;
+
+
+
 export class ColorsPallete extends React.Component<ColorProps> {
     constructor(props: ColorProps){
         super(props);
@@ -36,7 +43,7 @@ export class ColorsPallete extends React.Component<ColorProps> {
 
         return(
             <div className="lego__element">
-                <h1 className="title">Цвета</h1>
+                <h1 className="header">Цвета</h1>
                 <div className="colors__wrap">
                     <Pallete greyLight></Pallete>
                     <Pallete grey></Pallete>
@@ -46,6 +53,7 @@ export class ColorsPallete extends React.Component<ColorProps> {
                     <Pallete mint></Pallete>
                     <Pallete good></Pallete>
                     <Pallete empty></Pallete>
+                    <App color="grey"/>
                 </div>
             </div>
         )

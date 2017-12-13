@@ -1,15 +1,13 @@
 import * as React from "react";
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 interface ButtonProps {
     text: string;
     add?: boolean;
-    disable?: boolean;
-    children?: React.ReactChild;
 }
 
 interface ButtonState {
-    isBlocked: boolean;
+    isBlocked?: boolean;
 }
 
 const StyledButton = styled.div`
@@ -21,8 +19,7 @@ const StyledButton = styled.div`
     padding: 10px 20px;
     display: inline-block;
     cursor: pointer;
-    color: ${(props: ButtonProps) => props.add? "red": 
-             props.disable? "grey": '#000'
+    color: ${(props: ButtonProps) => props.add? "red": '#000'
     };
     background-color: blue;
 `;

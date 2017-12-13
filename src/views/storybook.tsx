@@ -11,14 +11,14 @@ export class StoryBook extends React.Component {
             <div className="lego">
                 <ColorsPallete/>
                 <div className="lego__element">
-                    <h1 className="title">Текст</h1>
+                    <h1 className="header">Текст</h1>
                     <div>Шрифт — Source Sans Pro</div>
                     <h1>H1 - Каждый день</h1>
-                    <h2>H2 - Каждый день</h2>
+                    <h2 className="subtitile">H2 - Каждый день</h2>
                     <div>Text - Каждый день</div>
                 </div>
                 <Button add text="Добавь"/>
-                <Button disable text="Disabled"/>
+                <Button text="Disabled"/>
             </div>
         )
     }
