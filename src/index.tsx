@@ -4,7 +4,7 @@ import * as ReactDOM from "react-dom";
 import "./assets/scss/styles.scss";
 
 
-import { StoryBook} from "./views/storybook";
+import { StoryBook} from "./views/storybook/storybook";
 
 ReactDOM.render(
     <StoryBook/>,

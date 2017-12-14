@@ -3,7 +3,8 @@ import styled from 'styled-components';
 
 interface ButtonProps {
     text: string;
-    add?: boolean;
+    type?: string;
+    example?: boolean;
 }
 
 interface ButtonState {
@@ -19,9 +20,12 @@ const StyledButton = styled.div`
     padding: 10px 20px;
     display: inline-block;
     cursor: pointer;
-    color: ${(props: ButtonProps) => props.add? "red": '#000'
+    color: ${(props: ButtonProps) => props.type === "cancel"? "#93a4ad": '#fff'
     };
-    background-color: blue;
+    background-color: ${(props: ButtonProps) => props.type === "cancel"? "#f6f7f8": '#00b0ff'
+    };
+    margin-right: ${(props: ButtonProps) => props.example? "20px": '0'
+    };
 `;
 
 export class Button extends React.Component<ButtonProps, ButtonState> {
