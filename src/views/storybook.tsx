@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Button } from "../components/button/button";
-import { ColorsPallete } from "../components/colors/colorspallete";
+import { ColorsPallet } from "../components/colors/colorspallete";
 // import { textExample } from "../components/text/text";
 
 export class StoryBook extends React.Component {
@@ -9,7 +9,7 @@ export class StoryBook extends React.Component {
 
         return(
             <div className="lego">
-                <ColorsPallete/>
+                <ColorsPallet/>
                 <div className="lego__element">
                     <h1 className="header">Текст</h1>
                     <div>Шрифт — Source Sans Pro</div>
