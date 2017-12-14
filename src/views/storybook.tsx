@@ -1,14 +1,14 @@
 import * as React from "react";
 import { Button } from "../components/button/button";
-import { ColorsPallet } from "../components/colors/colorspallete";
-// import { textExample } from "../components/text/text";
+import { ColorsPallet } from "../blocks/colorspallet/colorspallete";
+
 
 export class StoryBook extends React.Component {
 
     render(){
 
         return(
-            <div className="lego">
+            <div className="storybook">
                 <ColorsPallet/>
                 <div className="lego__element">
                     <h1 className="header">Текст</h1>
