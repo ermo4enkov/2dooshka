@@ -14,7 +14,7 @@ export class ButtonsCollection extends React.Component {
                     <ul className="storybook__list">
                         <li className="storybook__item"><div className="storybook__name">Default behavior</div><Button text="Добавить" example/><Button text="Отменить" type="cancel"/></li>
                         <li className="storybook__item"><div className="storybook__name">Hover</div><Button text="Добавить" example/><Button text="Отменить" type="cancel"/></li>
-                        <li className="storybook__item"><div className="storybook__name">Disabled</div><Button text="Добавить" /></li>
+                        <li className="storybook__item"><div className="storybook__name">Disabled</div><Button text="Добавить"/></li>
                         <li className="storybook__item"><div className="storybook__name">Loading...</div><Button text="Добавить"/></li>
                     </ul>
                 </div>
