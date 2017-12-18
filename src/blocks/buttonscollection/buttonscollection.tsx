@@ -19,16 +19,16 @@ export class ButtonsCollection extends React.Component {
                         </li>
                         <li className="storybook__item">
                             <div className="storybook__name">Hover</div>
-                            <Button text="Добавить" example/>
-                            <Button text="Отменить" type="cancel"/>
+                            <Button text="Добавить" example hover/>
+                            <Button text="Отменить" hover type="cancel"/>
                         </li>
                         <li className="storybook__item">
                             <div className="storybook__name">Disabled</div>
-                            <Button disable={true} text="Добавить"/>
+                            <Button disabled text="Добавить"/>
                         </li>
                         <li className="storybook__item">
                             <div className="storybook__name">Loading...</div>
-                            <Button text="Добавить"/>
+                            <Button isLoading text="Добавить"/>
                         </li>
                     </ul>
                 </div>
