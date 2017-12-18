@@ -12,6 +12,7 @@ interface ButtonProps {
 
 interface ButtonState {
     isBlocked?: boolean;
+    isLoaded?: boolean;
 }
 
 const StyledButton = styled.div`
@@ -20,7 +21,7 @@ const StyledButton = styled.div`
     text-align: center;
     padding: 10px 20px;
     display: inline-block;
-    cursor: ${( props: ButtonProps) => props.disabled === true? "default": "pointer"};
+    cursor: ${( props: ButtonProps) => (props.disabled === true || props.isLoading === true)? "default": "pointer"};
     color: ${(props: ButtonProps) => (props.type === "cancel" || props.disabled === true )? "#93a4ad": '#fff'
     };
     background-color: ${(props: ButtonProps) => props.type === "cancel"? "#f6f7f8": '#00b0ff'
@@ -34,7 +35,7 @@ const StyledButton = styled.div`
     filter: ${(props: ButtonProps) => props.hover === true? "brightness(90%);": "none"};
     
         &:hover{
-            box-shadow: ${(props: ButtonProps) => props.disabled === false? "inset 0 -2px 0 0 rgba(0, 0, 0, 0.1);": "none"}
+            box-shadow: ${(props: ButtonProps) => (props.disabled === true || props.isLoading === true)? "none": "inset 0 -2px 0 0 rgba(0, 0, 0, 0.1);"}
             filter: brightness(90%);
         }
     
@@ -46,6 +47,7 @@ export class Button extends React.Component<ButtonProps, ButtonState> {
 
         this.state = {
             isBlocked: false,
+            isLoaded: false
         };
 
         this.setDisable = this.setDisable.bind(this);
@@ -56,9 +58,13 @@ export class Button extends React.Component<ButtonProps, ButtonState> {
         this.setState({isBlocked: !this.state.isBlocked});
     }
 
+    setLoading(){
+        this.setState({isBlocked: !this.state.isBlocked});
+    }
+
     render() {
         return (
-            <StyledButton {...this.props} disabled={this.props.disabled? this.props.disabled: this.state.isBlocked} onClick={this.setDisable}>
+            <StyledButton {...this.props} disabled={this.props.disabled? this.props.disabled: this.state.isBlocked} isLoading={this.props.isLoading? this.props.isLoading: this.state.isLoaded} onClick={this.setDisable}>
                 {this.props.text}
             </StyledButton>
         );

@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="63065591-dc1a-4a46-bd7c-33effbc5b00e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/blocks/buttonscollection/buttonscollection.tsx" afterPath="$PROJECT_DIR$/src/blocks/buttonscollection/buttonscollection.tsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/button/button.tsx" afterPath="$PROJECT_DIR$/src/components/button/button.tsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tsconfig.json" afterPath="$PROJECT_DIR$/tsconfig.json" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -41,11 +39,11 @@
       <file leaf-file-name="button.tsx" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/button/button.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="30" column="102" lean-forward="false" selection-start-line="30" selection-start-column="102" selection-end-line="30" selection-end-column="102" />
+            <state relative-caret-position="382">
+              <caret line="61" column="58" lean-forward="false" selection-start-line="61" selection-start-column="58" selection-end-line="61" selection-end-column="58" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
-                <marker date="1513611858210" expanded="true" signature="1986:2048" ph="..." />
+                <marker date="1513612798019" expanded="true" signature="2257:2319" ph="..." />
               </folding>
             </state>
           </provider>
@@ -394,12 +392,12 @@
       <workItem from="1513261701308" duration="6965000" />
       <workItem from="1513447741284" duration="5235000" />
       <workItem from="1513524074796" duration="169000" />
-      <workItem from="1513608027195" duration="3703000" />
+      <workItem from="1513608027195" duration="4642000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47542000" />
+    <option name="totallyTimeSpent" value="48481000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1096" extended-state="6" />
@@ -501,7 +499,7 @@
           <caret line="7" column="4" lean-forward="false" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="32" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
-            <marker date="1513611858210" expanded="true" signature="1986:2048" ph="..." />
+            <marker date="1513612798019" expanded="true" signature="2257:2319" ph="..." />
           </folding>
         </state>
       </provider>
@@ -575,7 +573,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
-            <marker date="1513611858210" expanded="true" signature="1986:2048" ph="..." />
+            <marker date="1513612798019" expanded="true" signature="2257:2319" ph="..." />
           </folding>
         </state>
       </provider>
@@ -782,11 +780,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/button/button.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="30" column="102" lean-forward="false" selection-start-line="30" selection-start-column="102" selection-end-line="30" selection-end-column="102" />
+        <state relative-caret-position="382">
+          <caret line="61" column="58" lean-forward="false" selection-start-line="61" selection-start-column="58" selection-end-line="61" selection-end-column="58" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
-            <marker date="1513611858210" expanded="true" signature="1986:2048" ph="..." />
+            <marker date="1513612798019" expanded="true" signature="2257:2319" ph="..." />
           </folding>
         </state>
       </provider>
