@@ -18,7 +18,7 @@ const StyledButton = styled.div`
     text-align: center;
     padding: 10px 20px;
     display: inline-block;
-    cursor: pointer;
+    cursor: ${( props: ButtonProps) => props.disable === true? "default": "pointer"};
     color: ${(props: ButtonProps) => (props.type === "cancel" || props.disable === true )? "#93a4ad": '#fff'
     };
     background-color: ${(props: ButtonProps) => props.type === "cancel"? "#f6f7f8": '#00b0ff'
@@ -34,6 +34,7 @@ const StyledButton = styled.div`
 export class Button extends React.Component<ButtonProps, ButtonState> {
     constructor(props: ButtonProps) {
         super(props);
+
         this.state = {
             isBlocked: false,
         };
@@ -48,7 +49,7 @@ export class Button extends React.Component<ButtonProps, ButtonState> {
 
     render() {
         return (
-            <StyledButton {...this.props} disable={this.state.isBlocked} onClick={this.setDisable}>
+            <StyledButton {...this.props} disable={this.props.disable? this.props.disable: this.state.isBlocked} onClick={this.setDisable}>
                 {this.props.text}
             </StyledButton>
         );
