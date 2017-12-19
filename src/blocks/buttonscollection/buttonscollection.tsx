@@ -28,7 +28,7 @@ export class ButtonsCollection extends React.Component {
                         </li>
                         <li className="storybook__item">
                             <div className="storybook__name">Loading...</div>
-                            <Button isLoading text="Добавить"/>
+                            <Button isLoading text=""/>
                         </li>
                     </ul>
                 </div>
