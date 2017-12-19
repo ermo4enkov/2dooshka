@@ -31,6 +31,7 @@ const StyledButton = styled.div`
     border: ${(props: ButtonProps) => (props.disabled === true || props.isLoading === true)? "solid 1px #d0d8dc;": "none"}
     background-color: ${(props: ButtonProps) => (props.disabled === true || props.isLoading === true)? "#f6f7f8": ''
     };
+    min-width: 80px;
     box-shadow: ${(props: ButtonProps) => props.hover === true? "inset 0 -2px 0 0 rgba(0, 0, 0, 0.1);": "none"};
     filter: ${(props: ButtonProps) => props.hover === true? "brightness(90%);": "none"};
     
@@ -65,7 +66,7 @@ export class Button extends React.Component<ButtonProps, ButtonState> {
     render() {
         return (
             <StyledButton {...this.props} disabled={this.props.disabled? this.props.disabled: this.state.isBlocked} isLoading={this.props.isLoading? this.props.isLoading: this.state.isLoaded} onClick={this.setDisable}>
-                {this.props.isLoading? <span className={this.props.isLoading? "loader": ""}>Loader</span>: this.props.text }
+                {this.props.isLoading? <div className={this.props.isLoading? "loader": ""}>Loading...</div>: this.props.text }
             </StyledButton>
         );
     }
