@@ -15,7 +15,7 @@ export class ItemsCollection extends React.Component<{}> {
                     <ul className="storybook__list">
                         <li className="storybook__item">
                             <div className="storybook__name">Default behavior</div>
-                            <Item content="Новая задача на каждый день…" example></Item>
+                            <Item content="Новая задача на каждый день…" example newTask></Item>
                         </li>
                         <li className="storybook__item">
                             <div className="storybook__name">Hover</div>
@@ -27,7 +27,7 @@ export class ItemsCollection extends React.Component<{}> {
                         </li>
                         <li className="storybook__item">
                             <div className="storybook__name">Default behavior</div>
-                            <Item example></Item>
+                            <Item example newTask redaction></Item>
                         </li>
                     </ul>
                 </div>

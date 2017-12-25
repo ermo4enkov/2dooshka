@@ -6,6 +6,8 @@ import Plus from '../icons/plus'
 interface ItemProps  {
     content?: string;
     example?: boolean;
+    newTask?: boolean;
+    redaction?: boolean;
 }
 
 interface ItemState  {
@@ -30,12 +32,12 @@ export class Item extends React.Component<ItemProps, ItemState> {
     }
 
     render() {
-
+        const {content, newTask, redaction} = this.props;
         return(
             <StyledItem {...this.props}>
-                <Plus/>
-                {this.props.content}
-                <Button text="Добавить" example/>
+                {newTask? <Plus/>: null}
+                {newTask? <div>{content}</div>: null}
+                {newTask && redaction? <div><Button text="Добавить"/><Button text="Отменить" type="cancel"/></div>: null}
             </StyledItem>
         )
     }

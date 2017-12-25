@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="63065591-dc1a-4a46-bd7c-33effbc5b00e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/icons/index.tsx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/icons/plus.tsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package-lock.json" afterPath="$PROJECT_DIR$/package-lock.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/blocks/listitemscollection/itemscollection.tsx" afterPath="$PROJECT_DIR$/src/blocks/listitemscollection/itemscollection.tsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/item/item.tsx" afterPath="$PROJECT_DIR$/src/components/item/item.tsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.tsx" afterPath="$PROJECT_DIR$/src/index.tsx" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -30,26 +25,38 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="item.tsx" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/item/item.tsx">
+      <file leaf-file-name="buttonscollection.tsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/blocks/buttonscollection/buttonscollection.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="36" column="35" lean-forward="false" selection-start-line="36" selection-start-column="35" selection-end-line="36" selection-end-column="35" />
+            <state relative-caret-position="246">
+              <caret line="17" column="65" lean-forward="false" selection-start-line="17" selection-start-column="52" selection-end-line="17" selection-end-column="65" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
-                <marker date="1514224358330" expanded="true" signature="778:905" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="itemscollection.tsx" pinned="false" current-in-tab="false">
+      <file leaf-file-name="itemscollection.tsx" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/blocks/listitemscollection/itemscollection.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="29" column="34" lean-forward="false" selection-start-line="29" selection-start-column="34" selection-end-line="29" selection-end-column="34" />
+            <state relative-caret-position="391">
+              <caret line="29" column="50" lean-forward="false" selection-start-line="29" selection-start-column="50" selection-end-line="29" selection-end-column="50" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="item.tsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/item/item.tsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="459">
+              <caret line="39" column="106" lean-forward="false" selection-start-line="39" selection-start-column="106" selection-end-line="39" selection-end-column="106" />
+              <folding>
+                <element signature="e#0#31#0" expanded="true" />
+                <marker date="1514227167966" expanded="true" signature="884:925" ph="..." />
               </folding>
             </state>
           </provider>
@@ -58,34 +65,12 @@
       <file leaf-file-name="button.tsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/button/button.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
+            <state relative-caret-position="-323">
               <caret line="23" column="116" lean-forward="true" selection-start-line="23" selection-start-column="3" selection-end-line="23" selection-end-column="116" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
                 <marker date="1514054709587" expanded="true" signature="2415:2442" ph="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="colorspallete.tsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/blocks/colorspallet/colorspallete.tsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="586">
-              <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="28" />
-              <folding>
-                <element signature="e#0#31#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="storybook.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/views/storybook/storybook.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -120,7 +105,6 @@
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/assets/scss/buttons/buttons.scss" />
         <option value="$PROJECT_DIR$/gitignore.txt" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/components/hello.tsx" />
         <option value="$PROJECT_DIR$/src/components/buttons/button_add/button_add.tsx" />
         <option value="$PROJECT_DIR$/src/components/button/button_add.tsx" />
@@ -162,8 +146,9 @@
         <option value="$PROJECT_DIR$/src/components/icons/index.tsx" />
         <option value="$PROJECT_DIR$/src/index.tsx" />
         <option value="$PROJECT_DIR$/src/components/icons/plus.tsx" />
-        <option value="$PROJECT_DIR$/src/blocks/listitemscollection/itemscollection.tsx" />
+        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/components/item/item.tsx" />
+        <option value="$PROJECT_DIR$/src/blocks/listitemscollection/itemscollection.tsx" />
       </list>
     </option>
   </component>
@@ -427,86 +412,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="node_modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="2dooshka" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="2dooshka" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="node_modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="material-ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="2dooshka" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="2dooshka" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="node_modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="material-ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="svg-icons" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="2dooshka" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="2dooshka" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="node_modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="material-ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="svg-icons" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="content" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="2dooshka" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="2dooshka" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="dist" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -622,12 +527,12 @@
       <workItem from="1513792298220" duration="43000" />
       <workItem from="1514054252395" duration="1088000" />
       <workItem from="1514201721963" duration="2674000" />
-      <workItem from="1514221640442" duration="2714000" />
+      <workItem from="1514221640442" duration="5519000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56971000" />
+    <option name="totallyTimeSpent" value="59776000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1096" extended-state="6" />
@@ -730,13 +635,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="14" lean-forward="false" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="16" lean-forward="false" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -955,27 +853,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/button/button.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="23" column="116" lean-forward="true" selection-start-line="23" selection-start-column="3" selection-end-line="23" selection-end-column="116" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-            <marker date="1514054709587" expanded="true" signature="2415:2442" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/blocks/buttonscollection/buttonscollection.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="14" column="24" lean-forward="false" selection-start-line="14" selection-start-column="24" selection-end-line="18" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/icons/plus.tsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -986,23 +863,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/blocks/listitemscollection/itemscollection.tsx">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="34" lean-forward="false" selection-start-line="29" selection-start-column="34" selection-end-line="29" selection-end-column="34" />
+        <state relative-caret-position="51">
+          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/button/button.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-323">
+          <caret line="23" column="116" lean-forward="true" selection-start-line="23" selection-start-column="3" selection-end-line="23" selection-end-column="116" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
+            <marker date="1514054709587" expanded="true" signature="2415:2442" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/item/item.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="36" column="35" lean-forward="false" selection-start-line="36" selection-start-column="35" selection-end-line="36" selection-end-column="35" />
+        <state relative-caret-position="459">
+          <caret line="39" column="106" lean-forward="false" selection-start-line="39" selection-start-column="106" selection-end-line="39" selection-end-column="106" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
-            <marker date="1514224358330" expanded="true" signature="778:905" ph="..." />
+            <marker date="1514227167966" expanded="true" signature="884:925" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/blocks/buttonscollection/buttonscollection.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="17" column="65" lean-forward="false" selection-start-line="17" selection-start-column="52" selection-end-line="17" selection-end-column="65" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/blocks/listitemscollection/itemscollection.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="29" column="50" lean-forward="false" selection-start-line="29" selection-start-column="50" selection-end-line="29" selection-end-column="50" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
           </folding>
         </state>
       </provider>
