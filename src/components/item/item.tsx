@@ -1,29 +1,29 @@
 import * as React from "react";
 import styled from 'styled-components';
-import Button from '../button/button'
+import Button from '../button/button';
+import Plus from '../icons/plus'
 
 interface ItemProps  {
-    name?: string;
+    content?: string;
+    example?: boolean;
 }
 
 interface ItemState  {
     status?: string;
 }
 
-function Plus(props: ItemProps): JSX.Element{
-    return(
-        <img src="" alt=""/>
-    )
-}
 const StyledItem = styled.div`
-    display: inline-block;
-    width: 100%;
+    display: inline-flex;
+    width: ${(props: ItemProps) => props.example? "70%": "100%"};
     border-radius: 3px;
-    padding: 16px;
+    padding: 8px 16px;
     font-size: 16px;
-    background-color: #d0d8dc;
+    background-color: rgba(208, 216, 220, 0.6);
+    align-items: center;
+    justify-content: space-between;
 `
 ''
+
 export class Item extends React.Component<ItemProps, ItemState> {
     constructor(ItemProps, ItemState) {
         super(ItemProps)
@@ -32,9 +32,9 @@ export class Item extends React.Component<ItemProps, ItemState> {
     render() {
 
         return(
-            <StyledItem>
-                +
-                {this.props.name}
+            <StyledItem {...this.props}>
+                <Plus/>
+                {this.props.content}
                 <Button text="Добавить" example/>
             </StyledItem>
         )

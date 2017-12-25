@@ -15,19 +15,19 @@ export class ItemsCollection extends React.Component<{}> {
                     <ul className="storybook__list">
                         <li className="storybook__item">
                             <div className="storybook__name">Default behavior</div>
-                            <Item name="DFFDDFDF"></Item>
+                            <Item content="Новая задача на каждый день…" example></Item>
                         </li>
                         <li className="storybook__item">
                             <div className="storybook__name">Hover</div>
-                            <Item name="DFFDDFDF"></Item>
+                            <Item content="Новая задача на каждый день…" example></Item>
                         </li>
                         <li className="storybook__item">
                             <div className="storybook__name">Default behavior</div>
-                            <Item name="DFFDDFDF"></Item>
+                            <Item content="Новая задача на каждый день…" example></Item>
                         </li>
                         <li className="storybook__item">
                             <div className="storybook__name">Default behavior</div>
-                            <Item name="DFFDDFDF"></Item>
+                            <Item example></Item>
                         </li>
                     </ul>
                 </div>
