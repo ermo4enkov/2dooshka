@@ -1,7 +1,7 @@
 import * as React from "react";
 
 const Logo = () => (
-    <div className="logo">2Dooshka</div>
+    <a href="/" className="logo">2Dooshka</a>
 );
 
 export default Logo;

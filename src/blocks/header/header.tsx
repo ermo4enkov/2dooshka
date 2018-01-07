@@ -13,9 +13,10 @@ export class Header extends React.Component {
     render() {
 
         return(
-            <div className="Header">
-                <Plus></Plus>
+            <div className="header">
                 <Logo></Logo>
+                <a href="/today">Сегодня</a>
+                <a href="/everyday">Каждый день</a>
             </div>
 
         );
