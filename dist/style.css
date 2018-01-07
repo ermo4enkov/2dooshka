@@ -48,6 +48,11 @@ ul {
   justify-content: space-between;
   width: 80%; }
 
+.logo {
+  font-family: 'Margarine', cursive;
+  font-size: 24px;
+  color: #00b0ff; }
+
 .loader {
   display: inline-block;
   margin: 0;
