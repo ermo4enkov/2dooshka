@@ -10,7 +10,7 @@ export class ItemsCollection extends React.Component<{}> {
     render() {
         return(
             <div className="storybook__element">
-                <h1 className="header">Items of list</h1>
+                <h1 className="headerText">Items of list</h1>
                 <div>
                     <ul className="storybook__list">
                         <li className="storybook__item">

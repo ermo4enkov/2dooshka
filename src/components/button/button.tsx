@@ -1,5 +1,5 @@
 import * as React from "react";
-import styled from 'styled-components';
+import styled from "styled-components";
 
 interface ButtonProps {
     text: string;
@@ -66,7 +66,7 @@ export class Button extends React.Component<ButtonProps, ButtonState> {
     render() {
         return (
             <StyledButton {...this.props} disabled={this.props.disabled? this.props.disabled: this.state.isBlocked} isLoading={this.props.isLoading? this.props.isLoading: this.state.isLoaded} onClick={this.setDisable}>
-                {this.props.isLoading? <div className={this.props.isLoading? "loader": ""}>Loading...</div>: this.props.text }
+                {this.props.isLoading ? <div className={this.props.isLoading? "loader": ""}>Loading...</div>: this.props.text }
             </StyledButton>
         );
     }

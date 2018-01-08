@@ -13,7 +13,7 @@ export class StoryBook extends React.Component {
             <div className="storybook">
                 <ColorsPallet/>
                 <div className="storybook__element">
-                    <h1 className="header">Text</h1>
+                    <h1 className="headerText">Text</h1>
                     <div>Font — Source Sans Pro</div>
                     <h1>H1 - everyday</h1>
                     <h2 className="subtitile">H2 - everyday</h2>

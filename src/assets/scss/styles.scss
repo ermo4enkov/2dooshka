@@ -1,5 +1,8 @@
 @import "./default";
 @import "./text/text";
-@import "../../views/storybook/storybook";
+@import "../../views/storyBookView/storybook";
 @import "../../blocks/colorspallet/colorspallet";
+@import "../../blocks/header/header";
+@import "../../components/logo/logo";
+
 @import "./animation";

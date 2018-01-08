@@ -9,7 +9,7 @@ export class ButtonsCollection extends React.Component {
     render() {
         return (
             <div className="storybook__element">
-                <h1 className="header">Buttons</h1>
+                <h1 className="headerText">Buttons</h1>
                 <div>
                     <ul className="storybook__list">
                         <li className="storybook__item">

@@ -47,7 +47,7 @@ export class ColorsPallet extends React.Component<ColorPalletProps> {
 
         return(
             <div className="storybook__element">
-                <h1 className="header">Colors</h1>
+                <h1 className="headerText">Colors</h1>
                 <div className="colors__wrap">
                     {colorsCollection}
                 </div>
