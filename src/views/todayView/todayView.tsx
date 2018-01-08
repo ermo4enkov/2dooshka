@@ -8,7 +8,7 @@ export class TodayView extends React.Component {
     render() {
 
         return(
-            <div> TodayView </div>
+            <div>TodayView</div>
         );
     }
 }

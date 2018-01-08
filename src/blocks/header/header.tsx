@@ -4,6 +4,8 @@ import styled from "styled-components";
 import Logo from "../../components/logo";
 import Plus from "../../components/icons/plus";
 
+import { Link } from "react-router-dom";
+
 
 export class Header extends React.Component {
     constructor(props) {
@@ -14,11 +16,11 @@ export class Header extends React.Component {
 
         return(
             <div className="header">
-                <Logo></Logo>
-                <a href="/today">Сегодня</a>
-                <a href="/everyday">Каждый день</a>
+                <Logo/>
+                <Link to="/today">Сегодня</Link>
+                <Link to="/everyday">Каждый день</Link>
+                {this.props.children}
             </div>
-
         );
     }
 }

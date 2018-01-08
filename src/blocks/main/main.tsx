@@ -1,7 +1,7 @@
 import * as React from "react";
-import { Router, Route, IndexRoute, browserHistory } from "react-router";
+// import { Router, Route, IndexRoute, browserHistory } from "react-router";
 import styled from "styled-components";
-import Header from "../header/header";
+import  Header  from "../header/header";
 
 export class Main extends React.Component {
     constructor(props) {
@@ -10,7 +10,7 @@ export class Main extends React.Component {
 
     render() {
         return (
-            <Header></Header>
+            <Header/>
         );
     }
 
