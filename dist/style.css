@@ -48,6 +48,13 @@ ul {
   justify-content: space-between;
   width: 80%; }
 
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 53px;
+  box-shadow: 0 1px 4px 0 #e7e8ea; }
+
 .logo {
   font-family: 'Margarine', cursive;
   font-size: 24px;

@@ -17,9 +17,9 @@ export class Header extends React.Component {
         return(
             <div className="header">
                 <Logo/>
-                <Link to="/today">Сегодня</Link>
+                <Link to="/">Сегодня</Link>
                 <Link to="/everyday">Каждый день</Link>
-                {this.props.children}
+                <Link to="/storybook">storybook</Link>
             </div>
         );
     }

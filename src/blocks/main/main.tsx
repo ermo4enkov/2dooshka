@@ -1,19 +1,19 @@
 import * as React from "react";
-// import { Router, Route, IndexRoute, browserHistory } from "react-router";
-import styled from "styled-components";
-import  Header  from "../header/header";
+import { Switch, Route } from "react-router-dom";
 
-export class Main extends React.Component {
-    constructor(props) {
-        super(props);
-    }
+import everyDayView from "../../views/everyDayView";
+import todayView from "../../views/todayView";
+import storyBookView from "../../views/storyBookView";
 
-    render() {
-        return (
-            <Header/>
-        );
-    }
 
-};
+const Main = () => (
+  <main>
+    <Switch>
+      <Route exact path="/" component={todayView}/>
+      <Route path="/everyday" component={everyDayView}/>
+      <Route path="/storybook" component={storyBookView}/>
+    </Switch>
+  </main>
+)
 
 export default Main;

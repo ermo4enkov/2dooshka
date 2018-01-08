@@ -1,7 +1,9 @@
 import * as React from "react";
+import { Link } from "react-router-dom";
+
 
 const Logo = () => (
-    <a href="/" className="logo">2Dooshka</a>
+    <Link to="/" className="logo">2Dooshka</Link>
 );
 
 export default Logo;
