@@ -62,10 +62,10 @@ webpackConfig = {
                     },
                 ],
             },
-            // {
-            //     test: /\.(png|jpg)$/,
-            //     loader: 'file-loader'
-            // },
+            {
+                test: /\.(png|jpg)$/,
+                loader: 'file-loader'
+            },
               
         ]
     },
