@@ -10,6 +10,10 @@ ul {
   padding: 0;
   margin: 0; }
 
+.conteiner {
+  margin: 0 auto;
+  max-width: 936px; }
+
 .headerText {
   font-size: 36px; }
 
@@ -54,6 +58,17 @@ ul {
   justify-content: space-between;
   padding: 24px 53px;
   box-shadow: 0 1px 4px 0 #e7e8ea; }
+
+.introduction {
+  display: block;
+  margin: 0 auto;
+  max-width: 360px;
+  text-align: center; }
+  .introduction__logo {
+    width: 244px;
+    height: 200px;
+    display: block;
+    margin-bottom: 18px; }
 
 .logo {
   font-family: 'Margarine', cursive;

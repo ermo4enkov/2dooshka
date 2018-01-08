@@ -1,4 +1,5 @@
 import * as React from "react";
+import  Introduction from "../../blocks/introduction";
 
 export class TodayView extends React.Component {
     constructor(props) {
@@ -8,7 +9,10 @@ export class TodayView extends React.Component {
     render() {
 
         return(
-            <div>TodayView</div>
+            <div className="conteiner">
+                <h1 className="title">Сегодня</h1>
+                <Introduction/>
+            </div>
         );
     }
 }
