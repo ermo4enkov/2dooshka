@@ -6,10 +6,6 @@ interface IntroductionState {
     isHide?: boolean;
 }
 
-// const container = styled.div`
-//     display: $({})
-// `
-
 export const IntroductionBlock: React.StatelessComponent = props => (
     <div className="introduction">
         <div className="introduction__logo"></div>
@@ -23,13 +19,28 @@ export class Introduction extends React.Component<IntroductionState> {
     constructor(props) {
         super(props);
         this.state = {
-            isHide: true,
+            isHide: false,
         };
     }
 
-    // checkTasks(): boolean {
-        
-    // }
+    checkTasks(): boolean {
+        if (localStorage.getItem("bgcolor")) {
+            return true;
+        }
+        return false;
+    };
+
+    componentWillMount() {
+        // localStorage.setItem('bgcolor', 'red');
+        localStorage.clear();
+
+        if (this.checkTasks()) {
+            this.setState({
+                isHide: true,
+            });
+        };
+    };
+
     render() {
         const isHide: boolean = this.state["isHide"];
         let block = null;

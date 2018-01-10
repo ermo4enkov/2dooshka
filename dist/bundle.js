@@ -42474,10 +42474,27 @@ var Introduction = (function (_super) {
     function Introduction(props) {
         var _this = _super.call(this, props) || this;
         _this.state = {
-            isHide: true,
+            isHide: false,
         };
         return _this;
     }
+    Introduction.prototype.checkTasks = function () {
+        if (localStorage.getItem("bgcolor")) {
+            return true;
+        }
+        return false;
+    };
+    ;
+    Introduction.prototype.componentWillMount = function () {
+        localStorage.clear();
+        if (this.checkTasks()) {
+            this.setState({
+                isHide: true,
+            });
+        }
+        ;
+    };
+    ;
     Introduction.prototype.render = function () {
         var isHide = this.state["isHide"];
         var block = null;
