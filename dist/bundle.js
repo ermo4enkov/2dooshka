@@ -15343,14 +15343,10 @@ var Button = (function (_super) {
             isBlocked: false,
             isLoaded: false
         };
-        _this.setDisable = _this.setDisable.bind(_this);
         return _this;
     }
-    Button.prototype.setDisable = function () {
-        this.setState({ isBlocked: !this.state.isBlocked });
-    };
     Button.prototype.render = function () {
-        return (React.createElement(StyledButton, __assign({}, this.props, { disabled: this.props.disabled ? this.props.disabled : this.state.isBlocked, isLoading: this.props.isLoading ? this.props.isLoading : this.state.isLoaded, onClick: this.setDisable }), this.props.isLoading ? React.createElement("div", { className: this.props.isLoading ? "loader" : "" }, "Loading...") : this.props.text));
+        return (React.createElement(StyledButton, __assign({}, this.props, { disabled: this.props.disabled ? this.props.disabled : this.state.isBlocked, isLoading: this.props.isLoading ? this.props.isLoading : this.state.isLoaded }), this.props.isLoading ? React.createElement("div", { className: this.props.isLoading ? "loader" : "" }, "Loading...") : this.props.text));
     };
     return Button;
 }(React.Component));
@@ -42469,16 +42465,26 @@ var __extends = (this && this.__extends) || (function () {
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(0);
 var button_1 = __webpack_require__(120);
+exports.IntroductionBlock = function (props) { return (React.createElement("div", { className: "introduction" },
+    React.createElement("div", { className: "introduction__logo" }),
+    React.createElement("div", { className: "introduction__text" }, "\u0417\u0430\u043F\u043B\u0430\u043D\u0438\u0440\u0443\u0439\u0442\u0435 \u043E\u0431\u044F\u0437\u0430\u0442\u0435\u043B\u044C\u043D\u044B\u0435 \u0437\u0430\u0434\u0430\u0447\u0438 \u043D\u0430 \u043A\u0430\u0436\u0434\u044B\u0439 \u0434\u0435\u043D\u044C \u0438 \u043E\u043D\u0438 \u043E\u0442\u043E\u0431\u0440\u0430\u0437\u044F\u0442\u0441\u044F \u0437\u0434\u0435\u0441\u044C"),
+    React.createElement(button_1.default, { text: "Запланировать на каждый день" }))); };
 var Introduction = (function (_super) {
     __extends(Introduction, _super);
     function Introduction(props) {
-        return _super.call(this, props) || this;
+        var _this = _super.call(this, props) || this;
+        _this.state = {
+            isHide: true,
+        };
+        return _this;
     }
     Introduction.prototype.render = function () {
-        return (React.createElement("div", { className: "introduction" },
-            React.createElement("div", { className: "introduction__logo" }),
-            React.createElement("div", { className: "introduction__text" }, "\u0417\u0430\u043F\u043B\u0430\u043D\u0438\u0440\u0443\u0439\u0442\u0435 \u043E\u0431\u044F\u0437\u0430\u0442\u0435\u043B\u044C\u043D\u044B\u0435 \u0437\u0430\u0434\u0430\u0447\u0438 \u043D\u0430 \u043A\u0430\u0436\u0434\u044B\u0439 \u0434\u0435\u043D\u044C \u0438 \u043E\u043D\u0438 \u043E\u0442\u043E\u0431\u0440\u0430\u0437\u044F\u0442\u0441\u044F \u0437\u0434\u0435\u0441\u044C"),
-            React.createElement(button_1.default, { text: "Запланировать на каждый день" })));
+        var isHide = this.state["isHide"];
+        var block = null;
+        if (!isHide) {
+            return (block = React.createElement(exports.IntroductionBlock, null));
+        }
+        return (React.createElement("div", null, block));
     };
     return Introduction;
 }(React.Component));

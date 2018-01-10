@@ -51,13 +51,13 @@ export class Button extends React.Component<ButtonProps, ButtonState> {
             isLoaded: false
         };
 
-        this.setDisable = this.setDisable.bind(this);
+        // this.setDisable = this.setDisable.bind(this);
 
     }
 
-    setDisable(){
-        this.setState({isBlocked: !this.state.isBlocked});
-    }
+    // setDisable(){
+    //     this.setState({isBlocked: !this.state.isBlocked});
+    // }
 
     // setLoading(){
     //     this.setState({isBlocked: !this.state.isBlocked});
@@ -65,7 +65,8 @@ export class Button extends React.Component<ButtonProps, ButtonState> {
 
     render() {
         return (
-            <StyledButton {...this.props} disabled={this.props.disabled? this.props.disabled: this.state.isBlocked} isLoading={this.props.isLoading? this.props.isLoading: this.state.isLoaded} onClick={this.setDisable}>
+            <StyledButton {...this.props} disabled={this.props.disabled? this.props.disabled: this.state.isBlocked} isLoading={this.props.isLoading? this.props.isLoading: this.state.isLoaded}>
+            {/* onClick={this.setDisable} */}
                 {this.props.isLoading ? <div className={this.props.isLoading? "loader": ""}>Loading...</div>: this.props.text }
             </StyledButton>
         );
