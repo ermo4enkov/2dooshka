@@ -37,9 +37,11 @@
   "dependencies": {
     "@types/react": "^16.0.25",
     "@types/react-dom": "^16.0.3",
+    "file-loader": "^1.1.6",
     "material-ui": "^0.20.0",
     "react": "^16.1.1",
     "react-dom": "^16.1.1",
+    "resolve-url-loader": "^2.2.1",
     "source-sans-pro": "git://github.com/adobe-fonts/source-sans-pro.git#release",
     "styled-components": "^2.2.4"
   },
