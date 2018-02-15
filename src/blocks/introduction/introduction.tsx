@@ -1,6 +1,7 @@
 import * as React from "react";
 import Button from "../../components/button";
 import styled from "styled-components";
+import Item from '../../components/item';
 
 // import { db } from "../../constants/db";
 
@@ -38,8 +39,8 @@ export class Introduction extends React.Component<IntroductionProps,Introduction
     };
 
     componentWillMount() {
-        // localStorage.setItem('bgcolor', 'red');
-        localStorage.clear();
+        localStorage.setItem('bgcolor', 'red');
+        // localStorage.clear();
 
         if (this.checkTasks()) {
             this.setState({
@@ -57,6 +58,16 @@ export class Introduction extends React.Component<IntroductionProps,Introduction
         everyDayTasks = everyDayTasks.map(function (item, i) {
             console.log(item)
             console.log(i)
+            return(
+                <div>
+                    <ul className="storybook__list">
+                         <li className="storybook__item">
+                            <Item content={item} example newTask></Item>
+                        </li>
+                    </ul>
+                </div>
+            )
+            
         })
 
 
@@ -72,7 +83,7 @@ export class Introduction extends React.Component<IntroductionProps,Introduction
 
         return(
             <div>
-                {block}
+                {everyDayTasks}
             </div>
         );
     }

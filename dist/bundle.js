@@ -42484,6 +42484,7 @@ var __extends = (this && this.__extends) || (function () {
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(0);
 var button_1 = __webpack_require__(120);
+var item_1 = __webpack_require__(270);
 exports.IntroductionBlock = function (props) { return (React.createElement("div", { className: "introduction" },
     React.createElement("img", { className: "introduction__logo", src: "./empty.png" }),
     React.createElement("div", { className: "introduction__text" }, "\u0417\u0430\u043F\u043B\u0430\u043D\u0438\u0440\u0443\u0439\u0442\u0435 \u043E\u0431\u044F\u0437\u0430\u0442\u0435\u043B\u044C\u043D\u044B\u0435 \u0437\u0430\u0434\u0430\u0447\u0438 \u043D\u0430 \u043A\u0430\u0436\u0434\u044B\u0439 \u0434\u0435\u043D\u044C \u0438 \u043E\u043D\u0438 \u043E\u0442\u043E\u0431\u0440\u0430\u0437\u044F\u0442\u0441\u044F \u0437\u0434\u0435\u0441\u044C"),
@@ -42505,7 +42506,7 @@ var Introduction = (function (_super) {
     };
     ;
     Introduction.prototype.componentWillMount = function () {
-        localStorage.clear();
+        localStorage.setItem('bgcolor', 'red');
         if (this.checkTasks()) {
             this.setState({
                 isHide: true,
@@ -42520,13 +42521,17 @@ var Introduction = (function (_super) {
         everyDayTasks = everyDayTasks.map(function (item, i) {
             console.log(item);
             console.log(i);
+            return (React.createElement("div", null,
+                React.createElement("ul", { className: "storybook__list" },
+                    React.createElement("li", { className: "storybook__item" },
+                        React.createElement(item_1.default, { content: item, example: true, newTask: true })))));
         });
         var isHide = this.state["isHide"];
         var block = null;
         if (!isHide) {
             return (block = React.createElement(exports.IntroductionBlock, null));
         }
-        return (React.createElement("div", null, block));
+        return (React.createElement("div", null, everyDayTasks));
     };
     return Introduction;
 }(React.Component));
