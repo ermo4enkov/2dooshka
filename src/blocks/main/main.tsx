@@ -6,7 +6,7 @@ import todayView from "../../views/todayView";
 import storyBookView from "../../views/storyBookView";
 
 
-const Main = () => (
+const Main = (props) => (
   <main>
     <Switch>
       <Route exact path="/" component={todayView}/>

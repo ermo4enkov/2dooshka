@@ -9,6 +9,10 @@ interface IntroductionState {
     isHide?: boolean;
 }
 
+interface IntroductionProps {
+    data?: any;
+}
+
 export const IntroductionBlock: React.StatelessComponent = props => (
     <div className="introduction">
         <img className="introduction__logo" src="./empty.png" />
@@ -18,7 +22,7 @@ export const IntroductionBlock: React.StatelessComponent = props => (
 );
 
 
-export class Introduction extends React.Component<IntroductionState> {
+export class Introduction extends React.Component<IntroductionProps,IntroductionState> {
     constructor(props) {
         super(props);
         this.state = {
@@ -45,28 +49,17 @@ export class Introduction extends React.Component<IntroductionState> {
     };
 
     render() {
+        let data = this.props.data;
 
-        const data = {
-            "user": {
-               "name": "Roma"
-            },
-            "tasks": {
-                "everyday_Tasks": [
-                "30 pages",
-                "sport",
-                "hexlet",
-                "english"
-                ],
-                "today_Tasks": ["wash plates", "clean room"],
-            },
-            "grades": [
-               { "date": { "$date": 11122018 }, "tasks": 5, "score": 2 },
-               { "date": { "$date": 12122018 }, "tasks": 5, "score": 4 },
-               { "date": { "$date": 13122018 }, "tasks": 5, "score": 5 }
-            ]
-        };
+        let everyDayTasks = this.props.data.tasks.everyday_Tasks;
+        // console.log(everyDayTasks);
 
-        console.log(data.tasks.everyday_Tasks);
+        everyDayTasks = everyDayTasks.map(function (item, i) {
+            console.log(item)
+            console.log(i)
+        })
+
+
 
         const isHide: boolean = this.state["isHide"];
         let block = null;

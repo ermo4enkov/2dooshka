@@ -42338,7 +42338,7 @@ var react_router_dom_1 = __webpack_require__(34);
 var everyDayView_1 = __webpack_require__(253);
 var todayView_1 = __webpack_require__(255);
 var storyBookView_1 = __webpack_require__(265);
-var Main = function () { return (React.createElement("main", null,
+var Main = function (props) { return (React.createElement("main", null,
     React.createElement(react_router_dom_1.Switch, null,
         React.createElement(react_router_dom_1.Route, { exact: true, path: "/", component: todayView_1.default }),
         React.createElement(react_router_dom_1.Route, { path: "/everyday", component: everyDayView_1.default }),
@@ -42425,9 +42425,28 @@ var TodayView = (function (_super) {
         return _super.call(this, props) || this;
     }
     TodayView.prototype.render = function () {
+        var data = {
+            "user": {
+                "name": "Roma"
+            },
+            "tasks": {
+                "everyday_Tasks": [
+                    "30 pages",
+                    "sport",
+                    "hexlet",
+                    "english"
+                ],
+                "today_Tasks": ["wash plates", "clean room"],
+            },
+            "grades": [
+                { "date": { "$date": 11122018 }, "tasks": 5, "score": 2 },
+                { "date": { "$date": 12122018 }, "tasks": 5, "score": 4 },
+                { "date": { "$date": 13122018 }, "tasks": 5, "score": 5 }
+            ]
+        };
         return (React.createElement("div", { className: "conteiner" },
             React.createElement("h1", { className: "title" }, "\u0421\u0435\u0433\u043E\u0434\u043D\u044F"),
-            React.createElement(introduction_1.default, null)));
+            React.createElement(introduction_1.default, { data: data })));
     };
     return TodayView;
 }(React.Component));
@@ -42496,26 +42515,12 @@ var Introduction = (function (_super) {
     };
     ;
     Introduction.prototype.render = function () {
-        var data = {
-            "user": {
-                "name": "Roma"
-            },
-            "tasks": {
-                "everyday_Tasks": [
-                    "30 pages",
-                    "sport",
-                    "hexlet",
-                    "english"
-                ],
-                "today_Tasks": ["wash plates", "clean room"],
-            },
-            "grades": [
-                { "date": { "$date": 11122018 }, "tasks": 5, "score": 2 },
-                { "date": { "$date": 12122018 }, "tasks": 5, "score": 4 },
-                { "date": { "$date": 13122018 }, "tasks": 5, "score": 5 }
-            ]
-        };
-        console.log(data.tasks.everyday_Tasks);
+        var data = this.props.data;
+        var everyDayTasks = this.props.data.tasks.everyday_Tasks;
+        everyDayTasks = everyDayTasks.map(function (item, i) {
+            console.log(item);
+            console.log(i);
+        });
         var isHide = this.state["isHide"];
         var block = null;
         if (!isHide) {

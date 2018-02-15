@@ -13,7 +13,7 @@ export class App extends React.Component {
         return (
             <div>
                 <Header />
-                <Main />
+                <Main/>
             </div>
         );
     }
