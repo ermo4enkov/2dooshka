@@ -71,8 +71,7 @@ ul {
     display: block;
     margin: 0 auto;
     margin-bottom: 18px;
-    background: url(./dista201e920d8a2acd7441f54dfebc32c6f.png) no-repeat center;
-    background-size: contain; }
+    object-fit: contain; }
   .introduction__text {
     margin-bottom: 32px; }
 

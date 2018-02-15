@@ -8,7 +8,7 @@ interface IntroductionState {
 
 export const IntroductionBlock: React.StatelessComponent = props => (
     <div className="introduction">
-        <div className="introduction__logo"></div>
+        <img className="introduction__logo" src="./empty.png" />
         <div className="introduction__text">Запланируйте обязательные задачи на каждый день и они отобразятся здесь</div>
         <Button text="Запланировать на каждый день"></Button>
     </div>
