@@ -59,13 +59,9 @@ export class Introduction extends React.Component<IntroductionProps,Introduction
             console.log(item)
             console.log(i)
             return(
-                <div>
-                    <ul className="storybook__list">
-                         <li className="storybook__item">
-                            <Item content={item} example newTask></Item>
-                        </li>
-                    </ul>
-                </div>
+                <li className="storybook__item" key={i}>
+                    <Item content={item} example newTask></Item>
+                </li>
             )
             
         })
@@ -83,7 +79,9 @@ export class Introduction extends React.Component<IntroductionProps,Introduction
 
         return(
             <div>
-                {everyDayTasks}
+                <ul className="storybook__list" >
+                    {everyDayTasks}
+                </ul>
             </div>
         );
     }
