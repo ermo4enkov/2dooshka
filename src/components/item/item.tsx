@@ -38,14 +38,17 @@ export class Item extends React.Component<ItemProps, ItemState> {
     }
 
     switchChecked(){
-        this.setState({checked: true})
+        this.setState(prevState => ({
+            checked: !prevState.checked
+        }));
     }
 
     render() {
         const {content, newTask, redaction} = this.props;
+        let check = this.state.checked;
         return(
             <StyledItem {...this.props}>
-                <Checkbox label={content} onClick={this.switchChecked.bind(this)}/>
+                <Checkbox label={content} onCheck={this.switchChecked.bind(this)}/>
             </StyledItem>
         )
     }
