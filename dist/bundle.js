@@ -44851,7 +44851,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(0);
 var styled_components_1 = __webpack_require__(95);
 var Checkbox_1 = __webpack_require__(277);
-var StyledItem = styled_components_1.default.div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n    display: flex;\n    width: ", ";\n    border-radius: 3px;\n    padding: 8px 16px;\n    font-size: 16px;\n    align-items: center;\n    justify-content: space-between;\n    background-color: #ffffff;\n    border: solid 1px #516166;\n"], ["\n    display: flex;\n    width: ", ";\n    border-radius: 3px;\n    padding: 8px 16px;\n    font-size: 16px;\n    align-items: center;\n    justify-content: space-between;\n    background-color: #ffffff;\n    border: solid 1px #516166;\n"])), function (props) { return props.example ? "70%" : "100%"; });
+var StyledItem = styled_components_1.default.div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n    display: flex;\n    width: ", ";\n    border-radius: 3px;\n    padding: 8px 16px;\n    font-size: 16px;\n    align-items: center;\n    justify-content: space-between;\n    background-color: #ffffff;\n    border: solid 1px #516166;   \n"], ["\n    display: flex;\n    width: ", ";\n    border-radius: 3px;\n    padding: 8px 16px;\n    font-size: 16px;\n    align-items: center;\n    justify-content: space-between;\n    background-color: #ffffff;\n    border: solid 1px #516166;   \n"])), function (props) { return props.example ? "70%" : "100%"; });
 var Item = (function (_super) {
     __extends(Item, _super);
     function Item(ItemProps, ItemState) {
@@ -44869,7 +44869,7 @@ var Item = (function (_super) {
     Item.prototype.render = function () {
         var _a = this.props, content = _a.content, newTask = _a.newTask, redaction = _a.redaction;
         var check = this.state.checked;
-        return (React.createElement(StyledItem, __assign({}, this.props),
+        return (React.createElement(StyledItem, __assign({}, this.props, this.state),
             React.createElement(Checkbox_1.default, { label: content, onCheck: this.switchChecked.bind(this) })));
     };
     return Item;

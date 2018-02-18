@@ -26,7 +26,7 @@ const StyledItem = styled.div`
     align-items: center;
     justify-content: space-between;
     background-color: #ffffff;
-    border: solid 1px #516166;
+    border: solid 1px #516166;   
 `;
 
 export class Item extends React.Component<ItemProps, ItemState> {
@@ -46,8 +46,9 @@ export class Item extends React.Component<ItemProps, ItemState> {
     render() {
         const {content, newTask, redaction} = this.props;
         let check = this.state.checked;
+
         return(
-            <StyledItem {...this.props}>
+            <StyledItem {...this.props} {...this.state}>
                 <Checkbox label={content} onCheck={this.switchChecked.bind(this)}/>
             </StyledItem>
         )
