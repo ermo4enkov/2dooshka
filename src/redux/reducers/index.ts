@@ -1,7 +1,5 @@
 import {
-    CODE_RECIEVED_SUCCESS, CODE_RECIEVED_FAIL, FETCH_REQUEST, SET_USER,
-    CODE_VERIFY_SUCCESS, CODE_VERIFY_FAIL, USER_SIGN_UP_SUCCESS,
-    USER_SIGN_UP_FAIL, USER_SIGN_IN_SUCCESS, USER_SIGN_IN_FAIL
+    UPDATE_TASK_STATE
 } from "../../utils/constants/user";
 
 const initialState = {
@@ -23,6 +21,9 @@ const initialState = {
             "React",
             "2dooshka"
         ],
+        "completed_tasks": [
+            "wake up"
+        ],
         "today_tasks": ["wash plates", "clean room"],
         "grades": [
            { "date": { "$date": 11122018 }, "tasks": 5, "score": 2 },
@@ -35,66 +36,88 @@ const initialState = {
 
 export default function userState(state: any = initialState, action: any) {
     switch (action.type) {
-        case FETCH_REQUEST:
-            return state;
+        // case FETCH_REQUEST:
+        //     return state;
 
         // case SET_USER:
         //     return {...state, user_type: action.payload};
 
-        case CODE_RECIEVED_SUCCESS:
+        case UPDATE_TASK_STATE:
             return {...state,
                 error: "",
                 fetching: false,
                 user_type: "guest",
-                succesGetCode: true,
+                data_user: {
+                    "user": {
+                       "name": "Roma"
+                    },
+                    "everyday_tasks": [
+                        "30 pages",
+                        "sport",
+                        "english", 
+                        "js",
+                        "React",
+                        "2dooshka"
+                    ],
+                    "completed_tasks": [
+                        "wake up",
+                        "hexlet",
+                    ],
+                    "today_tasks": ["wash plates", "clean room"],
+                    "grades": [
+                       { "date": { "$date": 11122018 }, "tasks": 5, "score": 2 },
+                       { "date": { "$date": 12122018 }, "tasks": 5, "score": 4 },
+                       { "date": { "$date": 13122018 }, "tasks": 5, "score": 5 }
+                    ]
+                },
                 type_of_input: "code"
             };
 
-        case CODE_RECIEVED_FAIL:
-            return {...state,
-                error: "This phone is already used",
-                fetching: false,
-                user_type: "guest",
-                succesGetCode: false,
-            };
+        // case CODE_RECIEVED_FAIL:
+        //     return {...state,
+        //         error: "This phone is already used",
+        //         fetching: false,
+        //         user_type: "guest",
+        //         succesGetCode: false,
+        //     };
 
-        case CODE_VERIFY_SUCCESS:
-            return {...state,
-                error: "",
-                succesVerifyCode: true,
-                type_of_input: "userName"
-            };
+        // case CODE_VERIFY_SUCCESS:
+        //     return {...state,
+        //         error: "",
+        //         succesVerifyCode: true,
+        //         type_of_input: "userName"
+        //     };
 
-        case CODE_VERIFY_FAIL:
-            return {...state,
-                error: "This code do not exist",
-                succesVerifyCode: false,
-            };
+        // case CODE_VERIFY_FAIL:
+        //     return {...state,
+        //         error: "This code do not exist",
+        //         succesVerifyCode: false,
+        //     };
 
-        case USER_SIGN_UP_SUCCESS:
-            return {...state,
-                login: true,
-                user_type: "user",
-        };
+        // case USER_SIGN_UP_SUCCESS:
+        //     return {...state,
+        //         login: true,
+        //         user_type: "user",
+        // };
 
-        case USER_SIGN_UP_FAIL:
-            return {...state,
-                login: false,
-                user_type: "guest",
-        };
+        // case USER_SIGN_UP_FAIL:
+        //     return {...state,
+        //         login: false,
+        //         user_type: "guest",
+        // };
 
-        case USER_SIGN_IN_SUCCESS:
-            return {...state,
-                login: true,
-                user_type: "user",
-        };
+        // case USER_SIGN_IN_SUCCESS:
+        //     return {...state,
+        //         login: true,
+        //         user_type: "user",
+        // };
 
-        case USER_SIGN_IN_FAIL:
-            return {...state,
-                login: false,
-                user_type: "guest",
-                error: "Please check username or password"
-        };
+        // case USER_SIGN_IN_FAIL:
+        //     return {...state,
+        //         login: false,
+        //         user_type: "guest",
+        //         error: "Please check username or password"
+        // };
 
         // case LOGING_OUT:
         //     return Object.assign( {}, state, {

@@ -10,11 +10,13 @@ interface ItemProps  {
     newTask?: boolean;
     redaction?: boolean;
     everyDayTask?: boolean;
+    setTask?: any;
+    completedTask?: boolean;
 }
 
 interface ItemState  {
     status?: string;
-    checked: boolean;
+    checked: boolean;   
 }
 
 const StyledItem = styled.div`
@@ -26,7 +28,8 @@ const StyledItem = styled.div`
     align-items: center;
     justify-content: space-between;
     background-color: #ffffff;
-    border: solid 1px #516166;   
+    color: ${(props: ItemProps) => props.completedTask? "red": "#000"};   
+    border: ${(props: ItemProps) => props.completedTask? "solid 1px red": "solid 1px #516166"};    
 `;
 
 export class Item extends React.Component<ItemProps, ItemState> {
@@ -38,9 +41,7 @@ export class Item extends React.Component<ItemProps, ItemState> {
     }
 
     switchChecked(){
-        this.setState(prevState => ({
-            checked: !prevState.checked
-        }));
+        this.props.setTask();
     }
 
     render() {
