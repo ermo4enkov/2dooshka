@@ -14,7 +14,7 @@ const initialState = {
         "user": {
            "name": "Roma"
         },
-        "everyday_Tasks": [
+        "everyday_tasks": [
             "30 pages",
             "sport",
             "hexlet",
@@ -23,7 +23,7 @@ const initialState = {
             "React",
             "2dooshka"
         ],
-        "today_Tasks": ["wash plates", "clean room"],
+        "today_tasks": ["wash plates", "clean room"],
         "grades": [
            { "date": { "$date": 11122018 }, "tasks": 5, "score": 2 },
            { "date": { "$date": 12122018 }, "tasks": 5, "score": 4 },

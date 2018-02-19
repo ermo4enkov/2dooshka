@@ -14,10 +14,14 @@ export class App extends React.Component {
     }
 
     render() {
+        // const { error, login, user_type, fetching, data, data_user, succesVerifyCode, type_of_input } = this.props;
+
+        const data_user = this.props["data_user"]
+
         return (
             <div>
                 <Header />
-                <Main/>
+                <Main data_user={data_user}/>
             </div>
         );
     }
