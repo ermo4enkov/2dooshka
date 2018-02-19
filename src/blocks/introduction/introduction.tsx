@@ -11,7 +11,7 @@ interface IntroductionState {
 }
 
 interface IntroductionProps {
-    data?: any;
+    everyDay_tasks?: any;
 }
 
 export const IntroductionBlock: React.StatelessComponent = props => (
@@ -50,12 +50,11 @@ export class Introduction extends React.Component<IntroductionProps,Introduction
     };
 
     render() {
-        let data = this.props.data;
+        let everyDay_tasks = this.props.everyDay_tasks;
 
-        let everyDayTasks = this.props.data.tasks.everyday_Tasks;
-        // console.log(everyDayTasks);
+        console.log(everyDay_tasks);
 
-        everyDayTasks = everyDayTasks.map(function (item, i) {
+        everyDay_tasks = everyDay_tasks.map(function (item, i) {
             console.log(item)
             console.log(i)
             return(
@@ -80,7 +79,7 @@ export class Introduction extends React.Component<IntroductionProps,Introduction
         return(
             <div>
                 <ul className="storybook__list" >
-                    {everyDayTasks}
+                    {everyDay_tasks}
                 </ul>
             </div>
         );

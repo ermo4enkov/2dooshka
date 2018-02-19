@@ -6,7 +6,7 @@ export class EveryDayView extends React.Component {
     }
 
     render() {
-
+        
         return(
             <div> EveryDay </div>
         );

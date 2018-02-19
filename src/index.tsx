@@ -11,15 +11,23 @@ import TodayView from "./views/todayView/todayView";
 import App from "./blocks/app/app";
 
 import { Router, IndexRoute, browserHistory } from "react-router";
-
 import { BrowserRouter , Route } from "react-router-dom";
 
+import { createStore } from "redux";
+import { Provider } from "react-redux";
+import configureStore  from "./redux/store/store";
+
+
+const store = configureStore();
+
 ReactDOM.render(
-    <MuiThemeProvider>
-        <BrowserRouter>
-            <App />
-        </BrowserRouter>
-    </MuiThemeProvider>,
+    <Provider store={store}>
+        <MuiThemeProvider>
+            <BrowserRouter>
+                <App />
+            </BrowserRouter>
+        </MuiThemeProvider>
+    </Provider>,
     document.getElementById("root")
 );
 
