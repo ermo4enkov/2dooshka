@@ -64,8 +64,7 @@ export class Introduction extends React.Component<IntroductionProps,Introduction
                 <li className="storybook__item" key={i}>
                     <Item content={item} newTask setTask={setTask}></Item>
                 </li>
-            )
-            
+            );
         });
 
         completed_tasks =completed_tasks.map(function(item, i) {
