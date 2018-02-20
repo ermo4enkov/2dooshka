@@ -1,14 +1,10 @@
 import * as React from "react";
 import { withRouter } from "react-router";
-
 import { connect } from 'react-redux'
 import { bindActionCreators } from "redux";
-
-
 import styled from "styled-components";
 import  Header  from "../header/header";
 import  Main  from "../main/main";
-
 import * as setTask from "../../redux/actions/setTask";
 
 export class App extends React.Component {

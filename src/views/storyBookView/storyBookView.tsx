@@ -3,6 +3,7 @@ import { Button } from "../../components/button/button";
 import { ColorsPallet } from "../../blocks/colorspallet/colorspallete";
 import { ButtonsCollection } from "../../blocks/buttonscollection/buttonscollection";
 import { ItemsCollection } from "../../blocks/listitemscollection/itemscollection";
+import { Calendar } from "../../blocks/calendar/calendar";
 
 
 export class StoryBook extends React.Component {
@@ -21,6 +22,7 @@ export class StoryBook extends React.Component {
                 </div>
                 <ButtonsCollection/>
                 <ItemsCollection />
+                <Calendar />
             </div>
         )
     }

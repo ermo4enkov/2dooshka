@@ -29,6 +29,7 @@ const StyledItem = styled.div`
     color: ${(props: ItemProps) => props.completedTask? "#d0d8dc": "#000"};   
     border: solid 1px;
     border-color: ${(props: ItemProps) => props.completedTask? "#a9f6d0": "#516166"};
+    box-shadow: 1px 1px 1px #000;
 `;
 
 const checkbox_style = {
