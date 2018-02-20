@@ -27,10 +27,16 @@ const StyledItem = styled.div`
     font-size: 16px;
     align-items: center;
     justify-content: space-between;
-    background-color: #ffffff;
-    color: ${(props: ItemProps) => props.completedTask? "red": "#000"};   
-    border: ${(props: ItemProps) => props.completedTask? "solid 1px red": "solid 1px #516166"};    
+    background-color: ${(props: ItemProps) => props.completedTask? "#f2fef8": "#ffffff"};
+    color: ${(props: ItemProps) => props.completedTask? "#a9f6d0": "#000"};   
+    border: solid 1px;
+    border-color: ${(props: ItemProps) => props.completedTask? "#a9f6d0": "#516166"};
 `;
+
+const checkbox_style = {
+    fontFamily: "Source Sans Pro",
+    fontSize: 18,
+}
 
 export class Item extends React.Component<ItemProps, ItemState> {
     constructor(ItemProps, ItemState) {
@@ -50,7 +56,7 @@ export class Item extends React.Component<ItemProps, ItemState> {
 
         return(
             <StyledItem {...this.props} {...this.state}>
-                <Checkbox label={content} onCheck={this.switchChecked.bind(this)}/>
+                <Checkbox labelStyle={checkbox_style} label={content} onCheck={this.switchChecked.bind(this)}/>
             </StyledItem>
         )
     }

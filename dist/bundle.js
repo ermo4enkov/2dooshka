@@ -47030,7 +47030,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(0);
 var styled_components_1 = __webpack_require__(98);
 var Checkbox_1 = __webpack_require__(314);
-var StyledItem = styled_components_1.default.div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n    display: flex;\n    width: ", ";\n    border-radius: 3px;\n    padding: 8px 16px;\n    font-size: 16px;\n    align-items: center;\n    justify-content: space-between;\n    background-color: #ffffff;\n    color: ", ";   \n    border: ", ";    \n"], ["\n    display: flex;\n    width: ", ";\n    border-radius: 3px;\n    padding: 8px 16px;\n    font-size: 16px;\n    align-items: center;\n    justify-content: space-between;\n    background-color: #ffffff;\n    color: ", ";   \n    border: ", ";    \n"])), function (props) { return props.example ? "70%" : "100%"; }, function (props) { return props.completedTask ? "red" : "#000"; }, function (props) { return props.completedTask ? "solid 1px red" : "solid 1px #516166"; });
+var StyledItem = styled_components_1.default.div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n    display: flex;\n    width: ", ";\n    border-radius: 3px;\n    padding: 8px 16px;\n    font-size: 16px;\n    align-items: center;\n    justify-content: space-between;\n    background-color: ", ";\n    color: ", ";   \n    border: solid 1px;\n    border-color: ", ";\n"], ["\n    display: flex;\n    width: ", ";\n    border-radius: 3px;\n    padding: 8px 16px;\n    font-size: 16px;\n    align-items: center;\n    justify-content: space-between;\n    background-color: ", ";\n    color: ", ";   \n    border: solid 1px;\n    border-color: ", ";\n"])), function (props) { return props.example ? "70%" : "100%"; }, function (props) { return props.completedTask ? "#f2fef8" : "#ffffff"; }, function (props) { return props.completedTask ? "#a9f6d0" : "#000"; }, function (props) { return props.completedTask ? "#a9f6d0" : "#516166"; });
+var checkbox_style = {
+    fontFamily: "Source Sans Pro",
+    fontSize: 18,
+};
 var Item = (function (_super) {
     __extends(Item, _super);
     function Item(ItemProps, ItemState) {
@@ -47047,7 +47051,7 @@ var Item = (function (_super) {
         var _a = this.props, content = _a.content, newTask = _a.newTask, redaction = _a.redaction;
         var check = this.state.checked;
         return (React.createElement(StyledItem, __assign({}, this.props, this.state),
-            React.createElement(Checkbox_1.default, { label: content, onCheck: this.switchChecked.bind(this) })));
+            React.createElement(Checkbox_1.default, { labelStyle: checkbox_style, label: content, onCheck: this.switchChecked.bind(this) })));
     };
     return Item;
 }(React.Component));

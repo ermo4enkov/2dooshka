@@ -1,3 +1,6 @@
+html {
+  font-family: 'Source Sans Pro'; }
+
 body {
   font-family: 'Source Sans Pro';
   font-size: 16px;
@@ -5,6 +8,9 @@ body {
   margin: 0;
   box-sizing: border-box;
   color: #283238; }
+
+input, label {
+  font-family: 'Source Sans Pro'; }
 
 ul {
   list-style: none;
