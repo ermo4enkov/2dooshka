@@ -12,6 +12,7 @@ interface ItemProps  {
     everyDayTask?: boolean;
     setTask?: any;
     completedTask?: boolean;
+    index?: number; 
 }
 
 interface ItemState  {
@@ -28,7 +29,7 @@ const StyledItem = styled.div`
     align-items: center;
     justify-content: space-between;
     background-color: ${(props: ItemProps) => props.completedTask? "#f2fef8": "#ffffff"};
-    color: ${(props: ItemProps) => props.completedTask? "#a9f6d0": "#000"};   
+    color: ${(props: ItemProps) => props.completedTask? "#d0d8dc": "#000"};   
     border: solid 1px;
     border-color: ${(props: ItemProps) => props.completedTask? "#a9f6d0": "#516166"};
 `;
@@ -46,8 +47,8 @@ export class Item extends React.Component<ItemProps, ItemState> {
         }
     }
 
-    switchChecked(){
-        this.props.setTask();
+    switchChecked(event){
+        this.props.setTask(event);
     }
 
     render() {
@@ -56,7 +57,7 @@ export class Item extends React.Component<ItemProps, ItemState> {
 
         return(
             <StyledItem {...this.props} {...this.state}>
-                <Checkbox labelStyle={checkbox_style} label={content} onCheck={this.switchChecked.bind(this)}/>
+                <Checkbox labelStyle={checkbox_style} label={content} onCheck={this.switchChecked.bind(this)} name={this.props.content} value={this.props.index}/>
             </StyledItem>
         )
     }

@@ -45133,7 +45133,7 @@ var Introduction = (function (_super) {
         var setTask = this.props["setTask"];
         everyDay_tasks = everyDay_tasks.map(function (item, i) {
             return (React.createElement("li", { className: "storybook__item", key: i },
-                React.createElement(item_1.default, { content: item, newTask: true, setTask: setTask })));
+                React.createElement(item_1.default, { content: item, newTask: true, setTask: setTask, index: i })));
         });
         completed_tasks = completed_tasks.map(function (item, i) {
             return (React.createElement("li", { className: "storybook__item", key: i },
@@ -45145,10 +45145,9 @@ var Introduction = (function (_super) {
             return (block = React.createElement(exports.IntroductionBlock, null));
         }
         return (React.createElement("div", null,
-            React.createElement("div", null,
-                React.createElement("ul", { className: "storybook__list" }, everyDay_tasks)),
-            React.createElement("div", null,
-                React.createElement("ul", { className: "storybook__list" }, completed_tasks))));
+            React.createElement("ul", { className: "storybook__list" }, everyDay_tasks),
+            React.createElement("div", null, "\u0412\u044B\u043F\u043E\u043B\u043D\u0435\u043D\u043D\u044B\u0435"),
+            React.createElement("ul", { className: "storybook__list" }, completed_tasks)));
     };
     return Introduction;
 }(React.Component));
@@ -47030,7 +47029,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(0);
 var styled_components_1 = __webpack_require__(98);
 var Checkbox_1 = __webpack_require__(314);
-var StyledItem = styled_components_1.default.div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n    display: flex;\n    width: ", ";\n    border-radius: 3px;\n    padding: 8px 16px;\n    font-size: 16px;\n    align-items: center;\n    justify-content: space-between;\n    background-color: ", ";\n    color: ", ";   \n    border: solid 1px;\n    border-color: ", ";\n"], ["\n    display: flex;\n    width: ", ";\n    border-radius: 3px;\n    padding: 8px 16px;\n    font-size: 16px;\n    align-items: center;\n    justify-content: space-between;\n    background-color: ", ";\n    color: ", ";   \n    border: solid 1px;\n    border-color: ", ";\n"])), function (props) { return props.example ? "70%" : "100%"; }, function (props) { return props.completedTask ? "#f2fef8" : "#ffffff"; }, function (props) { return props.completedTask ? "#a9f6d0" : "#000"; }, function (props) { return props.completedTask ? "#a9f6d0" : "#516166"; });
+var StyledItem = styled_components_1.default.div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n    display: flex;\n    width: ", ";\n    border-radius: 3px;\n    padding: 8px 16px;\n    font-size: 16px;\n    align-items: center;\n    justify-content: space-between;\n    background-color: ", ";\n    color: ", ";   \n    border: solid 1px;\n    border-color: ", ";\n"], ["\n    display: flex;\n    width: ", ";\n    border-radius: 3px;\n    padding: 8px 16px;\n    font-size: 16px;\n    align-items: center;\n    justify-content: space-between;\n    background-color: ", ";\n    color: ", ";   \n    border: solid 1px;\n    border-color: ", ";\n"])), function (props) { return props.example ? "70%" : "100%"; }, function (props) { return props.completedTask ? "#f2fef8" : "#ffffff"; }, function (props) { return props.completedTask ? "#d0d8dc" : "#000"; }, function (props) { return props.completedTask ? "#a9f6d0" : "#516166"; });
 var checkbox_style = {
     fontFamily: "Source Sans Pro",
     fontSize: 18,
@@ -47044,14 +47043,14 @@ var Item = (function (_super) {
         };
         return _this;
     }
-    Item.prototype.switchChecked = function () {
-        this.props.setTask();
+    Item.prototype.switchChecked = function (event) {
+        this.props.setTask(event);
     };
     Item.prototype.render = function () {
         var _a = this.props, content = _a.content, newTask = _a.newTask, redaction = _a.redaction;
         var check = this.state.checked;
         return (React.createElement(StyledItem, __assign({}, this.props, this.state),
-            React.createElement(Checkbox_1.default, { labelStyle: checkbox_style, label: content, onCheck: this.switchChecked.bind(this) })));
+            React.createElement(Checkbox_1.default, { labelStyle: checkbox_style, label: content, onCheck: this.switchChecked.bind(this), name: this.props.content, value: this.props.index })));
     };
     return Item;
 }(React.Component));
@@ -50326,7 +50325,11 @@ exports.default = ItemsCollection;
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var user_1 = __webpack_require__(151);
-function setTask() {
+var db_1 = __webpack_require__(356);
+function setTask(event) {
+    db_1.DB.completed_tasks.push(event.target.name);
+    delete db_1.DB.everyday_tasks[event.target.value];
+    console.log(db_1.DB);
     return function (dispatch) {
         return dispatch(userTypeisGuest());
     };
@@ -50376,64 +50379,21 @@ var __assign = (this && this.__assign) || Object.assign || function(t) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var user_1 = __webpack_require__(151);
+var db_1 = __webpack_require__(356);
 var initialState = {
     error: "",
     login: false,
     user_type: "guest",
     fetching: false,
     data: "",
-    data_user: {
-        "user": {
-            "name": "Roma"
-        },
-        "everyday_tasks": [
-            "30 pages",
-            "sport",
-            "hexlet",
-            "english",
-            "js",
-            "React",
-            "2dooshka"
-        ],
-        "completed_tasks": [
-            "wake up"
-        ],
-        "today_tasks": ["wash plates", "clean room"],
-        "grades": [
-            { "date": { "$date": 11122018 }, "tasks": 5, "score": 2 },
-            { "date": { "$date": 12122018 }, "tasks": 5, "score": 4 },
-            { "date": { "$date": 13122018 }, "tasks": 5, "score": 5 }
-        ]
-    },
+    data_user: db_1.DB,
     succesVerifyCode: false,
 };
 function userState(state, action) {
     if (state === void 0) { state = initialState; }
     switch (action.type) {
         case user_1.UPDATE_TASK_STATE:
-            return __assign({}, state, { error: "", fetching: false, user_type: "guest", data_user: {
-                    "user": {
-                        "name": "Roma"
-                    },
-                    "everyday_tasks": [
-                        "30 pages",
-                        "sport",
-                        "english",
-                        "js",
-                        "React",
-                        "2dooshka"
-                    ],
-                    "completed_tasks": [
-                        "wake up",
-                        "hexlet",
-                    ],
-                    "today_tasks": ["wash plates", "clean room"],
-                    "grades": [
-                        { "date": { "$date": 11122018 }, "tasks": 5, "score": 2 },
-                        { "date": { "$date": 12122018 }, "tasks": 5, "score": 4 },
-                        { "date": { "$date": 13122018 }, "tasks": 5, "score": 5 }
-                    ]
-                }, type_of_input: "code" });
+            return __assign({}, state, { error: "", fetching: false, user_type: "guest", data_user: db_1.DB, type_of_input: "code" });
         default:
             return state;
     }
@@ -50477,6 +50437,44 @@ var thunk = createThunkMiddleware();
 thunk.withExtraArgument = createThunkMiddleware;
 
 exports['default'] = thunk;
+
+/***/ }),
+/* 351 */,
+/* 352 */,
+/* 353 */,
+/* 354 */,
+/* 355 */,
+/* 356 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DB = {
+    "user": {
+        "name": "Roma"
+    },
+    "everyday_tasks": [
+        "30 pages",
+        "sport",
+        "hexlet",
+        "english",
+        "js",
+        "React",
+        "2dooshka"
+    ],
+    "completed_tasks": [
+        "wake up"
+    ],
+    "today_tasks": ["wash plates", "clean room"],
+    "grades": [
+        { "date": { "$date": 11122018 }, "tasks": 5, "score": 2 },
+        { "date": { "$date": 12122018 }, "tasks": 5, "score": 4 },
+        { "date": { "$date": 13122018 }, "tasks": 5, "score": 5 }
+    ]
+};
+exports.default = exports.DB;
+
 
 /***/ })
 /******/ ]);

@@ -62,13 +62,13 @@ export class Introduction extends React.Component<IntroductionProps,Introduction
 
             return(
                 <li className="storybook__item" key={i}>
-                    <Item content={item} newTask setTask={setTask}></Item>
+                    <Item content={item} newTask setTask={setTask} index={i}></Item>
                 </li>
             )
             
         });
 
-        completed_tasks =completed_tasks.map(function(item, i) {
+        completed_tasks = completed_tasks.map(function(item, i) {
             return(
                 <li className="storybook__item" key={i}>
                     <Item content={item} completedTask></Item>
@@ -89,16 +89,16 @@ export class Introduction extends React.Component<IntroductionProps,Introduction
 
         return(
             <div>
-            <div>
                 <ul className="storybook__list" >
                     {everyDay_tasks}
                 </ul>
-            </div>
-            <div>
+                
+                <div>Выполненные</div>
+                
                 <ul className="storybook__list" >
                     {completed_tasks}
                 </ul>
-            </div>
+
             </div>
         );
     }

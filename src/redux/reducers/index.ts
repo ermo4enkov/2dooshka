@@ -1,6 +1,5 @@
-import {
-    UPDATE_TASK_STATE
-} from "../../utils/constants/user";
+import { UPDATE_TASK_STATE } from "../../utils/constants/user";
+import { DB } from "../../utils/constants/db";
 
 const initialState = {
     error: "",
@@ -8,29 +7,7 @@ const initialState = {
     user_type: "guest",
     fetching: false,
     data: "",
-    data_user: {
-        "user": {
-           "name": "Roma"
-        },
-        "everyday_tasks": [
-            "30 pages",
-            "sport",
-            "hexlet",
-            "english", 
-            "js",
-            "React",
-            "2dooshka"
-        ],
-        "completed_tasks": [
-            "wake up"
-        ],
-        "today_tasks": ["wash plates", "clean room"],
-        "grades": [
-           { "date": { "$date": 11122018 }, "tasks": 5, "score": 2 },
-           { "date": { "$date": 12122018 }, "tasks": 5, "score": 4 },
-           { "date": { "$date": 13122018 }, "tasks": 5, "score": 5 }
-        ]
-    },
+    data_user: DB,
     succesVerifyCode: false,
 };
 
@@ -47,29 +24,7 @@ export default function userState(state: any = initialState, action: any) {
                 error: "",
                 fetching: false,
                 user_type: "guest",
-                data_user: {
-                    "user": {
-                       "name": "Roma"
-                    },
-                    "everyday_tasks": [
-                        "30 pages",
-                        "sport",
-                        "english", 
-                        "js",
-                        "React",
-                        "2dooshka"
-                    ],
-                    "completed_tasks": [
-                        "wake up",
-                        "hexlet",
-                    ],
-                    "today_tasks": ["wash plates", "clean room"],
-                    "grades": [
-                       { "date": { "$date": 11122018 }, "tasks": 5, "score": 2 },
-                       { "date": { "$date": 12122018 }, "tasks": 5, "score": 4 },
-                       { "date": { "$date": 13122018 }, "tasks": 5, "score": 5 }
-                    ]
-                },
+                data_user: DB,
                 type_of_input: "code"
             };
 
