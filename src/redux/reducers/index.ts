@@ -24,7 +24,7 @@ export default function userState(state: any = initialState, action: any) {
                 error: "",
                 fetching: false,
                 user_type: "guest",
-                data_user: DB,
+                data_user: {...DB},
                 type_of_input: "code"
             };
 
