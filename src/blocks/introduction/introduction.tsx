@@ -3,8 +3,6 @@ import Button from "../../components/button";
 import styled from "styled-components";
 import Item from '../../components/item';
 
-// import { db } from "../../constants/db";
-
 
 interface IntroductionState {
     isHide?: boolean;
@@ -52,16 +50,15 @@ export class Introduction extends React.Component<IntroductionProps,Introduction
     };
 
     render() {
+        const setTask = this.props["setTask"];
+        const isHide: boolean = this.state["isHide"];
+
         let everyDay_tasks = this.props.everyDay_tasks;
         let completed_tasks = this.props.completed_tasks;
 
-
-        const setTask = this.props["setTask"];
-
         everyDay_tasks = everyDay_tasks.map(function (item, i) {
-
             return(
-                <li className="storybook__item" key={i}>
+                <li className="tasks-list__item" key={i}>
                     <Item content={item} newTask setTask={setTask} index={i}></Item>
                 </li>
             );
@@ -69,15 +66,12 @@ export class Introduction extends React.Component<IntroductionProps,Introduction
 
         completed_tasks = completed_tasks.map(function(item, i) {
             return(
-                <li className="storybook__item" key={i}>
+                <li className="tasks-list__item" key={i}>
                     <Item content={item} completedTask></Item>
                 </li>
             )
-        })
+        });
 
-
-
-        const isHide: boolean = this.state["isHide"];
         let block = null;
 
         if (!isHide) {
@@ -88,13 +82,13 @@ export class Introduction extends React.Component<IntroductionProps,Introduction
 
         return(
             <div>
-                <ul className="storybook__list" >
+                <ul className="tasks-list">
                     {everyDay_tasks}
                 </ul>
                 
-                <div>Выполненные</div>
+                <h2 className="subtitile">Выполненные</h2>
                 
-                <ul className="storybook__list" >
+                <ul className="tasks-list">
                     {completed_tasks}
                 </ul>
 

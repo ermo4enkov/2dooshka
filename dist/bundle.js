@@ -40624,6 +40624,7 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(0);
+var react_router_1 = __webpack_require__(357);
 var react_redux_1 = __webpack_require__(127);
 var redux_1 = __webpack_require__(90);
 var header_1 = __webpack_require__(271);
@@ -40664,7 +40665,7 @@ function mapDispatchProps(dispatch) {
         setTask: redux_1.bindActionCreators(setTask, dispatch)
     };
 }
-exports.default = react_redux_1.connect(mapStateToProps, mapDispatchProps)(App);
+exports.default = react_router_1.withRouter(react_redux_1.connect(mapStateToProps, mapDispatchProps)(App));
 
 
 /***/ }),
@@ -45000,7 +45001,7 @@ var Main = function (props) { return (React.createElement("main", null,
         React.createElement(react_router_dom_1.Route, { exact: true, path: "/", render: function (routeProps) {
                 return React.createElement(todayView_1.default, __assign({ routeProps: routeProps }, props));
             } }),
-        React.createElement(react_router_dom_1.Route, { path: "/everyday", render: function (routeProps) {
+        React.createElement(react_router_dom_1.Route, { exact: true, path: "/everyday", render: function (routeProps) {
                 return React.createElement(everyDayView_1.default, __assign({ routeProps: routeProps }, props));
             } }),
         React.createElement(react_router_dom_1.Route, { path: "/storybook", component: storyBookView_1.default })))); };
@@ -45161,26 +45162,26 @@ var Introduction = (function (_super) {
     };
     ;
     Introduction.prototype.render = function () {
+        var setTask = this.props["setTask"];
+        var isHide = this.state["isHide"];
         var everyDay_tasks = this.props.everyDay_tasks;
         var completed_tasks = this.props.completed_tasks;
-        var setTask = this.props["setTask"];
         everyDay_tasks = everyDay_tasks.map(function (item, i) {
-            return (React.createElement("li", { className: "storybook__item", key: i },
+            return (React.createElement("li", { className: "tasks-list__item", key: i },
                 React.createElement(item_1.default, { content: item, newTask: true, setTask: setTask, index: i })));
         });
         completed_tasks = completed_tasks.map(function (item, i) {
-            return (React.createElement("li", { className: "storybook__item", key: i },
+            return (React.createElement("li", { className: "tasks-list__item", key: i },
                 React.createElement(item_1.default, { content: item, completedTask: true })));
         });
-        var isHide = this.state["isHide"];
         var block = null;
         if (!isHide) {
             return (block = React.createElement(exports.IntroductionBlock, null));
         }
         return (React.createElement("div", null,
-            React.createElement("ul", { className: "storybook__list" }, everyDay_tasks),
-            React.createElement("div", null, "\u0412\u044B\u043F\u043E\u043B\u043D\u0435\u043D\u043D\u044B\u0435"),
-            React.createElement("ul", { className: "storybook__list" }, completed_tasks)));
+            React.createElement("ul", { className: "tasks-list" }, everyDay_tasks),
+            React.createElement("h2", { className: "subtitile" }, "\u0412\u044B\u043F\u043E\u043B\u043D\u0435\u043D\u043D\u044B\u0435"),
+            React.createElement("ul", { className: "tasks-list" }, completed_tasks)));
     };
     return Introduction;
 }(React.Component));
@@ -47062,10 +47063,10 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(0);
 var styled_components_1 = __webpack_require__(98);
 var Checkbox_1 = __webpack_require__(315);
-var StyledItem = styled_components_1.default.div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n    display: flex;\n    width: ", ";\n    border-radius: 3px;\n    padding: 8px 16px;\n    font-size: 16px;\n    align-items: center;\n    justify-content: space-between;\n    background-color: ", ";\n    color: ", ";   \n    border: solid 1px;\n    border-color: ", ";\n"], ["\n    display: flex;\n    width: ", ";\n    border-radius: 3px;\n    padding: 8px 16px;\n    font-size: 16px;\n    align-items: center;\n    justify-content: space-between;\n    background-color: ", ";\n    color: ", ";   \n    border: solid 1px;\n    border-color: ", ";\n"])), function (props) { return props.example ? "70%" : "100%"; }, function (props) { return props.completedTask ? "#f2fef8" : "#ffffff"; }, function (props) { return props.completedTask ? "#d0d8dc" : "#000"; }, function (props) { return props.completedTask ? "#a9f6d0" : "#516166"; });
+var StyledItem = styled_components_1.default.div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n    width: ", ";\n    border-radius: 3px;\n    padding: 18px 16px;\n    font-size: 16px;\n    background-color: ", ";\n    color: ", ";   \n    border: solid 1px;\n    border-color: ", ";\n"], ["\n    width: ", ";\n    border-radius: 3px;\n    padding: 18px 16px;\n    font-size: 16px;\n    background-color: ", ";\n    color: ", ";   \n    border: solid 1px;\n    border-color: ", ";\n"])), function (props) { return props.example ? "70%" : "100%"; }, function (props) { return props.completedTask ? "#f2fef8" : "#ffffff"; }, function (props) { return props.completedTask ? "#d0d8dc" : "#000"; }, function (props) { return props.completedTask ? "#a9f6d0" : "#516166"; });
 var checkbox_style = {
     fontFamily: "Source Sans Pro",
-    fontSize: 18,
+    fontSize: 16,
 };
 var Item = (function (_super) {
     __extends(Item, _super);
@@ -50470,6 +50471,54 @@ var thunk = createThunkMiddleware();
 thunk.withExtraArgument = createThunkMiddleware;
 
 exports['default'] = thunk;
+
+/***/ }),
+/* 352 */,
+/* 353 */,
+/* 354 */,
+/* 355 */,
+/* 356 */,
+/* 357 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__MemoryRouter__ = __webpack_require__(279);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "MemoryRouter", function() { return __WEBPACK_IMPORTED_MODULE_0__MemoryRouter__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Prompt__ = __webpack_require__(285);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Prompt", function() { return __WEBPACK_IMPORTED_MODULE_1__Prompt__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Redirect__ = __webpack_require__(287);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Redirect", function() { return __WEBPACK_IMPORTED_MODULE_2__Redirect__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Route__ = __webpack_require__(141);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Route", function() { return __WEBPACK_IMPORTED_MODULE_3__Route__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Router__ = __webpack_require__(95);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Router", function() { return __WEBPACK_IMPORTED_MODULE_4__Router__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__StaticRouter__ = __webpack_require__(293);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "StaticRouter", function() { return __WEBPACK_IMPORTED_MODULE_5__StaticRouter__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Switch__ = __webpack_require__(295);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Switch", function() { return __WEBPACK_IMPORTED_MODULE_6__Switch__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__matchPath__ = __webpack_require__(96);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "matchPath", function() { return __WEBPACK_IMPORTED_MODULE_7__matchPath__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__withRouter__ = __webpack_require__(298);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "withRouter", function() { return __WEBPACK_IMPORTED_MODULE_8__withRouter__["a"]; });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /***/ })
 /******/ ]);

@@ -12,7 +12,7 @@ const Main = (props) => (
       <Route exact path="/" render={ (routeProps) => 
         <TodayView routeProps={routeProps} {...props}/>
       }/>
-      <Route path="/everyday" render={ (routeProps) => 
+      <Route exact path="/everyday" render={ (routeProps) => 
         <EveryDayView routeProps={routeProps} {...props}/>
       }/>
 

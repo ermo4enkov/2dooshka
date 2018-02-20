@@ -1,5 +1,5 @@
 import * as React from "react";
-// import { Router, Route, IndexRoute, browserHistory } from "react-router";
+import { withRouter } from "react-router";
 
 import { connect } from 'react-redux'
 import { bindActionCreators } from "redux";
@@ -17,8 +17,6 @@ export class App extends React.Component {
     }
 
     render() {
-        // const { error, login, user_type, fetching, data, data_user, succesVerifyCode, type_of_input } = this.props;
-
         const data_user = this.props["data_user"];
         
         const { setTask } = this.props["setTask"];
@@ -54,4 +52,4 @@ function mapDispatchProps(dispatch: any) {
 }
 
 
-export default connect(mapStateToProps, mapDispatchProps)(App);
+export default withRouter(connect(mapStateToProps, mapDispatchProps)(App));

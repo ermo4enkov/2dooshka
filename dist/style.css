@@ -38,6 +38,9 @@ ul {
 .hint {
   font-size: 10px; }
 
+.tasks-list__item {
+  margin-bottom: 8px; }
+
 .storybook {
   padding-left: 132px; }
   .storybook__element {

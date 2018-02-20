@@ -21,13 +21,10 @@ interface ItemState  {
 }
 
 const StyledItem = styled.div`
-    display: flex;
     width: ${(props: ItemProps) => props.example? "70%": "100%"};
     border-radius: 3px;
-    padding: 8px 16px;
+    padding: 18px 16px;
     font-size: 16px;
-    align-items: center;
-    justify-content: space-between;
     background-color: ${(props: ItemProps) => props.completedTask? "#f2fef8": "#ffffff"};
     color: ${(props: ItemProps) => props.completedTask? "#d0d8dc": "#000"};   
     border: solid 1px;
@@ -36,7 +33,7 @@ const StyledItem = styled.div`
 
 const checkbox_style = {
     fontFamily: "Source Sans Pro",
-    fontSize: 18,
+    fontSize: 16,
 }
 
 export class Item extends React.Component<ItemProps, ItemState> {
