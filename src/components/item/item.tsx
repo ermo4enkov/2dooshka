@@ -26,16 +26,20 @@ const StyledItem = styled.div`
     padding: 18px 16px;
     font-size: 16px;
     background-color: ${(props: ItemProps) => props.completedTask? "#f2fef8": "#ffffff"};
-    color: ${(props: ItemProps) => props.completedTask? "#d0d8dc": "#000"};   
+    color: ${(props: ItemProps) => props.completedTask? "#a9f6d0": "#000"};   
     border: solid 1px;
     border-color: ${(props: ItemProps) => props.completedTask? "#a9f6d0": "#516166"};
-    box-shadow: 1px 1px 1px #000;
 `;
 
 const checkbox_style = {
     fontFamily: "Source Sans Pro",
     fontSize: 16,
 }
+
+const checkbox_style_dis = {
+    textDecoration: "line-through",
+}
+
 
 export class Item extends React.Component<ItemProps, ItemState> {
     constructor(ItemProps, ItemState) {
@@ -54,7 +58,7 @@ export class Item extends React.Component<ItemProps, ItemState> {
         let check = this.state.checked;
         return(
             <StyledItem {...this.props} {...this.state}>
-                <Checkbox disabled={this.props.completedTask? true: false} checked={this.props.completedTask? true: false} labelStyle={checkbox_style} label={content} onCheck={this.switchChecked.bind(this)} name={this.props.content} value={this.props.index}/>
+                <Checkbox disabled={this.props.completedTask? true: false} checked={this.props.completedTask? true: false} labelStyle={this.props.completedTask? checkbox_style_dis: checkbox_style} label={content} onCheck={this.switchChecked.bind(this)} name={this.props.content} value={this.props.index}/>
             </StyledItem>
         )
     }

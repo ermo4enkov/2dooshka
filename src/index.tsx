@@ -30,10 +30,3 @@ ReactDOM.render(
     </Provider>,
     document.getElementById("root")
 );
-
-
-{/* <div>
-                <Route exact path="/" component={Main} />
-                <Route path="everyday" component={EveryDayView} />
-                <Route path="today" component={TodayView} />
-            </div> */}

@@ -17510,8 +17510,6 @@ ReactDOM.render(React.createElement(react_redux_1.Provider, { store: store },
     React.createElement(MuiThemeProvider_1.default, null,
         React.createElement(react_router_dom_1.BrowserRouter, null,
             React.createElement(app_1.default, null)))), document.getElementById("root"));
-{
-}
 
 
 /***/ }),
@@ -44051,9 +44049,9 @@ var Header = (function (_super) {
     Header.prototype.render = function () {
         return (React.createElement("div", { className: "header" },
             React.createElement(logo_1.default, null),
-            React.createElement(react_router_dom_1.Link, { to: "/" }, "\u0421\u0435\u0433\u043E\u0434\u043D\u044F"),
-            React.createElement(react_router_dom_1.Link, { to: "/everyday" }, "\u041A\u0430\u0436\u0434\u044B\u0439 \u0434\u0435\u043D\u044C"),
-            React.createElement(react_router_dom_1.Link, { to: "/storybook" }, "storybook")));
+            React.createElement(react_router_dom_1.NavLink, { className: "header__link", to: "/today" }, "\u0421\u0435\u0433\u043E\u0434\u043D\u044F"),
+            React.createElement(react_router_dom_1.NavLink, { className: "header__link", to: "/everyday" }, "\u041A\u0430\u0436\u0434\u044B\u0439 \u0434\u0435\u043D\u044C"),
+            React.createElement(react_router_dom_1.NavLink, { className: "header__link", to: "/storybook" }, "storybook")));
     };
     return Header;
 }(React.Component));
@@ -44081,7 +44079,7 @@ exports.default = logo_1.default;
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(0);
 var react_router_dom_1 = __webpack_require__(48);
-var Logo = function () { return (React.createElement(react_router_dom_1.Link, { to: "/", className: "logo" }, "2Dooshka")); };
+var Logo = function () { return (React.createElement(react_router_dom_1.Link, { to: "/today", className: "logo" }, "2Dooshka")); };
 exports.default = Logo;
 
 
@@ -45041,7 +45039,7 @@ var todayView_1 = __webpack_require__(304);
 var storyBookView_1 = __webpack_require__(343);
 var Main = function (props) { return (React.createElement("main", null,
     React.createElement(react_router_dom_1.Switch, null,
-        React.createElement(react_router_dom_1.Route, { exact: true, path: "/", render: function (routeProps) {
+        React.createElement(react_router_dom_1.Route, { exact: true, path: "/today", render: function (routeProps) {
                 return React.createElement(todayView_1.default, __assign({ routeProps: routeProps }, props));
             } }),
         React.createElement(react_router_dom_1.Route, { exact: true, path: "/everyday", render: function (routeProps) {
@@ -47106,10 +47104,13 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(0);
 var styled_components_1 = __webpack_require__(99);
 var Checkbox_1 = __webpack_require__(316);
-var StyledItem = styled_components_1.default.div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n    width: ", ";\n    border-radius: 3px;\n    padding: 18px 16px;\n    font-size: 16px;\n    background-color: ", ";\n    color: ", ";   \n    border: solid 1px;\n    border-color: ", ";\n    box-shadow: 1px 1px 1px #000;\n"], ["\n    width: ", ";\n    border-radius: 3px;\n    padding: 18px 16px;\n    font-size: 16px;\n    background-color: ", ";\n    color: ", ";   \n    border: solid 1px;\n    border-color: ", ";\n    box-shadow: 1px 1px 1px #000;\n"])), function (props) { return props.example ? "70%" : "100%"; }, function (props) { return props.completedTask ? "#f2fef8" : "#ffffff"; }, function (props) { return props.completedTask ? "#d0d8dc" : "#000"; }, function (props) { return props.completedTask ? "#a9f6d0" : "#516166"; });
+var StyledItem = styled_components_1.default.div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n    width: ", ";\n    border-radius: 3px;\n    padding: 18px 16px;\n    font-size: 16px;\n    background-color: ", ";\n    color: ", ";   \n    border: solid 1px;\n    border-color: ", ";\n"], ["\n    width: ", ";\n    border-radius: 3px;\n    padding: 18px 16px;\n    font-size: 16px;\n    background-color: ", ";\n    color: ", ";   \n    border: solid 1px;\n    border-color: ", ";\n"])), function (props) { return props.example ? "70%" : "100%"; }, function (props) { return props.completedTask ? "#f2fef8" : "#ffffff"; }, function (props) { return props.completedTask ? "#a9f6d0" : "#000"; }, function (props) { return props.completedTask ? "#a9f6d0" : "#516166"; });
 var checkbox_style = {
     fontFamily: "Source Sans Pro",
     fontSize: 16,
+};
+var checkbox_style_dis = {
+    textDecoration: "line-through",
 };
 var Item = (function (_super) {
     __extends(Item, _super);
@@ -47127,7 +47128,7 @@ var Item = (function (_super) {
         var _a = this.props, content = _a.content, newTask = _a.newTask, redaction = _a.redaction;
         var check = this.state.checked;
         return (React.createElement(StyledItem, __assign({}, this.props, this.state),
-            React.createElement(Checkbox_1.default, { disabled: this.props.completedTask ? true : false, checked: this.props.completedTask ? true : false, labelStyle: checkbox_style, label: content, onCheck: this.switchChecked.bind(this), name: this.props.content, value: this.props.index })));
+            React.createElement(Checkbox_1.default, { disabled: this.props.completedTask ? true : false, checked: this.props.completedTask ? true : false, labelStyle: this.props.completedTask ? checkbox_style_dis : checkbox_style, label: content, onCheck: this.switchChecked.bind(this), name: this.props.content, value: this.props.index })));
     };
     return Item;
 }(React.Component));

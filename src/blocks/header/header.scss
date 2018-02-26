@@ -1,7 +1,30 @@
 .header{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     padding: 24px 53px;
     box-shadow: 0 1px 4px 0 #e7e8ea;
+
+
+    .logo{
+        margin-right: 10%;
+    }
+
+    &__link{
+        font-family: "Source Sans Pro";
+        font-size: 16px;
+        font-weight: normal;
+        font-style: normal;
+        color: #7c909b;
+        text-decoration: none;
+
+        &:not(:last-of-type){
+            margin-right: 75px;
+        }
+
+        &[aria-current="true"]{
+            color: #00b0ff;
+        }
+    }
+
 }

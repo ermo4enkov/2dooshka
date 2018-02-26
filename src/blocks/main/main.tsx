@@ -9,7 +9,7 @@ import StoryBookView from "../../views/storyBookView";
 const Main = (props) => (
   <main>
     <Switch>
-      <Route exact path="/" render={ (routeProps) => 
+      <Route exact path="/today" render={ (routeProps) => 
         <TodayView routeProps={routeProps} {...props}/>
       }/>
       <Route exact path="/everyday" render={ (routeProps) => 
