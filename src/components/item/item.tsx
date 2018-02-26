@@ -52,10 +52,9 @@ export class Item extends React.Component<ItemProps, ItemState> {
     render() {
         const {content, newTask, redaction} = this.props;
         let check = this.state.checked;
-
         return(
             <StyledItem {...this.props} {...this.state}>
-                <Checkbox labelStyle={checkbox_style} label={content} onCheck={this.switchChecked.bind(this)} name={this.props.content} value={this.props.index}/>
+                <Checkbox disabled={this.props.completedTask? true: false} checked={this.props.completedTask? true: false} labelStyle={checkbox_style} label={content} onCheck={this.switchChecked.bind(this)} name={this.props.content} value={this.props.index}/>
             </StyledItem>
         )
     }
