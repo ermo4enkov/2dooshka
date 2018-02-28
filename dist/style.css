@@ -82,19 +82,19 @@ ul {
     .header__link[aria-current="true"] {
       color: #00b0ff; }
 
-.introduction {
+.tasks-conteiner {
   display: block;
   margin: 0 auto;
   max-width: 360px;
   text-align: center; }
-  .introduction__logo {
+  .tasks-conteiner__logo {
     width: 244px;
     height: 200px;
     display: block;
     margin: 0 auto;
     margin-bottom: 18px;
     object-fit: contain; }
-  .introduction__text {
+  .tasks-conteiner__text {
     margin-bottom: 32px; }
 
 .logo {

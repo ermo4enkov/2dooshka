@@ -12,6 +12,7 @@ interface ItemProps  {
     everyDayTask?: boolean;
     setTask?: any;
     completedTask?: boolean;
+    additionalTask?: boolean;
     index?: number; 
 }
 
@@ -27,7 +28,7 @@ const StyledItem = styled.div`
     font-size: 16px;
     background-color: ${(props: ItemProps) => props.completedTask? "#f2fef8": "#ffffff"};
     color: ${(props: ItemProps) => props.completedTask? "#a9f6d0": "#000"};   
-    border: solid 1px;
+    border:  ${(props: ItemProps) => props.additionalTask? "dashed 1px": "solid 1px"}; 
     border-color: ${(props: ItemProps) => props.completedTask? "#a9f6d0": "#516166"};
 `;
 

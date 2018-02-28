@@ -15,6 +15,7 @@ export let DB = {
 		"wake up"
 	],
 	"today_tasks": ["wash plates", "clean room"],
+	"additional_tasks": ["забрать посылку"],
 	"grades": [
 	   { "date": { "$date": 11122018 }, "tasks": 5, "score": 2 },
 	   { "date": { "$date": 12122018 }, "tasks": 5, "score": 4 },

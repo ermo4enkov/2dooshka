@@ -1,5 +1,5 @@
 import * as React from "react";
-import  Introduction from "../../blocks/introduction";
+import TasksConteiner from "../../blocks/tasksConteiner";
 
 
 
@@ -12,12 +12,13 @@ export class EveryDayView extends React.Component {
 
         let everyDay_tasks = this.props["data_user"]["everyday_tasks"];
         let completed_tasks = this.props["data_user"]["completed_tasks"];
+        let additional_tasks = this.props["data_user"]["additional_tasks"];
         const setTask = this.props["setTask"];
         
         return(
             <div className="conteiner">
                 <h1 className="title">Каждый день</h1>
-                <Introduction everyDay_tasks={everyDay_tasks} completed_tasks={completed_tasks}/>
+                <TasksConteiner everyDay_tasks={everyDay_tasks} setTask={setTask} completed_tasks={completed_tasks}/>
             </div>
         );
     }

@@ -4,26 +4,27 @@ import styled from "styled-components";
 import Item from '../../components/item';
 
 
-interface IntroductionState {
+interface TasksContainerState {
     isHide?: boolean;
 }
 
-interface IntroductionProps {
+interface TasksContainerProps {
     everyDay_tasks?: any;
     setTask?: any;
     completed_tasks?: any;
+    additional_tasks?: any;
 }
 
-export const IntroductionBlock: React.StatelessComponent = props => (
-    <div className="introduction">
-        <img className="introduction__logo" src="./empty.png" />
-        <div className="introduction__text">Запланируйте обязательные задачи на каждый день и они отобразятся здесь</div>
+export const TasksContainerBlock: React.StatelessComponent = props => (
+    <div className="tasks-conteiner">
+        <img className="tasks-conteiner__logo" src="./empty.png" />
+        <div className="tasks-conteiner__text">Запланируйте обязательные задачи на каждый день и они отобразятся здесь</div>
         <Button text="Запланировать на каждый день"></Button>
     </div>
 );
 
 
-export class Introduction extends React.Component<IntroductionProps,IntroductionState> {
+export class TasksContainer extends React.Component<TasksContainerProps,TasksContainerState> {
     constructor(props) {
         super(props);
         this.state = {
@@ -56,6 +57,8 @@ export class Introduction extends React.Component<IntroductionProps,Introduction
         let everyDay_tasks = this.props.everyDay_tasks;
         let completed_tasks = this.props.completed_tasks;
 
+        let additional_tasks = this.props.additional_tasks;
+
         everyDay_tasks = everyDay_tasks.map(function (item, i) {
             return(
                 <li className="tasks-list__item" key={i}>
@@ -72,11 +75,19 @@ export class Introduction extends React.Component<IntroductionProps,Introduction
             )
         });
 
+        additional_tasks? additional_tasks = additional_tasks.map(function(item, i) {
+            return(
+                <li className="tasks-list__item" key={i}>
+                    <Item content={item} additionalTask></Item>
+                </li>
+            )
+        }): null;
+
         let block = null;
 
         if (!isHide) {
             return(
-                block = <IntroductionBlock></IntroductionBlock>
+                block = <TasksContainerBlock></TasksContainerBlock>
             );
         }
 
@@ -86,16 +97,30 @@ export class Introduction extends React.Component<IntroductionProps,Introduction
                     {everyDay_tasks}
                 </ul>
                 
-                <h2 className="subtitile">Выполненные</h2>
                 
-                <ul className="tasks-list">
-                    {completed_tasks}
-                </ul>
+                {additional_tasks?
+                    <div>
+                        <h2 className="subtitile">ДОПОЛНИТЕЛЬНЫЕ НА СЕГОДНЯ</h2>
+                        <ul className="tasks-list">
+                            {additional_tasks} 
+                        </ul>
+                    </div>
+                    :null}
+                
+                {completed_tasks?
+                <div> 
+                    <h2 className="subtitile">ВЫПОЛНЕННЫЕ</h2>
+                
+                    <ul className="tasks-list">
+                        {completed_tasks}
+                    </ul>
+                </div>
+                :null}
 
             </div>
         );
     }
 };
 
-export default Introduction;
+export default TasksContainer;
 
