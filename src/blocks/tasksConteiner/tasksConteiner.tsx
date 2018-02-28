@@ -12,7 +12,7 @@ interface TasksContainerProps {
     everyDay_tasks?: any;
     setTask?: any;
     completed_tasks?: any;
-    additional_tasks?: any;
+    today_tasks?: any;
 }
 
 export const TasksContainerBlock: React.StatelessComponent = props => (
@@ -57,12 +57,12 @@ export class TasksContainer extends React.Component<TasksContainerProps,TasksCon
         let everyDay_tasks = this.props.everyDay_tasks;
         let completed_tasks = this.props.completed_tasks;
 
-        let additional_tasks = this.props.additional_tasks;
+        let today_tasks = this.props.today_tasks;
 
         everyDay_tasks = everyDay_tasks.map(function (item, i) {
             return(
                 <li className="tasks-list__item" key={i}>
-                    <Item content={item} newTask setTask={setTask} index={i}></Item>
+                    <Item content={item} setTask={setTask} index={i}></Item>
                 </li>
             );
         });
@@ -75,10 +75,10 @@ export class TasksContainer extends React.Component<TasksContainerProps,TasksCon
             )
         });
 
-        additional_tasks? additional_tasks = additional_tasks.map(function(item, i) {
+        today_tasks? today_tasks = today_tasks.map(function(item, i) {
             return(
                 <li className="tasks-list__item" key={i}>
-                    <Item content={item} additionalTask></Item>
+                    <Item content={item} todayTask setTask={setTask} index={i}></Item>
                 </li>
             )
         }): null;
@@ -98,11 +98,11 @@ export class TasksContainer extends React.Component<TasksContainerProps,TasksCon
                 </ul>
                 
                 
-                {additional_tasks?
+                {today_tasks?
                     <div>
                         <h2 className="subtitile">ДОПОЛНИТЕЛЬНЫЕ НА СЕГОДНЯ</h2>
                         <ul className="tasks-list">
-                            {additional_tasks} 
+                            {today_tasks} 
                         </ul>
                     </div>
                     :null}

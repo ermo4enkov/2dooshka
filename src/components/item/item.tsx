@@ -12,7 +12,7 @@ interface ItemProps  {
     everyDayTask?: boolean;
     setTask?: any;
     completedTask?: boolean;
-    additionalTask?: boolean;
+    todayTask?: boolean;
     index?: number; 
 }
 
@@ -22,13 +22,13 @@ interface ItemState  {
 }
 
 const StyledItem = styled.div`
-    width: ${(props: ItemProps) => props.example? "70%": "100%"};
+    width: ${(props: ItemProps) => props.example? "70%": "auto"};
     border-radius: 3px;
     padding: 18px 16px;
     font-size: 16px;
     background-color: ${(props: ItemProps) => props.completedTask? "#f2fef8": "#ffffff"};
     color: ${(props: ItemProps) => props.completedTask? "#a9f6d0": "#000"};   
-    border:  ${(props: ItemProps) => props.additionalTask? "dashed 1px": "solid 1px"}; 
+    border:  ${(props: ItemProps) => props.todayTask? "dashed 1px": "solid 1px"}; 
     border-color: ${(props: ItemProps) => props.completedTask? "#a9f6d0": "#516166"};
 `;
 
@@ -50,16 +50,28 @@ export class Item extends React.Component<ItemProps, ItemState> {
         }
     }
 
-    switchChecked(event){
-        this.props.setTask(event);
+    switchChecked(event, name){
+        name = event.target.attributes["aria-details"]["nodeValue"];
+        this.props.setTask(event,name);
     }
 
     render() {
-        const {content, newTask, redaction} = this.props;
+        const {content, newTask, redaction, index, completedTask, todayTask} = this.props;
         let check = this.state.checked;
+
         return(
             <StyledItem {...this.props} {...this.state}>
-                <Checkbox disabled={this.props.completedTask? true: false} checked={this.props.completedTask? true: false} labelStyle={this.props.completedTask? checkbox_style_dis: checkbox_style} label={content} onCheck={this.switchChecked.bind(this)} name={this.props.content} value={this.props.index}/>
+                <Checkbox 
+                    disabled={completedTask? true: false} 
+                    checked={completedTask? true: false} 
+                    labelStyle={completedTask? 
+                    checkbox_style_dis: checkbox_style}
+                    label={content} 
+                    onCheck={this.switchChecked.bind(this)} 
+                    name={content} 
+                    value={index}
+                    aria-details={todayTask? "today_tasks": "everyday_tasks"}
+                />
             </StyledItem>
         )
     }
