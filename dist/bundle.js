@@ -45078,13 +45078,19 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(0);
+var introduction_1 = __webpack_require__(306);
 var EveryDayView = (function (_super) {
     __extends(EveryDayView, _super);
     function EveryDayView(props) {
         return _super.call(this, props) || this;
     }
     EveryDayView.prototype.render = function () {
-        return (React.createElement("div", null, " EveryDay "));
+        var everyDay_tasks = this.props["data_user"]["everyday_tasks"];
+        var completed_tasks = this.props["data_user"]["completed_tasks"];
+        var setTask = this.props["setTask"];
+        return (React.createElement("div", { className: "conteiner" },
+            React.createElement("h1", { className: "title" }, "\u041A\u0430\u0436\u0434\u044B\u0439 \u0434\u0435\u043D\u044C"),
+            React.createElement(introduction_1.default, { everyDay_tasks: everyDay_tasks, completed_tasks: completed_tasks })));
     };
     return EveryDayView;
 }(React.Component));

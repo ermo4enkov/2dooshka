@@ -10,8 +10,7 @@ export class TodayView extends React.Component {
         
         let everyDay_tasks = this.props["data_user"]["everyday_tasks"];
         let completed_tasks = this.props["data_user"]["completed_tasks"];
-
-        const setTask = this.props["setTask"]
+        const setTask = this.props["setTask"];
 
         return(
             <div className="conteiner">
