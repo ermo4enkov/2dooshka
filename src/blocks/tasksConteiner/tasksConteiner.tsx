@@ -1,7 +1,8 @@
 import * as React from "react";
 import Button from "../../components/button";
 import styled from "styled-components";
-import Item from '../../components/item';
+import Item from "../../components/item";
+import NewTask from "../../components/newTask"
 
 
 interface TasksContainerState {
@@ -97,16 +98,13 @@ export class TasksContainer extends React.Component<TasksContainerProps,TasksCon
                     {everyDay_tasks}
                 </ul>
                 
-                
+                <h2 className="subtitile">ДОПОЛНИТЕЛЬНЫЕ НА СЕГОДНЯ</h2>
                 {today_tasks?
-                    <div>
-                        <h2 className="subtitile">ДОПОЛНИТЕЛЬНЫЕ НА СЕГОДНЯ</h2>
                         <ul className="tasks-list">
                             {today_tasks} 
                         </ul>
-                    </div>
                     :null}
-                
+                <NewTask/>
                 {completed_tasks?
                 <div> 
                     <h2 className="subtitile">ВЫПОЛНЕННЫЕ</h2>

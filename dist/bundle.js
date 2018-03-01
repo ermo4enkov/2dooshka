@@ -45130,6 +45130,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(0);
 var button_1 = __webpack_require__(150);
 var item_1 = __webpack_require__(151);
+var newTask_1 = __webpack_require__(359);
 exports.TasksContainerBlock = function (props) { return (React.createElement("div", { className: "tasks-conteiner" },
     React.createElement("img", { className: "tasks-conteiner__logo", src: "./empty.png" }),
     React.createElement("div", { className: "tasks-conteiner__text" }, "\u0417\u0430\u043F\u043B\u0430\u043D\u0438\u0440\u0443\u0439\u0442\u0435 \u043E\u0431\u044F\u0437\u0430\u0442\u0435\u043B\u044C\u043D\u044B\u0435 \u0437\u0430\u0434\u0430\u0447\u0438 \u043D\u0430 \u043A\u0430\u0436\u0434\u044B\u0439 \u0434\u0435\u043D\u044C \u0438 \u043E\u043D\u0438 \u043E\u0442\u043E\u0431\u0440\u0430\u0437\u044F\u0442\u0441\u044F \u0437\u0434\u0435\u0441\u044C"),
@@ -45184,11 +45185,11 @@ var TasksContainer = (function (_super) {
         }
         return (React.createElement("div", null,
             React.createElement("ul", { className: "tasks-list" }, everyDay_tasks),
+            React.createElement("h2", { className: "subtitile" }, "\u0414\u041E\u041F\u041E\u041B\u041D\u0418\u0422\u0415\u041B\u042C\u041D\u042B\u0415 \u041D\u0410 \u0421\u0415\u0413\u041E\u0414\u041D\u042F"),
             today_tasks ?
-                React.createElement("div", null,
-                    React.createElement("h2", { className: "subtitile" }, "\u0414\u041E\u041F\u041E\u041B\u041D\u0418\u0422\u0415\u041B\u042C\u041D\u042B\u0415 \u041D\u0410 \u0421\u0415\u0413\u041E\u0414\u041D\u042F"),
-                    React.createElement("ul", { className: "tasks-list" }, today_tasks))
+                React.createElement("ul", { className: "tasks-list" }, today_tasks)
                 : null,
+            React.createElement(newTask_1.default, null),
             completed_tasks ?
                 React.createElement("div", null,
                     React.createElement("h2", { className: "subtitile" }, "\u0412\u042B\u041F\u041E\u041B\u041D\u0415\u041D\u041D\u042B\u0415"),
@@ -50571,6 +50572,53 @@ var thunk = createThunkMiddleware();
 thunk.withExtraArgument = createThunkMiddleware;
 
 exports['default'] = thunk;
+
+/***/ }),
+/* 354 */,
+/* 355 */,
+/* 356 */,
+/* 357 */,
+/* 358 */,
+/* 359 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var newTask_1 = __webpack_require__(360);
+exports.default = newTask_1.default;
+
+
+/***/ }),
+/* 360 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+var React = __webpack_require__(0);
+var NewTask = (function (_super) {
+    __extends(NewTask, _super);
+    function NewTask() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    NewTask.prototype.render = function () {
+        return (React.createElement("div", null, "HUI"));
+    };
+    return NewTask;
+}(React.Component));
+exports.default = NewTask;
+
 
 /***/ })
 /******/ ]);

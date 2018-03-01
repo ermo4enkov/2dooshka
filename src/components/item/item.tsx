@@ -1,7 +1,6 @@
 import * as React from "react";
 import styled from "styled-components";
 import Button from "../button/button";
-import Plus from "../icons/plus";
 import Checkbox from 'material-ui/Checkbox';
 
 interface ItemProps  {
