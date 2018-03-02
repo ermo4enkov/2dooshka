@@ -3,11 +3,12 @@ import styled from "styled-components";
 
 interface ButtonProps {
     text: string;
-    type?: string;
     example?: boolean;
     disabled?: boolean;
     hover?: boolean;
     isLoading?: boolean;
+    cancel?: boolean;
+    onClick?: any;
 }
 
 interface ButtonState {
@@ -21,10 +22,10 @@ const StyledButton = styled.div`
     text-align: center;
     padding: 10px 20px;
     display: inline-block;
-    cursor: ${( props: ButtonProps) => (props.disabled === true || props.isLoading === true)? "default": "pointer"};
-    color: ${(props: ButtonProps) => (props.type === "cancel" || props.disabled === true )? "#93a4ad": '#fff'
+    cursor: ${( props: ButtonProps) => (props.disabled || props.isLoading )? "default": "pointer"};
+    color: ${(props: ButtonProps) => (props.cancel || props.disabled)? "#93a4ad": '#fff'
     };
-    background-color: ${(props: ButtonProps) => props.type === "cancel"? "#f6f7f8": '#00b0ff'
+    background-color: ${(props: ButtonProps) => props.cancel? "#f6f7f8": '#00b0ff'
     };
     margin-right: ${(props: ButtonProps) => props.example? "20px": '0'
     };
