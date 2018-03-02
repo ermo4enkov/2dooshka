@@ -3,23 +3,6 @@ import styled from "styled-components";
 import Button from "../button/button";
 import Checkbox from 'material-ui/Checkbox';
 
-interface ItemProps  {
-    content?: string;
-    example?: boolean;
-    newTask?: boolean;
-    redaction?: boolean;
-    everyDayTask?: boolean;
-    setTask?: any;
-    completedTask?: boolean;
-    todayTask?: boolean;
-    index?: number; 
-}
-
-interface ItemState  {
-    status?: string;
-    checked: boolean;   
-}
-
 const StyledItem = styled.div`
     width: ${(props: ItemProps) => props.example? "70%": "auto"};
     border-radius: 3px;
@@ -40,6 +23,25 @@ const checkbox_style_dis = {
     textDecoration: "line-through",
 }
 
+interface ItemProps  {
+    content?: string;
+    example?: boolean;
+    newTask?: boolean;
+    redaction?: boolean;
+    everyDayTask?: boolean;
+    finishTask?: any;
+    completedTask?: boolean;
+    todayTask?: boolean;
+    index?: number; 
+}
+
+interface ItemState  {
+    status?: string;
+    checked: boolean;   
+}
+
+
+
 
 export class Item extends React.Component<ItemProps, ItemState> {
     constructor(ItemProps, ItemState) {
@@ -49,11 +51,13 @@ export class Item extends React.Component<ItemProps, ItemState> {
         }
     }
 
-    switchChecked(event, name){
-        name = event.target.attributes["aria-details"]["nodeValue"];
-        this.props.setTask(event,name);
+    switchChecked(event) {
+        const type = event.target.attributes["aria-details"]["nodeValue"];
+        const name = event.target.name;
+        const value = event.target.value;
+        this.props.finishTask(name, value, type);
     }
-
+        
     render() {
         const {content, newTask, redaction, index, completedTask, todayTask} = this.props;
         let check = this.state.checked;

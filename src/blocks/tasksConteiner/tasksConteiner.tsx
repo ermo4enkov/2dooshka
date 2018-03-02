@@ -11,7 +11,7 @@ interface TasksContainerState {
 
 interface TasksContainerProps {
     everyDay_tasks?: any;
-    setTask?: any;
+    finishTask?: any;
     completed_tasks?: any;
     today_tasks?: any;
 }
@@ -52,7 +52,7 @@ export class TasksContainer extends React.Component<TasksContainerProps,TasksCon
     };
 
     render() {
-        const setTask = this.props["setTask"];
+        const finishTask = this.props["finishTask"];
         const isHide: boolean = this.state["isHide"];
 
         let everyDay_tasks = this.props.everyDay_tasks;
@@ -63,7 +63,7 @@ export class TasksContainer extends React.Component<TasksContainerProps,TasksCon
         everyDay_tasks = everyDay_tasks.map(function (item, i) {
             return(
                 <li className="tasks-list__item" key={i}>
-                    <Item content={item} setTask={setTask} index={i}></Item>
+                    <Item content={item} finishTask={finishTask} index={i}></Item>
                 </li>
             );
         });
@@ -79,7 +79,7 @@ export class TasksContainer extends React.Component<TasksContainerProps,TasksCon
         today_tasks? today_tasks = today_tasks.map(function(item, i) {
             return(
                 <li className="tasks-list__item" key={i}>
-                    <Item content={item} todayTask setTask={setTask} index={i}></Item>
+                    <Item content={item} todayTask finishTask={finishTask} index={i}></Item>
                 </li>
             )
         }): null;

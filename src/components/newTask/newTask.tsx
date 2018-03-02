@@ -29,7 +29,7 @@ const StyledButtonCont = styled.div`
 `;
 
 interface newTaskProps {
-    visible?: boolean;
+    setTask?: any;
 };
 
 
@@ -50,21 +50,43 @@ class NewTask extends React.Component<newTaskProps,newTaskStates>{
         console.log(this.state.content);
     };
 
+    switchChecked(event) {
+        const type = event.target.attributes["aria-details"];
+        const name = event.target.name;
+        const value = event.target.value;
+        this.props.setTask(name, value, type);
+    }
+
     changeContent(event){
         this.setState({
             content: event.target.value
           });
     }
 
+    deleteContent(event){
+        this.setState({
+            content: ""
+          });
+    }
+
     render() {
+
+        const ButtonsBlock = () => 
+        {
+            return this.state.content?
+                <StyledButtonCont>
+                    <Button text="Добавить" onClick={this.showContent.bind(this)} aria-details="today_tasks"/>
+                    <Button text="Отмена" cancel onClick={this.deleteContent.bind(this)}/>
+                </StyledButtonCont>
+            : 
+            null
+        }
+
         return(
             <StyledItem>
                 <Plus/>
-                <StyledInput type="text" placeholder="Новая задача на сегодня..." onChange={this.changeContent.bind(this)}/>
-                <StyledButtonCont >
-                    <Button text="Добавить" onClick={this.showContent.bind(this)}/>
-                    <Button text="Отмена" cancel/>
-                </StyledButtonCont>
+                <StyledInput type="text" placeholder="Новая задача на сегодня..." onChange={this.changeContent.bind(this)} value={this.state.content}/>
+                <ButtonsBlock/>
             </StyledItem>
         )
     }

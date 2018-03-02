@@ -5,7 +5,7 @@ import { bindActionCreators } from "redux";
 import styled from "styled-components";
 import  Header  from "../header/header";
 import  Main  from "../main/main";
-import * as setTask from "../../redux/actions/setTask";
+import * as finishTask from "../../redux/actions/finishTask";
 
 export class App extends React.Component {
     constructor(props) {
@@ -15,12 +15,12 @@ export class App extends React.Component {
     render() {
         const data_user = this.props["data_user"];
         
-        const { setTask } = this.props["setTask"];
+        const { finishTask } = this.props["finishTask"];
 
         return (
             <div>
                 <Header />
-                <Main data_user={data_user} setTask={setTask}/>
+                <Main data_user={data_user} finishTask={finishTask}/>
             </div>
         );
     }
@@ -43,7 +43,7 @@ function mapStateToProps (state) {
 
 function mapDispatchProps(dispatch: any) {
     return{
-        setTask: bindActionCreators(setTask, dispatch)
+        finishTask: bindActionCreators(finishTask, dispatch)
     };
 }
 
