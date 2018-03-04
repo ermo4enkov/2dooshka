@@ -1,7 +1,7 @@
 import * as React from "react";
 import styled from "styled-components";
 import Plus from "../icons/plus";
-import Checkbox from 'material-ui/Checkbox';
+import Checkbox from "material-ui/Checkbox";
 import Button from "../../components/button";
 
 const StyledItem = styled.div`
@@ -33,7 +33,6 @@ interface NewTaskProps {
     addTask?: any;
 };
 
-
 interface NewTaskStates {
     content: string;
 };
@@ -58,35 +57,40 @@ class NewTask extends React.Component<NewTaskProps, NewTaskStates> {
     changeContent(event) {
         this.setState({
             content: event.target.value
-          });
+        });
     }
 
     deleteContent(event) {
         this.setState({
             content: ""
-          });
+        });
     }
 
     render() {
 
-        const ButtonsBlock = () => 
+        const ButtonsBlock = () =>
         {
-            return this.state.content?
+            return this.state.content ?
                 <StyledButtonCont>
                     <Button text="Добавить" onClick={this.addTask.bind(this)}/>
                     <Button text="Отмена" cancel onClick={this.deleteContent.bind(this)}/>
                 </StyledButtonCont>
-            : 
-            null
-        }
+            :
+            null;
+        };
 
         return(
             <StyledItem>
                 <Plus/>
-                <StyledInput type="text" placeholder="Новая задача на сегодня..." onChange={this.changeContent.bind(this)} value={this.state.content}/>
+                <StyledInput
+                    type="text"
+                    placeholder="Новая задача на сегодня..."
+                    onChange={this.changeContent.bind(this)}
+                    value={this.state.content}
+                />
                 <ButtonsBlock/>
             </StyledItem>
-        )
+        );
     }
 }
 

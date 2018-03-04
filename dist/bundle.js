@@ -45138,8 +45138,8 @@ exports.TasksContainerBlock = function (props) { return (React.createElement("di
     React.createElement(button_1.default, { text: "Запланировать на каждый день" }))); };
 var TasksContainer = (function (_super) {
     __extends(TasksContainer, _super);
-    function TasksContainer(props) {
-        var _this = _super.call(this, props) || this;
+    function TasksContainer(TasksContainerProps) {
+        var _this = _super.call(this, TasksContainerProps) || this;
         _this.state = {
             isHide: false,
         };
@@ -45232,15 +45232,17 @@ var __assign = (this && this.__assign) || Object.assign || function(t) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(0);
 var styled_components_1 = __webpack_require__(49);
-var StyledButton = styled_components_1.default.div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n    border-radius: 5px;\n    font-size: 16px;\n    text-align: center;\n    padding: 10px 20px;\n    display: inline-block;\n    cursor: ", ";\n    color: ", ";\n    background-color: ", ";\n    margin-right: ", ";\n    border: ", "\n    background-color: ", ";\n    min-width: 80px;\n    box-shadow: ", ";\n    filter: ", ";\n    \n        &:hover{\n            box-shadow: ", "\n            filter: brightness(90%);\n        }\n    \n"], ["\n    border-radius: 5px;\n    font-size: 16px;\n    text-align: center;\n    padding: 10px 20px;\n    display: inline-block;\n    cursor: ", ";\n    color: ",
+var StyledButton = styled_components_1.default.div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n    border-radius: 5px;\n    font-size: 16px;\n    text-align: center;\n    padding: 10px 20px;\n    display: inline-block;\n    cursor: ", ";\n    color: ", ";\n    background-color: ", ";\n    margin-right: ", ";\n    border: ", ";\n    background-color: ", ";\n    min-width: 80px;\n    box-shadow: ", ";\n    filter: ", ";\n    \n        &:hover{\n            box-shadow: ", "\n            filter: brightness(90%);\n        }    \n"], ["\n    border-radius: 5px;\n    font-size: 16px;\n    text-align: center;\n    padding: 10px 20px;\n    display: inline-block;\n    cursor: ", ";\n    color: ", ";\n    background-color: ", ";\n    margin-right: ", ";\n    border: ",
     ";\n    background-color: ",
-    ";\n    margin-right: ",
-    ";\n    border: ", "\n    background-color: ",
-    ";\n    min-width: 80px;\n    box-shadow: ", ";\n    filter: ", ";\n    \n        &:hover{\n            box-shadow: ", "\n            filter: brightness(90%);\n        }\n    \n"])), function (props) { return (props.disabled || props.isLoading) ? "default" : "pointer"; }, function (props) { return (props.cancel || props.disabled) ? "#93a4ad" : '#fff'; }, function (props) { return props.cancel ? "#f6f7f8" : '#00b0ff'; }, function (props) { return props.example ? "20px" : '0'; }, function (props) { return (props.disabled === true || props.isLoading === true) ? "solid 1px #d0d8dc;" : "none"; }, function (props) { return (props.disabled === true || props.isLoading === true) ? "#f6f7f8" : ''; }, function (props) { return props.hover === true ? "inset 0 -2px 0 0 rgba(0, 0, 0, 0.1);" : "none"; }, function (props) { return props.hover === true ? "brightness(90%);" : "none"; }, function (props) { return (props.disabled === true || props.isLoading === true) ? "none" : "inset 0 -2px 0 0 rgba(0, 0, 0, 0.1);"; });
+    ";\n    min-width: 80px;\n    box-shadow: ",
+    ";\n    filter: ", ";\n    \n        &:hover{\n            box-shadow: ", "\n            filter: brightness(90%);\n        }    \n"])), function (props) { return (props.disabled || props.isLoading) ? "default" : "pointer"; }, function (props) { return (props.cancel || props.disabled) ? "#93a4ad" : "#fff"; }, function (props) { return props.cancel ? "#f6f7f8" : "#00b0ff"; }, function (props) { return props.example ? "20px" : "0"; }, function (props) { return (props.disabled === true || props.isLoading === true) ?
+    "solid 1px #d0d8dc;" : "none"; }, function (props) { return (props.disabled === true || props.isLoading === true) ?
+    "#f6f7f8" : ""; }, function (props) { return props.hover === true ?
+    "inset 0 -2px 0 0 rgba(0, 0, 0, 0.1);" : "none"; }, function (props) { return props.hover === true ? "brightness(90%);" : "none"; }, function (props) { return (props.disabled === true || props.isLoading === true) ? "none" : "inset 0 -2px 0 0 rgba(0, 0, 0, 0.1);"; });
 var Button = (function (_super) {
     __extends(Button, _super);
-    function Button(props) {
-        var _this = _super.call(this, props) || this;
+    function Button(ButtonProps) {
+        var _this = _super.call(this, ButtonProps) || this;
         _this.state = {
             isBlocked: false,
             isLoaded: false
@@ -47101,8 +47103,7 @@ var Item = (function (_super) {
         var _a = this.props, content = _a.content, newTask = _a.newTask, redaction = _a.redaction, index = _a.index, completedTask = _a.completedTask, todayTask = _a.todayTask;
         var check = this.state.checked;
         return (React.createElement(StyledItem, __assign({}, this.props, this.state),
-            React.createElement(Checkbox_1.default, { disabled: completedTask ? true : false, checked: completedTask ? true : false, labelStyle: completedTask ?
-                    checkbox_style_dis : checkbox_style, label: content, onCheck: this.switchChecked.bind(this), name: content, value: index, "aria-details": todayTask ? "today_tasks" : "everyday_tasks" })));
+            React.createElement(Checkbox_1.default, { disabled: completedTask ? true : false, checked: completedTask ? true : false, labelStyle: completedTask ? checkbox_style_dis : checkbox_style, label: content, onCheck: this.switchChecked.bind(this), name: content, value: index, "aria-details": todayTask ? "today_tasks" : "everyday_tasks" })));
     };
     return Item;
 }(React.Component));
