@@ -40,9 +40,6 @@ interface ItemState  {
     checked: boolean;   
 }
 
-
-
-
 export class Item extends React.Component<ItemProps, ItemState> {
     constructor(ItemProps, ItemState) {
         super(ItemProps)

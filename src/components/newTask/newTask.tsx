@@ -29,7 +29,7 @@ const StyledButtonCont = styled.div`
 `;
 
 interface newTaskProps {
-    setTask?: any;
+    addTask?: any;
 };
 
 
@@ -46,15 +46,12 @@ class NewTask extends React.Component<newTaskProps,newTaskStates>{
         }
     }
 
-    showContent(){
-        console.log(this.state.content);
-    };
-
-    switchChecked(event) {
-        const type = event.target.attributes["aria-details"];
-        const name = event.target.name;
-        const value = event.target.value;
-        this.props.setTask(name, value, type);
+    addTask(event) {
+        const value = this.state.content;
+        this.props.addTask(value);
+        this.setState({
+            content: ""
+        });
     }
 
     changeContent(event){
@@ -75,7 +72,7 @@ class NewTask extends React.Component<newTaskProps,newTaskStates>{
         {
             return this.state.content?
                 <StyledButtonCont>
-                    <Button text="Добавить" onClick={this.showContent.bind(this)} aria-details="today_tasks"/>
+                    <Button text="Добавить" onClick={this.addTask.bind(this)}/>
                     <Button text="Отмена" cancel onClick={this.deleteContent.bind(this)}/>
                 </StyledButtonCont>
             : 

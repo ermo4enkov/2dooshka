@@ -14,6 +14,7 @@ interface TasksContainerProps {
     finishTask?: any;
     completed_tasks?: any;
     today_tasks?: any;
+    addTask?: any;
 }
 
 export const TasksContainerBlock: React.StatelessComponent = props => (
@@ -53,6 +54,8 @@ export class TasksContainer extends React.Component<TasksContainerProps,TasksCon
 
     render() {
         const finishTask = this.props["finishTask"];
+        const addTask = this.props["addTask"];
+        
         const isHide: boolean = this.state["isHide"];
 
         let everyDay_tasks = this.props.everyDay_tasks;
@@ -104,7 +107,7 @@ export class TasksContainer extends React.Component<TasksContainerProps,TasksCon
                             {today_tasks} 
                         </ul>
                     :null}
-                <NewTask/>
+                <NewTask addTask={addTask}/>
                 {completed_tasks?
                 <div> 
                     <h2 className="subtitile">ВЫПОЛНЕННЫЕ</h2>

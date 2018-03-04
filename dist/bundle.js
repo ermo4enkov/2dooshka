@@ -41226,7 +41226,8 @@ var react_redux_1 = __webpack_require__(140);
 var redux_1 = __webpack_require__(97);
 var header_1 = __webpack_require__(287);
 var main_1 = __webpack_require__(302);
-var finishTask = __webpack_require__(363);
+var finishTask = __webpack_require__(353);
+var addTask = __webpack_require__(363);
 var App = (function (_super) {
     __extends(App, _super);
     function App(props) {
@@ -41235,9 +41236,10 @@ var App = (function (_super) {
     App.prototype.render = function () {
         var data_user = this.props["data_user"];
         var finishTask = this.props["finishTask"].finishTask;
+        var addTask = this.props["addTask"].addTask;
         return (React.createElement("div", null,
             React.createElement(header_1.default, null),
-            React.createElement(main_1.default, { data_user: data_user, finishTask: finishTask })));
+            React.createElement(main_1.default, { data_user: data_user, finishTask: finishTask, addTask: addTask })));
     };
     return App;
 }(React.Component));
@@ -41259,7 +41261,8 @@ function mapStateToProps(state) {
 ;
 function mapDispatchProps(dispatch) {
     return {
-        finishTask: redux_1.bindActionCreators(finishTask, dispatch)
+        finishTask: redux_1.bindActionCreators(finishTask, dispatch),
+        addTask: redux_1.bindActionCreators(addTask, dispatch)
     };
 }
 exports.default = react_router_1.withRouter(react_redux_1.connect(mapStateToProps, mapDispatchProps)(App));
@@ -45163,6 +45166,7 @@ var TasksContainer = (function (_super) {
     ;
     TasksContainer.prototype.render = function () {
         var finishTask = this.props["finishTask"];
+        var addTask = this.props["addTask"];
         var isHide = this.state["isHide"];
         var everyDay_tasks = this.props.everyDay_tasks;
         var completed_tasks = this.props.completed_tasks;
@@ -45189,7 +45193,7 @@ var TasksContainer = (function (_super) {
             today_tasks ?
                 React.createElement("ul", { className: "tasks-list" }, today_tasks)
                 : null,
-            React.createElement(newTask_1.default, null),
+            React.createElement(newTask_1.default, { addTask: addTask }),
             completed_tasks ?
                 React.createElement("div", null,
                     React.createElement("h2", { className: "subtitile" }, "\u0412\u042B\u041F\u041E\u041B\u041D\u0415\u041D\u041D\u042B\u0415"),
@@ -50209,15 +50213,12 @@ var NewTask = (function (_super) {
         };
         return _this;
     }
-    NewTask.prototype.showContent = function () {
-        console.log(this.state.content);
-    };
-    ;
-    NewTask.prototype.switchChecked = function (event) {
-        var type = event.target.attributes["aria-details"];
-        var name = event.target.name;
-        var value = event.target.value;
-        this.props.setTask(name, value, type);
+    NewTask.prototype.addTask = function (event) {
+        var value = this.state.content;
+        this.props.addTask(value);
+        this.setState({
+            content: ""
+        });
     };
     NewTask.prototype.changeContent = function (event) {
         this.setState({
@@ -50234,7 +50235,7 @@ var NewTask = (function (_super) {
         var ButtonsBlock = function () {
             return _this.state.content ?
                 React.createElement(StyledButtonCont, null,
-                    React.createElement(button_1.default, { text: "Добавить", onClick: _this.showContent.bind(_this), "aria-details": "today_tasks" }),
+                    React.createElement(button_1.default, { text: "Добавить", onClick: _this.addTask.bind(_this) }),
                     React.createElement(button_1.default, { text: "Отмена", cancel: true, onClick: _this.deleteContent.bind(_this) }))
                 :
                     null;
@@ -50345,9 +50346,10 @@ var TodayView = (function (_super) {
         var completed_tasks = this.props["data_user"]["completed_tasks"];
         var today_tasks = this.props["data_user"]["today_tasks"];
         var finishTask = this.props["finishTask"];
+        var addTask = this.props["addTask"];
         return (React.createElement("div", { className: "conteiner" },
             React.createElement("h1", { className: "title" }, "\u0421\u0435\u0433\u043E\u0434\u043D\u044F"),
-            React.createElement(tasksConteiner_1.default, { everyDay_tasks: everyDay_tasks, finishTask: finishTask, completed_tasks: completed_tasks, today_tasks: today_tasks })));
+            React.createElement(tasksConteiner_1.default, { everyDay_tasks: everyDay_tasks, finishTask: finishTask, completed_tasks: completed_tasks, today_tasks: today_tasks, addTask: addTask })));
     };
     return TodayView;
 }(React.Component));
@@ -50602,7 +50604,31 @@ exports.default = Calendar;
 
 
 /***/ }),
-/* 353 */,
+/* 353 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var user_1 = __webpack_require__(158);
+var db_1 = __webpack_require__(159);
+function finishTask(name, value, type) {
+    db_1.DB.completed_tasks.push(name);
+    delete db_1.DB[type][value];
+    return function (dispatch) {
+        return dispatch(updateTaskState());
+    };
+}
+exports.finishTask = finishTask;
+;
+function updateTaskState() {
+    return {
+        type: user_1.UPDATE_TASK_STATE
+    };
+}
+
+
+/***/ }),
 /* 354 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -50711,16 +50737,15 @@ exports['default'] = thunk;
 Object.defineProperty(exports, "__esModule", { value: true });
 var user_1 = __webpack_require__(158);
 var db_1 = __webpack_require__(159);
-function finishTask(name, value, type) {
-    db_1.DB.completed_tasks.push(name);
-    delete db_1.DB[type][value];
+function addTask(value) {
+    db_1.DB.today_tasks.push(value);
     return function (dispatch) {
-        return dispatch(userTypeisGuest());
+        return dispatch(updateTaskState());
     };
 }
-exports.finishTask = finishTask;
+exports.addTask = addTask;
 ;
-function userTypeisGuest() {
+function updateTaskState() {
     return {
         type: user_1.UPDATE_TASK_STATE
     };
