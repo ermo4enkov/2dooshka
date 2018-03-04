@@ -14,6 +14,7 @@ const StyledItem = styled.div`
     display: flex;
     padding: 10px;
     align-items: center;
+    min-height: 40px;
 `;
 
 const StyledInput = styled.input`
@@ -28,22 +29,22 @@ const StyledButtonCont = styled.div`
     display:flex;
 `;
 
-interface newTaskProps {
+interface NewTaskProps {
     addTask?: any;
 };
 
 
-interface newTaskStates {
+interface NewTaskStates {
     content: string;
 };
 
 
-class NewTask extends React.Component<newTaskProps,newTaskStates>{
-    constructor(newTaskProps,newTaskStates) {
-        super(newTaskProps)
+class NewTask extends React.Component<NewTaskProps, NewTaskStates> {
+    constructor(newTaskProps, newTaskStates) {
+        super(newTaskProps);
         this.state = {
             content: ""
-        }
+        };
     }
 
     addTask(event) {
@@ -54,13 +55,13 @@ class NewTask extends React.Component<newTaskProps,newTaskStates>{
         });
     }
 
-    changeContent(event){
+    changeContent(event) {
         this.setState({
             content: event.target.value
           });
     }
 
-    deleteContent(event){
+    deleteContent(event) {
         this.setState({
             content: ""
           });

@@ -53,15 +53,9 @@ export class TasksContainer extends React.Component<TasksContainerProps,TasksCon
     };
 
     render() {
-        const finishTask = this.props["finishTask"];
-        const addTask = this.props["addTask"];
-        
+        const { finishTask, addTask } = this.props;
         const isHide: boolean = this.state["isHide"];
-
-        let everyDay_tasks = this.props.everyDay_tasks;
-        let completed_tasks = this.props.completed_tasks;
-
-        let today_tasks = this.props.today_tasks;
+        let {everyDay_tasks, completed_tasks, today_tasks} = this.props;
 
         everyDay_tasks = everyDay_tasks.map(function (item, i) {
             return(
@@ -79,19 +73,17 @@ export class TasksContainer extends React.Component<TasksContainerProps,TasksCon
             )
         });
 
-        today_tasks? today_tasks = today_tasks.map(function(item, i) {
+        today_tasks ? today_tasks = today_tasks.map(function(item, i) {
             return(
                 <li className="tasks-list__item" key={i}>
                     <Item content={item} todayTask finishTask={finishTask} index={i}></Item>
                 </li>
-            )
-        }): null;
-
-        let block = null;
+            );
+        }) : null;
 
         if (!isHide) {
             return(
-                block = <TasksContainerBlock></TasksContainerBlock>
+                <TasksContainerBlock></TasksContainerBlock>
             );
         }
 

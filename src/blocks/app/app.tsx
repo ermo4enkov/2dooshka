@@ -8,15 +8,19 @@ import  Main  from "../main/main";
 import * as finishTask from "../../redux/actions/finishTask";
 import * as addTask from "../../redux/actions/addTask";
 
-export class App extends React.Component {
+interface AppProps {
+    data_user?: any;
+    finishTask?: any;
+    addTask?: any;
+}
+
+export class App extends React.Component<AppProps> {
     constructor(props) {
         super(props);
     }
 
     render() {
-        const data_user = this.props["data_user"];
-        const { finishTask } = this.props["finishTask"];
-        const { addTask } = this.props["addTask"];
+        const { data_user, finishTask, addTask } = this.props;
 
         return (
             <div>

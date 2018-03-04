@@ -19,6 +19,6 @@ const Main = (props) => (
       <Route path="/storybook" component={StoryBookView}/>
     </Switch>
   </main>
-)
+);
 
 export default Main;
