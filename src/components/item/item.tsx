@@ -52,7 +52,7 @@ export class Item extends React.Component<ItemProps, ItemState> {
         const type = event.target.attributes["aria-details"]["nodeValue"];
         const name = event.target.name;
         const value = event.target.value;
-        this.props.finishTask(name, value, type);
+        this.props.finishTask.finishTask(name, value, type);
     }
 
     render() {

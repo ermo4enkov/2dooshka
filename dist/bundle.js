@@ -47097,7 +47097,7 @@ var Item = (function (_super) {
         var type = event.target.attributes["aria-details"]["nodeValue"];
         var name = event.target.name;
         var value = event.target.value;
-        this.props.finishTask(name, value, type);
+        this.props.finishTask.finishTask(name, value, type);
     };
     Item.prototype.render = function () {
         var _a = this.props, content = _a.content, newTask = _a.newTask, redaction = _a.redaction, index = _a.index, completedTask = _a.completedTask, todayTask = _a.todayTask;
@@ -50208,9 +50208,9 @@ var NewTask = (function (_super) {
         };
         return _this;
     }
-    NewTask.prototype.addTask = function (event) {
+    NewTask.prototype.addNewTask = function (event) {
         var value = this.state.content;
-        this.props.addTask(value);
+        this.props.addTask.addTask(value);
         this.setState({
             content: ""
         });
@@ -50230,7 +50230,7 @@ var NewTask = (function (_super) {
         var ButtonsBlock = function () {
             return _this.state.content ?
                 React.createElement(StyledButtonCont, null,
-                    React.createElement(button_1.default, { text: "Добавить", onClick: _this.addTask.bind(_this) }),
+                    React.createElement(button_1.default, { text: "Добавить", onClick: _this.addNewTask.bind(_this) }),
                     React.createElement(button_1.default, { text: "Отмена", cancel: true, onClick: _this.deleteContent.bind(_this) }))
                 :
                     null;
@@ -50331,6 +50331,7 @@ var __extends = (this && this.__extends) || (function () {
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(0);
 var tasksConteiner_1 = __webpack_require__(154);
+var grid_1 = __webpack_require__(364);
 var TodayView = (function (_super) {
     __extends(TodayView, _super);
     function TodayView(props) {
@@ -50344,7 +50345,8 @@ var TodayView = (function (_super) {
         var addTask = this.props["addTask"];
         return (React.createElement("div", { className: "conteiner" },
             React.createElement("h1", { className: "title" }, "\u0421\u0435\u0433\u043E\u0434\u043D\u044F"),
-            React.createElement(tasksConteiner_1.default, { everyDay_tasks: everyDay_tasks, finishTask: finishTask, completed_tasks: completed_tasks, today_tasks: today_tasks, addTask: addTask })));
+            React.createElement(tasksConteiner_1.default, { everyDay_tasks: everyDay_tasks, finishTask: finishTask, completed_tasks: completed_tasks, today_tasks: today_tasks, addTask: addTask }),
+            React.createElement(grid_1.default, null)));
     };
     return TodayView;
 }(React.Component));
@@ -50741,6 +50743,36 @@ var thunk = createThunkMiddleware();
 thunk.withExtraArgument = createThunkMiddleware;
 
 exports['default'] = thunk;
+
+/***/ }),
+/* 359 */,
+/* 360 */,
+/* 361 */,
+/* 362 */,
+/* 363 */,
+/* 364 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var grid_1 = __webpack_require__(365);
+exports.default = grid_1.default;
+
+
+/***/ }),
+/* 365 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var React = __webpack_require__(0);
+var grid = function (props) {
+    return (React.createElement("div", null, "fdfdfdf"));
+};
+exports.default = grid;
+
 
 /***/ })
 /******/ ]);

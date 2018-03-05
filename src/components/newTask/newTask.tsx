@@ -46,9 +46,9 @@ class NewTask extends React.Component<NewTaskProps, NewTaskStates> {
         };
     }
 
-    addTask(event) {
+    addNewTask(event) {
         const value = this.state.content;
-        this.props.addTask(value);
+        this.props.addTask.addTask(value);
         this.setState({
             content: ""
         });
@@ -72,7 +72,7 @@ class NewTask extends React.Component<NewTaskProps, NewTaskStates> {
         {
             return this.state.content ?
                 <StyledButtonCont>
-                    <Button text="Добавить" onClick={this.addTask.bind(this)}/>
+                    <Button text="Добавить" onClick={this.addNewTask.bind(this)}/>
                     <Button text="Отмена" cancel onClick={this.deleteContent.bind(this)}/>
                 </StyledButtonCont>
             :
