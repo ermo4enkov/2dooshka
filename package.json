@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --open --config webpack.config.js --content-base ./dist",
-    "build": "webpack --config webpack.prod.js"
+    "build": "webpack --config webpack.prod.js",
+    "lint": "tslint --project"
   },
   "repository": {
     "type": "git",
@@ -54,7 +55,9 @@
     "redux-thunk": "^2.2.0",
     "resolve-url-loader": "^2.2.1",
     "source-sans-pro": "git://github.com/adobe-fonts/source-sans-pro.git#release",
-    "styled-components": "^2.2.4"
+    "styled-components": "^2.2.4",
+    "tslint": "^5.9.1",
+    "tslint-config-airbnb": "^5.7.0"
   },
   "keywords": [
     "React",

@@ -2,7 +2,7 @@ import * as React from "react";
 import Button from "../../components/button";
 import styled from "styled-components";
 import Item from "../../components/item";
-import NewTask from "../../components/newTask"
+import NewTask from "../../components/newTask";
 
 
 interface TasksContainerState {
