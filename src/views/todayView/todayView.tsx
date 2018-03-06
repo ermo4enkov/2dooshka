@@ -1,6 +1,6 @@
-import * as React from "react";
-import TasksConteiner from "../../blocks/tasksConteiner";
-import Grid from "../../blocks/grid";
+import * as React from 'react';
+import TasksConteiner from '../../blocks/TasksConteiner';
+import Calendar from '../../blocks/Calendar';
 
 
 export class TodayView extends React.Component {
@@ -21,7 +21,7 @@ export class TodayView extends React.Component {
             <div className="conteiner">
                 <h1 className="title">Сегодня</h1>
                 <TasksConteiner everyDay_tasks={everyDay_tasks} finishTask={finishTask} completed_tasks={completed_tasks} today_tasks={today_tasks} addTask={addTask}/>
-                <Grid/>
+                <Calendar/>
             </div>
         );
     }
