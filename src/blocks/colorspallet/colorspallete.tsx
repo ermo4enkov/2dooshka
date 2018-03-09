@@ -39,10 +39,10 @@ export class ColorsPallet extends React.Component<ColorPalletProps> {
   }
   
   render () {
-    const colorsCollection = () => colorsArray.map(function(color, index) {
+    const colorsCollection = colorsArray.map((color, index) => {
       return (
         <Pallet key={index} color={color} />
-        )
+      );
     });
 
     return(
@@ -52,10 +52,8 @@ export class ColorsPallet extends React.Component<ColorPalletProps> {
                     {colorsCollection}
                 </div>
             </div>
-        )
-    }
-
-
+    );
+  }
 
 }
 
