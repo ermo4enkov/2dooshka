@@ -1,32 +1,32 @@
-import { UPDATE_TASK_STATE } from "../../utils/constants/user";
-import { DB } from "../../utils/constants/db";
+import { UPDATE_TASK_STATE } from '../../utils/constants/user';
+import { DB } from '../../utils/constants/db';
 
 const initialState = {
-    error: "",
-    login: false,
-    user_type: "guest",
-    fetching: false,
-    data: "",
-    data_user: DB,
-    succesVerifyCode: false,
+  error: '',
+  login: false,
+  user_type: 'guest',
+  fetching: false,
+  data: '',
+  data_user: DB,
+  succesVerifyCode: false,
 };
 
 export default function userState(state: any = initialState, action: any) {
-    switch (action.type) {
+  switch (action.type) {
         // case FETCH_REQUEST:
         //     return state;
 
         // case SET_USER:
         //     return {...state, user_type: action.payload};
 
-        case UPDATE_TASK_STATE:
-            return {...state,
-                error: "",
-                fetching: false,
-                user_type: "guest",
-                data_user: {...DB},
-                type_of_input: "code"
-            };
+    case UPDATE_TASK_STATE:
+      return {...state,
+        error: '',
+        fetching: false,
+        user_type: 'guest',
+        data_user: { ...DB },
+        type_of_input: 'code',
+      };
 
         // case CODE_RECIEVED_FAIL:
         //     return {...state,
@@ -104,8 +104,8 @@ export default function userState(state: any = initialState, action: any) {
         //         data_user: action.payload,
         //     });
 
-        default:
-            return state;
-    }
+    default:
+      return state;
+  }
 }
 

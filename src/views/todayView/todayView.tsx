@@ -4,27 +4,34 @@ import Calendar from '../../blocks/Calendar';
 
 
 export class TodayView extends React.Component {
-    constructor(props) {
-        super(props);
-    }
+  constructor(props) {
+    super(props);
+  }
 
-    render() {
+  render() {
 
-        let everyDay_tasks = this.props["data_user"]["everyday_tasks"];
-        let completed_tasks = this.props["data_user"]["completed_tasks"];
-        let today_tasks = this.props["data_user"]["today_tasks"];
+    const everyDaytasks = this.props['data_user']['everyday_tasks'];
+    const completedTasks = this.props['data_user']['completed_tasks'];
+    const todayTasks = this.props['data_user']['today_tasks'];
 
-        const finishTask = this.props["finishTask"];
-        const addTask = this.props["addTask"];
+    const finishTask = this.props['finishTask'];
+    const addTask = this.props['addTask'];
+    const days = this.props['data_user']['days'];
 
-        return(
-            <div className="conteiner">
-                <h1 className="title">Сегодня</h1>
-                <TasksConteiner everyDay_tasks={everyDay_tasks} finishTask={finishTask} completed_tasks={completed_tasks} today_tasks={today_tasks} addTask={addTask}/>
-                <Calendar/>
-            </div>
-        );
-    }
+    return(
+        <div className="conteiner">
+            <h1 className="title">Сегодня</h1>
+            <TasksConteiner 
+              everyDay_tasks={everyDaytasks} 
+              finishTask={finishTask}
+              completed_tasks={completedTasks}
+              today_tasks={todayTasks}
+              addTask={addTask}
+            />
+            <Calendar days={days}/>
+        </div>
+    );
+  }
 }
 
 export default TodayView;
