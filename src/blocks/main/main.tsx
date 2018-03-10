@@ -6,7 +6,7 @@ import TodayView from '../../views/todayView';
 import StoryBookView from '../../views/storyBookView';
 
 
-const Main = (props) => (
+const Main = props => (
   <main>
     <Switch>
       <Route exact path="/today" render={ (routeProps) => 

@@ -1,8 +1,8 @@
-import * as React from "react";
-import styled from "styled-components";
-import Plus from "../icons/plus";
-import Checkbox from "material-ui/Checkbox";
-import Button from "../../components/button";
+import * as React from 'react';
+import styled from 'styled-components';
+import Plus from '../icons/plus';
+import Checkbox from 'material-ui/Checkbox';
+import Button from '../../components/button';
 
 const StyledItem = styled.div`
     width: auto;
@@ -30,68 +30,65 @@ const StyledButtonCont = styled.div`
 `;
 
 interface NewTaskProps {
-    addTask?: any;
-};
+  addTask?: any;
+}
 
 interface NewTaskStates {
-    content: string;
-};
-
+  content: string;
+}
 
 class NewTask extends React.Component<NewTaskProps, NewTaskStates> {
-    constructor(newTaskProps, newTaskStates) {
-        super(newTaskProps);
-        this.state = {
-            content: ""
-        };
-    }
+  constructor(newTaskProps, newTaskStates) {
+    super(newTaskProps);
+    this.state = {
+      content: '',
+    };
+  }
 
-    addNewTask(event) {
-        const value = this.state.content;
-        this.props.addTask.addTask(value);
-        this.setState({
-            content: ""
-        });
-    }
+  addNewTask(event) {
+    const value = this.state.content;
+    this.props.addTask.addTask(value);
+    this.setState({
+      content: '',
+    });
+  }
 
-    changeContent(event) {
-        this.setState({
-            content: event.target.value
-        });
-    }
+  changeContent(event) {
+    this.setState({
+      content: event.target.value
+    });
+  }
 
-    deleteContent(event) {
-        this.setState({
-            content: ""
-        });
-    }
+  deleteContent(event) {
+    this.setState({
+      content: '',
+    });
+  }
 
-    render() {
+  render() {
+    const ButtonsBlock = () => {
+      return this.state.content ?
+        <StyledButtonCont>
+            <Button text="Добавить" onClick={this.addNewTask.bind(this)}/>
+            <Button text="Отмена" cancel onClick={this.deleteContent.bind(this)}/>
+        </StyledButtonCont>
+        :
+        null;
+    };
 
-        const ButtonsBlock = () =>
-        {
-            return this.state.content ?
-                <StyledButtonCont>
-                    <Button text="Добавить" onClick={this.addNewTask.bind(this)}/>
-                    <Button text="Отмена" cancel onClick={this.deleteContent.bind(this)}/>
-                </StyledButtonCont>
-            :
-            null;
-        };
-
-        return(
-            <StyledItem>
-                <Plus/>
-                <StyledInput
-                    type="text"
-                    placeholder="Новая задача на сегодня..."
-                    onChange={this.changeContent.bind(this)}
-                    value={this.state.content}
-                />
-                <ButtonsBlock/>
-            </StyledItem>
-        );
-    }
+    return(
+        <StyledItem>
+            <Plus/>
+            <StyledInput
+                type="text"
+                placeholder="Новая задача на сегодня..."
+                onChange={this.changeContent.bind(this)}
+                defaultValue={this.state.content}
+            />
+            <ButtonsBlock/>
+        </StyledItem>
+    );
+  }
 }
 
 export default NewTask;

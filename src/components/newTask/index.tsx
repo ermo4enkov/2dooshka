@@ -1,1 +1,1 @@
-export { default } from "./newTask";
+export { default } from './newTask';

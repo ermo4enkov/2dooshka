@@ -1,1 +1,1 @@
-export { default } from "./storyBookView";
+export { default } from './storyBookView';

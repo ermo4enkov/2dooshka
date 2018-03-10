@@ -1,14 +1,14 @@
-import * as React from "react";
-import styled from "styled-components";
-import ContentAdd from "material-ui/svg-icons/content/add";
+import * as React from 'react';
+import styled from 'styled-components';
+import ContentAdd from 'material-ui/svg-icons/content/add';
 
-const PlusStyles = {
-    color: "#93A4AD",
-    cursor: "pointer"
+const plusStyles = {
+  color: '#93A4AD',
+  cursor: 'pointer',
 };
 
 const Plus = () => (
-    <ContentAdd style={PlusStyles}/>
+    <ContentAdd style={plusStyles}/>
 );
 
 export default Plus;

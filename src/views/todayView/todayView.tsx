@@ -22,10 +22,10 @@ export class TodayView extends React.Component {
         <div className="conteiner">
             <h1 className="title">Сегодня</h1>
             <TasksConteiner 
-              everyDay_tasks={everyDaytasks} 
+              everyDayTasks={everyDaytasks} 
               finishTask={finishTask}
-              completed_tasks={completedTasks}
-              today_tasks={todayTasks}
+              completedTasks={completedTasks}
+              todayTasks={todayTasks}
               addTask={addTask}
             />
             <Calendar days={days}/>

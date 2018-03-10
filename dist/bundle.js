@@ -14510,11 +14510,11 @@ exports.default = _SvgIcon2.default;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.FETCH_REQUEST = "FETCH_REQUEST";
-exports.FETCH_SUCCESS = "FETCH_SUCCESS";
-exports.FETCH_ERROR = "FETCH_ERROR";
-exports.SET_USER = "SET_USER";
-exports.UPDATE_TASK_STATE = "UPDATE_TASK_STATE";
+exports.FETCH_REQUEST = 'FETCH_REQUEST';
+exports.FETCH_SUCCESS = 'FETCH_SUCCESS';
+exports.FETCH_ERROR = 'FETCH_ERROR';
+exports.SET_USER = 'SET_USER';
+exports.UPDATE_TASK_STATE = 'UPDATE_TASK_STATE';
 
 
 /***/ }),
@@ -17885,7 +17885,7 @@ var store = store_1.default();
 ReactDOM.render(React.createElement(react_redux_1.Provider, { store: store },
     React.createElement(MuiThemeProvider_1.default, null,
         React.createElement(react_router_dom_1.BrowserRouter, null,
-            React.createElement(App_1.default, null)))), document.getElementById("root"));
+            React.createElement(App_1.default, null)))), document.getElementById('root'));
 
 
 /***/ }),
@@ -45460,13 +45460,13 @@ var EveryDayView = (function (_super) {
         return _super.call(this, props) || this;
     }
     EveryDayView.prototype.render = function () {
-        var everyDay_tasks = this.props["data_user"]["everyday_tasks"];
-        var completed_tasks = this.props["data_user"]["completed_tasks"];
-        var additional_tasks = this.props["data_user"]["additional_tasks"];
-        var finishTask = this.props["finishTask"];
+        var everyDayTasks = this.props['data_user']['everyday_tasks'];
+        var completedTasks = this.props['data_user']['completed_tasks'];
+        var additionalTasks = this.props['data_user']['additional_tasks'];
+        var finishTask = this.props['finishTask'];
         return (React.createElement("div", { className: "conteiner" },
             React.createElement("h1", { className: "title" }, "\u041A\u0430\u0436\u0434\u044B\u0439 \u0434\u0435\u043D\u044C"),
-            React.createElement(tasksConteiner_1.default, { everyDay_tasks: everyDay_tasks, finishTask: finishTask, completed_tasks: completed_tasks })));
+            React.createElement(tasksConteiner_1.default, { everyDayTasks: everyDayTasks, finishTask: finishTask, completedTasks: completedTasks })));
     };
     return EveryDayView;
 }(React.Component));
@@ -45512,20 +45512,19 @@ exports.TasksContainerBlock = function (props) { return (React.createElement("di
     React.createElement(button_1.default, { text: "Запланировать на каждый день" }))); };
 var TasksContainer = (function (_super) {
     __extends(TasksContainer, _super);
-    function TasksContainer(TasksContainerProps) {
-        var _this = _super.call(this, TasksContainerProps) || this;
+    function TasksContainer(props) {
+        var _this = _super.call(this, props) || this;
         _this.state = {
             isHide: false,
         };
         return _this;
     }
     TasksContainer.prototype.checkTasks = function () {
-        if (localStorage.getItem("bgcolor")) {
+        if (localStorage.getItem('bgcolor')) {
             return true;
         }
         return false;
     };
-    ;
     TasksContainer.prototype.componentWillMount = function () {
         localStorage.setItem('bgcolor', 'red');
         if (this.checkTasks()) {
@@ -45533,22 +45532,20 @@ var TasksContainer = (function (_super) {
                 isHide: true,
             });
         }
-        ;
     };
-    ;
     TasksContainer.prototype.render = function () {
         var _a = this.props, finishTask = _a.finishTask, addTask = _a.addTask;
-        var isHide = this.state["isHide"];
-        var _b = this.props, everyDay_tasks = _b.everyDay_tasks, completed_tasks = _b.completed_tasks, today_tasks = _b.today_tasks;
-        everyDay_tasks = everyDay_tasks.map(function (item, i) {
+        var isHide = this.state['isHide'];
+        var _b = this.props, everyDayTasks = _b.everyDayTasks, completedTasks = _b.completedTasks, todayTasks = _b.todayTasks;
+        everyDayTasks = everyDayTasks.map(function (item, i) {
             return (React.createElement("li", { className: "tasks-list__item", key: i },
                 React.createElement(item_1.default, { content: item, finishTask: finishTask, index: i })));
         });
-        completed_tasks = completed_tasks.map(function (item, i) {
+        completedTasks = completedTasks.map(function (item, i) {
             return (React.createElement("li", { className: "tasks-list__item", key: i },
                 React.createElement(item_1.default, { content: item, completedTask: true })));
         });
-        today_tasks ? today_tasks = today_tasks.map(function (item, i) {
+        todayTasks ? todayTasks = todayTasks.map(function (item, i) {
             return (React.createElement("li", { className: "tasks-list__item", key: i },
                 React.createElement(item_1.default, { content: item, todayTask: true, finishTask: finishTask, index: i })));
         }) : null;
@@ -45556,22 +45553,21 @@ var TasksContainer = (function (_super) {
             return (React.createElement(exports.TasksContainerBlock, null));
         }
         return (React.createElement("div", null,
-            React.createElement("ul", { className: "tasks-list" }, everyDay_tasks),
+            React.createElement("ul", { className: "tasks-list" }, everyDayTasks),
             React.createElement("h2", { className: "subtitile" }, "\u0414\u041E\u041F\u041E\u041B\u041D\u0418\u0422\u0415\u041B\u042C\u041D\u042B\u0415 \u041D\u0410 \u0421\u0415\u0413\u041E\u0414\u041D\u042F"),
-            today_tasks ?
-                React.createElement("ul", { className: "tasks-list" }, today_tasks)
+            todayTasks ?
+                React.createElement("ul", { className: "tasks-list" }, todayTasks)
                 : null,
             React.createElement(newTask_1.default, { addTask: addTask }),
-            completed_tasks ?
+            completedTasks ?
                 React.createElement("div", null,
                     React.createElement("h2", { className: "subtitile" }, "\u0412\u042B\u041F\u041E\u041B\u041D\u0415\u041D\u041D\u042B\u0415"),
-                    React.createElement("ul", { className: "tasks-list" }, completed_tasks))
+                    React.createElement("ul", { className: "tasks-list" }, completedTasks))
                 : null));
     };
     return TasksContainer;
 }(React.Component));
 exports.TasksContainer = TasksContainer;
-;
 exports.default = TasksContainer;
 
 
@@ -45606,25 +45602,50 @@ var __assign = (this && this.__assign) || Object.assign || function(t) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(0);
 var styled_components_1 = __webpack_require__(40);
-var StyledButton = styled_components_1.default.div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n    border-radius: 5px;\n    font-size: 16px;\n    text-align: center;\n    padding: 10px 20px;\n    display: inline-block;\n    cursor: ", ";\n    color: ", ";\n    background-color: ", ";\n    margin-right: ", ";\n    border: ", ";\n    background-color: ", ";\n    min-width: 80px;\n    box-shadow: ", ";\n    filter: ", ";\n    \n        &:hover{\n            box-shadow: ", "\n            filter: brightness(90%);\n        }    \n"], ["\n    border-radius: 5px;\n    font-size: 16px;\n    text-align: center;\n    padding: 10px 20px;\n    display: inline-block;\n    cursor: ", ";\n    color: ", ";\n    background-color: ", ";\n    margin-right: ", ";\n    border: ",
+var StyledButton = styled_components_1.default.div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n    border-radius: 5px;\n    font-size: 16px;\n    text-align: center;\n    padding: 10px 20px;\n    display: inline-block;\n    cursor: ", ";\n    color: ", ";\n    background-color: ", ";\n    margin-right: ", ";\n    border: ", ";\n    background-color: ", ";\n    min-width: 80px;\n    box-shadow: ", ";\n    filter: ", ";\n    \n        &:hover{\n            box-shadow: ", "\n            filter: brightness(90%);\n        }    \n"], ["\n    border-radius: 5px;\n    font-size: 16px;\n    text-align: center;\n    padding: 10px 20px;\n    display: inline-block;\n    cursor: ",
+    ";\n    color: ",
+    ";\n    background-color: ",
+    ";\n    margin-right: ",
+    ";\n    border: ",
     ";\n    background-color: ",
     ";\n    min-width: 80px;\n    box-shadow: ",
-    ";\n    filter: ", ";\n    \n        &:hover{\n            box-shadow: ", "\n            filter: brightness(90%);\n        }    \n"])), function (props) { return (props.disabled || props.isLoading) ? "default" : "pointer"; }, function (props) { return (props.cancel || props.disabled) ? "#93a4ad" : "#fff"; }, function (props) { return props.cancel ? "#f6f7f8" : "#00b0ff"; }, function (props) { return props.example ? "20px" : "0"; }, function (props) { return (props.disabled === true || props.isLoading === true) ?
-    "solid 1px #d0d8dc;" : "none"; }, function (props) { return (props.disabled === true || props.isLoading === true) ?
-    "#f6f7f8" : ""; }, function (props) { return props.hover === true ?
-    "inset 0 -2px 0 0 rgba(0, 0, 0, 0.1);" : "none"; }, function (props) { return props.hover === true ? "brightness(90%);" : "none"; }, function (props) { return (props.disabled === true || props.isLoading === true) ? "none" : "inset 0 -2px 0 0 rgba(0, 0, 0, 0.1);"; });
+    ";\n    filter: ",
+    ";\n    \n        &:hover{\n            box-shadow: ",
+    "\n            filter: brightness(90%);\n        }    \n"])), function (props) {
+    return (props.disabled || props.isLoading) ? 'default' : 'pointer';
+}, function (props) {
+    return (props.cancel || props.disabled) ? '#93a4ad' : '#fff';
+}, function (props) {
+    return props.cancel ? '#f6f7f8' : '#00b0ff';
+}, function (props) {
+    return props.example ? '20px' : '0';
+}, function (props) {
+    return (props.disabled || props.isLoading) ? 'solid 1px #d0d8dc;' : 'none';
+}, function (props) {
+    return (props.disabled || props.isLoading) ?
+        '#f6f7f8' : '';
+}, function (props) {
+    return props.hover === true ? 'inset 0 -2px 0 0 rgba(0, 0, 0, 0.1);' : 'none';
+}, function (props) {
+    return props.hover === true ? 'brightness(90%);' : 'none';
+}, function (props) {
+    return (props.disabled || props.isLoading) ?
+        'none' : 'inset 0 -2px 0 0 rgba(0, 0, 0, 0.1);';
+});
 var Button = (function (_super) {
     __extends(Button, _super);
-    function Button(ButtonProps) {
-        var _this = _super.call(this, ButtonProps) || this;
+    function Button(props) {
+        var _this = _super.call(this, props) || this;
         _this.state = {
             isBlocked: false,
-            isLoaded: false
+            isLoaded: false,
         };
         return _this;
     }
     Button.prototype.render = function () {
-        return (React.createElement(StyledButton, __assign({}, this.props, { disabled: this.props.disabled ? this.props.disabled : this.state.isBlocked, isLoading: this.props.isLoading ? this.props.isLoading : this.state.isLoaded }), this.props.isLoading ? React.createElement("div", { className: this.props.isLoading ? "loader" : "" }, "Loading...") : this.props.text));
+        return (React.createElement(StyledButton, __assign({}, this.props, { disabled: this.props.disabled ? this.props.disabled : this.state.isBlocked, isLoading: this.props.isLoading ? this.props.isLoading : this.state.isLoaded }), this.props.isLoading ?
+            React.createElement("div", { className: this.props.isLoading ? 'loader' : '' }, "Loading...")
+            : this.props.text));
     };
     return Button;
 }(React.Component));
@@ -47450,25 +47471,25 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(0);
 var styled_components_1 = __webpack_require__(40);
 var Checkbox_1 = __webpack_require__(315);
-var StyledItem = styled_components_1.default.div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n    width: ", ";\n    border-radius: 3px;\n    padding: 18px 16px;\n    font-size: 16px;\n    background-color: ", ";\n    color: ", ";   \n    border:  ", "; \n    border-color: ", ";\n"], ["\n    width: ", ";\n    border-radius: 3px;\n    padding: 18px 16px;\n    font-size: 16px;\n    background-color: ", ";\n    color: ", ";   \n    border:  ", "; \n    border-color: ", ";\n"])), function (props) { return props.example ? "70%" : "auto"; }, function (props) { return props.completedTask ? "#f2fef8" : "#ffffff"; }, function (props) { return props.completedTask ? "#a9f6d0" : "#000"; }, function (props) { return props.todayTask ? "dashed 1px" : "solid 1px"; }, function (props) { return props.completedTask ? "#a9f6d0" : "#516166"; });
-var checkbox_style = {
-    fontFamily: "Source Sans Pro",
+var StyledItem = styled_components_1.default.div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n    width: ", ";\n    border-radius: 3px;\n    padding: 18px 16px;\n    font-size: 16px;\n    background-color: ", ";\n    color: ", ";   \n    border:  ", "; \n    border-color: ", ";\n"], ["\n    width: ", ";\n    border-radius: 3px;\n    padding: 18px 16px;\n    font-size: 16px;\n    background-color: ", ";\n    color: ", ";   \n    border:  ", "; \n    border-color: ", ";\n"])), function (props) { return props.example ? '70%' : 'auto'; }, function (props) { return props.completedTask ? '#f2fef8' : '#ffffff'; }, function (props) { return props.completedTask ? '#a9f6d0' : '#000'; }, function (props) { return props.todayTask ? 'dashed 1px' : 'solid 1px'; }, function (props) { return props.completedTask ? '#a9f6d0' : '#516166'; });
+var checkboxStyle = {
+    fontFamily: 'Source Sans Pro',
     fontSize: 16,
 };
-var checkbox_style_dis = {
-    textDecoration: "line-through",
+var checkboxStyleDisable = {
+    textDecoration: 'line-through',
 };
 var Item = (function (_super) {
     __extends(Item, _super);
-    function Item(ItemProps, ItemState) {
-        var _this = _super.call(this, ItemProps) || this;
+    function Item(props) {
+        var _this = _super.call(this, props) || this;
         _this.state = {
-            checked: false
+            checked: false,
         };
         return _this;
     }
     Item.prototype.switchChecked = function (event) {
-        var type = event.target.attributes["aria-details"]["nodeValue"];
+        var type = event.target.attributes['aria-details']['nodeValue'];
         var name = event.target.name;
         var value = event.target.value;
         this.props.finishTask.finishTask(name, value, type);
@@ -47477,7 +47498,7 @@ var Item = (function (_super) {
         var _a = this.props, content = _a.content, newTask = _a.newTask, redaction = _a.redaction, index = _a.index, completedTask = _a.completedTask, todayTask = _a.todayTask;
         var check = this.state.checked;
         return (React.createElement(StyledItem, __assign({}, this.props, this.state),
-            React.createElement(Checkbox_1.default, { disabled: completedTask ? true : false, checked: completedTask ? true : false, labelStyle: completedTask ? checkbox_style_dis : checkbox_style, label: content, onCheck: this.switchChecked.bind(this), name: content, value: index, "aria-details": todayTask ? "today_tasks" : "everyday_tasks" })));
+            React.createElement(Checkbox_1.default, { disabled: completedTask ? true : false, checked: completedTask ? true : false, labelStyle: completedTask ? checkboxStyleDisable : checkboxStyle, label: content, onCheck: this.switchChecked.bind(this), name: content, value: index, "aria-details": todayTask ? 'today_tasks' : 'everyday_tasks' })));
     };
     return Item;
 }(React.Component));
@@ -50560,14 +50581,12 @@ var button_1 = __webpack_require__(100);
 var StyledItem = styled_components_1.default.div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n    width: auto;\n    border-radius: 3px;\n    padding: 18px 16px;\n    font-size: 16px;\n    background-color: rgba(208,216,220, 0.5);\n    color: #d0d8dc;\n    display: flex;\n    padding: 10px;\n    align-items: center;\n    min-height: 40px;\n"], ["\n    width: auto;\n    border-radius: 3px;\n    padding: 18px 16px;\n    font-size: 16px;\n    background-color: rgba(208,216,220, 0.5);\n    color: #d0d8dc;\n    display: flex;\n    padding: 10px;\n    align-items: center;\n    min-height: 40px;\n"])));
 var StyledInput = styled_components_1.default.input(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n    border: none;\n    background: none;\n    width: 100%;\n    font-family: Source Sans Pro;\n    font-size: 16px;\n"], ["\n    border: none;\n    background: none;\n    width: 100%;\n    font-family: Source Sans Pro;\n    font-size: 16px;\n"])));
 var StyledButtonCont = styled_components_1.default.div(templateObject_3 || (templateObject_3 = __makeTemplateObject(["\n    display:flex;\n"], ["\n    display:flex;\n"])));
-;
-;
 var NewTask = (function (_super) {
     __extends(NewTask, _super);
     function NewTask(newTaskProps, newTaskStates) {
         var _this = _super.call(this, newTaskProps) || this;
         _this.state = {
-            content: ""
+            content: '',
         };
         return _this;
     }
@@ -50575,7 +50594,7 @@ var NewTask = (function (_super) {
         var value = this.state.content;
         this.props.addTask.addTask(value);
         this.setState({
-            content: ""
+            content: '',
         });
     };
     NewTask.prototype.changeContent = function (event) {
@@ -50585,7 +50604,7 @@ var NewTask = (function (_super) {
     };
     NewTask.prototype.deleteContent = function (event) {
         this.setState({
-            content: ""
+            content: '',
         });
     };
     NewTask.prototype.render = function () {
@@ -50600,7 +50619,7 @@ var NewTask = (function (_super) {
         };
         return (React.createElement(StyledItem, null,
             React.createElement(plus_1.default, null),
-            React.createElement(StyledInput, { type: "text", placeholder: "Новая задача на сегодня...", onChange: this.changeContent.bind(this), value: this.state.content }),
+            React.createElement(StyledInput, { type: "text", placeholder: "Новая задача на сегодня...", onChange: this.changeContent.bind(this), defaultValue: this.state.content }),
             React.createElement(ButtonsBlock, null)));
     };
     return NewTask;
@@ -50618,11 +50637,11 @@ var templateObject_1, templateObject_2, templateObject_3;
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(0);
 var add_1 = __webpack_require__(344);
-var PlusStyles = {
-    color: "#93A4AD",
-    cursor: "pointer"
+var plusStyles = {
+    color: '#93A4AD',
+    cursor: 'pointer',
 };
-var Plus = function () { return (React.createElement(add_1.default, { style: PlusStyles })); };
+var Plus = function () { return (React.createElement(add_1.default, { style: plusStyles })); };
 exports.default = Plus;
 
 
@@ -50709,7 +50728,7 @@ var TodayView = (function (_super) {
         var days = this.props['data_user']['days'];
         return (React.createElement("div", { className: "conteiner" },
             React.createElement("h1", { className: "title" }, "\u0421\u0435\u0433\u043E\u0434\u043D\u044F"),
-            React.createElement(TasksConteiner_1.default, { everyDay_tasks: everyDaytasks, finishTask: finishTask, completed_tasks: completedTasks, today_tasks: todayTasks, addTask: addTask }),
+            React.createElement(TasksConteiner_1.default, { everyDayTasks: everyDaytasks, finishTask: finishTask, completedTasks: completedTasks, todayTasks: todayTasks, addTask: addTask }),
             React.createElement(Calendar_1.default, { days: days })));
     };
     return TodayView;
@@ -50756,20 +50775,19 @@ exports.TasksContainerBlock = function (props) { return (React.createElement("di
     React.createElement(button_1.default, { text: "Запланировать на каждый день" }))); };
 var TasksContainer = (function (_super) {
     __extends(TasksContainer, _super);
-    function TasksContainer(TasksContainerProps) {
-        var _this = _super.call(this, TasksContainerProps) || this;
+    function TasksContainer(props) {
+        var _this = _super.call(this, props) || this;
         _this.state = {
             isHide: false,
         };
         return _this;
     }
     TasksContainer.prototype.checkTasks = function () {
-        if (localStorage.getItem("bgcolor")) {
+        if (localStorage.getItem('bgcolor')) {
             return true;
         }
         return false;
     };
-    ;
     TasksContainer.prototype.componentWillMount = function () {
         localStorage.setItem('bgcolor', 'red');
         if (this.checkTasks()) {
@@ -50777,22 +50795,20 @@ var TasksContainer = (function (_super) {
                 isHide: true,
             });
         }
-        ;
     };
-    ;
     TasksContainer.prototype.render = function () {
         var _a = this.props, finishTask = _a.finishTask, addTask = _a.addTask;
-        var isHide = this.state["isHide"];
-        var _b = this.props, everyDay_tasks = _b.everyDay_tasks, completed_tasks = _b.completed_tasks, today_tasks = _b.today_tasks;
-        everyDay_tasks = everyDay_tasks.map(function (item, i) {
+        var isHide = this.state['isHide'];
+        var _b = this.props, everyDayTasks = _b.everyDayTasks, completedTasks = _b.completedTasks, todayTasks = _b.todayTasks;
+        everyDayTasks = everyDayTasks.map(function (item, i) {
             return (React.createElement("li", { className: "tasks-list__item", key: i },
                 React.createElement(item_1.default, { content: item, finishTask: finishTask, index: i })));
         });
-        completed_tasks = completed_tasks.map(function (item, i) {
+        completedTasks = completedTasks.map(function (item, i) {
             return (React.createElement("li", { className: "tasks-list__item", key: i },
                 React.createElement(item_1.default, { content: item, completedTask: true })));
         });
-        today_tasks ? today_tasks = today_tasks.map(function (item, i) {
+        todayTasks ? todayTasks = todayTasks.map(function (item, i) {
             return (React.createElement("li", { className: "tasks-list__item", key: i },
                 React.createElement(item_1.default, { content: item, todayTask: true, finishTask: finishTask, index: i })));
         }) : null;
@@ -50800,22 +50816,21 @@ var TasksContainer = (function (_super) {
             return (React.createElement(exports.TasksContainerBlock, null));
         }
         return (React.createElement("div", null,
-            React.createElement("ul", { className: "tasks-list" }, everyDay_tasks),
+            React.createElement("ul", { className: "tasks-list" }, everyDayTasks),
             React.createElement("h2", { className: "subtitile" }, "\u0414\u041E\u041F\u041E\u041B\u041D\u0418\u0422\u0415\u041B\u042C\u041D\u042B\u0415 \u041D\u0410 \u0421\u0415\u0413\u041E\u0414\u041D\u042F"),
-            today_tasks ?
-                React.createElement("ul", { className: "tasks-list" }, today_tasks)
+            todayTasks ?
+                React.createElement("ul", { className: "tasks-list" }, todayTasks)
                 : null,
             React.createElement(newTask_1.default, { addTask: addTask }),
-            completed_tasks ?
+            completedTasks ?
                 React.createElement("div", null,
                     React.createElement("h2", { className: "subtitile" }, "\u0412\u042B\u041F\u041E\u041B\u041D\u0415\u041D\u041D\u042B\u0415"),
-                    React.createElement("ul", { className: "tasks-list" }, completed_tasks))
+                    React.createElement("ul", { className: "tasks-list" }, completedTasks))
                 : null));
     };
     return TasksContainer;
 }(React.Component));
 exports.TasksContainer = TasksContainer;
-;
 exports.default = TasksContainer;
 
 
@@ -50991,9 +51006,9 @@ var ColorsPallet = (function (_super) {
         return _super.call(this, props) || this;
     }
     ColorsPallet.prototype.render = function () {
-        var colorsCollection = function () { return colorsArray.map(function (color, index) {
+        var colorsCollection = colorsArray.map(function (color, index) {
             return (React.createElement(Pallet, { key: index, color: color }));
-        }); };
+        });
         return (React.createElement("div", { className: "storybook__element" },
             React.createElement("h1", { className: "headerText" }, "Colors"),
             React.createElement("div", { className: "colors__wrap" }, colorsCollection)));
@@ -51096,25 +51111,50 @@ var __assign = (this && this.__assign) || Object.assign || function(t) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(0);
 var styled_components_1 = __webpack_require__(40);
-var StyledButton = styled_components_1.default.div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n    border-radius: 5px;\n    font-size: 16px;\n    text-align: center;\n    padding: 10px 20px;\n    display: inline-block;\n    cursor: ", ";\n    color: ", ";\n    background-color: ", ";\n    margin-right: ", ";\n    border: ", ";\n    background-color: ", ";\n    min-width: 80px;\n    box-shadow: ", ";\n    filter: ", ";\n    \n        &:hover{\n            box-shadow: ", "\n            filter: brightness(90%);\n        }    \n"], ["\n    border-radius: 5px;\n    font-size: 16px;\n    text-align: center;\n    padding: 10px 20px;\n    display: inline-block;\n    cursor: ", ";\n    color: ", ";\n    background-color: ", ";\n    margin-right: ", ";\n    border: ",
+var StyledButton = styled_components_1.default.div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n    border-radius: 5px;\n    font-size: 16px;\n    text-align: center;\n    padding: 10px 20px;\n    display: inline-block;\n    cursor: ", ";\n    color: ", ";\n    background-color: ", ";\n    margin-right: ", ";\n    border: ", ";\n    background-color: ", ";\n    min-width: 80px;\n    box-shadow: ", ";\n    filter: ", ";\n    \n        &:hover{\n            box-shadow: ", "\n            filter: brightness(90%);\n        }    \n"], ["\n    border-radius: 5px;\n    font-size: 16px;\n    text-align: center;\n    padding: 10px 20px;\n    display: inline-block;\n    cursor: ",
+    ";\n    color: ",
+    ";\n    background-color: ",
+    ";\n    margin-right: ",
+    ";\n    border: ",
     ";\n    background-color: ",
     ";\n    min-width: 80px;\n    box-shadow: ",
-    ";\n    filter: ", ";\n    \n        &:hover{\n            box-shadow: ", "\n            filter: brightness(90%);\n        }    \n"])), function (props) { return (props.disabled || props.isLoading) ? "default" : "pointer"; }, function (props) { return (props.cancel || props.disabled) ? "#93a4ad" : "#fff"; }, function (props) { return props.cancel ? "#f6f7f8" : "#00b0ff"; }, function (props) { return props.example ? "20px" : "0"; }, function (props) { return (props.disabled === true || props.isLoading === true) ?
-    "solid 1px #d0d8dc;" : "none"; }, function (props) { return (props.disabled === true || props.isLoading === true) ?
-    "#f6f7f8" : ""; }, function (props) { return props.hover === true ?
-    "inset 0 -2px 0 0 rgba(0, 0, 0, 0.1);" : "none"; }, function (props) { return props.hover === true ? "brightness(90%);" : "none"; }, function (props) { return (props.disabled === true || props.isLoading === true) ? "none" : "inset 0 -2px 0 0 rgba(0, 0, 0, 0.1);"; });
+    ";\n    filter: ",
+    ";\n    \n        &:hover{\n            box-shadow: ",
+    "\n            filter: brightness(90%);\n        }    \n"])), function (props) {
+    return (props.disabled || props.isLoading) ? 'default' : 'pointer';
+}, function (props) {
+    return (props.cancel || props.disabled) ? '#93a4ad' : '#fff';
+}, function (props) {
+    return props.cancel ? '#f6f7f8' : '#00b0ff';
+}, function (props) {
+    return props.example ? '20px' : '0';
+}, function (props) {
+    return (props.disabled || props.isLoading) ? 'solid 1px #d0d8dc;' : 'none';
+}, function (props) {
+    return (props.disabled || props.isLoading) ?
+        '#f6f7f8' : '';
+}, function (props) {
+    return props.hover === true ? 'inset 0 -2px 0 0 rgba(0, 0, 0, 0.1);' : 'none';
+}, function (props) {
+    return props.hover === true ? 'brightness(90%);' : 'none';
+}, function (props) {
+    return (props.disabled || props.isLoading) ?
+        'none' : 'inset 0 -2px 0 0 rgba(0, 0, 0, 0.1);';
+});
 var Button = (function (_super) {
     __extends(Button, _super);
-    function Button(ButtonProps) {
-        var _this = _super.call(this, ButtonProps) || this;
+    function Button(props) {
+        var _this = _super.call(this, props) || this;
         _this.state = {
             isBlocked: false,
-            isLoaded: false
+            isLoaded: false,
         };
         return _this;
     }
     Button.prototype.render = function () {
-        return (React.createElement(StyledButton, __assign({}, this.props, { disabled: this.props.disabled ? this.props.disabled : this.state.isBlocked, isLoading: this.props.isLoading ? this.props.isLoading : this.state.isLoaded }), this.props.isLoading ? React.createElement("div", { className: this.props.isLoading ? "loader" : "" }, "Loading...") : this.props.text));
+        return (React.createElement(StyledButton, __assign({}, this.props, { disabled: this.props.disabled ? this.props.disabled : this.state.isBlocked, isLoading: this.props.isLoading ? this.props.isLoading : this.state.isLoaded }), this.props.isLoading ?
+            React.createElement("div", { className: this.props.isLoading ? 'loader' : '' }, "Loading...")
+            : this.props.text));
     };
     return Button;
 }(React.Component));
@@ -51248,10 +51288,9 @@ function finishTask(name, value, type) {
     };
 }
 exports.finishTask = finishTask;
-;
 function updateTaskState() {
     return {
-        type: user_1.UPDATE_TASK_STATE
+        type: user_1.UPDATE_TASK_STATE,
     };
 }
 
@@ -51272,10 +51311,9 @@ function addTask(value) {
     };
 }
 exports.addTask = addTask;
-;
 function updateTaskState() {
     return {
-        type: user_1.UPDATE_TASK_STATE
+        type: user_1.UPDATE_TASK_STATE,
     };
 }
 

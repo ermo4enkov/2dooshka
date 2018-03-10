@@ -10,10 +10,10 @@ interface TasksContainerState {
 }
 
 interface TasksContainerProps {
-  everyDay_tasks?: any;
+  everyDayTasks?: any;
   finishTask?: any;
-  completed_tasks?: any;
-  today_tasks?: any;
+  completedTasks?: any;
+  todayTasks?: any;
   addTask?: any;
 }
 
@@ -56,9 +56,9 @@ export class TasksContainer extends React.Component<TasksContainerProps, TasksCo
   render() {
     const { finishTask, addTask } = this.props;
     const isHide: boolean = this.state['isHide'];
-    let { everyDay_tasks, completed_tasks, today_tasks } = this.props;
+    let { everyDayTasks, completedTasks, todayTasks } = this.props;
 
-    everyDay_tasks = everyDay_tasks.map((item, i) => {
+    everyDayTasks = everyDayTasks.map((item, i) => {
       return(
         <li className="tasks-list__item" key={i}>
             <Item content={item} finishTask={finishTask} index={i}></Item>
@@ -66,7 +66,7 @@ export class TasksContainer extends React.Component<TasksContainerProps, TasksCo
       );
     });
 
-    completed_tasks = completed_tasks.map((item, i) => {
+    completedTasks = completedTasks.map((item, i) => {
       return(
         <li className="tasks-list__item" key={i}>
             <Item content={item} completedTask></Item>
@@ -74,7 +74,7 @@ export class TasksContainer extends React.Component<TasksContainerProps, TasksCo
       );
     });
 
-    today_tasks ? today_tasks = today_tasks.map((item, i) => {
+    todayTasks ? todayTasks = todayTasks.map((item, i) => {
       return(
         <li className="tasks-list__item" key={i}>
             <Item content={item} todayTask finishTask={finishTask} index={i}></Item>
@@ -91,21 +91,21 @@ export class TasksContainer extends React.Component<TasksContainerProps, TasksCo
     return(
         <div>
             <ul className="tasks-list">
-                {everyDay_tasks}
+                {everyDayTasks}
             </ul>    
             <h2 className="subtitile">ДОПОЛНИТЕЛЬНЫЕ НА СЕГОДНЯ</h2>
-            {today_tasks ?
+            {todayTasks ?
                 <ul className="tasks-list">
-                    {today_tasks} 
+                    {todayTasks} 
                 </ul>
             :null
             }
             <NewTask addTask={addTask}/>
-            {completed_tasks ?
+            {completedTasks ?
                 <div> 
                     <h2 className="subtitile">ВЫПОЛНЕННЫЕ</h2>
                     <ul className="tasks-list">
-                        {completed_tasks}
+                        {completedTasks}
                     </ul>
                 </div>
             :null
@@ -116,4 +116,3 @@ export class TasksContainer extends React.Component<TasksContainerProps, TasksCo
 }
 
 export default TasksContainer;
-

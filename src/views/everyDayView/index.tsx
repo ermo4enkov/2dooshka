@@ -1,1 +1,1 @@
-export { default } from "./everyDayView";
+export { default } from './everyDayView';
