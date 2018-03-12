@@ -2,7 +2,7 @@ export const FETCH_REQUEST = 'FETCH_REQUEST';
 export const FETCH_SUCCESS = 'FETCH_SUCCESS';
 export const FETCH_ERROR = 'FETCH_ERROR';
 
-export const SET_USER  = 'SET_USER';
+export const SET_USER = 'SET_USER';
 
 export const UPDATE_TASK_STATE = 'UPDATE_TASK_STATE';
 
@@ -21,7 +21,6 @@ export const UPDATE_TASK_STATE = 'UPDATE_TASK_STATE';
 // export const USER_TYPE_USER = "USER_TYPE_USER";
 // export const USER_TYPE_GUEST = "USER_TYPE_GUEST";
 
-
 // authorization/get-code?phone=37258147073
 // const TEST_URL = "http://api.demo.join.chat/v1";
 // const PRODUCTION_URL = "https://api.internal.join.chat/v1";
@@ -31,12 +30,9 @@ export const UPDATE_TASK_STATE = 'UPDATE_TASK_STATE';
 // export const SIGNUP_PATH = `${TEST_URL}/authorization/sign-up/`;
 // export const SIGNIN_PATH = `${TEST_URL}/authorization/sign-in`;
 
-
-
 // export const REGISTER_PATH = 'http://carsaleclub.xyz:5000/v1/clients/client/register';
 // export const REFRESH_PATH = 'http://carsaleclub.xyz:5000/v1/auth/refresh_token';
 // export const USER_TYPE_PATH = 'http://carsaleclub.xyz:5000/v1/auth/actor';
-
 
 // http://carsaleclub.xyz:5000
 // export const REQUEST_PATH = 'http://local-cs.ru:5000/v1/auth/token';

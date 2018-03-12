@@ -14537,13 +14537,8 @@ exports.DB = {
         'React',
         '2dooshka',
     ],
-    completed_tasks: [
-        'wake up',
-    ],
-    today_tasks: [
-        'wash plates',
-        'clean room',
-    ],
+    completed_tasks: ['wake up'],
+    today_tasks: ['wash plates', 'clean room'],
     days: [
         '1',
         '2',
@@ -45414,12 +45409,8 @@ var todayView_1 = __webpack_require__(345);
 var storyBookView_1 = __webpack_require__(351);
 var Main = function (props) { return (React.createElement("main", null,
     React.createElement(react_router_dom_1.Switch, null,
-        React.createElement(react_router_dom_1.Route, { exact: true, path: "/today", render: function (routeProps) {
-                return React.createElement(todayView_1.default, __assign({ routeProps: routeProps }, props));
-            } }),
-        React.createElement(react_router_dom_1.Route, { exact: true, path: "/everyday", render: function (routeProps) {
-                return React.createElement(everyDayView_1.default, __assign({ routeProps: routeProps }, props));
-            } }),
+        React.createElement(react_router_dom_1.Route, { exact: true, path: "/today", render: function (routeProps) { return React.createElement(todayView_1.default, __assign({ routeProps: routeProps }, props)); } }),
+        React.createElement(react_router_dom_1.Route, { exact: true, path: "/everyday", render: function (routeProps) { return (React.createElement(everyDayView_1.default, __assign({ routeProps: routeProps }, props))); } }),
         React.createElement(react_router_dom_1.Route, { path: "/storybook", component: storyBookView_1.default })))); };
 exports.default = Main;
 
@@ -45545,25 +45536,23 @@ var TasksContainer = (function (_super) {
             return (React.createElement("li", { className: "tasks-list__item", key: i },
                 React.createElement(item_1.default, { content: item, completedTask: true })));
         });
-        todayTasks ? todayTasks = todayTasks.map(function (item, i) {
-            return (React.createElement("li", { className: "tasks-list__item", key: i },
-                React.createElement(item_1.default, { content: item, todayTask: true, finishTask: finishTask, index: i })));
-        }) : null;
+        todayTasks
+            ? (todayTasks = todayTasks.map(function (item, i) {
+                return (React.createElement("li", { className: "tasks-list__item", key: i },
+                    React.createElement(item_1.default, { content: item, todayTask: true, finishTask: finishTask, index: i })));
+            }))
+            : null;
         if (!isHide) {
-            return (React.createElement(exports.TasksContainerBlock, null));
+            return React.createElement(exports.TasksContainerBlock, null);
         }
         return (React.createElement("div", null,
             React.createElement("ul", { className: "tasks-list" }, everyDayTasks),
             React.createElement("h2", { className: "subtitile" }, "\u0414\u041E\u041F\u041E\u041B\u041D\u0418\u0422\u0415\u041B\u042C\u041D\u042B\u0415 \u041D\u0410 \u0421\u0415\u0413\u041E\u0414\u041D\u042F"),
-            todayTasks ?
-                React.createElement("ul", { className: "tasks-list" }, todayTasks)
-                : null,
+            todayTasks ? React.createElement("ul", { className: "tasks-list" }, todayTasks) : null,
             React.createElement(newTask_1.default, { addTask: addTask }),
-            completedTasks ?
-                React.createElement("div", null,
-                    React.createElement("h2", { className: "subtitile" }, "\u0412\u042B\u041F\u041E\u041B\u041D\u0415\u041D\u041D\u042B\u0415"),
-                    React.createElement("ul", { className: "tasks-list" }, completedTasks))
-                : null));
+            completedTasks ? (React.createElement("div", null,
+                React.createElement("h2", { className: "subtitile" }, "\u0412\u042B\u041F\u041E\u041B\u041D\u0415\u041D\u041D\u042B\u0415"),
+                React.createElement("ul", { className: "tasks-list" }, completedTasks))) : null));
     };
     return TasksContainer;
 }(React.Component));
@@ -45605,32 +45594,29 @@ var styled_components_1 = __webpack_require__(40);
 var StyledButton = styled_components_1.default.div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n    border-radius: 5px;\n    font-size: 16px;\n    text-align: center;\n    padding: 10px 20px;\n    display: inline-block;\n    cursor: ", ";\n    color: ", ";\n    background-color: ", ";\n    margin-right: ", ";\n    border: ", ";\n    background-color: ", ";\n    min-width: 80px;\n    box-shadow: ", ";\n    filter: ", ";\n    \n        &:hover{\n            box-shadow: ", "\n            filter: brightness(90%);\n        }    \n"], ["\n    border-radius: 5px;\n    font-size: 16px;\n    text-align: center;\n    padding: 10px 20px;\n    display: inline-block;\n    cursor: ",
     ";\n    color: ",
     ";\n    background-color: ",
-    ";\n    margin-right: ",
-    ";\n    border: ",
+    ";\n    margin-right: ", ";\n    border: ",
     ";\n    background-color: ",
     ";\n    min-width: 80px;\n    box-shadow: ",
     ";\n    filter: ",
     ";\n    \n        &:hover{\n            box-shadow: ",
     "\n            filter: brightness(90%);\n        }    \n"])), function (props) {
-    return (props.disabled || props.isLoading) ? 'default' : 'pointer';
+    return props.disabled || props.isLoading ? 'default' : 'pointer';
 }, function (props) {
-    return (props.cancel || props.disabled) ? '#93a4ad' : '#fff';
+    return props.cancel || props.disabled ? '#93a4ad' : '#fff';
 }, function (props) {
     return props.cancel ? '#f6f7f8' : '#00b0ff';
+}, function (props) { return (props.example ? '20px' : '0'); }, function (props) {
+    return props.disabled || props.isLoading ? 'solid 1px #d0d8dc;' : 'none';
 }, function (props) {
-    return props.example ? '20px' : '0';
-}, function (props) {
-    return (props.disabled || props.isLoading) ? 'solid 1px #d0d8dc;' : 'none';
-}, function (props) {
-    return (props.disabled || props.isLoading) ?
-        '#f6f7f8' : '';
+    return props.disabled || props.isLoading ? '#f6f7f8' : '';
 }, function (props) {
     return props.hover === true ? 'inset 0 -2px 0 0 rgba(0, 0, 0, 0.1);' : 'none';
 }, function (props) {
     return props.hover === true ? 'brightness(90%);' : 'none';
 }, function (props) {
-    return (props.disabled || props.isLoading) ?
-        'none' : 'inset 0 -2px 0 0 rgba(0, 0, 0, 0.1);';
+    return props.disabled || props.isLoading
+        ? 'none'
+        : 'inset 0 -2px 0 0 rgba(0, 0, 0, 0.1);';
 });
 var Button = (function (_super) {
     __extends(Button, _super);
@@ -45643,9 +45629,7 @@ var Button = (function (_super) {
         return _this;
     }
     Button.prototype.render = function () {
-        return (React.createElement(StyledButton, __assign({}, this.props, { disabled: this.props.disabled ? this.props.disabled : this.state.isBlocked, isLoading: this.props.isLoading ? this.props.isLoading : this.state.isLoaded }), this.props.isLoading ?
-            React.createElement("div", { className: this.props.isLoading ? 'loader' : '' }, "Loading...")
-            : this.props.text));
+        return (React.createElement(StyledButton, __assign({}, this.props, { disabled: this.props.disabled ? this.props.disabled : this.state.isBlocked, isLoading: this.props.isLoading ? this.props.isLoading : this.state.isLoaded }), this.props.isLoading ? (React.createElement("div", { className: this.props.isLoading ? 'loader' : '' }, "Loading...")) : (this.props.text)));
     };
     return Button;
 }(React.Component));
@@ -47471,7 +47455,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(0);
 var styled_components_1 = __webpack_require__(40);
 var Checkbox_1 = __webpack_require__(315);
-var StyledItem = styled_components_1.default.div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n    width: ", ";\n    border-radius: 3px;\n    padding: 18px 16px;\n    font-size: 16px;\n    background-color: ", ";\n    color: ", ";   \n    border:  ", "; \n    border-color: ", ";\n"], ["\n    width: ", ";\n    border-radius: 3px;\n    padding: 18px 16px;\n    font-size: 16px;\n    background-color: ", ";\n    color: ", ";   \n    border:  ", "; \n    border-color: ", ";\n"])), function (props) { return props.example ? '70%' : 'auto'; }, function (props) { return props.completedTask ? '#f2fef8' : '#ffffff'; }, function (props) { return props.completedTask ? '#a9f6d0' : '#000'; }, function (props) { return props.todayTask ? 'dashed 1px' : 'solid 1px'; }, function (props) { return props.completedTask ? '#a9f6d0' : '#516166'; });
+var StyledItem = styled_components_1.default.div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  width: ", ";\n  border-radius: 3px;\n  padding: 18px 16px;\n  font-size: 16px;\n  background-color: ", ";\n  color: ", ";\n  border: ", ";\n  border-color: ", ";\n"], ["\n  width: ", ";\n  border-radius: 3px;\n  padding: 18px 16px;\n  font-size: 16px;\n  background-color: ",
+    ";\n  color: ", ";\n  border: ",
+    ";\n  border-color: ",
+    ";\n"])), function (props) { return (props.example ? '70%' : 'auto'); }, function (props) {
+    return props.completedTask ? '#f2fef8' : '#ffffff';
+}, function (props) { return (props.completedTask ? '#a9f6d0' : '#000'); }, function (props) {
+    return props.todayTask ? 'dashed 1px' : 'solid 1px';
+}, function (props) {
+    return props.completedTask ? '#a9f6d0' : '#516166';
+});
 var checkboxStyle = {
     fontFamily: 'Source Sans Pro',
     fontSize: 16,
@@ -50578,9 +50571,9 @@ var React = __webpack_require__(0);
 var styled_components_1 = __webpack_require__(40);
 var plus_1 = __webpack_require__(343);
 var button_1 = __webpack_require__(100);
-var StyledItem = styled_components_1.default.div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n    width: auto;\n    border-radius: 3px;\n    padding: 18px 16px;\n    font-size: 16px;\n    background-color: rgba(208,216,220, 0.5);\n    color: #d0d8dc;\n    display: flex;\n    padding: 10px;\n    align-items: center;\n    min-height: 40px;\n"], ["\n    width: auto;\n    border-radius: 3px;\n    padding: 18px 16px;\n    font-size: 16px;\n    background-color: rgba(208,216,220, 0.5);\n    color: #d0d8dc;\n    display: flex;\n    padding: 10px;\n    align-items: center;\n    min-height: 40px;\n"])));
-var StyledInput = styled_components_1.default.input(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n    border: none;\n    background: none;\n    width: 100%;\n    font-family: Source Sans Pro;\n    font-size: 16px;\n"], ["\n    border: none;\n    background: none;\n    width: 100%;\n    font-family: Source Sans Pro;\n    font-size: 16px;\n"])));
-var StyledButtonCont = styled_components_1.default.div(templateObject_3 || (templateObject_3 = __makeTemplateObject(["\n    display:flex;\n"], ["\n    display:flex;\n"])));
+var StyledItem = styled_components_1.default.div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  width: auto;\n  border-radius: 3px;\n  padding: 18px 16px;\n  font-size: 16px;\n  background-color: rgba(208, 216, 220, 0.5);\n  color: #d0d8dc;\n  display: flex;\n  padding: 10px;\n  align-items: center;\n  min-height: 40px;\n"], ["\n  width: auto;\n  border-radius: 3px;\n  padding: 18px 16px;\n  font-size: 16px;\n  background-color: rgba(208, 216, 220, 0.5);\n  color: #d0d8dc;\n  display: flex;\n  padding: 10px;\n  align-items: center;\n  min-height: 40px;\n"])));
+var StyledInput = styled_components_1.default.input(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n  border: none;\n  background: none;\n  width: 100%;\n  font-family: Source Sans Pro;\n  font-size: 16px;\n"], ["\n  border: none;\n  background: none;\n  width: 100%;\n  font-family: Source Sans Pro;\n  font-size: 16px;\n"])));
+var StyledButtonCont = styled_components_1.default.div(templateObject_3 || (templateObject_3 = __makeTemplateObject(["\n  display: flex;\n"], ["\n  display: flex;\n"])));
 var NewTask = (function (_super) {
     __extends(NewTask, _super);
     function NewTask(newTaskProps, newTaskStates) {
@@ -50599,7 +50592,7 @@ var NewTask = (function (_super) {
     };
     NewTask.prototype.changeContent = function (event) {
         this.setState({
-            content: event.target.value
+            content: event.target.value,
         });
     };
     NewTask.prototype.deleteContent = function (event) {
@@ -50610,12 +50603,9 @@ var NewTask = (function (_super) {
     NewTask.prototype.render = function () {
         var _this = this;
         var ButtonsBlock = function () {
-            return _this.state.content ?
-                React.createElement(StyledButtonCont, null,
-                    React.createElement(button_1.default, { text: "Добавить", onClick: _this.addNewTask.bind(_this) }),
-                    React.createElement(button_1.default, { text: "Отмена", cancel: true, onClick: _this.deleteContent.bind(_this) }))
-                :
-                    null;
+            return _this.state.content ? (React.createElement(StyledButtonCont, null,
+                React.createElement(button_1.default, { text: "Добавить", onClick: _this.addNewTask.bind(_this) }),
+                React.createElement(button_1.default, { text: "Отмена", cancel: true, onClick: _this.deleteContent.bind(_this) }))) : null;
         };
         return (React.createElement(StyledItem, null,
             React.createElement(plus_1.default, null),
@@ -50641,7 +50631,7 @@ var plusStyles = {
     color: '#93A4AD',
     cursor: 'pointer',
 };
-var Plus = function () { return (React.createElement(add_1.default, { style: plusStyles })); };
+var Plus = function () { return React.createElement(add_1.default, { style: plusStyles }); };
 exports.default = Plus;
 
 
@@ -50808,25 +50798,23 @@ var TasksContainer = (function (_super) {
             return (React.createElement("li", { className: "tasks-list__item", key: i },
                 React.createElement(item_1.default, { content: item, completedTask: true })));
         });
-        todayTasks ? todayTasks = todayTasks.map(function (item, i) {
-            return (React.createElement("li", { className: "tasks-list__item", key: i },
-                React.createElement(item_1.default, { content: item, todayTask: true, finishTask: finishTask, index: i })));
-        }) : null;
+        todayTasks
+            ? (todayTasks = todayTasks.map(function (item, i) {
+                return (React.createElement("li", { className: "tasks-list__item", key: i },
+                    React.createElement(item_1.default, { content: item, todayTask: true, finishTask: finishTask, index: i })));
+            }))
+            : null;
         if (!isHide) {
-            return (React.createElement(exports.TasksContainerBlock, null));
+            return React.createElement(exports.TasksContainerBlock, null);
         }
         return (React.createElement("div", null,
             React.createElement("ul", { className: "tasks-list" }, everyDayTasks),
             React.createElement("h2", { className: "subtitile" }, "\u0414\u041E\u041F\u041E\u041B\u041D\u0418\u0422\u0415\u041B\u042C\u041D\u042B\u0415 \u041D\u0410 \u0421\u0415\u0413\u041E\u0414\u041D\u042F"),
-            todayTasks ?
-                React.createElement("ul", { className: "tasks-list" }, todayTasks)
-                : null,
+            todayTasks ? React.createElement("ul", { className: "tasks-list" }, todayTasks) : null,
             React.createElement(newTask_1.default, { addTask: addTask }),
-            completedTasks ?
-                React.createElement("div", null,
-                    React.createElement("h2", { className: "subtitile" }, "\u0412\u042B\u041F\u041E\u041B\u041D\u0415\u041D\u041D\u042B\u0415"),
-                    React.createElement("ul", { className: "tasks-list" }, completedTasks))
-                : null));
+            completedTasks ? (React.createElement("div", null,
+                React.createElement("h2", { className: "subtitile" }, "\u0412\u042B\u041F\u041E\u041B\u041D\u0415\u041D\u041D\u042B\u0415"),
+                React.createElement("ul", { className: "tasks-list" }, completedTasks))) : null));
     };
     return TasksContainer;
 }(React.Component));
@@ -50985,21 +50973,39 @@ var __extends = (this && this.__extends) || (function () {
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(0);
 var styled_components_1 = __webpack_require__(40);
-var PALLETEXAMPLE = styled_components_1.default.div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n    display: block;\n    width: 70px;\n    height: 70px;\n    background-color: ", ";\n"], ["\n    display: block;\n    width: 70px;\n    height: 70px;\n    background-color: ",
-    ";\n"])), function (props) { return props.color === 'greyLight' ? '#f6f7f8' :
-    props.color === 'grey' ? '#d0d8dc' :
-        props.color === 'greyDark' ? '#93a4ad' :
-            props.color === 'greyDarker' ? '#7c909b' :
-                props.color === 'black' ? '#283238' :
-                    props.color === 'mint' ? '#f2fef8' :
-                        props.color === 'good' ? '#a9f6d0' :
-                            props.color === 'empty' ? '#1fb6ff' : '#fff'; });
+var PALLETEXAMPLE = styled_components_1.default.div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  display: block;\n  width: 70px;\n  height: 70px;\n  background-color: ", ";\n"], ["\n  display: block;\n  width: 70px;\n  height: 70px;\n  background-color: ",
+    ";\n"])), function (props) {
+    return props.color === 'greyLight'
+        ? '#f6f7f8'
+        : props.color === 'grey'
+            ? '#d0d8dc'
+            : props.color === 'greyDark'
+                ? '#93a4ad'
+                : props.color === 'greyDarker'
+                    ? '#7c909b'
+                    : props.color === 'black'
+                        ? '#283238'
+                        : props.color === 'mint'
+                            ? '#f2fef8'
+                            : props.color === 'good'
+                                ? '#a9f6d0'
+                                : props.color === 'empty' ? '#1fb6ff' : '#fff';
+});
 function Pallet(props) {
     return (React.createElement("div", null,
         React.createElement(PALLETEXAMPLE, { color: props.color }),
         React.createElement("span", { className: "hint" }, props.color)));
 }
-var colorsArray = ['greyLight', 'grey', 'greyDark', 'greyDarker', 'black', 'mint', 'good', 'empty'];
+var colorsArray = [
+    'greyLight',
+    'grey',
+    'greyDark',
+    'greyDarker',
+    'black',
+    'mint',
+    'good',
+    'empty',
+];
 var ColorsPallet = (function (_super) {
     __extends(ColorsPallet, _super);
     function ColorsPallet(props) {
@@ -51007,7 +51013,7 @@ var ColorsPallet = (function (_super) {
     }
     ColorsPallet.prototype.render = function () {
         var colorsCollection = colorsArray.map(function (color, index) {
-            return (React.createElement(Pallet, { key: index, color: color }));
+            return React.createElement(Pallet, { key: index, color: color });
         });
         return (React.createElement("div", { className: "storybook__element" },
             React.createElement("h1", { className: "headerText" }, "Colors"),
@@ -51114,32 +51120,29 @@ var styled_components_1 = __webpack_require__(40);
 var StyledButton = styled_components_1.default.div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n    border-radius: 5px;\n    font-size: 16px;\n    text-align: center;\n    padding: 10px 20px;\n    display: inline-block;\n    cursor: ", ";\n    color: ", ";\n    background-color: ", ";\n    margin-right: ", ";\n    border: ", ";\n    background-color: ", ";\n    min-width: 80px;\n    box-shadow: ", ";\n    filter: ", ";\n    \n        &:hover{\n            box-shadow: ", "\n            filter: brightness(90%);\n        }    \n"], ["\n    border-radius: 5px;\n    font-size: 16px;\n    text-align: center;\n    padding: 10px 20px;\n    display: inline-block;\n    cursor: ",
     ";\n    color: ",
     ";\n    background-color: ",
-    ";\n    margin-right: ",
-    ";\n    border: ",
+    ";\n    margin-right: ", ";\n    border: ",
     ";\n    background-color: ",
     ";\n    min-width: 80px;\n    box-shadow: ",
     ";\n    filter: ",
     ";\n    \n        &:hover{\n            box-shadow: ",
     "\n            filter: brightness(90%);\n        }    \n"])), function (props) {
-    return (props.disabled || props.isLoading) ? 'default' : 'pointer';
+    return props.disabled || props.isLoading ? 'default' : 'pointer';
 }, function (props) {
-    return (props.cancel || props.disabled) ? '#93a4ad' : '#fff';
+    return props.cancel || props.disabled ? '#93a4ad' : '#fff';
 }, function (props) {
     return props.cancel ? '#f6f7f8' : '#00b0ff';
+}, function (props) { return (props.example ? '20px' : '0'); }, function (props) {
+    return props.disabled || props.isLoading ? 'solid 1px #d0d8dc;' : 'none';
 }, function (props) {
-    return props.example ? '20px' : '0';
-}, function (props) {
-    return (props.disabled || props.isLoading) ? 'solid 1px #d0d8dc;' : 'none';
-}, function (props) {
-    return (props.disabled || props.isLoading) ?
-        '#f6f7f8' : '';
+    return props.disabled || props.isLoading ? '#f6f7f8' : '';
 }, function (props) {
     return props.hover === true ? 'inset 0 -2px 0 0 rgba(0, 0, 0, 0.1);' : 'none';
 }, function (props) {
     return props.hover === true ? 'brightness(90%);' : 'none';
 }, function (props) {
-    return (props.disabled || props.isLoading) ?
-        'none' : 'inset 0 -2px 0 0 rgba(0, 0, 0, 0.1);';
+    return props.disabled || props.isLoading
+        ? 'none'
+        : 'inset 0 -2px 0 0 rgba(0, 0, 0, 0.1);';
 });
 var Button = (function (_super) {
     __extends(Button, _super);
@@ -51152,9 +51155,7 @@ var Button = (function (_super) {
         return _this;
     }
     Button.prototype.render = function () {
-        return (React.createElement(StyledButton, __assign({}, this.props, { disabled: this.props.disabled ? this.props.disabled : this.state.isBlocked, isLoading: this.props.isLoading ? this.props.isLoading : this.state.isLoaded }), this.props.isLoading ?
-            React.createElement("div", { className: this.props.isLoading ? 'loader' : '' }, "Loading...")
-            : this.props.text));
+        return (React.createElement(StyledButton, __assign({}, this.props, { disabled: this.props.disabled ? this.props.disabled : this.state.isBlocked, isLoading: this.props.isLoading ? this.props.isLoading : this.state.isLoaded }), this.props.isLoading ? (React.createElement("div", { className: this.props.isLoading ? 'loader' : '' }, "Loading...")) : (this.props.text)));
     };
     return Button;
 }(React.Component));

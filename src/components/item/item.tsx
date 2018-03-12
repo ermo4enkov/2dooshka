@@ -4,14 +4,17 @@ import Button from '../button/button';
 import Checkbox from 'material-ui/Checkbox';
 
 const StyledItem = styled.div`
-    width: ${(props: ItemProps) => props.example ? '70%' : 'auto'};
-    border-radius: 3px;
-    padding: 18px 16px;
-    font-size: 16px;
-    background-color: ${(props: ItemProps) => props.completedTask ? '#f2fef8' : '#ffffff'};
-    color: ${(props: ItemProps) => props.completedTask ? '#a9f6d0' : '#000'};   
-    border:  ${(props: ItemProps) => props.todayTask ? 'dashed 1px' : 'solid 1px'}; 
-    border-color: ${(props: ItemProps) => props.completedTask ? '#a9f6d0' : '#516166'};
+  width: ${(props: ItemProps) => (props.example ? '70%' : 'auto')};
+  border-radius: 3px;
+  padding: 18px 16px;
+  font-size: 16px;
+  background-color: ${(props: ItemProps) =>
+    props.completedTask ? '#f2fef8' : '#ffffff'};
+  color: ${(props: ItemProps) => (props.completedTask ? '#a9f6d0' : '#000')};
+  border: ${(props: ItemProps) =>
+    props.todayTask ? 'dashed 1px' : 'solid 1px'};
+  border-color: ${(props: ItemProps) =>
+    props.completedTask ? '#a9f6d0' : '#516166'};
 `;
 
 const checkboxStyle = {
@@ -56,22 +59,29 @@ export class Item extends React.Component<ItemProps, ItemState> {
   }
 
   render() {
-    const { content, newTask, redaction, index, completedTask, todayTask } = this.props;
+    const {
+      content,
+      newTask,
+      redaction,
+      index,
+      completedTask,
+      todayTask,
+    } = this.props;
     const check = this.state.checked;
 
-    return(
-        <StyledItem {...this.props} {...this.state}>
-            <Checkbox
-                disabled={completedTask ? true : false}
-                checked={completedTask ? true : false}
-                labelStyle={completedTask ? checkboxStyleDisable : checkboxStyle}
-                label={content}
-                onCheck={this.switchChecked.bind(this)}
-                name={content}
-                value={index}
-                aria-details={todayTask ? 'today_tasks' : 'everyday_tasks'}
-            />
-        </StyledItem>
+    return (
+      <StyledItem {...this.props} {...this.state}>
+        <Checkbox
+          disabled={completedTask ? true : false}
+          checked={completedTask ? true : false}
+          labelStyle={completedTask ? checkboxStyleDisable : checkboxStyle}
+          label={content}
+          onCheck={this.switchChecked.bind(this)}
+          name={content}
+          value={index}
+          aria-details={todayTask ? 'today_tasks' : 'everyday_tasks'}
+        />
+      </StyledItem>
     );
   }
 }

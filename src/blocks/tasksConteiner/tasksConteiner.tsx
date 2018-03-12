@@ -4,7 +4,6 @@ import styled from 'styled-components';
 import Item from '../../components/item';
 import NewTask from '../../components/newTask';
 
-
 interface TasksContainerState {
   isHide?: boolean;
 }
@@ -18,16 +17,19 @@ interface TasksContainerProps {
 }
 
 export const TasksContainerBlock: React.StatelessComponent = props => (
-    <div className="tasks-conteiner">
-        <img className="tasks-conteiner__logo" src="./empty.png"/>
-        <div className="tasks-conteiner__text">Запланируйте обязательные задачи 
-        на каждый день и они отобразятся здесь</div>
-        <Button text="Запланировать на каждый день"/>
+  <div className="tasks-conteiner">
+    <img className="tasks-conteiner__logo" src="./empty.png" />
+    <div className="tasks-conteiner__text">
+      Запланируйте обязательные задачи на каждый день и они отобразятся здесь
     </div>
+    <Button text="Запланировать на каждый день" />
+  </div>
 );
 
-
-export class TasksContainer extends React.Component<TasksContainerProps, TasksContainerState> {
+export class TasksContainer extends React.Component<
+  TasksContainerProps,
+  TasksContainerState
+> {
   constructor(props) {
     super(props);
     this.state = {
@@ -59,58 +61,53 @@ export class TasksContainer extends React.Component<TasksContainerProps, TasksCo
     let { everyDayTasks, completedTasks, todayTasks } = this.props;
 
     everyDayTasks = everyDayTasks.map((item, i) => {
-      return(
+      return (
         <li className="tasks-list__item" key={i}>
-            <Item content={item} finishTask={finishTask} index={i}></Item>
+          <Item content={item} finishTask={finishTask} index={i} />
         </li>
       );
     });
 
     completedTasks = completedTasks.map((item, i) => {
-      return(
+      return (
         <li className="tasks-list__item" key={i}>
-            <Item content={item} completedTask></Item>
+          <Item content={item} completedTask />
         </li>
       );
     });
 
-    todayTasks ? todayTasks = todayTasks.map((item, i) => {
-      return(
-        <li className="tasks-list__item" key={i}>
-            <Item content={item} todayTask finishTask={finishTask} index={i}></Item>
-        </li>
-      );
-    }) : null;
+    todayTasks
+      ? (todayTasks = todayTasks.map((item, i) => {
+          return (
+            <li className="tasks-list__item" key={i}>
+              <Item
+                content={item}
+                todayTask
+                finishTask={finishTask}
+                index={i}
+              />
+            </li>
+          );
+        }))
+      : null;
 
     if (!isHide) {
-      return(
-        <TasksContainerBlock></TasksContainerBlock>
-      );
+      return <TasksContainerBlock />;
     }
 
-    return(
-        <div>
-            <ul className="tasks-list">
-                {everyDayTasks}
-            </ul>    
-            <h2 className="subtitile">ДОПОЛНИТЕЛЬНЫЕ НА СЕГОДНЯ</h2>
-            {todayTasks ?
-                <ul className="tasks-list">
-                    {todayTasks} 
-                </ul>
-            :null
-            }
-            <NewTask addTask={addTask}/>
-            {completedTasks ?
-                <div> 
-                    <h2 className="subtitile">ВЫПОЛНЕННЫЕ</h2>
-                    <ul className="tasks-list">
-                        {completedTasks}
-                    </ul>
-                </div>
-            :null
-            }
-        </div>
+    return (
+      <div>
+        <ul className="tasks-list">{everyDayTasks}</ul>
+        <h2 className="subtitile">ДОПОЛНИТЕЛЬНЫЕ НА СЕГОДНЯ</h2>
+        {todayTasks ? <ul className="tasks-list">{todayTasks}</ul> : null}
+        <NewTask addTask={addTask} />
+        {completedTasks ? (
+          <div>
+            <h2 className="subtitile">ВЫПОЛНЕННЫЕ</h2>
+            <ul className="tasks-list">{completedTasks}</ul>
+          </div>
+        ) : null}
+      </div>
     );
   }
 }

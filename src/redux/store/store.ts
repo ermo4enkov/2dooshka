@@ -9,7 +9,8 @@ export function store(initialState?: any) {
   const store = createStore(
     rootReducer,
     initialState,
-    applyMiddleware(thunk, logger));
+    applyMiddleware(thunk, logger),
+  );
   return store;
 }
 
