@@ -7,6 +7,9 @@ import { Calendar } from '../../blocks/calendar/calendar';
 
 export class StoryBook extends React.Component {
   render() {
+    const days = this.props['data_user']['days'];
+
+    console.log(days);
     return (
       <div className="storybook">
         <ColorsPallet />
@@ -19,7 +22,7 @@ export class StoryBook extends React.Component {
         </div>
         <ButtonsCollection />
         <ItemsCollection />
-        <Calendar />
+        <Calendar days={days} />
       </div>
     );
   }

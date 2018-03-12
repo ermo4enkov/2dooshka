@@ -45411,7 +45411,7 @@ var appMain = function (props) { return (React.createElement("main", null,
     React.createElement(react_router_dom_1.Switch, null,
         React.createElement(react_router_dom_1.Route, { exact: true, path: "/today", render: function (routeProps) { return React.createElement(TodayView_1.default, __assign({ routeProps: routeProps }, props)); } }),
         React.createElement(react_router_dom_1.Route, { exact: true, path: "/everyday", render: function (routeProps) { return (React.createElement(EveryDayView_1.default, __assign({ routeProps: routeProps }, props))); } }),
-        React.createElement(react_router_dom_1.Route, { path: "/storybook", component: StoryBookView_1.default })))); };
+        React.createElement(react_router_dom_1.Route, { path: "/storybook", render: function (routeProps) { return (React.createElement(StoryBookView_1.default, __assign({ routeProps: routeProps }, props))); } })))); };
 exports.default = appMain;
 
 
@@ -50837,6 +50837,8 @@ var StoryBook = (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     StoryBook.prototype.render = function () {
+        var days = this.props['data_user']['days'];
+        console.log(days);
         return (React.createElement("div", { className: "storybook" },
             React.createElement(colorspallete_1.ColorsPallet, null),
             React.createElement("div", { className: "storybook__element" },
@@ -50847,7 +50849,7 @@ var StoryBook = (function (_super) {
                 React.createElement("div", null, "Text - everyday")),
             React.createElement(buttonscollection_1.ButtonsCollection, null),
             React.createElement(itemscollection_1.ItemsCollection, null),
-            React.createElement(calendar_1.Calendar, null)));
+            React.createElement(calendar_1.Calendar, { days: days })));
     };
     return StoryBook;
 }(React.Component));

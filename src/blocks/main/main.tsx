@@ -20,8 +20,12 @@ const appMain = props => (
           <EveryDayView routeProps={routeProps} {...props} />
         )}
       />
-
-      <Route path="/storybook" component={StoryBookView} />
+      <Route
+        path="/storybook"
+        render={routeProps => (
+          <StoryBookView routeProps={routeProps} {...props} />
+        )}
+      />
     </Switch>
   </main>
 );
