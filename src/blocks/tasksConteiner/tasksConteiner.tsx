@@ -1,6 +1,6 @@
 import * as React from 'react';
-import styled from 'styled-components';
 import Button from '../../components/Button';
+import styled from 'styled-components';
 import Item from '../../components/Item';
 import NewTask from '../../components/NewTask';
 
