@@ -1,8 +1,8 @@
 import * as React from 'react';
 import styled from 'styled-components';
 
-import Logo from '../../components/logo';
-import Plus from '../../components/icons/plus';
+import Logo from '../../components/Logo';
+import Plus from '../../components/icons/Plus';
 
 import { Link, NavLink } from 'react-router-dom';
 

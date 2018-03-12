@@ -1,11 +1,11 @@
 import * as React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
-import EveryDayView from '../../views/everyDayView';
-import TodayView from '../../views/todayView';
-import StoryBookView from '../../views/storyBookView';
+import EveryDayView from '../../views/EveryDayView';
+import TodayView from '../../views/TodayView';
+import StoryBookView from '../../views/StoryBookView';
 
-const Main = props => (
+const appMain = props => (
   <main>
     <Switch>
       <Route
@@ -26,4 +26,4 @@ const Main = props => (
   </main>
 );
 
-export default Main;
+export default appMain;

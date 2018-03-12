@@ -1,10 +1,10 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import Plus from '../icons/plus';
+import Plus from '../icons/Plus';
 import Checkbox from 'material-ui/Checkbox';
-import Button from '../../components/button';
+import Button from '../../components/Button';
 
-const StyledItem = styled.div`
+const STYLEDITEM = styled.div`
   width: auto;
   border-radius: 3px;
   padding: 18px 16px;
@@ -17,7 +17,7 @@ const StyledItem = styled.div`
   min-height: 40px;
 `;
 
-const StyledInput = styled.input`
+const STYLEDINPUT = styled.input`
   border: none;
   background: none;
   width: 100%;
@@ -25,7 +25,7 @@ const StyledInput = styled.input`
   font-size: 16px;
 `;
 
-const StyledButtonCont = styled.div`
+const STYLEDBUTTONCONT = styled.div`
   display: flex;
 `;
 
@@ -66,30 +66,30 @@ class NewTask extends React.Component<NewTaskProps, NewTaskStates> {
   }
 
   render() {
-    const ButtonsBlock = () => {
+    const BUTTONSBLOCK = () => {
       return this.state.content ? (
-        <StyledButtonCont>
+        <STYLEDBUTTONCONT>
           <Button text="Добавить" onClick={this.addNewTask.bind(this)} />
           <Button
             text="Отмена"
             cancel
             onClick={this.deleteContent.bind(this)}
           />
-        </StyledButtonCont>
+        </STYLEDBUTTONCONT>
       ) : null;
     };
 
     return (
-      <StyledItem>
+      <STYLEDITEM>
         <Plus />
-        <StyledInput
+        <STYLEDINPUT
           type="text"
           placeholder="Новая задача на сегодня..."
           onChange={this.changeContent.bind(this)}
           defaultValue={this.state.content}
         />
-        <ButtonsBlock />
-      </StyledItem>
+        <BUTTONSBLOCK />
+      </STYLEDITEM>
     );
   }
 }

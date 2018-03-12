@@ -7,6 +7,6 @@ const plusStyles = {
   cursor: 'pointer',
 };
 
-const Plus = () => <ContentAdd style={plusStyles} />;
+const PLUS = () => <ContentAdd style={plusStyles} />;
 
-export default Plus;
+export default PLUS;

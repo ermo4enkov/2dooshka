@@ -1,9 +1,9 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import Button from '../button/button';
+import Button from '../button/Button';
 import Checkbox from 'material-ui/Checkbox';
 
-const StyledItem = styled.div`
+const STYLEDITEM = styled.div`
   width: ${(props: ItemProps) => (props.example ? '70%' : 'auto')};
   border-radius: 3px;
   padding: 18px 16px;
@@ -70,7 +70,7 @@ export class Item extends React.Component<ItemProps, ItemState> {
     const check = this.state.checked;
 
     return (
-      <StyledItem {...this.props} {...this.state}>
+      <STYLEDITEM {...this.props} {...this.state}>
         <Checkbox
           disabled={completedTask ? true : false}
           checked={completedTask ? true : false}
@@ -81,7 +81,7 @@ export class Item extends React.Component<ItemProps, ItemState> {
           value={index}
           aria-details={todayTask ? 'today_tasks' : 'everyday_tasks'}
         />
-      </StyledItem>
+      </STYLEDITEM>
     );
   }
 }

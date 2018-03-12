@@ -1,6 +1,5 @@
 import * as React from 'react';
 
-
 interface CalendarProps {
   days?: any;
 }
@@ -11,13 +10,12 @@ export class Calendar extends React.Component<CalendarProps> {
   }
 
   render() {
-    
     const { days } = this.props;
 
     console.log(days);
 
-    const CAL = days.map((index,i) => {
-      return <li data-level={index} key={i}></li>;
+    const CAL = days.map((index, i) => {
+      return <li data-level={index} key={i} />;
     });
 
     console.log(CAL);
@@ -47,10 +45,8 @@ export class Calendar extends React.Component<CalendarProps> {
           <li>Fri</li>
           <li>Sat</li>
         </ul>
-        <ul className="squares">
-          {CAL}
-        </ul>
-    </div>
+        <ul className="squares">{CAL}</ul>
+      </div>
     );
   }
 }

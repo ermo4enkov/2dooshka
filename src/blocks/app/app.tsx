@@ -3,8 +3,8 @@ import { withRouter } from 'react-router';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as styled from 'styled-components';
-import  Header  from '../header/Header';
-import  Main  from '../main/Main';
+import Header from '../header/Header';
+import Main from '../main/Main';
 import * as finishTask from '../../redux/actions/finishTask';
 import * as addTask from '../../redux/actions/addTask';
 
@@ -23,13 +23,12 @@ export class App extends React.Component<AppProps> {
     const { data_user, finishTask, addTask } = this.props;
 
     return (
-        <div>
-            <Header />
-            <Main data_user={data_user} finishTask={finishTask} addTask={addTask}/>
-        </div>
+      <div>
+        <Header />
+        <Main data_user={data_user} finishTask={finishTask} addTask={addTask} />
+      </div>
     );
   }
-
 }
 
 function mapStateToProps(state) {
@@ -47,11 +46,10 @@ function mapStateToProps(state) {
 }
 
 function mapDispatchProps(dispatch: any) {
-  return{
+  return {
     finishTask: bindActionCreators(finishTask, dispatch),
     addTask: bindActionCreators(addTask, dispatch),
   };
 }
-
 
 export default withRouter(connect(mapStateToProps, mapDispatchProps)(App));

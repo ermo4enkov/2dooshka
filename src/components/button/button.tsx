@@ -16,7 +16,7 @@ interface ButtonState {
   isLoaded?: boolean;
 }
 
-const StyledButton = styled.div`
+const STYLEDBUTTON = styled.div`
     border-radius: 5px;
     font-size: 16px;
     text-align: center;
@@ -60,7 +60,7 @@ export class Button extends React.Component<ButtonProps, ButtonState> {
 
   render() {
     return (
-      <StyledButton
+      <STYLEDBUTTON
         {...this.props}
         disabled={
           this.props.disabled ? this.props.disabled : this.state.isBlocked
@@ -74,7 +74,7 @@ export class Button extends React.Component<ButtonProps, ButtonState> {
         ) : (
           this.props.text
         )}
-      </StyledButton>
+      </STYLEDBUTTON>
     );
   }
 }

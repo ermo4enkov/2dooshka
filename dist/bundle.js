@@ -44409,7 +44409,7 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(0);
-var logo_1 = __webpack_require__(288);
+var Logo_1 = __webpack_require__(370);
 var react_router_dom_1 = __webpack_require__(49);
 var Header = (function (_super) {
     __extends(Header, _super);
@@ -44418,7 +44418,7 @@ var Header = (function (_super) {
     }
     Header.prototype.render = function () {
         return (React.createElement("div", { className: "header" },
-            React.createElement(logo_1.default, null),
+            React.createElement(Logo_1.default, null),
             React.createElement(react_router_dom_1.NavLink, { className: "header__link", to: "/today" }, "\u0421\u0435\u0433\u043E\u0434\u043D\u044F"),
             React.createElement(react_router_dom_1.NavLink, { className: "header__link", to: "/everyday" }, "\u041A\u0430\u0436\u0434\u044B\u0439 \u0434\u0435\u043D\u044C"),
             React.createElement(react_router_dom_1.NavLink, { className: "header__link", to: "/storybook" }, "storybook")));
@@ -44430,30 +44430,8 @@ exports.default = Header;
 
 
 /***/ }),
-/* 288 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-var logo_1 = __webpack_require__(289);
-exports.default = logo_1.default;
-
-
-/***/ }),
-/* 289 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-var React = __webpack_require__(0);
-var react_router_dom_1 = __webpack_require__(49);
-var Logo = function () { return (React.createElement(react_router_dom_1.Link, { to: "/today", className: "logo" }, "2Dooshka")); };
-exports.default = Logo;
-
-
-/***/ }),
+/* 288 */,
+/* 289 */,
 /* 290 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -45404,163 +45382,22 @@ var __assign = (this && this.__assign) || Object.assign || function(t) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(0);
 var react_router_dom_1 = __webpack_require__(49);
-var everyDayView_1 = __webpack_require__(303);
-var todayView_1 = __webpack_require__(345);
-var storyBookView_1 = __webpack_require__(351);
-var Main = function (props) { return (React.createElement("main", null,
+var EveryDayView_1 = __webpack_require__(374);
+var TodayView_1 = __webpack_require__(376);
+var StoryBookView_1 = __webpack_require__(378);
+var appMain = function (props) { return (React.createElement("main", null,
     React.createElement(react_router_dom_1.Switch, null,
-        React.createElement(react_router_dom_1.Route, { exact: true, path: "/today", render: function (routeProps) { return React.createElement(todayView_1.default, __assign({ routeProps: routeProps }, props)); } }),
-        React.createElement(react_router_dom_1.Route, { exact: true, path: "/everyday", render: function (routeProps) { return (React.createElement(everyDayView_1.default, __assign({ routeProps: routeProps }, props))); } }),
-        React.createElement(react_router_dom_1.Route, { path: "/storybook", component: storyBookView_1.default })))); };
-exports.default = Main;
+        React.createElement(react_router_dom_1.Route, { exact: true, path: "/today", render: function (routeProps) { return React.createElement(TodayView_1.default, __assign({ routeProps: routeProps }, props)); } }),
+        React.createElement(react_router_dom_1.Route, { exact: true, path: "/everyday", render: function (routeProps) { return (React.createElement(EveryDayView_1.default, __assign({ routeProps: routeProps }, props))); } }),
+        React.createElement(react_router_dom_1.Route, { path: "/storybook", component: StoryBookView_1.default })))); };
+exports.default = appMain;
 
 
 /***/ }),
-/* 303 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-var everyDayView_1 = __webpack_require__(304);
-exports.default = everyDayView_1.default;
-
-
-/***/ }),
-/* 304 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-Object.defineProperty(exports, "__esModule", { value: true });
-var React = __webpack_require__(0);
-var tasksConteiner_1 = __webpack_require__(305);
-var EveryDayView = (function (_super) {
-    __extends(EveryDayView, _super);
-    function EveryDayView(props) {
-        return _super.call(this, props) || this;
-    }
-    EveryDayView.prototype.render = function () {
-        var everyDayTasks = this.props['data_user']['everyday_tasks'];
-        var completedTasks = this.props['data_user']['completed_tasks'];
-        var additionalTasks = this.props['data_user']['additional_tasks'];
-        var finishTask = this.props['finishTask'];
-        return (React.createElement("div", { className: "conteiner" },
-            React.createElement("h1", { className: "title" }, "\u041A\u0430\u0436\u0434\u044B\u0439 \u0434\u0435\u043D\u044C"),
-            React.createElement(tasksConteiner_1.default, { everyDayTasks: everyDayTasks, finishTask: finishTask, completedTasks: completedTasks })));
-    };
-    return EveryDayView;
-}(React.Component));
-exports.EveryDayView = EveryDayView;
-exports.default = EveryDayView;
-
-
-/***/ }),
-/* 305 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-var tasksConteiner_1 = __webpack_require__(306);
-exports.default = tasksConteiner_1.default;
-
-
-/***/ }),
-/* 306 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-Object.defineProperty(exports, "__esModule", { value: true });
-var React = __webpack_require__(0);
-var button_1 = __webpack_require__(100);
-var item_1 = __webpack_require__(101);
-var newTask_1 = __webpack_require__(159);
-exports.TasksContainerBlock = function (props) { return (React.createElement("div", { className: "tasks-conteiner" },
-    React.createElement("img", { className: "tasks-conteiner__logo", src: "./empty.png" }),
-    React.createElement("div", { className: "tasks-conteiner__text" }, "\u0417\u0430\u043F\u043B\u0430\u043D\u0438\u0440\u0443\u0439\u0442\u0435 \u043E\u0431\u044F\u0437\u0430\u0442\u0435\u043B\u044C\u043D\u044B\u0435 \u0437\u0430\u0434\u0430\u0447\u0438 \u043D\u0430 \u043A\u0430\u0436\u0434\u044B\u0439 \u0434\u0435\u043D\u044C \u0438 \u043E\u043D\u0438 \u043E\u0442\u043E\u0431\u0440\u0430\u0437\u044F\u0442\u0441\u044F \u0437\u0434\u0435\u0441\u044C"),
-    React.createElement(button_1.default, { text: "Запланировать на каждый день" }))); };
-var TasksContainer = (function (_super) {
-    __extends(TasksContainer, _super);
-    function TasksContainer(props) {
-        var _this = _super.call(this, props) || this;
-        _this.state = {
-            isHide: false,
-        };
-        return _this;
-    }
-    TasksContainer.prototype.checkTasks = function () {
-        if (localStorage.getItem('bgcolor')) {
-            return true;
-        }
-        return false;
-    };
-    TasksContainer.prototype.componentWillMount = function () {
-        localStorage.setItem('bgcolor', 'red');
-        if (this.checkTasks()) {
-            this.setState({
-                isHide: true,
-            });
-        }
-    };
-    TasksContainer.prototype.render = function () {
-        var _a = this.props, finishTask = _a.finishTask, addTask = _a.addTask;
-        var isHide = this.state['isHide'];
-        var _b = this.props, everyDayTasks = _b.everyDayTasks, completedTasks = _b.completedTasks, todayTasks = _b.todayTasks;
-        everyDayTasks = everyDayTasks.map(function (item, i) {
-            return (React.createElement("li", { className: "tasks-list__item", key: i },
-                React.createElement(item_1.default, { content: item, finishTask: finishTask, index: i })));
-        });
-        completedTasks = completedTasks.map(function (item, i) {
-            return (React.createElement("li", { className: "tasks-list__item", key: i },
-                React.createElement(item_1.default, { content: item, completedTask: true })));
-        });
-        todayTasks
-            ? (todayTasks = todayTasks.map(function (item, i) {
-                return (React.createElement("li", { className: "tasks-list__item", key: i },
-                    React.createElement(item_1.default, { content: item, todayTask: true, finishTask: finishTask, index: i })));
-            }))
-            : null;
-        if (!isHide) {
-            return React.createElement(exports.TasksContainerBlock, null);
-        }
-        return (React.createElement("div", null,
-            React.createElement("ul", { className: "tasks-list" }, everyDayTasks),
-            React.createElement("h2", { className: "subtitile" }, "\u0414\u041E\u041F\u041E\u041B\u041D\u0418\u0422\u0415\u041B\u042C\u041D\u042B\u0415 \u041D\u0410 \u0421\u0415\u0413\u041E\u0414\u041D\u042F"),
-            todayTasks ? React.createElement("ul", { className: "tasks-list" }, todayTasks) : null,
-            React.createElement(newTask_1.default, { addTask: addTask }),
-            completedTasks ? (React.createElement("div", null,
-                React.createElement("h2", { className: "subtitile" }, "\u0412\u042B\u041F\u041E\u041B\u041D\u0415\u041D\u041D\u042B\u0415"),
-                React.createElement("ul", { className: "tasks-list" }, completedTasks))) : null));
-    };
-    return TasksContainer;
-}(React.Component));
-exports.TasksContainer = TasksContainer;
-exports.default = TasksContainer;
-
-
-/***/ }),
+/* 303 */,
+/* 304 */,
+/* 305 */,
+/* 306 */,
 /* 307 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -45591,7 +45428,7 @@ var __assign = (this && this.__assign) || Object.assign || function(t) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(0);
 var styled_components_1 = __webpack_require__(40);
-var StyledButton = styled_components_1.default.div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n    border-radius: 5px;\n    font-size: 16px;\n    text-align: center;\n    padding: 10px 20px;\n    display: inline-block;\n    cursor: ", ";\n    color: ", ";\n    background-color: ", ";\n    margin-right: ", ";\n    border: ", ";\n    background-color: ", ";\n    min-width: 80px;\n    box-shadow: ", ";\n    filter: ", ";\n    \n        &:hover{\n            box-shadow: ", "\n            filter: brightness(90%);\n        }    \n"], ["\n    border-radius: 5px;\n    font-size: 16px;\n    text-align: center;\n    padding: 10px 20px;\n    display: inline-block;\n    cursor: ",
+var STYLEDBUTTON = styled_components_1.default.div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n    border-radius: 5px;\n    font-size: 16px;\n    text-align: center;\n    padding: 10px 20px;\n    display: inline-block;\n    cursor: ", ";\n    color: ", ";\n    background-color: ", ";\n    margin-right: ", ";\n    border: ", ";\n    background-color: ", ";\n    min-width: 80px;\n    box-shadow: ", ";\n    filter: ", ";\n    \n        &:hover{\n            box-shadow: ", "\n            filter: brightness(90%);\n        }    \n"], ["\n    border-radius: 5px;\n    font-size: 16px;\n    text-align: center;\n    padding: 10px 20px;\n    display: inline-block;\n    cursor: ",
     ";\n    color: ",
     ";\n    background-color: ",
     ";\n    margin-right: ", ";\n    border: ",
@@ -45629,7 +45466,7 @@ var Button = (function (_super) {
         return _this;
     }
     Button.prototype.render = function () {
-        return (React.createElement(StyledButton, __assign({}, this.props, { disabled: this.props.disabled ? this.props.disabled : this.state.isBlocked, isLoading: this.props.isLoading ? this.props.isLoading : this.state.isLoaded }), this.props.isLoading ? (React.createElement("div", { className: this.props.isLoading ? 'loader' : '' }, "Loading...")) : (this.props.text)));
+        return (React.createElement(STYLEDBUTTON, __assign({}, this.props, { disabled: this.props.disabled ? this.props.disabled : this.state.isBlocked, isLoading: this.props.isLoading ? this.props.isLoading : this.state.isLoaded }), this.props.isLoading ? (React.createElement("div", { className: this.props.isLoading ? 'loader' : '' }, "Loading...")) : (this.props.text)));
     };
     return Button;
 }(React.Component));
@@ -47455,7 +47292,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(0);
 var styled_components_1 = __webpack_require__(40);
 var Checkbox_1 = __webpack_require__(315);
-var StyledItem = styled_components_1.default.div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  width: ", ";\n  border-radius: 3px;\n  padding: 18px 16px;\n  font-size: 16px;\n  background-color: ", ";\n  color: ", ";\n  border: ", ";\n  border-color: ", ";\n"], ["\n  width: ", ";\n  border-radius: 3px;\n  padding: 18px 16px;\n  font-size: 16px;\n  background-color: ",
+var STYLEDITEM = styled_components_1.default.div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  width: ", ";\n  border-radius: 3px;\n  padding: 18px 16px;\n  font-size: 16px;\n  background-color: ", ";\n  color: ", ";\n  border: ", ";\n  border-color: ", ";\n"], ["\n  width: ", ";\n  border-radius: 3px;\n  padding: 18px 16px;\n  font-size: 16px;\n  background-color: ",
     ";\n  color: ", ";\n  border: ",
     ";\n  border-color: ",
     ";\n"])), function (props) { return (props.example ? '70%' : 'auto'); }, function (props) {
@@ -47490,7 +47327,7 @@ var Item = (function (_super) {
     Item.prototype.render = function () {
         var _a = this.props, content = _a.content, newTask = _a.newTask, redaction = _a.redaction, index = _a.index, completedTask = _a.completedTask, todayTask = _a.todayTask;
         var check = this.state.checked;
-        return (React.createElement(StyledItem, __assign({}, this.props, this.state),
+        return (React.createElement(STYLEDITEM, __assign({}, this.props, this.state),
             React.createElement(Checkbox_1.default, { disabled: completedTask ? true : false, checked: completedTask ? true : false, labelStyle: completedTask ? checkboxStyleDisable : checkboxStyle, label: content, onCheck: this.switchChecked.bind(this), name: content, value: index, "aria-details": todayTask ? 'today_tasks' : 'everyday_tasks' })));
     };
     return Item;
@@ -50569,11 +50406,11 @@ var __extends = (this && this.__extends) || (function () {
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(0);
 var styled_components_1 = __webpack_require__(40);
-var plus_1 = __webpack_require__(343);
-var button_1 = __webpack_require__(100);
-var StyledItem = styled_components_1.default.div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  width: auto;\n  border-radius: 3px;\n  padding: 18px 16px;\n  font-size: 16px;\n  background-color: rgba(208, 216, 220, 0.5);\n  color: #d0d8dc;\n  display: flex;\n  padding: 10px;\n  align-items: center;\n  min-height: 40px;\n"], ["\n  width: auto;\n  border-radius: 3px;\n  padding: 18px 16px;\n  font-size: 16px;\n  background-color: rgba(208, 216, 220, 0.5);\n  color: #d0d8dc;\n  display: flex;\n  padding: 10px;\n  align-items: center;\n  min-height: 40px;\n"])));
-var StyledInput = styled_components_1.default.input(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n  border: none;\n  background: none;\n  width: 100%;\n  font-family: Source Sans Pro;\n  font-size: 16px;\n"], ["\n  border: none;\n  background: none;\n  width: 100%;\n  font-family: Source Sans Pro;\n  font-size: 16px;\n"])));
-var StyledButtonCont = styled_components_1.default.div(templateObject_3 || (templateObject_3 = __makeTemplateObject(["\n  display: flex;\n"], ["\n  display: flex;\n"])));
+var Plus_1 = __webpack_require__(380);
+var Button_1 = __webpack_require__(355);
+var STYLEDITEM = styled_components_1.default.div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  width: auto;\n  border-radius: 3px;\n  padding: 18px 16px;\n  font-size: 16px;\n  background-color: rgba(208, 216, 220, 0.5);\n  color: #d0d8dc;\n  display: flex;\n  padding: 10px;\n  align-items: center;\n  min-height: 40px;\n"], ["\n  width: auto;\n  border-radius: 3px;\n  padding: 18px 16px;\n  font-size: 16px;\n  background-color: rgba(208, 216, 220, 0.5);\n  color: #d0d8dc;\n  display: flex;\n  padding: 10px;\n  align-items: center;\n  min-height: 40px;\n"])));
+var STYLEDINPUT = styled_components_1.default.input(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n  border: none;\n  background: none;\n  width: 100%;\n  font-family: Source Sans Pro;\n  font-size: 16px;\n"], ["\n  border: none;\n  background: none;\n  width: 100%;\n  font-family: Source Sans Pro;\n  font-size: 16px;\n"])));
+var STYLEDBUTTONCONT = styled_components_1.default.div(templateObject_3 || (templateObject_3 = __makeTemplateObject(["\n  display: flex;\n"], ["\n  display: flex;\n"])));
 var NewTask = (function (_super) {
     __extends(NewTask, _super);
     function NewTask(newTaskProps, newTaskStates) {
@@ -50602,15 +50439,15 @@ var NewTask = (function (_super) {
     };
     NewTask.prototype.render = function () {
         var _this = this;
-        var ButtonsBlock = function () {
-            return _this.state.content ? (React.createElement(StyledButtonCont, null,
-                React.createElement(button_1.default, { text: "Добавить", onClick: _this.addNewTask.bind(_this) }),
-                React.createElement(button_1.default, { text: "Отмена", cancel: true, onClick: _this.deleteContent.bind(_this) }))) : null;
+        var BUTTONSBLOCK = function () {
+            return _this.state.content ? (React.createElement(STYLEDBUTTONCONT, null,
+                React.createElement(Button_1.default, { text: "Добавить", onClick: _this.addNewTask.bind(_this) }),
+                React.createElement(Button_1.default, { text: "Отмена", cancel: true, onClick: _this.deleteContent.bind(_this) }))) : null;
         };
-        return (React.createElement(StyledItem, null,
-            React.createElement(plus_1.default, null),
-            React.createElement(StyledInput, { type: "text", placeholder: "Новая задача на сегодня...", onChange: this.changeContent.bind(this), defaultValue: this.state.content }),
-            React.createElement(ButtonsBlock, null)));
+        return (React.createElement(STYLEDITEM, null,
+            React.createElement(Plus_1.default, null),
+            React.createElement(STYLEDINPUT, { type: "text", placeholder: "Новая задача на сегодня...", onChange: this.changeContent.bind(this), defaultValue: this.state.content }),
+            React.createElement(BUTTONSBLOCK, null)));
     };
     return NewTask;
 }(React.Component));
@@ -50619,23 +50456,7 @@ var templateObject_1, templateObject_2, templateObject_3;
 
 
 /***/ }),
-/* 343 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-var React = __webpack_require__(0);
-var add_1 = __webpack_require__(344);
-var plusStyles = {
-    color: '#93A4AD',
-    cursor: 'pointer',
-};
-var Plus = function () { return React.createElement(add_1.default, { style: plusStyles }); };
-exports.default = Plus;
-
-
-/***/ }),
+/* 343 */,
 /* 344 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -50674,60 +50495,8 @@ ContentAdd.muiName = 'SvgIcon';
 exports.default = ContentAdd;
 
 /***/ }),
-/* 345 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-var todayView_1 = __webpack_require__(346);
-exports.default = todayView_1.default;
-
-
-/***/ }),
-/* 346 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-Object.defineProperty(exports, "__esModule", { value: true });
-var React = __webpack_require__(0);
-var TasksConteiner_1 = __webpack_require__(347);
-var Calendar_1 = __webpack_require__(349);
-var TodayView = (function (_super) {
-    __extends(TodayView, _super);
-    function TodayView(props) {
-        return _super.call(this, props) || this;
-    }
-    TodayView.prototype.render = function () {
-        var everyDaytasks = this.props['data_user']['everyday_tasks'];
-        var completedTasks = this.props['data_user']['completed_tasks'];
-        var todayTasks = this.props['data_user']['today_tasks'];
-        var finishTask = this.props['finishTask'];
-        var addTask = this.props['addTask'];
-        var days = this.props['data_user']['days'];
-        return (React.createElement("div", { className: "conteiner" },
-            React.createElement("h1", { className: "title" }, "\u0421\u0435\u0433\u043E\u0434\u043D\u044F"),
-            React.createElement(TasksConteiner_1.default, { everyDayTasks: everyDaytasks, finishTask: finishTask, completedTasks: completedTasks, todayTasks: todayTasks, addTask: addTask }),
-            React.createElement(Calendar_1.default, { days: days })));
-    };
-    return TodayView;
-}(React.Component));
-exports.TodayView = TodayView;
-exports.default = TodayView;
-
-
-/***/ }),
+/* 345 */,
+/* 346 */,
 /* 347 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -50894,63 +50663,8 @@ exports.default = Calendar;
 
 
 /***/ }),
-/* 351 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-var storyBookView_1 = __webpack_require__(352);
-exports.default = storyBookView_1.default;
-
-
-/***/ }),
-/* 352 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-Object.defineProperty(exports, "__esModule", { value: true });
-var React = __webpack_require__(0);
-var colorspallete_1 = __webpack_require__(353);
-var buttonscollection_1 = __webpack_require__(354);
-var itemscollection_1 = __webpack_require__(357);
-var calendar_1 = __webpack_require__(358);
-var StoryBook = (function (_super) {
-    __extends(StoryBook, _super);
-    function StoryBook() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    StoryBook.prototype.render = function () {
-        return (React.createElement("div", { className: "storybook" },
-            React.createElement(colorspallete_1.ColorsPallet, null),
-            React.createElement("div", { className: "storybook__element" },
-                React.createElement("h1", { className: "headerText" }, "Text"),
-                React.createElement("div", null, "Font \u2014 Source Sans Pro"),
-                React.createElement("h1", null, "H1 - everyday"),
-                React.createElement("h2", { className: "subtitile" }, "H2 - everyday"),
-                React.createElement("div", null, "Text - everyday")),
-            React.createElement(buttonscollection_1.ButtonsCollection, null),
-            React.createElement(itemscollection_1.ItemsCollection, null),
-            React.createElement(calendar_1.Calendar, null)));
-    };
-    return StoryBook;
-}(React.Component));
-exports.StoryBook = StoryBook;
-exports.default = StoryBook;
-
-
-/***/ }),
+/* 351 */,
+/* 352 */,
 /* 353 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -51182,7 +50896,7 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(0);
-var item_1 = __webpack_require__(101);
+var Item_1 = __webpack_require__(372);
 var ItemsCollection = (function (_super) {
     __extends(ItemsCollection, _super);
     function ItemsCollection(props) {
@@ -51195,16 +50909,16 @@ var ItemsCollection = (function (_super) {
                 React.createElement("ul", { className: "storybook__list" },
                     React.createElement("li", { className: "storybook__item" },
                         React.createElement("div", { className: "storybook__name" }, "Default behavior"),
-                        React.createElement(item_1.default, { content: "Новая задача на каждый день…", example: true, newTask: true })),
+                        React.createElement(Item_1.default, { content: "Новая задача на каждый день…", example: true, newTask: true })),
                     React.createElement("li", { className: "storybook__item" },
                         React.createElement("div", { className: "storybook__name" }, "Hover"),
-                        React.createElement(item_1.default, { content: "Новая задача на каждый день…", example: true })),
+                        React.createElement(Item_1.default, { content: "Новая задача на каждый день…", example: true })),
                     React.createElement("li", { className: "storybook__item" },
                         React.createElement("div", { className: "storybook__name" }, "Default behavior"),
-                        React.createElement(item_1.default, { content: "Новая задача на каждый день…", example: true })),
+                        React.createElement(Item_1.default, { content: "Новая задача на каждый день…", example: true })),
                     React.createElement("li", { className: "storybook__item" },
                         React.createElement("div", { className: "storybook__name" }, "Default behavior"),
-                        React.createElement(item_1.default, { example: true, newTask: true, redaction: true }))))));
+                        React.createElement(Item_1.default, { example: true, newTask: true, redaction: true }))))));
     };
     return ItemsCollection;
 }(React.Component));
@@ -51413,6 +51127,301 @@ var thunk = createThunkMiddleware();
 thunk.withExtraArgument = createThunkMiddleware;
 
 exports['default'] = thunk;
+
+/***/ }),
+/* 365 */,
+/* 366 */,
+/* 367 */,
+/* 368 */,
+/* 369 */,
+/* 370 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var logo_1 = __webpack_require__(371);
+exports.default = logo_1.default;
+
+
+/***/ }),
+/* 371 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var React = __webpack_require__(0);
+var react_router_dom_1 = __webpack_require__(49);
+var Logo = function () { return (React.createElement(react_router_dom_1.Link, { to: "/today", className: "logo" }, "2Dooshka")); };
+exports.default = Logo;
+
+
+/***/ }),
+/* 372 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var item_1 = __webpack_require__(373);
+exports.default = item_1.default;
+
+
+/***/ }),
+/* 373 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __makeTemplateObject = (this && this.__makeTemplateObject) || function (cooked, raw) {
+    if (Object.defineProperty) { Object.defineProperty(cooked, "raw", { value: raw }); } else { cooked.raw = raw; }
+    return cooked;
+};
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __assign = (this && this.__assign) || Object.assign || function(t) {
+    for (var s, i = 1, n = arguments.length; i < n; i++) {
+        s = arguments[i];
+        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+            t[p] = s[p];
+    }
+    return t;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var React = __webpack_require__(0);
+var styled_components_1 = __webpack_require__(40);
+var Checkbox_1 = __webpack_require__(315);
+var StyledItem = styled_components_1.default.div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  width: ", ";\n  border-radius: 3px;\n  padding: 18px 16px;\n  font-size: 16px;\n  background-color: ", ";\n  color: ", ";\n  border: ", ";\n  border-color: ", ";\n"], ["\n  width: ", ";\n  border-radius: 3px;\n  padding: 18px 16px;\n  font-size: 16px;\n  background-color: ",
+    ";\n  color: ", ";\n  border: ",
+    ";\n  border-color: ",
+    ";\n"])), function (props) { return (props.example ? '70%' : 'auto'); }, function (props) {
+    return props.completedTask ? '#f2fef8' : '#ffffff';
+}, function (props) { return (props.completedTask ? '#a9f6d0' : '#000'); }, function (props) {
+    return props.todayTask ? 'dashed 1px' : 'solid 1px';
+}, function (props) {
+    return props.completedTask ? '#a9f6d0' : '#516166';
+});
+var checkboxStyle = {
+    fontFamily: 'Source Sans Pro',
+    fontSize: 16,
+};
+var checkboxStyleDisable = {
+    textDecoration: 'line-through',
+};
+var Item = (function (_super) {
+    __extends(Item, _super);
+    function Item(props) {
+        var _this = _super.call(this, props) || this;
+        _this.state = {
+            checked: false,
+        };
+        return _this;
+    }
+    Item.prototype.switchChecked = function (event) {
+        var type = event.target.attributes['aria-details']['nodeValue'];
+        var name = event.target.name;
+        var value = event.target.value;
+        this.props.finishTask.finishTask(name, value, type);
+    };
+    Item.prototype.render = function () {
+        var _a = this.props, content = _a.content, newTask = _a.newTask, redaction = _a.redaction, index = _a.index, completedTask = _a.completedTask, todayTask = _a.todayTask;
+        var check = this.state.checked;
+        return (React.createElement(StyledItem, __assign({}, this.props, this.state),
+            React.createElement(Checkbox_1.default, { disabled: completedTask ? true : false, checked: completedTask ? true : false, labelStyle: completedTask ? checkboxStyleDisable : checkboxStyle, label: content, onCheck: this.switchChecked.bind(this), name: content, value: index, "aria-details": todayTask ? 'today_tasks' : 'everyday_tasks' })));
+    };
+    return Item;
+}(React.Component));
+exports.Item = Item;
+exports.default = Item;
+var templateObject_1;
+
+
+/***/ }),
+/* 374 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var everyDayView_1 = __webpack_require__(375);
+exports.default = everyDayView_1.default;
+
+
+/***/ }),
+/* 375 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+var React = __webpack_require__(0);
+var TasksConteiner_1 = __webpack_require__(347);
+var EveryDayView = (function (_super) {
+    __extends(EveryDayView, _super);
+    function EveryDayView(props) {
+        return _super.call(this, props) || this;
+    }
+    EveryDayView.prototype.render = function () {
+        var everyDayTasks = this.props['data_user']['everyday_tasks'];
+        var completedTasks = this.props['data_user']['completed_tasks'];
+        var additionalTasks = this.props['data_user']['additional_tasks'];
+        var finishTask = this.props['finishTask'];
+        return (React.createElement("div", { className: "conteiner" },
+            React.createElement("h1", { className: "title" }, "\u041A\u0430\u0436\u0434\u044B\u0439 \u0434\u0435\u043D\u044C"),
+            React.createElement(TasksConteiner_1.default, { everyDayTasks: everyDayTasks, finishTask: finishTask, completedTasks: completedTasks })));
+    };
+    return EveryDayView;
+}(React.Component));
+exports.EveryDayView = EveryDayView;
+exports.default = EveryDayView;
+
+
+/***/ }),
+/* 376 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var todayView_1 = __webpack_require__(377);
+exports.default = todayView_1.default;
+
+
+/***/ }),
+/* 377 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+var React = __webpack_require__(0);
+var TasksConteiner_1 = __webpack_require__(347);
+var Calendar_1 = __webpack_require__(349);
+var TodayView = (function (_super) {
+    __extends(TodayView, _super);
+    function TodayView(props) {
+        return _super.call(this, props) || this;
+    }
+    TodayView.prototype.render = function () {
+        var everyDaytasks = this.props['data_user']['everyday_tasks'];
+        var completedTasks = this.props['data_user']['completed_tasks'];
+        var todayTasks = this.props['data_user']['today_tasks'];
+        var finishTask = this.props['finishTask'];
+        var addTask = this.props['addTask'];
+        var days = this.props['data_user']['days'];
+        return (React.createElement("div", { className: "conteiner" },
+            React.createElement("h1", { className: "title" }, "\u0421\u0435\u0433\u043E\u0434\u043D\u044F"),
+            React.createElement(TasksConteiner_1.default, { everyDayTasks: everyDaytasks, finishTask: finishTask, completedTasks: completedTasks, todayTasks: todayTasks, addTask: addTask }),
+            React.createElement(Calendar_1.default, { days: days })));
+    };
+    return TodayView;
+}(React.Component));
+exports.TodayView = TodayView;
+exports.default = TodayView;
+
+
+/***/ }),
+/* 378 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var storyBookView_1 = __webpack_require__(379);
+exports.default = storyBookView_1.default;
+
+
+/***/ }),
+/* 379 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+var React = __webpack_require__(0);
+var colorspallete_1 = __webpack_require__(353);
+var buttonscollection_1 = __webpack_require__(354);
+var itemscollection_1 = __webpack_require__(357);
+var calendar_1 = __webpack_require__(358);
+var StoryBook = (function (_super) {
+    __extends(StoryBook, _super);
+    function StoryBook() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    StoryBook.prototype.render = function () {
+        return (React.createElement("div", { className: "storybook" },
+            React.createElement(colorspallete_1.ColorsPallet, null),
+            React.createElement("div", { className: "storybook__element" },
+                React.createElement("h1", { className: "headerText" }, "Text"),
+                React.createElement("div", null, "Font \u2014 Source Sans Pro"),
+                React.createElement("h1", null, "H1 - everyday"),
+                React.createElement("h2", { className: "subtitile" }, "H2 - everyday"),
+                React.createElement("div", null, "Text - everyday")),
+            React.createElement(buttonscollection_1.ButtonsCollection, null),
+            React.createElement(itemscollection_1.ItemsCollection, null),
+            React.createElement(calendar_1.Calendar, null)));
+    };
+    return StoryBook;
+}(React.Component));
+exports.StoryBook = StoryBook;
+exports.default = StoryBook;
+
+
+/***/ }),
+/* 380 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var React = __webpack_require__(0);
+var add_1 = __webpack_require__(344);
+var plusStyles = {
+    color: '#93A4AD',
+    cursor: 'pointer',
+};
+var PLUS = function () { return React.createElement(add_1.default, { style: plusStyles }); };
+exports.default = PLUS;
+
 
 /***/ })
 /******/ ]);

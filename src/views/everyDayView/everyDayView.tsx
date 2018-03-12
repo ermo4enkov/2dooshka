@@ -1,5 +1,5 @@
 import * as React from 'react';
-import TasksConteiner from '../../blocks/tasksConteiner';
+import TasksConteiner from '../../blocks/TasksConteiner';
 
 export class EveryDayView extends React.Component {
   constructor(props) {
