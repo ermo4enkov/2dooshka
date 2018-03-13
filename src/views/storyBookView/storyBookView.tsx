@@ -3,7 +3,7 @@ import Button  from '../../components/button/Button';
 import ColorsPallet from '../../blocks/colorspallet/colorsPallet';
 import ButtonsCollection from '../../blocks/buttonscollection/buttonsCollection';
 import ItemsCollection  from '../../blocks/listitemscollection/itemsCollection';
-import Calendar from '../../blocks/calendar/calendar';
+import Calendar from '../../blocks/calendar';
 
 export class StoryBook extends React.Component {
   render() {
