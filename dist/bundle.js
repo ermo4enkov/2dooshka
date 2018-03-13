@@ -50763,11 +50763,9 @@ var Calendar = (function (_super) {
     }
     Calendar.prototype.render = function () {
         var days = this.props.days;
-        console.log(days);
         var CAL = days.map(function (index, i) {
             return React.createElement("li", { "data-level": index, key: i });
         });
-        console.log(CAL);
         return (React.createElement("div", { className: "graph" },
             React.createElement("ul", { className: "months" },
                 React.createElement("li", null, "Jan"),
@@ -50827,10 +50825,10 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(0);
-var colorspallete_1 = __webpack_require__(351);
-var buttonscollection_1 = __webpack_require__(352);
-var itemscollection_1 = __webpack_require__(353);
-var calendar_1 = __webpack_require__(354);
+var ColorsPallet_1 = __webpack_require__(351);
+var ButtonsCollection_1 = __webpack_require__(352);
+var ItemsCollection_1 = __webpack_require__(353);
+var Calendar_1 = __webpack_require__(354);
 var StoryBook = (function (_super) {
     __extends(StoryBook, _super);
     function StoryBook() {
@@ -50838,18 +50836,17 @@ var StoryBook = (function (_super) {
     }
     StoryBook.prototype.render = function () {
         var days = this.props['data_user']['days'];
-        console.log(days);
         return (React.createElement("div", { className: "storybook" },
-            React.createElement(colorspallete_1.ColorsPallet, null),
+            React.createElement(ColorsPallet_1.default, null),
             React.createElement("div", { className: "storybook__element" },
                 React.createElement("h1", { className: "headerText" }, "Text"),
                 React.createElement("div", null, "Font \u2014 Source Sans Pro"),
                 React.createElement("h1", null, "H1 - everyday"),
                 React.createElement("h2", { className: "subtitile" }, "H2 - everyday"),
                 React.createElement("div", null, "Text - everyday")),
-            React.createElement(buttonscollection_1.ButtonsCollection, null),
-            React.createElement(itemscollection_1.ItemsCollection, null),
-            React.createElement(calendar_1.Calendar, { days: days })));
+            React.createElement(ButtonsCollection_1.default, null),
+            React.createElement(ItemsCollection_1.default, null),
+            React.createElement(Calendar_1.default, { days: days })));
     };
     return StoryBook;
 }(React.Component));
@@ -51055,11 +51052,9 @@ var Calendar = (function (_super) {
     }
     Calendar.prototype.render = function () {
         var days = this.props.days;
-        console.log(days);
         var CAL = days.map(function (index, i) {
             return React.createElement("li", { "data-level": index, key: i });
         });
-        console.log(CAL);
         return (React.createElement("div", { className: "graph" },
             React.createElement("ul", { className: "months" },
                 React.createElement("li", null, "Jan"),

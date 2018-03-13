@@ -1,15 +1,14 @@
 import * as React from 'react';
-import { Button } from '../../components/button/button';
-import { ColorsPallet } from '../../blocks/colorspallet/colorspallete';
-import { ButtonsCollection } from '../../blocks/buttonscollection/buttonscollection';
-import { ItemsCollection } from '../../blocks/listitemscollection/itemscollection';
-import { Calendar } from '../../blocks/calendar/calendar';
+import Button  from '../../components/button/Button';
+import ColorsPallet from '../../blocks/colorspallet/ColorsPallet';
+import ButtonsCollection from '../../blocks/buttonscollection/ButtonsCollection';
+import ItemsCollection  from '../../blocks/listitemscollection/ItemsCollection';
+import Calendar from '../../blocks/calendar/Calendar';
 
 export class StoryBook extends React.Component {
   render() {
     const days = this.props['data_user']['days'];
 
-    console.log(days);
     return (
       <div className="storybook">
         <ColorsPallet />

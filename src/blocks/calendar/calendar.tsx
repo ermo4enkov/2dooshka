@@ -11,14 +11,9 @@ export class Calendar extends React.Component<CalendarProps> {
 
   render() {
     const { days } = this.props;
-
-    console.log(days);
-
     const CAL = days.map((index, i) => {
       return <li data-level={index} key={i} />;
     });
-
-    console.log(CAL);
 
     return (
       <div className="graph">
