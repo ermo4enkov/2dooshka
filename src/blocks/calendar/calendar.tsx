@@ -8,7 +8,7 @@ export class Calendar extends React.Component<CalendarProps> {
   constructor(props: any) {
     super(props);
   }
-
+  
   render() {
     const { days } = this.props;
     const CAL = days.map((index, i) => {
