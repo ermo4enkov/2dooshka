@@ -105,8 +105,8 @@ ul {
   text-decoration: none; }
 
 :root {
-  --square-size: 15px;
-  --square-gap: 5px;
+  --square-size: 14px;
+  --square-gap: 3px;
   --week-width: calc(var(--square-size) + var(--square-gap)); }
 
 .months {
@@ -122,11 +122,12 @@ ul {
   display: inline-grid;
   grid-template-areas: "empty months" "days squares";
   grid-template-columns: auto 1fr;
-  grid-gap: 10px; }
+  grid-gap: 10px;
+  position: relative; }
 
 .months {
   display: grid;
-  grid-template-columns: calc(var(--week-width) * 4) calc(var(--week-width) * 4) calc(var(--week-width) * 4) calc(var(--week-width) * 5) calc(var(--week-width) * 4) calc(var(--week-width) * 4) calc(var(--week-width) * 5) calc(var(--week-width) * 4) calc(var(--week-width) * 4) calc(var(--week-width) * 5) calc(var(--week-width) * 4) calc(var(--week-width) * 5); }
+  grid-template-columns: calc(var(--week-width) * 5) calc(var(--week-width) * 4) calc(var(--week-width) * 5) calc(var(--week-width) * 4) calc(var(--week-width) * 5) calc(var(--week-width) * 4) calc(var(--week-width) * 5) calc(var(--week-width) * 5) calc(var(--week-width) * 4) calc(var(--week-width) * 4) calc(var(--week-width) * 4) calc(var(--week-width) * 5); }
 
 .days,
 .squares {
@@ -134,18 +135,20 @@ ul {
   grid-gap: var(--square-gap);
   grid-template-rows: repeat(7, var(--square-size)); }
 
+.day {
+  padding-top: 30px;
+  font-size: 14px;
+  line-height: 1.25; }
+
 .squares {
   grid-auto-flow: column;
-  grid-auto-columns: var(--square-size); }
+  grid-auto-columns: var(--square-size);
+  position: absolute;
+  top: -127px; }
 
 /* Other styling */
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  font-size: 12px; }
-
 .graph {
-  padding: 20px 0;
-  border: 1px #e1e4e8 solid; }
+  padding: 20px 0; }
 
 .days li:nth-child(odd) {
   visibility: hidden; }

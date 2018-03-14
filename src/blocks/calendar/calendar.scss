@@ -1,6 +1,6 @@
 :root {
-	--square-size: 15px;
-	--square-gap: 5px;
+	--square-size: 14px;
+	--square-gap: 3px;
 	--week-width: calc(var(--square-size) + var(--square-gap));
   }
   
@@ -14,20 +14,21 @@
 						 "days squares";
 	grid-template-columns: auto 1fr;
 	grid-gap: 10px;
+	position: relative;
   }
   
   .months {
 	display: grid;
-	grid-template-columns: calc(var(--week-width) * 4) /* Jan */
+	grid-template-columns: calc(var(--week-width) * 5) /* Jan */
 						   calc(var(--week-width) * 4) /* Feb */
-						   calc(var(--week-width) * 4) /* Mar */
-						   calc(var(--week-width) * 5) /* Apr */
-						   calc(var(--week-width) * 4) /* May */
+						   calc(var(--week-width) * 5) /* Mar */
+						   calc(var(--week-width) * 4) /* Apr */
+						   calc(var(--week-width) * 5) /* May */
 						   calc(var(--week-width) * 4) /* Jun */
 						   calc(var(--week-width) * 5) /* Jul */
-						   calc(var(--week-width) * 4) /* Aug */
+						   calc(var(--week-width) * 5) /* Aug */
 						   calc(var(--week-width) * 4) /* Sep */
-						   calc(var(--week-width) * 5) /* Oct */
+						   calc(var(--week-width) * 4) /* Oct */
 						   calc(var(--week-width) * 4) /* Nov */
 						   calc(var(--week-width) * 5) /* Dec */;
   }
@@ -38,23 +39,25 @@
 	grid-gap: var(--square-gap);
 	grid-template-rows: repeat(7, var(--square-size));
   }
+
+  .day{
+	  padding-top: 30px;
+	  font-size: 14px;
+	  line-height: 1.25;
+  }
   
   .squares {
 	grid-auto-flow: column;
 	grid-auto-columns: var(--square-size);
+	position: absolute;
+	top: -127px;
   }
   
   
   /* Other styling */
-  
-  body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-	font-size: 12px;
-  }
-  
+
   .graph {
 	padding: 20px 0;
-	border: 1px #e1e4e8 solid;
   }
   
   .days li:nth-child(odd) {

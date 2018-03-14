@@ -1,6 +1,5 @@
 import * as React from 'react';
 import Button from '../../components/Button';
-import styled from 'styled-components';
 import Item from '../../components/Item';
 import NewTask from '../../components/NewTask';
 
@@ -26,10 +25,7 @@ export const TasksContainerBlock: React.StatelessComponent = props => (
   </div>
 );
 
-export class TasksContainer extends React.Component<
-  TasksContainerProps,
-  TasksContainerState
-> {
+export class TasksContainer extends React.Component<TasksContainerProps,TasksContainerState> {
   constructor(props) {
     super(props);
     this.state = {
