@@ -56,7 +56,7 @@ export class TasksContainer extends React.Component<TasksContainerProps,TasksCon
     const isHide: boolean = this.state['isHide'];
     let { everyDayTasks, completedTasks, todayTasks } = this.props;
 
-    everyDayTasks = everyDayTasks.map((item, i) => {
+    const everyDayTasksBlock = everyDayTasks.map((item, i) => {
       return (
         <li className="tasks-list__item" key={i}>
           <Item content={item} finishTask={finishTask} index={i} />
@@ -64,7 +64,7 @@ export class TasksContainer extends React.Component<TasksContainerProps,TasksCon
       );
     });
 
-    completedTasks = completedTasks.map((item, i) => {
+    const completedTasksBlock = completedTasks.map((item, i) => {
       return (
         <li className="tasks-list__item" key={i}>
           <Item content={item} completedTask />
@@ -72,8 +72,7 @@ export class TasksContainer extends React.Component<TasksContainerProps,TasksCon
       );
     });
 
-    todayTasks
-      ? (todayTasks = todayTasks.map((item, i) => {
+    const todayTasksBlock = todayTasks.map((item, i) => {
           return (
             <li className="tasks-list__item" key={i}>
               <Item
@@ -84,8 +83,7 @@ export class TasksContainer extends React.Component<TasksContainerProps,TasksCon
               />
             </li>
           );
-        }))
-      : null;
+        });
 
     if (!isHide) {
       return <TasksContainerBlock />;
@@ -93,14 +91,14 @@ export class TasksContainer extends React.Component<TasksContainerProps,TasksCon
 
     return (
       <div>
-        <ul className="tasks-list">{everyDayTasks}</ul>
+        <ul className="tasks-list">{everyDayTasksBlock}</ul>
         <h2 className="subtitile">ДОПОЛНИТЕЛЬНЫЕ НА СЕГОДНЯ</h2>
-        {todayTasks ? <ul className="tasks-list">{todayTasks}</ul> : null}
+        {todayTasks ? <ul className="tasks-list">{todayTasksBlock}</ul> : null}
         <NewTask addTask={addTask} />
         {completedTasks ? (
           <div>
             <h2 className="subtitile">ВЫПОЛНЕННЫЕ</h2>
-            <ul className="tasks-list">{completedTasks}</ul>
+            <ul className="tasks-list">{completedTasksBlock}</ul>
           </div>
         ) : null}
       </div>
