@@ -14528,7 +14528,7 @@ exports.DB = {
     user: {
         name: 'Roma',
     },
-    everyday_tasks: [
+    everydayTasks: [
         '30 pages',
         'sport',
         'hexlet',
@@ -14537,8 +14537,8 @@ exports.DB = {
         'React',
         '2dooshka',
     ],
-    completed_tasks: ['wake up'],
-    today_tasks: ['wash plates', 'clean room'],
+    completedTasks: ['wake up'],
+    todayTasks: ['wash plates', 'clean room'],
     days: [
         '1',
         '2',
@@ -45462,9 +45462,9 @@ var EveryDayView = (function (_super) {
         return _super.call(this, props) || this;
     }
     EveryDayView.prototype.render = function () {
-        var everyDayTasks = this.props['data_user']['everyday_tasks'];
-        var completedTasks = this.props['data_user']['completed_tasks'];
-        var additionalTasks = this.props['data_user']['additional_tasks'];
+        var everyDayTasks = this.props['data_user']['everydayTasks'];
+        var completedTasks = this.props['data_user']['completedTasks'];
+        var additionalTasks = this.props['data_user']['additionalTasks'];
         var finishTask = this.props['finishTask'];
         return (React.createElement("div", { className: "conteiner" },
             React.createElement("h1", { className: "title" }, "\u041A\u0430\u0436\u0434\u044B\u0439 \u0434\u0435\u043D\u044C"),
@@ -45539,29 +45539,31 @@ var TasksContainer = (function (_super) {
         var _a = this.props, finishTask = _a.finishTask, addTask = _a.addTask;
         var isHide = this.state['isHide'];
         var _b = this.props, everyDayTasks = _b.everyDayTasks, completedTasks = _b.completedTasks, todayTasks = _b.todayTasks;
-        var everyDayTasksBlock = everyDayTasks.map(function (item, i) {
+        everyDayTasks = everyDayTasks.map(function (item, i) {
             return (React.createElement("li", { className: "tasks-list__item", key: i },
                 React.createElement(Item_1.default, { content: item, finishTask: finishTask, index: i })));
         });
-        var completedTasksBlock = completedTasks.map(function (item, i) {
+        completedTasks = completedTasks.map(function (item, i) {
             return (React.createElement("li", { className: "tasks-list__item", key: i },
                 React.createElement(Item_1.default, { content: item, completedTask: true })));
         });
-        var todayTasksBlock = todayTasks.map(function (item, i) {
-            return (React.createElement("li", { className: "tasks-list__item", key: i },
-                React.createElement(Item_1.default, { content: item, todayTask: true, finishTask: finishTask, index: i })));
-        });
+        todayTasks
+            ? (todayTasks = todayTasks.map(function (item, i) {
+                return (React.createElement("li", { className: "tasks-list__item", key: i },
+                    React.createElement(Item_1.default, { content: item, todayTask: true, finishTask: finishTask, index: i })));
+            }))
+            : null;
         if (!isHide) {
             return React.createElement(exports.TasksContainerBlock, null);
         }
         return (React.createElement("div", null,
-            React.createElement("ul", { className: "tasks-list" }, everyDayTasksBlock),
+            React.createElement("ul", { className: "tasks-list" }, everyDayTasks),
             React.createElement("h2", { className: "subtitile" }, "\u0414\u041E\u041F\u041E\u041B\u041D\u0418\u0422\u0415\u041B\u042C\u041D\u042B\u0415 \u041D\u0410 \u0421\u0415\u0413\u041E\u0414\u041D\u042F"),
-            todayTasks ? React.createElement("ul", { className: "tasks-list" }, todayTasksBlock) : null,
+            todayTasks ? React.createElement("ul", { className: "tasks-list" }, todayTasks) : null,
             React.createElement(NewTask_1.default, { addTask: addTask }),
             completedTasks ? (React.createElement("div", null,
                 React.createElement("h2", { className: "subtitile" }, "\u0412\u042B\u041F\u041E\u041B\u041D\u0415\u041D\u041D\u042B\u0415"),
-                React.createElement("ul", { className: "tasks-list" }, completedTasksBlock))) : null));
+                React.createElement("ul", { className: "tasks-list" }, completedTasks))) : null));
     };
     return TasksContainer;
 }(React.Component));
@@ -50719,9 +50721,9 @@ var TodayView = (function (_super) {
         return _super.call(this, props) || this;
     }
     TodayView.prototype.render = function () {
-        var everyDaytasks = this.props['data_user']['everyday_tasks'];
-        var completedTasks = this.props['data_user']['completed_tasks'];
-        var todayTasks = this.props['data_user']['today_tasks'];
+        var everyDaytasks = this.props['data_user']['everydayTasks'];
+        var completedTasks = this.props['data_user']['completedTasks'];
+        var todayTasks = this.props['data_user']['todayTasks'];
         var finishTask = this.props['finishTask'];
         var addTask = this.props['addTask'];
         var days = this.props['data_user']['days'];
@@ -50799,29 +50801,31 @@ var TasksContainer = (function (_super) {
         var _a = this.props, finishTask = _a.finishTask, addTask = _a.addTask;
         var isHide = this.state['isHide'];
         var _b = this.props, everyDayTasks = _b.everyDayTasks, completedTasks = _b.completedTasks, todayTasks = _b.todayTasks;
-        var everyDayTasksBlock = everyDayTasks.map(function (item, i) {
+        everyDayTasks = everyDayTasks.map(function (item, i) {
             return (React.createElement("li", { className: "tasks-list__item", key: i },
                 React.createElement(Item_1.default, { content: item, finishTask: finishTask, index: i })));
         });
-        var completedTasksBlock = completedTasks.map(function (item, i) {
+        completedTasks = completedTasks.map(function (item, i) {
             return (React.createElement("li", { className: "tasks-list__item", key: i },
                 React.createElement(Item_1.default, { content: item, completedTask: true })));
         });
-        var todayTasksBlock = todayTasks.map(function (item, i) {
-            return (React.createElement("li", { className: "tasks-list__item", key: i },
-                React.createElement(Item_1.default, { content: item, todayTask: true, finishTask: finishTask, index: i })));
-        });
+        todayTasks
+            ? (todayTasks = todayTasks.map(function (item, i) {
+                return (React.createElement("li", { className: "tasks-list__item", key: i },
+                    React.createElement(Item_1.default, { content: item, todayTask: true, finishTask: finishTask, index: i })));
+            }))
+            : null;
         if (!isHide) {
             return React.createElement(exports.TasksContainerBlock, null);
         }
         return (React.createElement("div", null,
-            React.createElement("ul", { className: "tasks-list" }, everyDayTasksBlock),
+            React.createElement("ul", { className: "tasks-list" }, everyDayTasks),
             React.createElement("h2", { className: "subtitile" }, "\u0414\u041E\u041F\u041E\u041B\u041D\u0418\u0422\u0415\u041B\u042C\u041D\u042B\u0415 \u041D\u0410 \u0421\u0415\u0413\u041E\u0414\u041D\u042F"),
-            todayTasks ? React.createElement("ul", { className: "tasks-list" }, todayTasksBlock) : null,
+            todayTasks ? React.createElement("ul", { className: "tasks-list" }, todayTasks) : null,
             React.createElement(NewTask_1.default, { addTask: addTask }),
             completedTasks ? (React.createElement("div", null,
                 React.createElement("h2", { className: "subtitile" }, "\u0412\u042B\u041F\u041E\u041B\u041D\u0415\u041D\u041D\u042B\u0415"),
-                React.createElement("ul", { className: "tasks-list" }, completedTasksBlock))) : null));
+                React.createElement("ul", { className: "tasks-list" }, completedTasks))) : null));
     };
     return TasksContainer;
 }(React.Component));
@@ -51128,7 +51132,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var user_1 = __webpack_require__(106);
 var db_1 = __webpack_require__(107);
 function finishTask(name, value, type) {
-    db_1.DB.completed_tasks.push(name);
+    db_1.DB.completedTasks.push(name);
     delete db_1.DB[type][value];
     return function (dispatch) {
         return dispatch(updateTaskState());
@@ -51152,7 +51156,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var user_1 = __webpack_require__(106);
 var db_1 = __webpack_require__(107);
 function addTask(value) {
-    db_1.DB.today_tasks.push(value);
+    db_1.DB.todayTasks.push(value);
     return function (dispatch) {
         return dispatch(updateTaskState());
     };

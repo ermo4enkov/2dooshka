@@ -2,7 +2,7 @@ export let DB = {
   user: {
     name: 'Roma',
   },
-  everyday_tasks: [
+  everydayTasks: [
     '30 pages',
     'sport',
     'hexlet',
@@ -11,8 +11,8 @@ export let DB = {
     'React',
     '2dooshka',
   ],
-  completed_tasks: ['wake up'],
-  today_tasks: ['wash plates', 'clean room'],
+  completedTasks: ['wake up'],
+  todayTasks: ['wash plates', 'clean room'],
   days: [
     // { grade: '2' },
     // { grade: '5' },

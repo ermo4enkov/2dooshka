@@ -7,9 +7,9 @@ export class EveryDayView extends React.Component {
   }
 
   render() {
-    const everyDayTasks = this.props['data_user']['everyday_tasks'];
-    const completedTasks = this.props['data_user']['completed_tasks'];
-    const additionalTasks = this.props['data_user']['additional_tasks'];
+    const everyDayTasks = this.props['data_user']['everydayTasks'];
+    const completedTasks = this.props['data_user']['completedTasks'];
+    const additionalTasks = this.props['data_user']['additionalTasks'];
     const finishTask = this.props['finishTask'];
 
     return (
