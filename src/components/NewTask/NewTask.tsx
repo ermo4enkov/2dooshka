@@ -35,6 +35,7 @@ const plusStyles = {
 
 interface NewTaskProps {
   addTask?: any;
+  placeholder: string;
 }
 
 interface NewTaskStates {
@@ -70,6 +71,9 @@ class NewTask extends React.Component<NewTaskProps, NewTaskStates> {
   }
 
   render() {
+
+    const { placeholder } = this.props;
+
     const ButtonsBlock = () => {
       return this.state.content ? (
         <StyledButtonCont>
@@ -89,7 +93,7 @@ class NewTask extends React.Component<NewTaskProps, NewTaskStates> {
         <Add style={plusStyles} />
         <StyledInput
           type="text"
-          placeholder="Новая задача на сегодня..."
+          placeholder={placeholder}
           onChange={this.changeContent.bind(this)}
           value={this.state.content}
         />

@@ -53,9 +53,11 @@ export class TasksContainer extends React.Component<TasksContainerProps,TasksCon
   }
 
   render() {
-    const { setTaskFinished, addTask } = this.props;
+    const { setTaskFinished, addTask, typeOfList } = this.props;
     const isHide: boolean = this.state['isHide'];
     let { everyDayTasks, completedTasks, todayTasks } = this.props;
+    const todayPlaceholder: string = 'Новая задача на сегодня...';
+    const everydayPlaceholder: string = 'Новая задача на каждый день...';
 
     everyDayTasks = everyDayTasks.map((item, i) => {
       return (
@@ -75,7 +77,7 @@ export class TasksContainer extends React.Component<TasksContainerProps,TasksCon
 
     todayTasks
       ? (todayTasks = todayTasks.map((item, i) => {
-          return (
+        return (
             <li className="tasks-list__item" key={i}>
               <Item
                 content={item}
@@ -84,8 +86,8 @@ export class TasksContainer extends React.Component<TasksContainerProps,TasksCon
                 index={i}
               />
             </li>
-          );
-        }))
+        );
+      }))
       : null;
 
     if (!isHide) {
@@ -95,9 +97,16 @@ export class TasksContainer extends React.Component<TasksContainerProps,TasksCon
     return (
       <div>
         <ul className="tasks-list">{everyDayTasks}</ul>
-        <h2 className="subtitile">ДОПОЛНИТЕЛЬНЫЕ НА СЕГОДНЯ</h2>
-        {todayTasks ? <ul className="tasks-list">{todayTasks}</ul> : null}
-        <NewTask addTask={addTask} />
+
+        {todayTasks ? (
+          <div>
+            <h2 className="subtitile">ДОПОЛНИТЕЛЬНЫЕ НА СЕГОДНЯ</h2>
+            <ul className="tasks-list">{todayTasks}</ul>
+          </div>
+        ) : null}
+        <NewTask addTask={addTask} placeholder={typeOfList === 'today' ?
+         todayPlaceholder : everydayPlaceholder}
+        />
         {completedTasks ? (
           <div>
             <h2 className="subtitile">ВЫПОЛНЕННЫЕ</h2>

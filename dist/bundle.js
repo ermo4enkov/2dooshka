@@ -45350,8 +45350,8 @@ var react_redux_1 = __webpack_require__(145);
 var redux_1 = __webpack_require__(97);
 var Header_1 = __webpack_require__(304);
 var Main_1 = __webpack_require__(307);
-var addTask_1 = __webpack_require__(361);
-var setTaskFinished_1 = __webpack_require__(367);
+var addTask_1 = __webpack_require__(360);
+var setTaskFinished_1 = __webpack_require__(361);
 var App = (function (_super) {
     __extends(App, _super);
     function App(props) {
@@ -45620,9 +45620,11 @@ var TasksContainer = (function (_super) {
         }
     };
     TasksContainer.prototype.render = function () {
-        var _a = this.props, setTaskFinished = _a.setTaskFinished, addTask = _a.addTask;
+        var _a = this.props, setTaskFinished = _a.setTaskFinished, addTask = _a.addTask, typeOfList = _a.typeOfList;
         var isHide = this.state['isHide'];
         var _b = this.props, everyDayTasks = _b.everyDayTasks, completedTasks = _b.completedTasks, todayTasks = _b.todayTasks;
+        var todayPlaceholder = 'Новая задача на сегодня...';
+        var everydayPlaceholder = 'Новая задача на каждый день...';
         everyDayTasks = everyDayTasks.map(function (item, i) {
             return (React.createElement("li", { className: "tasks-list__item", key: i },
                 React.createElement(Item_1.default, { content: item, setTaskFinished: setTaskFinished, index: i })));
@@ -45642,9 +45644,11 @@ var TasksContainer = (function (_super) {
         }
         return (React.createElement("div", null,
             React.createElement("ul", { className: "tasks-list" }, everyDayTasks),
-            React.createElement("h2", { className: "subtitile" }, "\u0414\u041E\u041F\u041E\u041B\u041D\u0418\u0422\u0415\u041B\u042C\u041D\u042B\u0415 \u041D\u0410 \u0421\u0415\u0413\u041E\u0414\u041D\u042F"),
-            todayTasks ? React.createElement("ul", { className: "tasks-list" }, todayTasks) : null,
-            React.createElement(NewTask_1.default, { addTask: addTask }),
+            todayTasks ? (React.createElement("div", null,
+                React.createElement("h2", { className: "subtitile" }, "\u0414\u041E\u041F\u041E\u041B\u041D\u0418\u0422\u0415\u041B\u042C\u041D\u042B\u0415 \u041D\u0410 \u0421\u0415\u0413\u041E\u0414\u041D\u042F"),
+                React.createElement("ul", { className: "tasks-list" }, todayTasks))) : null,
+            React.createElement(NewTask_1.default, { addTask: addTask, placeholder: typeOfList === 'today' ?
+                    todayPlaceholder : everydayPlaceholder }),
             completedTasks ? (React.createElement("div", null,
                 React.createElement("h2", { className: "subtitile" }, "\u0412\u042B\u041F\u041E\u041B\u041D\u0415\u041D\u041D\u042B\u0415"),
                 React.createElement("ul", { className: "tasks-list" }, completedTasks))) : null));
@@ -50712,6 +50716,7 @@ var NewTask = (function (_super) {
     };
     NewTask.prototype.render = function () {
         var _this = this;
+        var placeholder = this.props.placeholder;
         var ButtonsBlock = function () {
             return _this.state.content ? (React.createElement(StyledButtonCont, null,
                 React.createElement(Button_1.default, { text: "Добавить", onClick: _this.addNewTask.bind(_this) }),
@@ -50719,7 +50724,7 @@ var NewTask = (function (_super) {
         };
         return (React.createElement(StyledItem, null,
             React.createElement(Add_1.default, { style: plusStyles }),
-            React.createElement(StyledInput, { type: "text", placeholder: "Новая задача на сегодня...", onChange: this.changeContent.bind(this), value: this.state.content }),
+            React.createElement(StyledInput, { type: "text", placeholder: placeholder, onChange: this.changeContent.bind(this), value: this.state.content }),
             React.createElement(ButtonsBlock, null)));
     };
     return NewTask;
@@ -50811,7 +50816,7 @@ var TodayView = (function (_super) {
         var days = this.props['data_user']['days'];
         return (React.createElement("div", { className: "conteiner" },
             React.createElement("h1", { className: "title" }, "\u0421\u0435\u0433\u043E\u0434\u043D\u044F"),
-            React.createElement(TasksContainer_1.default, { everyDayTasks: everyDaytasks, setTaskFinished: setTaskFinished, completedTasks: completedTasks, todayTasks: todayTasks, addTask: addTask }),
+            React.createElement(TasksContainer_1.default, { everyDayTasks: everyDaytasks, setTaskFinished: setTaskFinished, completedTasks: completedTasks, todayTasks: todayTasks, addTask: addTask, typeOfList: "today" }),
             React.createElement(Calendar_1.default, { days: days })));
     };
     return TodayView;
@@ -51143,8 +51148,7 @@ exports.default = ItemsCollection;
 
 
 /***/ }),
-/* 360 */,
-/* 361 */
+/* 360 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -51167,12 +51171,7 @@ function updateTaskState() {
 
 
 /***/ }),
-/* 362 */,
-/* 363 */,
-/* 364 */,
-/* 365 */,
-/* 366 */,
-/* 367 */
+/* 361 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";

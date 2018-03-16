@@ -1,5 +1,5 @@
 import * as React from 'react';
-import TasksConteiner from '../../blocks/TasksContainer';
+import TasksContainer from '../../blocks/TasksContainer';
 import Calendar from '../../blocks/Calendar';
 
 export class TodayView extends React.Component {
@@ -19,12 +19,13 @@ export class TodayView extends React.Component {
     return (
       <div className="conteiner">
         <h1 className="title">Сегодня</h1>
-        <TasksConteiner
+        <TasksContainer
           everyDayTasks={everyDaytasks}
           setTaskFinished={setTaskFinished}
           completedTasks={completedTasks}
           todayTasks={todayTasks}
           addTask={addTask}
+          typeOfList="today"
         />
         <Calendar days={days} />
       </div>
