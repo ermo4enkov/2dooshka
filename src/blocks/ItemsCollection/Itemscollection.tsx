@@ -1,6 +1,5 @@
 import * as React from 'react';
-import styled from 'styled-components';
-import Item from '../.';
+import Item from '../../components/Item';
 
 export class ItemsCollection extends React.Component<{}> {
   constructor(props: any) {

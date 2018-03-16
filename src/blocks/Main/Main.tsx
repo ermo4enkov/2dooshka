@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
-import EveryDayView from '../.';
-import TodayView from '../.';
-import StoryBookView from '../.';
+import EveryDayView from '../../views/EveryDayView';
+import TodayView from '../../views/TodayView';
+import StoryBookView from '../../views/StoryBookView';
 
 const appMain = props => (
   <main>

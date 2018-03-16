@@ -1,7 +1,7 @@
 import * as React from 'react';
-import Button from '../.';
-import Item from '../.';
-import NewTask from '../.';
+import Button from '../../components/Button';
+import Item from '../../components/Item';
+import NewTask from '../../components/NewTask';
 
 interface TasksContainerState {
   isHide?: boolean;
@@ -15,7 +15,7 @@ interface TasksContainerProps {
   addTask?: any;
 }
 
-export const TasksContainerBlock: React.StatelessComponent = props => (
+export const Greetings: React.StatelessComponent = props => (
   <div className="tasks-conteiner">
     <img className="tasks-conteiner__logo" src="./empty.png" />
     <div className="tasks-conteiner__text">
@@ -88,7 +88,7 @@ export class TasksContainer extends React.Component<TasksContainerProps,TasksCon
       : null;
 
     if (!isHide) {
-      return <TasksContainerBlock />;
+      return <Greetings />;
     }
 
     return (

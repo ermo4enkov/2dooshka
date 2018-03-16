@@ -1,9 +1,5 @@
 import * as React from 'react';
-import styled from 'styled-components';
-
-import Logo from '../.';
-import Plus from '../../components/Icons/Plus';
-
+import Logo from '../../components/Logo';
 import { Link, NavLink } from 'react-router-dom';
 
 export class Header extends React.Component {

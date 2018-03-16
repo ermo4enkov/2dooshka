@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Button from '../.';
+import Button from '../../components/Button';
 
 export class ButtonsCollection extends React.Component {
   constructor(props: any) {

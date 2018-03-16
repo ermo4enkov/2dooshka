@@ -1,5 +1,5 @@
 import * as React from 'react';
-import TasksConteiner from '../.';
+import TasksContainer from '../../blocks/TasksContainer';
 
 export class EveryDayView extends React.Component {
   constructor(props) {
@@ -15,7 +15,7 @@ export class EveryDayView extends React.Component {
     return (
       <div className="conteiner">
         <h1 className="title">Каждый день</h1>
-        <TasksConteiner
+        <TasksContainer
           everyDayTasks={everyDayTasks}
           finishTask={finishTask}
           completedTasks={completedTasks}

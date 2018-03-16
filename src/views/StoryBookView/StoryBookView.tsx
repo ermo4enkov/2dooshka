@@ -1,9 +1,8 @@
 import * as React from 'react';
-import Button  from '../../components/Button/Button';
-import ColorsPallet from '../../blocks/ColorsPallet/ColorsPallet';
-import ButtonsCollection from '../../blocks/ButtonsCollection/ButtonsCollection';
-import ItemsCollection  from '../../blocks/ItemsCollection/Itemscollection';
-import Calendar from '../.';
+import ColorsPallet from '../../blocks/ColorsPallet';
+import ButtonsCollection from '../../blocks/ButtonsCollection';
+import ItemsCollection  from '../../blocks/ItemsCollection';
+import Calendar from '../../blocks/Calendar';
 
 export class StoryBook extends React.Component {
   render() {
