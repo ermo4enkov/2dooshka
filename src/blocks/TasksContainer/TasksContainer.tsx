@@ -4,7 +4,7 @@ import Item from '../../components/Item';
 import NewTask from '../../components/NewTask';
 
 interface TasksContainerState {
-  isHide?: boolean;
+  greetingsIsHide: boolean;
 }
 
 interface TasksContainerProps {
@@ -30,7 +30,7 @@ export class TasksContainer extends React.Component<TasksContainerProps,TasksCon
   constructor(props) {
     super(props);
     this.state = {
-      isHide: false,
+      greetingsIsHide: false,
     };
   }
 
@@ -47,7 +47,7 @@ export class TasksContainer extends React.Component<TasksContainerProps,TasksCon
 
     if (this.checkTasks()) {
       this.setState({
-        isHide: true,
+        greetingsIsHide: true,
       });
     }
   }
@@ -62,28 +62,31 @@ export class TasksContainer extends React.Component<TasksContainerProps,TasksCon
       todayTasks,
     } = this.props;
 
-    const isHide: boolean = this.state['isHide'];
-
+    const { greetingsIsHide } = this.state;
     const todayPlaceholder: string = 'Новая задача на сегодня...';
     const everydayPlaceholder: string = 'Новая задача на каждый день...';
 
-    const everyDayTasksList = everyDayTasks.map((item, i) => {
+    const everyDayTasksList = everyDayTasks ? everyDayTasks.map((item, i) => {
       return (
         <li className="tasks-list__item" key={i}>
-          <Item content={item} setTaskFinished={setTaskFinished} index={i} />
+          <Item 
+            content={item} 
+            setTaskFinished={setTaskFinished} 
+            index={i} 
+          />
         </li>
       );
-    });
+    }) : null;
 
-    const completedTasksList = completedTasks.map((item, i) => {
+    const completedTasksList = completedTasks ? completedTasks.map((item, i) => {
       return (
         <li className="tasks-list__item" key={i}>
           <Item content={item} completedTask />
         </li>
       );
-    });
+    }) : null;
 
-    const todayTasksList = todayTasks.map((item, i) => {
+    const todayTasksList = todayTasks ? todayTasks.map((item, i) => {
       return (
             <li className="tasks-list__item" key={i}>
               <Item
@@ -94,34 +97,53 @@ export class TasksContainer extends React.Component<TasksContainerProps,TasksCon
               />
             </li>
       );
-    });
+    }) : null;
       
+    const EverydayBlock = () => {
+      return everyDayTasks ? (
+        <div>
+          <ul className="tasks-list">{everyDayTasksList}</ul>
+        </div>
+      ) 
+     : null;
+    };
 
-    if (!isHide) {
+    const TodayBlock = () => {
+      return todayTasks ? (
+        <div>
+          <h2 className="subtitile">ДОПОЛНИТЕЛЬНЫЕ НА СЕГОДНЯ</h2>
+          <ul className="tasks-list">{todayTasksList}</ul>
+        </div>
+     ) 
+     : null;
+    };
+
+    const CompletedBlock = () => {
+      return completedTasks ? (
+          <div>
+            <h2 className="subtitile">ВЫПОЛНЕННЫЕ</h2>
+            <ul className="tasks-list">{completedTasksList}</ul>
+          </div>
+        ) 
+        : null;
+    };
+
+    if (!greetingsIsHide) {
       return <Greetings />;
     }
 
     return (
       <div>
-        <ul className="tasks-list">{everyDayTasksList}</ul>
-
-        {todayTasks ? (
-          <div>
-            <h2 className="subtitile">ДОПОЛНИТЕЛЬНЫЕ НА СЕГОДНЯ</h2>
-            <ul className="tasks-list">{todayTasksList}</ul>
-          </div>
-        ) : null}
-
-        <NewTask addTask={addTask} placeholder={typeOfList === 'today' ?
-         todayPlaceholder : everydayPlaceholder}
+        <EverydayBlock />
+        <TodayBlock />
+        <NewTask 
+          addTask={addTask} 
+          placeholder= {
+              typeOfList === 'today' ?
+              todayPlaceholder : everydayPlaceholder
+            }
         />
-
-        {completedTasks ? (
-          <div>
-            <h2 className="subtitile">ВЫПОЛНЕННЫЕ</h2>
-            <ul className="tasks-list">{completedTasksList}</ul>
-          </div>
-        ) : null}
+        <CompletedBlock />
 
       </div>
     );

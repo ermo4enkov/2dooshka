@@ -45601,7 +45601,7 @@ var TasksContainer = (function (_super) {
     function TasksContainer(props) {
         var _this = _super.call(this, props) || this;
         _this.state = {
-            isHide: false,
+            greetingsIsHide: false,
         };
         return _this;
     }
@@ -45615,40 +45615,53 @@ var TasksContainer = (function (_super) {
         localStorage.setItem('bgcolor', 'red');
         if (this.checkTasks()) {
             this.setState({
-                isHide: true,
+                greetingsIsHide: true,
             });
         }
     };
     TasksContainer.prototype.render = function () {
         var _a = this.props, setTaskFinished = _a.setTaskFinished, addTask = _a.addTask, typeOfList = _a.typeOfList, everyDayTasks = _a.everyDayTasks, completedTasks = _a.completedTasks, todayTasks = _a.todayTasks;
-        var isHide = this.state['isHide'];
+        var greetingsIsHide = this.state.greetingsIsHide;
         var todayPlaceholder = 'Новая задача на сегодня...';
         var everydayPlaceholder = 'Новая задача на каждый день...';
-        var everyDayTasksList = everyDayTasks.map(function (item, i) {
+        var everyDayTasksList = everyDayTasks ? everyDayTasks.map(function (item, i) {
             return (React.createElement("li", { className: "tasks-list__item", key: i },
                 React.createElement(Item_1.default, { content: item, setTaskFinished: setTaskFinished, index: i })));
-        });
-        var completedTasksList = completedTasks.map(function (item, i) {
+        }) : null;
+        var completedTasksList = completedTasks ? completedTasks.map(function (item, i) {
             return (React.createElement("li", { className: "tasks-list__item", key: i },
                 React.createElement(Item_1.default, { content: item, completedTask: true })));
-        });
-        var todayTasksList = todayTasks.map(function (item, i) {
+        }) : null;
+        var todayTasksList = todayTasks ? todayTasks.map(function (item, i) {
             return (React.createElement("li", { className: "tasks-list__item", key: i },
                 React.createElement(Item_1.default, { content: item, todayTask: true, setTaskFinished: setTaskFinished, index: i })));
-        });
-        if (!isHide) {
+        }) : null;
+        var EverydayBlock = function () {
+            return everyDayTasks ? (React.createElement("div", null,
+                React.createElement("ul", { className: "tasks-list" }, everyDayTasksList)))
+                : null;
+        };
+        var TodayBlock = function () {
+            return todayTasks ? (React.createElement("div", null,
+                React.createElement("h2", { className: "subtitile" }, "\u0414\u041E\u041F\u041E\u041B\u041D\u0418\u0422\u0415\u041B\u042C\u041D\u042B\u0415 \u041D\u0410 \u0421\u0415\u0413\u041E\u0414\u041D\u042F"),
+                React.createElement("ul", { className: "tasks-list" }, todayTasksList)))
+                : null;
+        };
+        var CompletedBlock = function () {
+            return completedTasks ? (React.createElement("div", null,
+                React.createElement("h2", { className: "subtitile" }, "\u0412\u042B\u041F\u041E\u041B\u041D\u0415\u041D\u041D\u042B\u0415"),
+                React.createElement("ul", { className: "tasks-list" }, completedTasksList)))
+                : null;
+        };
+        if (!greetingsIsHide) {
             return React.createElement(Greetings, null);
         }
         return (React.createElement("div", null,
-            React.createElement("ul", { className: "tasks-list" }, everyDayTasksList),
-            todayTasks ? (React.createElement("div", null,
-                React.createElement("h2", { className: "subtitile" }, "\u0414\u041E\u041F\u041E\u041B\u041D\u0418\u0422\u0415\u041B\u042C\u041D\u042B\u0415 \u041D\u0410 \u0421\u0415\u0413\u041E\u0414\u041D\u042F"),
-                React.createElement("ul", { className: "tasks-list" }, todayTasksList))) : null,
+            React.createElement(EverydayBlock, null),
+            React.createElement(TodayBlock, null),
             React.createElement(NewTask_1.default, { addTask: addTask, placeholder: typeOfList === 'today' ?
                     todayPlaceholder : everydayPlaceholder }),
-            completedTasks ? (React.createElement("div", null,
-                React.createElement("h2", { className: "subtitile" }, "\u0412\u042B\u041F\u041E\u041B\u041D\u0415\u041D\u041D\u042B\u0415"),
-                React.createElement("ul", { className: "tasks-list" }, completedTasksList))) : null));
+            React.createElement(CompletedBlock, null)));
     };
     return TasksContainer;
 }(React.Component));
