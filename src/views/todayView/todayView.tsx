@@ -1,6 +1,6 @@
 import * as React from 'react';
-import TasksConteiner from '../../blocks/tasksConteiner';
-import Calendar from '../../blocks/calendar';
+import TasksConteiner from '../.';
+import Calendar from '../.';
 
 export class TodayView extends React.Component {
   constructor(props) {

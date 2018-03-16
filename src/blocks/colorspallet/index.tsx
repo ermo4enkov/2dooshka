@@ -1,1 +1,1 @@
-export { default } from './colorsPallet';
+export { default } from './ColorsPallet';

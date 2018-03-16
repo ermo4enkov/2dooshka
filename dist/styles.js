@@ -518,7 +518,7 @@ if (hostname === '0.0.0.0' || hostname === '::') {
 
 // `hostname` can be empty when the script path is relative. In that case, specifying
 // a protocol would result in an invalid URL.
-// When https is used in the app, secure websockets are always necessary
+// When https is used in the App, secure websockets are always necessary
 // because the browser doesn't accept non-secure websockets.
 if (hostname && (self.location.protocol === 'https:' || urlParts.hostname === '0.0.0.0')) {
   protocol = self.location.protocol;
@@ -1397,7 +1397,7 @@ Url.prototype.parseHost = function() {
 	 * @private
 	 * @param {Array} array The array to iterate over.
 	 * @param {Function} callback The function that gets called for every array
-	 * item.
+	 * Item.
 	 * @returns {Array} A new array of values returned by the callback function.
 	 */
 	function map(array, fn) {
@@ -2428,7 +2428,7 @@ module.exports = socket;
 
 var transportList = require('./transport-list');
 
-module.exports = require('./main')(transportList);
+module.exports = require('./Main')(transportList);
 
 // TODO can't get rid of this until all servers do
 if ('_sockjs_onload' in global) {
@@ -3055,7 +3055,7 @@ var URL = require('url-parse')
 
 var debug = function() {};
 if (process.env.NODE_ENV !== 'production') {
-  debug = require('debug')('sockjs-client:main');
+  debug = require('debug')('sockjs-client:Main');
 }
 
 var transports;
@@ -8411,7 +8411,7 @@ ansiHTML.setColors = function (colors) {
       if (!Array.isArray(hex) || hex.length === 0 || hex.some(function (h) {
         return typeof h !== 'string'
       })) {
-        throw new Error('The value of `' + key + '` property must be an Array and each item could only be a hex string, e.g.: FF0000')
+        throw new Error('The value of `' + key + '` property must be an Array and each Item could only be a hex string, e.g.: FF0000')
       }
       var defHexColor = _defColors[key]
       if (!hex[0]) {

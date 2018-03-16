@@ -4524,7 +4524,7 @@ if (hostname === '0.0.0.0' || hostname === '::') {
 
 // `hostname` can be empty when the script path is relative. In that case, specifying
 // a protocol would result in an invalid URL.
-// When https is used in the app, secure websockets are always necessary
+// When https is used in the App, secure websockets are always necessary
 // because the browser doesn't accept non-secure websockets.
 if (hostname && (self.location.protocol === 'https:' || urlParts.hostname === '0.0.0.0')) {
   protocol = self.location.protocol;
@@ -5401,7 +5401,7 @@ Url.prototype.parseHost = function() {
 	 * @private
 	 * @param {Array} array The array to iterate over.
 	 * @param {Function} callback The function that gets called for every array
-	 * item.
+	 * Item.
 	 * @returns {Array} A new array of values returned by the callback function.
 	 */
 	function map(array, fn) {
@@ -6423,7 +6423,7 @@ module.exports = socket;
 
 var transportList = require('./transport-list');
 
-module.exports = require('./main')(transportList);
+module.exports = require('./Main')(transportList);
 
 // TODO can't get rid of this until all servers do
 if ('_sockjs_onload' in global) {
@@ -7050,7 +7050,7 @@ var URL = require('url-parse')
 
 var debug = function() {};
 if (process.env.NODE_ENV !== 'production') {
-  debug = require('debug')('sockjs-client:main');
+  debug = require('debug')('sockjs-client:Main');
 }
 
 var transports;
@@ -12404,7 +12404,7 @@ ansiHTML.setColors = function (colors) {
       if (!Array.isArray(hex) || hex.length === 0 || hex.some(function (h) {
         return typeof h !== 'string'
       })) {
-        throw new Error('The value of `' + key + '` property must be an Array and each item could only be a hex string, e.g.: FF0000')
+        throw new Error('The value of `' + key + '` property must be an Array and each Item could only be a hex string, e.g.: FF0000')
       }
       var defHexColor = _defColors[key]
       if (!hex[0]) {
@@ -14930,7 +14930,7 @@ var canUseDOM = !!(typeof window !== 'undefined' && window.document && window.do
 /**
  * Simple, lightweight module assisting with the detection and context of
  * Worker. Helps avoid circular dependencies and allows code to reason about
- * whether or not they are in a Worker, even if they never include the main
+ * whether or not they are in a Worker, even if they never include the Main
  * `ReactWorker` dependency.
  */
 var ExecutionEnvironment = {
@@ -16225,7 +16225,7 @@ var supportsGoWithoutReloadUsingHash = function supportsGoWithoutReloadUsingHash
 /**
  * Returns true if a given popstate event is an extraneous WebKit event.
  * Accounts for the fact that Chrome on iOS fires real popstate events
- * containing undefined state when pressing the back button.
+ * containing undefined state when pressing the back Button.
  */
 var isExtraneousPopstateEvent = function isExtraneousPopstateEvent(event) {
   return event.state === undefined && navigator.userAgent.indexOf('CriOS') === -1;
@@ -16927,7 +16927,7 @@ var ActionTypes = {
    * Creates a Redux store that holds the state tree.
    * The only way to change the data in the store is to call `dispatch()` on it.
    *
-   * There should only be a single store in your app. To specify how different
+   * There should only be a single store in your App. To specify how different
    * parts of the state tree respond to actions, you may combine several reducers
    * into a single reducer function by using `combineReducers`.
    *
@@ -17092,7 +17092,7 @@ var ActionTypes = {
   /**
    * Replaces the reducer currently used by the store to calculate the state.
    *
-   * You might need this if your app implements code splitting and you want to
+   * You might need this if your App implements code splitting and you want to
    * load some of the reducers dynamically. You might also need this if you
    * implement a hot reloading mechanism for Redux.
    *
@@ -17391,7 +17391,7 @@ var supportsGoWithoutReloadUsingHash = exports.supportsGoWithoutReloadUsingHash 
 /**
  * Returns true if a given popstate event is an extraneous WebKit event.
  * Accounts for the fact that Chrome on iOS fires real popstate events
- * containing undefined state when pressing the back button.
+ * containing undefined state when pressing the back Button.
  */
 var isExtraneousPopstateEvent = exports.isExtraneousPopstateEvent = function isExtraneousPopstateEvent(event) {
   return event.state === undefined && navigator.userAgent.indexOf('CriOS') === -1;
@@ -18606,7 +18606,7 @@ function escape(key) {
 }
 
 /**
- * TODO: Test that a single child and an array with one item have the same key
+ * TODO: Test that a single child and an array with one Item have the same key
  * pattern.
  */
 
@@ -20492,9 +20492,9 @@ function accumulateInto(current, next) {
 
 /**
  * @param {array} arr an "accumulation" of items which is either an Array or
- * a single item. Useful when paired with the `accumulate` module. This is a
+ * a single Item. Useful when paired with the `accumulate` module. This is a
  * simple utility that allows us to reason about a collection of items, but
- * handling the case when there is exactly one item (and we do not need to
+ * handling the case when there is exactly one Item (and we do not need to
  * allocate an array).
  * @param {function} cb Callback invoked with each element or a collection.
  * @param {?} [scope] Scope used as `this` in a callback.
@@ -23186,9 +23186,9 @@ var topLevelTypes = BrowserEventConstants.topLevelTypes;
  * Summary of `ReactBrowserEventEmitter` event handling:
  *
  *  - Top-level delegation is used to trap most native browser events. This
- *    may only occur in the main thread and is the responsibility of
+ *    may only occur in the Main thread and is the responsibility of
  *    ReactDOMEventListener, which is injected and can therefore support
- *    pluggable event sources. This is the only work that occurs in the main
+ *    pluggable event sources. This is the only work that occurs in the Main
  *    thread.
  *
  *  - We normalize and de-duplicate events to account for browser quirks. This
@@ -24700,7 +24700,7 @@ function stopRequestCallbackTimer(didExpire) {
   if (enableUserTimingAPI) {
     if (supportsUserTiming) {
       isWaitingForCallback = false;
-      var warning$$1 = didExpire ? 'React was blocked by main thread' : null;
+      var warning$$1 = didExpire ? 'React was blocked by Main thread' : null;
       endMark('(Waiting for async callback...)', '(Waiting for async callback...)', warning$$1);
     }
   }
@@ -26434,7 +26434,7 @@ function ChildReconciler(shouldClone, shouldTrackSideEffects) {
         newFiber.effectTag = Placement;
         return lastPlacedIndex;
       } else {
-        // This item can stay in place.
+        // This Item can stay in place.
         return oldIndex;
       }
     } else {
@@ -26942,7 +26942,7 @@ function ChildReconciler(shouldClone, shouldTrackSideEffects) {
       }
 
       // First, validate keys.
-      // We'll get a different iterator later for the main pass.
+      // We'll get a different iterator later for the Main pass.
       var _newChildren = iteratorFn.call(newChildrenIterable);
       if (_newChildren) {
         var knownKeys = null;
@@ -27093,7 +27093,7 @@ function ChildReconciler(shouldClone, shouldTrackSideEffects) {
     var child = currentFirstChild;
     while (child !== null) {
       // TODO: If key === null and child.key === null, then this only applies to
-      // the first item in the list.
+      // the first Item in the list.
       if (child.key === key) {
         if (child.tag === Fragment ? element.type === REACT_FRAGMENT_TYPE : child.type === element.type) {
           deleteRemainingChildren(returnFiber, child.sibling);
@@ -27132,7 +27132,7 @@ function ChildReconciler(shouldClone, shouldTrackSideEffects) {
     var child = currentFirstChild;
     while (child !== null) {
       // TODO: If key === null and child.key === null, then this only applies to
-      // the first item in the list.
+      // the first Item in the list.
       if (child.key === key) {
         if (child.tag === CallComponent) {
           deleteRemainingChildren(returnFiber, child.sibling);
@@ -27180,7 +27180,7 @@ function ChildReconciler(shouldClone, shouldTrackSideEffects) {
     var child = currentFirstChild;
     while (child !== null) {
       // TODO: If key === null and child.key === null, then this only applies to
-      // the first item in the list.
+      // the first Item in the list.
       if (child.key === key) {
         if (child.tag === HostPortal && child.stateNode.containerInfo === portal.containerInfo && child.stateNode.implementation === portal.implementation) {
           deleteRemainingChildren(returnFiber, child.sibling);
@@ -27207,7 +27207,7 @@ function ChildReconciler(shouldClone, shouldTrackSideEffects) {
   // children and the parent.
   function reconcileChildFibers(returnFiber, currentFirstChild, newChild, expirationTime) {
     // This function is not recursive.
-    // If the top level item is an array, we treat it as a set of children,
+    // If the top level Item is an array, we treat it as a set of children,
     // not as a fragment. Nested arrays on the other hand will be treated as
     // fragment nodes. Recursion happens at the normal flow.
 
@@ -31474,7 +31474,7 @@ function postMountWrapper(element, props) {
   // this is needed to work around a chrome bug where setting defaultChecked
   // will sometimes influence the value of checked (even after detachment).
   // Reference: https://bugs.chromium.org/p/chromium/issues/detail?id=608416
-  // We need to temporarily unset name to avoid disrupting radio button groups.
+  // We need to temporarily unset name to avoid disrupting radio Button groups.
   var name = node.name;
   if (name !== '') {
     node.name = '';
@@ -31521,7 +31521,7 @@ function updateNamedCousins(rootNode, props) {
       // mixing React radio buttons with non-React ones.
       var otherProps = getFiberCurrentPropsFromNode$1(otherNode);
       !otherProps ? invariant(false, 'ReactDOMInput: Mixing React and non-React radio inputs with the same `name` is not supported.') : void 0;
-      // If this is a controlled radio button group, forcing the input that
+      // If this is a controlled radio Button group, forcing the input that
       // was previously checked to update will cause it to be come re-checked
       // as appropriate.
       updateWrapper(otherNode, otherProps);
@@ -34770,7 +34770,7 @@ function renderSubtreeIntoContainer(parentComponent, children, container, forceH
 
     warning(!hasNonRootReactChild || isRootRenderedBySomeReact, 'render(...): Replacing React-rendered children with a new root ' + 'component. If you intended to update the children of this node, ' + 'you should instead have the existing children update their state ' + 'and render the new components instead of calling ReactDOM.render.');
 
-    warning(container.nodeType !== ELEMENT_NODE || !container.tagName || container.tagName.toUpperCase() !== 'BODY', 'render(): Rendering components directly into document.body is ' + 'discouraged, since its children are often manipulated by third-party ' + 'scripts and browser extensions. This may lead to subtle ' + 'reconciliation issues. Try rendering into a container element created ' + 'for your app.');
+    warning(container.nodeType !== ELEMENT_NODE || !container.tagName || container.tagName.toUpperCase() !== 'BODY', 'render(): Rendering components directly into document.body is ' + 'discouraged, since its children are often manipulated by third-party ' + 'scripts and browser extensions. This may lead to subtle ' + 'reconciliation issues. Try rendering into a container element created ' + 'for your App.');
   }
 
   var root = container._reactRootContainer;
@@ -39377,7 +39377,7 @@ exports.default = {
     shadowColor: _colors.fullBlack
   }
 }; /**
-    * NB: If you update this file, please also update `docs/src/app/customization/Themes.js`
+    * NB: If you update this file, please also update `docs/src/App/customization/Themes.js`
     */
 
 /***/ }),
@@ -40546,14 +40546,14 @@ module.exports = exports['default'];
   bowser.check = check;
 
   /*
-   * Set our detect method to the main bowser object so we can
+   * Set our detect method to the Main bowser object so we can
    * reuse it to test other user agents.
    * This is needed to implement future tests.
    */
   bowser._detect = detect;
 
   /*
-   * Set our detect public method to the main bowser object
+   * Set our detect public method to the Main bowser object
    * This is needed to implement bowser in server side
    */
   bowser.detect = detect;
@@ -42690,7 +42690,7 @@ module.exports.tokensToFunction = tokensToFunction
 module.exports.tokensToRegExp = tokensToRegExp
 
 /**
- * The main path matching regexp utility.
+ * The Main path matching regexp utility.
  *
  * @type {RegExp}
  */
@@ -44460,7 +44460,7 @@ exports.default = logo_1.default;
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(0);
 var react_router_dom_1 = __webpack_require__(48);
-var LOGO = function () { return (React.createElement(react_router_dom_1.Link, { to: "/today", className: "logo" }, "2Dooshka")); };
+var LOGO = function () { return (React.createElement(react_router_dom_1.Link, { to: "/today", className: "Logo" }, "2Dooshka")); };
 exports.default = LOGO;
 
 
@@ -46912,7 +46912,7 @@ module.exports = function isObject(val) {
 						}
 						// align-self, s
 						case 115: {
-							return webkit + out + ms + 'flex-item-' + out.replace(selfptn, '') + out
+							return webkit + out + ms + 'flex-Item-' + out.replace(selfptn, '') + out
 						}
 						// align-content
 						default: {

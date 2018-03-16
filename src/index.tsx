@@ -4,10 +4,10 @@ import * as ReactDOM from 'react-dom';
 import './assets/scss/styles.scss';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
-import EveryDayView from './views/everyDayView/EveryDayView';
-import StoryBookView from './views/storyBookView/StoryBookView';
-import TodayView from './views/todayView/TodayView';
-import App from './blocks/app/App';
+import EveryDayView from './views/EveryDayView/EveryDayView';
+import StoryBookView from './views/StoryBookView/StoryBookView';
+import TodayView from './views/TodayView/TodayView';
+import App from './blocks/App/App';
 
 import { Router, IndexRoute, browserHistory } from 'react-router';
 import { BrowserRouter, Route } from 'react-router-dom';
