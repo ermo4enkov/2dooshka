@@ -38,12 +38,12 @@ interface NewTaskProps {
   placeholder: string;
 }
 
-interface NewTaskStates {
+interface NewTaskState {
   content: string;
 }
 
-class NewTask extends React.Component<NewTaskProps, NewTaskStates> {
-  constructor(newTaskProps, newTaskStates) {
+class NewTask extends React.Component<NewTaskProps, NewTaskState> {
+  constructor(newTaskProps, newTaskState) {
     super(newTaskProps);
     this.state = {
       content: '',
@@ -52,7 +52,7 @@ class NewTask extends React.Component<NewTaskProps, NewTaskStates> {
 
   addNewTask(event) {
     const value = this.state.content;
-    this.props.addTask.addTask(value);
+    this.props.addTask(value);
     this.setState({
       content: '',
     });
@@ -87,7 +87,6 @@ class NewTask extends React.Component<NewTaskProps, NewTaskStates> {
       ) : null;
     };
 
-    //noinspection TsLint
     return (
       <StyledItem>
         <Add style={plusStyles} />

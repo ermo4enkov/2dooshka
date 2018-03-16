@@ -47,7 +47,7 @@ function mapStateToProps(state) {
 
 function mapDispatchProps(dispatch: any) {
   return {
-    finishTask: bindActionCreators(setTaskFinished, dispatch),
+    setTaskFinished: bindActionCreators(setTaskFinished, dispatch),
     addTask: bindActionCreators(addTask, dispatch),
   };
 }

@@ -45381,7 +45381,7 @@ function mapStateToProps(state) {
 }
 function mapDispatchProps(dispatch) {
     return {
-        finishTask: redux_1.bindActionCreators(setTaskFinished_1.setTaskFinished, dispatch),
+        setTaskFinished: redux_1.bindActionCreators(setTaskFinished_1.setTaskFinished, dispatch),
         addTask: redux_1.bindActionCreators(addTask_1.addTask, dispatch),
     };
 }
@@ -45592,7 +45592,7 @@ var React = __webpack_require__(0);
 var Button_1 = __webpack_require__(102);
 var Item_1 = __webpack_require__(155);
 var NewTask_1 = __webpack_require__(346);
-exports.Greetings = function (props) { return (React.createElement("div", { className: "tasks-conteiner" },
+var Greetings = function (props) { return (React.createElement("div", { className: "tasks-conteiner" },
     React.createElement("img", { className: "tasks-conteiner__logo", src: "./empty.png" }),
     React.createElement("div", { className: "tasks-conteiner__text" }, "\u0417\u0430\u043F\u043B\u0430\u043D\u0438\u0440\u0443\u0439\u0442\u0435 \u043E\u0431\u044F\u0437\u0430\u0442\u0435\u043B\u044C\u043D\u044B\u0435 \u0437\u0430\u0434\u0430\u0447\u0438 \u043D\u0430 \u043A\u0430\u0436\u0434\u044B\u0439 \u0434\u0435\u043D\u044C \u0438 \u043E\u043D\u0438 \u043E\u0442\u043E\u0431\u0440\u0430\u0437\u044F\u0442\u0441\u044F \u0437\u0434\u0435\u0441\u044C"),
     React.createElement(Button_1.default, { text: "Запланировать на каждый день" }))); };
@@ -45620,38 +45620,35 @@ var TasksContainer = (function (_super) {
         }
     };
     TasksContainer.prototype.render = function () {
-        var _a = this.props, setTaskFinished = _a.setTaskFinished, addTask = _a.addTask, typeOfList = _a.typeOfList;
+        var _a = this.props, setTaskFinished = _a.setTaskFinished, addTask = _a.addTask, typeOfList = _a.typeOfList, everyDayTasks = _a.everyDayTasks, completedTasks = _a.completedTasks, todayTasks = _a.todayTasks;
         var isHide = this.state['isHide'];
-        var _b = this.props, everyDayTasks = _b.everyDayTasks, completedTasks = _b.completedTasks, todayTasks = _b.todayTasks;
         var todayPlaceholder = 'Новая задача на сегодня...';
         var everydayPlaceholder = 'Новая задача на каждый день...';
-        everyDayTasks = everyDayTasks.map(function (item, i) {
+        var everyDayTasksList = everyDayTasks.map(function (item, i) {
             return (React.createElement("li", { className: "tasks-list__item", key: i },
                 React.createElement(Item_1.default, { content: item, setTaskFinished: setTaskFinished, index: i })));
         });
-        completedTasks = completedTasks.map(function (item, i) {
+        var completedTasksList = completedTasks.map(function (item, i) {
             return (React.createElement("li", { className: "tasks-list__item", key: i },
                 React.createElement(Item_1.default, { content: item, completedTask: true })));
         });
-        todayTasks
-            ? (todayTasks = todayTasks.map(function (item, i) {
-                return (React.createElement("li", { className: "tasks-list__item", key: i },
-                    React.createElement(Item_1.default, { content: item, todayTask: true, setTaskFinished: setTaskFinished, index: i })));
-            }))
-            : null;
+        var todayTasksList = todayTasks.map(function (item, i) {
+            return (React.createElement("li", { className: "tasks-list__item", key: i },
+                React.createElement(Item_1.default, { content: item, todayTask: true, setTaskFinished: setTaskFinished, index: i })));
+        });
         if (!isHide) {
-            return React.createElement(exports.Greetings, null);
+            return React.createElement(Greetings, null);
         }
         return (React.createElement("div", null,
-            React.createElement("ul", { className: "tasks-list" }, everyDayTasks),
+            React.createElement("ul", { className: "tasks-list" }, everyDayTasksList),
             todayTasks ? (React.createElement("div", null,
                 React.createElement("h2", { className: "subtitile" }, "\u0414\u041E\u041F\u041E\u041B\u041D\u0418\u0422\u0415\u041B\u042C\u041D\u042B\u0415 \u041D\u0410 \u0421\u0415\u0413\u041E\u0414\u041D\u042F"),
-                React.createElement("ul", { className: "tasks-list" }, todayTasks))) : null,
+                React.createElement("ul", { className: "tasks-list" }, todayTasksList))) : null,
             React.createElement(NewTask_1.default, { addTask: addTask, placeholder: typeOfList === 'today' ?
                     todayPlaceholder : everydayPlaceholder }),
             completedTasks ? (React.createElement("div", null,
                 React.createElement("h2", { className: "subtitile" }, "\u0412\u042B\u041F\u041E\u041B\u041D\u0415\u041D\u041D\u042B\u0415"),
-                React.createElement("ul", { className: "tasks-list" }, completedTasks))) : null));
+                React.createElement("ul", { className: "tasks-list" }, completedTasksList))) : null));
     };
     return TasksContainer;
 }(React.Component));
@@ -47584,13 +47581,13 @@ var Item = (function (_super) {
         var type = event.target.attributes['aria-details']['nodeValue'];
         var name = event.target.name;
         var value = event.target.value;
-        this.props.setTaskFinished.setTaskFinished(name, value, type);
+        this.props.setTaskFinished(name, value, type);
     };
     Item.prototype.render = function () {
-        var _a = this.props, content = _a.content, newTask = _a.newTask, redaction = _a.redaction, index = _a.index, completedTask = _a.completedTask, todayTask = _a.todayTask;
+        var _a = this.props, content = _a.content, newTask = _a.newTask, redaction = _a.redaction, index = _a.index, completedTask = _a.completedTask, todayTask = _a.todayTask, setTaskFinished = _a.setTaskFinished;
         var check = this.state.checked;
         return (React.createElement(STYLEDITEM, __assign({}, this.props, this.state),
-            React.createElement(Checkbox_1.default, { disabled: completedTask ? true : false, checked: completedTask ? true : false, labelStyle: completedTask ? checkboxStyleDisable : checkboxStyle, label: content, onCheck: this.switchChecked.bind(this), name: content, value: index, "aria-details": todayTask ? 'today_tasks' : 'everyday_tasks' })));
+            React.createElement(Checkbox_1.default, { disabled: completedTask ? true : false, checked: completedTask ? true : false, labelStyle: completedTask ? checkboxStyleDisable : checkboxStyle, label: content, onCheck: this.switchChecked.bind(this), name: content, value: index, "aria-details": todayTask ? 'todayTasks' : 'everydayTasks' })));
     };
     return Item;
 }(React.Component));
@@ -50690,7 +50687,7 @@ var plusStyles = {
 };
 var NewTask = (function (_super) {
     __extends(NewTask, _super);
-    function NewTask(newTaskProps, newTaskStates) {
+    function NewTask(newTaskProps, newTaskState) {
         var _this = _super.call(this, newTaskProps) || this;
         _this.state = {
             content: '',
@@ -50699,7 +50696,7 @@ var NewTask = (function (_super) {
     }
     NewTask.prototype.addNewTask = function (event) {
         var value = this.state.content;
-        this.props.addTask.addTask(value);
+        this.props.addTask(value);
         this.setState({
             content: '',
         });

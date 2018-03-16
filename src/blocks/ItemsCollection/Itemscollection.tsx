@@ -6,7 +6,10 @@ export class ItemsCollection extends React.Component<{}> {
     super(props);
   }
 
+  
+
   render() {
+    
     return (
       <div className="storybook__element">
         <h1 className="headerText">Items of list</h1>

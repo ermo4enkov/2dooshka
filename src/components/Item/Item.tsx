@@ -55,7 +55,7 @@ export class Item extends React.Component<ItemProps, ItemState> {
     const type = event.target.attributes['aria-details']['nodeValue'];
     const name = event.target.name;
     const value = event.target.value;
-    this.props.setTaskFinished.setTaskFinished(name, value, type);
+    this.props.setTaskFinished(name, value, type);
   }
 
   render() {
@@ -66,6 +66,7 @@ export class Item extends React.Component<ItemProps, ItemState> {
       index,
       completedTask,
       todayTask,
+      setTaskFinished,
     } = this.props;
     const check = this.state.checked;
 
@@ -79,7 +80,7 @@ export class Item extends React.Component<ItemProps, ItemState> {
           onCheck={this.switchChecked.bind(this)}
           name={content}
           value={index}
-          aria-details={todayTask ? 'today_tasks' : 'everyday_tasks'}
+          aria-details={todayTask ? 'todayTasks' : 'everydayTasks'}
         />
       </STYLEDITEM>
     );
