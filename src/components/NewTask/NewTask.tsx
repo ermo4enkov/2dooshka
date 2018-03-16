@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import Add from 'material-ui/svg-icons/content/add';
+import Add from 'material-ui/svg-icons/content/Add';
 import Button from '../../components/Button';
 
 const StyledItem = styled.div`
@@ -80,9 +80,10 @@ class NewTask extends React.Component<NewTaskProps, NewTaskStates> {
             onClick={this.deleteContent.bind(this)}
           />
         </StyledButtonCont>
-      ) : null
+      ) : null;
     };
 
+    //noinspection TsLint
     return (
       <StyledItem>
         <Add style={plusStyles} />

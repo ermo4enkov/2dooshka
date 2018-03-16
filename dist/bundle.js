@@ -45350,18 +45350,18 @@ var react_redux_1 = __webpack_require__(145);
 var redux_1 = __webpack_require__(97);
 var Header_1 = __webpack_require__(304);
 var Main_1 = __webpack_require__(307);
-var finishTask = __webpack_require__(360);
-var addTask = __webpack_require__(361);
+var addTask_1 = __webpack_require__(361);
+var setTaskFinished_1 = __webpack_require__(367);
 var App = (function (_super) {
     __extends(App, _super);
     function App(props) {
         return _super.call(this, props) || this;
     }
     App.prototype.render = function () {
-        var _a = this.props, data_user = _a.data_user, finishTask = _a.finishTask, addTask = _a.addTask;
+        var _a = this.props, data_user = _a.data_user, setTaskFinished = _a.setTaskFinished, addTask = _a.addTask;
         return (React.createElement("div", null,
             React.createElement(Header_1.default, null),
-            React.createElement(Main_1.default, { data_user: data_user, finishTask: finishTask, addTask: addTask })));
+            React.createElement(Main_1.default, { data_user: data_user, setTaskFinished: setTaskFinished, addTask: addTask })));
     };
     return App;
 }(React.Component));
@@ -45381,8 +45381,8 @@ function mapStateToProps(state) {
 }
 function mapDispatchProps(dispatch) {
     return {
-        finishTask: redux_1.bindActionCreators(finishTask, dispatch),
-        addTask: redux_1.bindActionCreators(addTask, dispatch),
+        finishTask: redux_1.bindActionCreators(setTaskFinished_1.setTaskFinished, dispatch),
+        addTask: redux_1.bindActionCreators(addTask_1.addTask, dispatch),
     };
 }
 exports.default = react_router_1.withRouter(react_redux_1.connect(mapStateToProps, mapDispatchProps)(App));
@@ -45560,10 +45560,10 @@ var EveryDayView = (function (_super) {
         var everyDayTasks = this.props['data_user']['everydayTasks'];
         var completedTasks = this.props['data_user']['completedTasks'];
         var additionalTasks = this.props['data_user']['additionalTasks'];
-        var finishTask = this.props['finishTask'];
+        var setTaskFinished = this.props['setTaskFinished'];
         return (React.createElement("div", { className: "conteiner" },
             React.createElement("h1", { className: "title" }, "\u041A\u0430\u0436\u0434\u044B\u0439 \u0434\u0435\u043D\u044C"),
-            React.createElement(TasksContainer_1.default, { everyDayTasks: everyDayTasks, finishTask: finishTask, completedTasks: completedTasks })));
+            React.createElement(TasksContainer_1.default, { everyDayTasks: everyDayTasks, setTaskFinished: setTaskFinished, completedTasks: completedTasks })));
     };
     return EveryDayView;
 }(React.Component));
@@ -45620,12 +45620,12 @@ var TasksContainer = (function (_super) {
         }
     };
     TasksContainer.prototype.render = function () {
-        var _a = this.props, finishTask = _a.finishTask, addTask = _a.addTask;
+        var _a = this.props, setTaskFinished = _a.setTaskFinished, addTask = _a.addTask;
         var isHide = this.state['isHide'];
         var _b = this.props, everyDayTasks = _b.everyDayTasks, completedTasks = _b.completedTasks, todayTasks = _b.todayTasks;
         everyDayTasks = everyDayTasks.map(function (item, i) {
             return (React.createElement("li", { className: "tasks-list__item", key: i },
-                React.createElement(Item_1.default, { content: item, finishTask: finishTask, index: i })));
+                React.createElement(Item_1.default, { content: item, setTaskFinished: setTaskFinished, index: i })));
         });
         completedTasks = completedTasks.map(function (item, i) {
             return (React.createElement("li", { className: "tasks-list__item", key: i },
@@ -45634,7 +45634,7 @@ var TasksContainer = (function (_super) {
         todayTasks
             ? (todayTasks = todayTasks.map(function (item, i) {
                 return (React.createElement("li", { className: "tasks-list__item", key: i },
-                    React.createElement(Item_1.default, { content: item, todayTask: true, finishTask: finishTask, index: i })));
+                    React.createElement(Item_1.default, { content: item, todayTask: true, setTaskFinished: setTaskFinished, index: i })));
             }))
             : null;
         if (!isHide) {
@@ -47580,7 +47580,7 @@ var Item = (function (_super) {
         var type = event.target.attributes['aria-details']['nodeValue'];
         var name = event.target.name;
         var value = event.target.value;
-        this.props.finishTask.finishTask(name, value, type);
+        this.props.setTaskFinished.setTaskFinished(name, value, type);
     };
     Item.prototype.render = function () {
         var _a = this.props, content = _a.content, newTask = _a.newTask, redaction = _a.redaction, index = _a.index, completedTask = _a.completedTask, todayTask = _a.todayTask;
@@ -50675,7 +50675,7 @@ var __extends = (this && this.__extends) || (function () {
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(0);
 var styled_components_1 = __webpack_require__(49);
-var add_1 = __webpack_require__(348);
+var Add_1 = __webpack_require__(348);
 var Button_1 = __webpack_require__(102);
 var StyledItem = styled_components_1.default.div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  width: auto;\n  border-radius: 3px;\n  padding: 18px 16px;\n  font-size: 16px;\n  background-color: rgba(208, 216, 220, 0.5);\n  color: #d0d8dc;\n  display: flex;\n  padding: 10px;\n  align-items: center;\n  min-height: 40px;\n"], ["\n  width: auto;\n  border-radius: 3px;\n  padding: 18px 16px;\n  font-size: 16px;\n  background-color: rgba(208, 216, 220, 0.5);\n  color: #d0d8dc;\n  display: flex;\n  padding: 10px;\n  align-items: center;\n  min-height: 40px;\n"])));
 var StyledInput = styled_components_1.default.input(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n  border: none;\n  background: none;\n  width: 100%;\n  font-family: Source Sans Pro;\n  font-size: 16px;\n"], ["\n  border: none;\n  background: none;\n  width: 100%;\n  font-family: Source Sans Pro;\n  font-size: 16px;\n"])));
@@ -50718,7 +50718,7 @@ var NewTask = (function (_super) {
                 React.createElement(Button_1.default, { text: "Отмена", cancel: true, onClick: _this.deleteContent.bind(_this) }))) : null;
         };
         return (React.createElement(StyledItem, null,
-            React.createElement(add_1.default, { style: plusStyles }),
+            React.createElement(Add_1.default, { style: plusStyles }),
             React.createElement(StyledInput, { type: "text", placeholder: "Новая задача на сегодня...", onChange: this.changeContent.bind(this), value: this.state.content }),
             React.createElement(ButtonsBlock, null)));
     };
@@ -50806,12 +50806,12 @@ var TodayView = (function (_super) {
         var everyDaytasks = this.props['data_user']['everydayTasks'];
         var completedTasks = this.props['data_user']['completedTasks'];
         var todayTasks = this.props['data_user']['todayTasks'];
-        var finishTask = this.props['finishTask'];
+        var setTaskFinished = this.props['setTaskFinished'];
         var addTask = this.props['addTask'];
         var days = this.props['data_user']['days'];
         return (React.createElement("div", { className: "conteiner" },
             React.createElement("h1", { className: "title" }, "\u0421\u0435\u0433\u043E\u0434\u043D\u044F"),
-            React.createElement(TasksContainer_1.default, { everyDayTasks: everyDaytasks, finishTask: finishTask, completedTasks: completedTasks, todayTasks: todayTasks, addTask: addTask }),
+            React.createElement(TasksContainer_1.default, { everyDayTasks: everyDaytasks, setTaskFinished: setTaskFinished, completedTasks: completedTasks, todayTasks: todayTasks, addTask: addTask }),
             React.createElement(Calendar_1.default, { days: days })));
     };
     return TodayView;
@@ -51143,30 +51143,7 @@ exports.default = ItemsCollection;
 
 
 /***/ }),
-/* 360 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-var user_1 = __webpack_require__(99);
-var db_1 = __webpack_require__(100);
-function finishTask(name, value, type) {
-    db_1.DB.completedTasks.push(name);
-    delete db_1.DB[type][value];
-    return function (dispatch) {
-        return dispatch(updateTaskState());
-    };
-}
-exports.finishTask = finishTask;
-function updateTaskState() {
-    return {
-        type: user_1.UPDATE_TASK_STATE,
-    };
-}
-
-
-/***/ }),
+/* 360 */,
 /* 361 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -51182,6 +51159,35 @@ function addTask(value) {
     };
 }
 exports.addTask = addTask;
+function updateTaskState() {
+    return {
+        type: user_1.UPDATE_TASK_STATE,
+    };
+}
+
+
+/***/ }),
+/* 362 */,
+/* 363 */,
+/* 364 */,
+/* 365 */,
+/* 366 */,
+/* 367 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var user_1 = __webpack_require__(99);
+var db_1 = __webpack_require__(100);
+function setTaskFinished(name, value, type) {
+    db_1.DB.completedTasks.push(name);
+    delete db_1.DB[type][value];
+    return function (dispatch) {
+        return dispatch(updateTaskState());
+    };
+}
+exports.setTaskFinished = setTaskFinished;
 function updateTaskState() {
     return {
         type: user_1.UPDATE_TASK_STATE,

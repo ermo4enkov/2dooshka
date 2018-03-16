@@ -9,10 +9,11 @@ interface TasksContainerState {
 
 interface TasksContainerProps {
   everyDayTasks?: any;
-  finishTask?: any;
+  setTaskFinished?: any;
   completedTasks?: any;
   todayTasks?: any;
   addTask?: any;
+  typeOfList?: string;
 }
 
 export const Greetings: React.StatelessComponent = props => (
@@ -52,14 +53,14 @@ export class TasksContainer extends React.Component<TasksContainerProps,TasksCon
   }
 
   render() {
-    const { finishTask, addTask } = this.props;
+    const { setTaskFinished, addTask } = this.props;
     const isHide: boolean = this.state['isHide'];
     let { everyDayTasks, completedTasks, todayTasks } = this.props;
 
     everyDayTasks = everyDayTasks.map((item, i) => {
       return (
         <li className="tasks-list__item" key={i}>
-          <Item content={item} finishTask={finishTask} index={i} />
+          <Item content={item} setTaskFinished={setTaskFinished} index={i} />
         </li>
       );
     });
@@ -79,7 +80,7 @@ export class TasksContainer extends React.Component<TasksContainerProps,TasksCon
               <Item
                 content={item}
                 todayTask
-                finishTask={finishTask}
+                setTaskFinished={setTaskFinished}
                 index={i}
               />
             </li>

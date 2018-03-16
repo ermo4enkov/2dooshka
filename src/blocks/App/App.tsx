@@ -5,12 +5,12 @@ import { bindActionCreators } from 'redux';
 import * as styled from 'styled-components';
 import Header from '../Header/Header';
 import Main from '../Main/Main';
-import * as finishTask from '../../redux/actions/finishTask';
-import * as addTask from '../../redux/actions/addTask';
+import { addTask } from '../../redux/actions/addTask';
+import { setTaskFinished } from '../../redux/actions/setTaskFinished';
 
 interface AppProps {
   data_user?: any;
-  finishTask?: any;
+  setTaskFinished?: any;
   addTask?: any;
 }
 
@@ -20,12 +20,12 @@ export class App extends React.Component<AppProps> {
   }
 
   render() {
-    const { data_user, finishTask, addTask } = this.props;
+    const { data_user, setTaskFinished, addTask } = this.props;
 
     return (
       <div>
         <Header />
-        <Main data_user={data_user} finishTask={finishTask} addTask={addTask} />
+        <Main data_user={data_user} setTaskFinished={setTaskFinished} addTask={addTask} />
       </div>
     );
   }
@@ -47,7 +47,7 @@ function mapStateToProps(state) {
 
 function mapDispatchProps(dispatch: any) {
   return {
-    finishTask: bindActionCreators(finishTask, dispatch),
+    finishTask: bindActionCreators(setTaskFinished, dispatch),
     addTask: bindActionCreators(addTask, dispatch),
   };
 }
