@@ -36,6 +36,7 @@ const plusStyles = {
 interface NewTaskProps {
   addTask?: any;
   placeholder: string;
+  taskType: string;
 }
 
 interface NewTaskState {
@@ -51,8 +52,9 @@ class NewTask extends React.Component<NewTaskProps, NewTaskState> {
   }
 
   addNewTask(event) {
+    const type = event.target.attributes['aria-details']['nodeValue'];
     const value = this.state.content;
-    this.props.addTask(value);
+    this.props.addTask(value, type);
     this.setState({
       content: '',
     });
@@ -72,12 +74,16 @@ class NewTask extends React.Component<NewTaskProps, NewTaskState> {
 
   render() {
 
-    const { placeholder } = this.props;
+    const { placeholder, taskType } = this.props;
 
     const ButtonsBlock = () => {
       return this.state.content ? (
         <StyledButtonCont>
-          <Button text="Добавить" onClick={this.addNewTask.bind(this)} />
+          <Button 
+            text="Добавить" 
+            onClick={this.addNewTask.bind(this)} 
+            aria-details={taskType}
+          />
           <Button
             text="Отмена"
             cancel

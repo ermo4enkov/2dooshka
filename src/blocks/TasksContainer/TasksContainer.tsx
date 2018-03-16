@@ -41,11 +41,9 @@ export class TasksContainer extends React.Component<TasksContainerProps,TasksCon
     localStorage.setItem('bgcolor', 'red');
     // localStorage.clear();
 
-    if (this.checkTasks()) {
-      this.setState({
-        greetingsIsHide: true,
-      });
-    }
+    this.setState({
+      greetingsIsHide: this.checkTasks(),
+    });
   }
 
   render() {
@@ -144,14 +142,17 @@ export class TasksContainer extends React.Component<TasksContainerProps,TasksCon
         <EverydayBlock />
         <TodayBlock />
         <NewTask 
-          addTask={addTask} 
+          addTask = { addTask }
+          taskType = { 
+            typeOfList === 'today' ?
+            'todayTasks' : 'everydayTasks'
+          } 
           placeholder= {
-              typeOfList === 'today' ?
-              todayPlaceholder : everydayPlaceholder
-            }
+            typeOfList === 'today' ?
+            todayPlaceholder : everydayPlaceholder
+          }
         />
         <CompletedBlock />
-
       </div>
     );
   }

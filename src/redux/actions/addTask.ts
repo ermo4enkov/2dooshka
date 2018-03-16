@@ -1,8 +1,9 @@
 import { UPDATE_TASK_STATE } from '../../utils/constants/user';
 import { DB } from '../../utils/constants/db';
 
-export function addTask(value) {
-  DB.todayTasks.push(value);
+export function addTask(value, type) {
+  // DB.todayTasks.push(value);
+  DB[type].push(value);
 
   return (dispatch: any) => {
     return dispatch(updateTaskState());

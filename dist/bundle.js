@@ -45561,9 +45561,10 @@ var EveryDayView = (function (_super) {
         var completedTasks = this.props['data_user']['completedTasks'];
         var additionalTasks = this.props['data_user']['additionalTasks'];
         var setTaskFinished = this.props['setTaskFinished'];
+        var addTask = this.props['addTask'];
         return (React.createElement("div", { className: "conteiner" },
             React.createElement("h1", { className: "title" }, "\u041A\u0430\u0436\u0434\u044B\u0439 \u0434\u0435\u043D\u044C"),
-            React.createElement(TasksContainer_1.default, { everyDayTasks: everyDayTasks, setTaskFinished: setTaskFinished, completedTasks: completedTasks })));
+            React.createElement(TasksContainer_1.default, { everyDayTasks: everyDayTasks, setTaskFinished: setTaskFinished, completedTasks: completedTasks, addTask: addTask })));
     };
     return EveryDayView;
 }(React.Component));
@@ -45614,11 +45615,9 @@ var TasksContainer = (function (_super) {
     };
     TasksContainer.prototype.componentWillMount = function () {
         localStorage.setItem('bgcolor', 'red');
-        if (this.checkTasks()) {
-            this.setState({
-                greetingsIsHide: true,
-            });
-        }
+        this.setState({
+            greetingsIsHide: this.checkTasks(),
+        });
     };
     TasksContainer.prototype.render = function () {
         var _this = this;
@@ -45665,7 +45664,8 @@ var TasksContainer = (function (_super) {
         return (React.createElement("div", null,
             React.createElement(EverydayBlock, null),
             React.createElement(TodayBlock, null),
-            React.createElement(NewTask_1.default, { addTask: addTask, placeholder: typeOfList === 'today' ?
+            React.createElement(NewTask_1.default, { addTask: addTask, taskType: typeOfList === 'today' ?
+                    'todayTasks' : 'everydayTasks', placeholder: typeOfList === 'today' ?
                     todayPlaceholder : everydayPlaceholder }),
             React.createElement(CompletedBlock, null)));
     };
@@ -50714,8 +50714,9 @@ var NewTask = (function (_super) {
         return _this;
     }
     NewTask.prototype.addNewTask = function (event) {
+        var type = event.target.attributes['aria-details']['nodeValue'];
         var value = this.state.content;
-        this.props.addTask(value);
+        this.props.addTask(value, type);
         this.setState({
             content: '',
         });
@@ -50732,10 +50733,10 @@ var NewTask = (function (_super) {
     };
     NewTask.prototype.render = function () {
         var _this = this;
-        var placeholder = this.props.placeholder;
+        var _a = this.props, placeholder = _a.placeholder, taskType = _a.taskType;
         var ButtonsBlock = function () {
             return _this.state.content ? (React.createElement(StyledButtonCont, null,
-                React.createElement(Button_1.default, { text: "Добавить", onClick: _this.addNewTask.bind(_this) }),
+                React.createElement(Button_1.default, { text: "Добавить", onClick: _this.addNewTask.bind(_this), "aria-details": taskType }),
                 React.createElement(Button_1.default, { text: "Отмена", cancel: true, onClick: _this.deleteContent.bind(_this) }))) : null;
         };
         return (React.createElement(StyledItem, null,
@@ -51172,8 +51173,8 @@ exports.default = ItemsCollection;
 Object.defineProperty(exports, "__esModule", { value: true });
 var user_1 = __webpack_require__(99);
 var db_1 = __webpack_require__(100);
-function addTask(value) {
-    db_1.DB.todayTasks.push(value);
+function addTask(value, type) {
+    db_1.DB[type].push(value);
     return function (dispatch) {
         return dispatch(updateTaskState());
     };
