@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import Add from 'material-ui/svg-icons/content/add';
-import Button from './.';
+import Button from '../../components/Button';
 
 const StyledItem = styled.div`
   width: auto;
@@ -63,7 +63,7 @@ class NewTask extends React.Component<NewTaskProps, NewTaskStates> {
     });
   }
 
-  deleteContent(event) {
+  deleteContent() {
     this.setState({
       content: '',
     });
@@ -80,17 +80,17 @@ class NewTask extends React.Component<NewTaskProps, NewTaskStates> {
             onClick={this.deleteContent.bind(this)}
           />
         </StyledButtonCont>
-      ) : null;
+      ) : null
     };
 
     return (
       <StyledItem>
-        <Add style={plusStyles} />;
+        <Add style={plusStyles} />
         <StyledInput
           type="text"
           placeholder="Новая задача на сегодня..."
           onChange={this.changeContent.bind(this)}
-          defaultValue={this.state.content}
+          value={this.state.content}
         />
         <ButtonsBlock />
       </StyledItem>

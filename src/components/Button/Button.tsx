@@ -16,6 +16,7 @@ interface ButtonState {
   isLoaded?: boolean;
 }
 
+
 const STYLEDBUTTON = styled.div`
     border-radius: 5px;
     font-size: 16px;
