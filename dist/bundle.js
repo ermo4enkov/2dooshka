@@ -45592,10 +45592,6 @@ var React = __webpack_require__(0);
 var Button_1 = __webpack_require__(102);
 var Item_1 = __webpack_require__(155);
 var NewTask_1 = __webpack_require__(346);
-var Greetings = function (props) { return (React.createElement("div", { className: "tasks-conteiner" },
-    React.createElement("img", { className: "tasks-conteiner__logo", src: "./empty.png" }),
-    React.createElement("div", { className: "tasks-conteiner__text" }, "\u0417\u0430\u043F\u043B\u0430\u043D\u0438\u0440\u0443\u0439\u0442\u0435 \u043E\u0431\u044F\u0437\u0430\u0442\u0435\u043B\u044C\u043D\u044B\u0435 \u0437\u0430\u0434\u0430\u0447\u0438 \u043D\u0430 \u043A\u0430\u0436\u0434\u044B\u0439 \u0434\u0435\u043D\u044C \u0438 \u043E\u043D\u0438 \u043E\u0442\u043E\u0431\u0440\u0430\u0437\u044F\u0442\u0441\u044F \u0437\u0434\u0435\u0441\u044C"),
-    React.createElement(Button_1.default, { text: "Запланировать на каждый день" }))); };
 var TasksContainer = (function (_super) {
     __extends(TasksContainer, _super);
     function TasksContainer(props) {
@@ -45611,6 +45607,11 @@ var TasksContainer = (function (_super) {
         }
         return false;
     };
+    TasksContainer.prototype.setGreetingsHide = function () {
+        this.setState({
+            greetingsIsHide: true,
+        });
+    };
     TasksContainer.prototype.componentWillMount = function () {
         localStorage.setItem('bgcolor', 'red');
         if (this.checkTasks()) {
@@ -45620,6 +45621,7 @@ var TasksContainer = (function (_super) {
         }
     };
     TasksContainer.prototype.render = function () {
+        var _this = this;
         var _a = this.props, setTaskFinished = _a.setTaskFinished, addTask = _a.addTask, typeOfList = _a.typeOfList, everyDayTasks = _a.everyDayTasks, completedTasks = _a.completedTasks, todayTasks = _a.todayTasks;
         var greetingsIsHide = this.state.greetingsIsHide;
         var todayPlaceholder = 'Новая задача на сегодня...';
@@ -45653,6 +45655,10 @@ var TasksContainer = (function (_super) {
                 React.createElement("ul", { className: "tasks-list" }, completedTasksList)))
                 : null;
         };
+        var Greetings = function (props) { return (React.createElement("div", { className: "tasks-conteiner" },
+            React.createElement("img", { className: "tasks-conteiner__logo", src: "./empty.png" }),
+            React.createElement("div", { className: "tasks-conteiner__text" }, "\u0417\u0430\u043F\u043B\u0430\u043D\u0438\u0440\u0443\u0439\u0442\u0435 \u043E\u0431\u044F\u0437\u0430\u0442\u0435\u043B\u044C\u043D\u044B\u0435 \u0437\u0430\u0434\u0430\u0447\u0438 \u043D\u0430 \u043A\u0430\u0436\u0434\u044B\u0439 \u0434\u0435\u043D\u044C \u0438 \u043E\u043D\u0438 \u043E\u0442\u043E\u0431\u0440\u0430\u0437\u044F\u0442\u0441\u044F \u0437\u0434\u0435\u0441\u044C"),
+            React.createElement(Button_1.default, { text: "Запланировать на каждый день", onClick: _this.setGreetingsHide.bind(_this) }))); };
         if (!greetingsIsHide) {
             return React.createElement(Greetings, null);
         }

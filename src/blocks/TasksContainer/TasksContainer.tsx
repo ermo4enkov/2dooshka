@@ -16,16 +16,6 @@ interface TasksContainerProps {
   typeOfList?: string;
 }
 
-const Greetings: React.StatelessComponent = props => (
-  <div className="tasks-conteiner">
-    <img className="tasks-conteiner__logo" src="./empty.png" />
-    <div className="tasks-conteiner__text">
-      Запланируйте обязательные задачи на каждый день и они отобразятся здесь
-    </div>
-    <Button text="Запланировать на каждый день"/>
-  </div>
-);
-
 export class TasksContainer extends React.Component<TasksContainerProps,TasksContainerState> {
   constructor(props) {
     super(props);
@@ -39,6 +29,12 @@ export class TasksContainer extends React.Component<TasksContainerProps,TasksCon
       return true;
     }
     return false;
+  }
+
+  setGreetingsHide() {
+    this.setState({
+      greetingsIsHide: true,
+    });
   }
 
   componentWillMount() {
@@ -127,6 +123,17 @@ export class TasksContainer extends React.Component<TasksContainerProps,TasksCon
         ) 
         : null;
     };
+
+    const Greetings: React.StatelessComponent = props => (
+      <div className="tasks-conteiner">
+        <img className="tasks-conteiner__logo" src="./empty.png" />
+        <div className="tasks-conteiner__text">
+          Запланируйте обязательные задачи на каждый день и они отобразятся здесь
+        </div>
+        <Button text="Запланировать на каждый день" onClick={this.setGreetingsHide.bind(this)}/>
+      </div>
+    );
+
 
     if (!greetingsIsHide) {
       return <Greetings />;
