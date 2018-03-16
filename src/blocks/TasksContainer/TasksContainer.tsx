@@ -94,26 +94,29 @@ export class TasksContainer extends React.Component<TasksContainerProps,TasksCon
     }) : null;
       
     const EverydayBlock = () => {
-      return everyDayTasks ? (
-        <div>
-          <ul className="tasks-list">{everyDayTasksList}</ul>
-        </div>
-      ) 
-     : null;
+      return everyDayTasks ? 
+        (
+          <div>
+            <ul className="tasks-list">{everyDayTasksList}</ul>
+          </div>
+        ) 
+        : null;
     };
 
     const TodayBlock = () => {
-      return todayTasks ? (
+      return todayTasks ? 
+       (
         <div>
           <h2 className="subtitile">ДОПОЛНИТЕЛЬНЫЕ НА СЕГОДНЯ</h2>
           <ul className="tasks-list">{todayTasksList}</ul>
         </div>
-     ) 
-     : null;
+      ) 
+      : null;
     };
 
     const CompletedBlock = () => {
-      return completedTasks ? (
+      return completedTasks ? 
+        (
           <div>
             <h2 className="subtitile">ВЫПОЛНЕННЫЕ</h2>
             <ul className="tasks-list">{completedTasksList}</ul>

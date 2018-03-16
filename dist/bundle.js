@@ -45638,20 +45638,23 @@ var TasksContainer = (function (_super) {
                 React.createElement(Item_1.default, { content: item, todayTask: true, setTaskFinished: setTaskFinished, index: i })));
         }) : null;
         var EverydayBlock = function () {
-            return everyDayTasks ? (React.createElement("div", null,
-                React.createElement("ul", { className: "tasks-list" }, everyDayTasksList)))
+            return everyDayTasks ?
+                (React.createElement("div", null,
+                    React.createElement("ul", { className: "tasks-list" }, everyDayTasksList)))
                 : null;
         };
         var TodayBlock = function () {
-            return todayTasks ? (React.createElement("div", null,
-                React.createElement("h2", { className: "subtitile" }, "\u0414\u041E\u041F\u041E\u041B\u041D\u0418\u0422\u0415\u041B\u042C\u041D\u042B\u0415 \u041D\u0410 \u0421\u0415\u0413\u041E\u0414\u041D\u042F"),
-                React.createElement("ul", { className: "tasks-list" }, todayTasksList)))
+            return todayTasks ?
+                (React.createElement("div", null,
+                    React.createElement("h2", { className: "subtitile" }, "\u0414\u041E\u041F\u041E\u041B\u041D\u0418\u0422\u0415\u041B\u042C\u041D\u042B\u0415 \u041D\u0410 \u0421\u0415\u0413\u041E\u0414\u041D\u042F"),
+                    React.createElement("ul", { className: "tasks-list" }, todayTasksList)))
                 : null;
         };
         var CompletedBlock = function () {
-            return completedTasks ? (React.createElement("div", null,
-                React.createElement("h2", { className: "subtitile" }, "\u0412\u042B\u041F\u041E\u041B\u041D\u0415\u041D\u041D\u042B\u0415"),
-                React.createElement("ul", { className: "tasks-list" }, completedTasksList)))
+            return completedTasks ?
+                (React.createElement("div", null,
+                    React.createElement("h2", { className: "subtitile" }, "\u0412\u042B\u041F\u041E\u041B\u041D\u0415\u041D\u041D\u042B\u0415"),
+                    React.createElement("ul", { className: "tasks-list" }, completedTasksList)))
                 : null;
         };
         var Greetings = function (props) { return (React.createElement("div", { className: "tasks-conteiner" },
