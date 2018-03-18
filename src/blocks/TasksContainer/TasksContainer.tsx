@@ -2,7 +2,9 @@ import * as React from 'react';
 import Button from '../../components/Button';
 import Item from '../../components/Item';
 import NewTask from '../../components/NewTask';
-import EveryDayTasksListProps from '../../blocks/EveryDayTasksList';
+import EveryDayTasksList from '../../blocks/EveryDayTasksList';
+import TodayTasksList from '../../blocks/TodayTasksList';
+import CompletedTasksList from '../../blocks/CompletedTasksList';
 
 interface TasksContainerState {
   greetingsIsHide: boolean;
@@ -60,47 +62,17 @@ export class TasksContainer extends React.Component<TasksContainerProps,TasksCon
     const { greetingsIsHide } = this.state;
     const todayPlaceholder: string = 'Новая задача на сегодня...';
     const everydayPlaceholder: string = 'Новая задача на каждый день...';
-
-    // const everyDayTasksList = everyDayTasks ? everyDayTasks.map((item, i) => {
-    //   return (
-    //     <li className="tasks-list__item" key={i}>
-    //       <Item 
-    //         content={item} 
-    //         setTaskFinished={setTaskFinished} 
-    //         index={i} 
-    //       />
-    //     </li>
-    //   );
-    // }) : null;
-
-    const list = <EveryDayTasksListProps everyDayTasks={everyDayTasks} setTaskFinished={setTaskFinished} />;
-
-    const completedTasksList = completedTasks ? completedTasks.map((item, i) => {
-      return (
-        <li className="tasks-list__item" key={i}>
-          <Item content={item} completedTask />
-        </li>
-      );
-    }) : null;
-
-    const todayTasksList = todayTasks ? todayTasks.map((item, i) => {
-      return (
-            <li className="tasks-list__item" key={i}>
-              <Item
-                content={item}
-                todayTask
-                setTaskFinished={setTaskFinished}
-                index={i}
-              />
-            </li>
-      );
-    }) : null;
       
     const EverydayBlock = () => {
       return everyDayTasks ? 
         (
           <div>
-            <ul className="tasks-list">{list}</ul>
+            <ul className="tasks-list">
+              <EveryDayTasksList 
+                everyDayTasks={everyDayTasks} 
+                setTaskFinished={setTaskFinished} 
+              />
+            </ul>
           </div>
         ) 
         : null;
@@ -111,7 +83,12 @@ export class TasksContainer extends React.Component<TasksContainerProps,TasksCon
        (
         <div>
           <h2 className="subtitile">ДОПОЛНИТЕЛЬНЫЕ НА СЕГОДНЯ</h2>
-          <ul className="tasks-list">{todayTasksList}</ul>
+          <ul className="tasks-list">
+            <TodayTasksList
+              todayTasks={everyDayTasks} 
+              setTaskFinished={setTaskFinished} 
+            />
+          </ul>
         </div>
       ) 
       : null;
@@ -122,7 +99,11 @@ export class TasksContainer extends React.Component<TasksContainerProps,TasksCon
         (
           <div>
             <h2 className="subtitile">ВЫПОЛНЕННЫЕ</h2>
-            <ul className="tasks-list">{completedTasksList}</ul>
+            <ul className="tasks-list">
+              <CompletedTasksList
+                completedTasks={completedTasks}
+              />
+            </ul>
           </div>
         ) 
         : null;
