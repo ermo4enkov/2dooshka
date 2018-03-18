@@ -45593,6 +45593,7 @@ var React = __webpack_require__(0);
 var Button_1 = __webpack_require__(102);
 var Item_1 = __webpack_require__(155);
 var NewTask_1 = __webpack_require__(346);
+var EveryDayTasksList_1 = __webpack_require__(367);
 var TasksContainer = (function (_super) {
     __extends(TasksContainer, _super);
     function TasksContainer(props) {
@@ -45625,10 +45626,7 @@ var TasksContainer = (function (_super) {
         var greetingsIsHide = this.state.greetingsIsHide;
         var todayPlaceholder = 'Новая задача на сегодня...';
         var everydayPlaceholder = 'Новая задача на каждый день...';
-        var everyDayTasksList = everyDayTasks ? everyDayTasks.map(function (item, i) {
-            return (React.createElement("li", { className: "tasks-list__item", key: i },
-                React.createElement(Item_1.default, { content: item, setTaskFinished: setTaskFinished, index: i })));
-        }) : null;
+        var list = React.createElement(EveryDayTasksList_1.default, { everyDayTasks: everyDayTasks, setTaskFinished: setTaskFinished });
         var completedTasksList = completedTasks ? completedTasks.map(function (item, i) {
             return (React.createElement("li", { className: "tasks-list__item", key: i },
                 React.createElement(Item_1.default, { content: item, completedTask: true })));
@@ -45640,7 +45638,7 @@ var TasksContainer = (function (_super) {
         var EverydayBlock = function () {
             return everyDayTasks ?
                 (React.createElement("div", null,
-                    React.createElement("ul", { className: "tasks-list" }, everyDayTasksList)))
+                    React.createElement("ul", { className: "tasks-list" }, list)))
                 : null;
         };
         var TodayBlock = function () {
@@ -51212,6 +51210,40 @@ function updateTaskState() {
         type: user_1.UPDATE_TASK_STATE,
     };
 }
+
+
+/***/ }),
+/* 362 */,
+/* 363 */,
+/* 364 */,
+/* 365 */,
+/* 366 */,
+/* 367 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var EveryDayTasksList_1 = __webpack_require__(368);
+exports.default = EveryDayTasksList_1.default;
+
+
+/***/ }),
+/* 368 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var React = __webpack_require__(0);
+var Item_1 = __webpack_require__(155);
+var EveryDayTasksListProps = function (props) {
+    return props['everyDayTasks'].map(function (item, i) {
+        return (React.createElement("li", { className: "tasks-list__item", key: i },
+            React.createElement(Item_1.default, { content: item, index: i, setTaskFinished: props['setTaskFinished'] })));
+    });
+};
+exports.default = EveryDayTasksListProps;
 
 
 /***/ })

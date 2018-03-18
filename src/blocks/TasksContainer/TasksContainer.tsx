@@ -2,6 +2,7 @@ import * as React from 'react';
 import Button from '../../components/Button';
 import Item from '../../components/Item';
 import NewTask from '../../components/NewTask';
+import EveryDayTasksListProps from '../../blocks/EveryDayTasksList';
 
 interface TasksContainerState {
   greetingsIsHide: boolean;
@@ -60,17 +61,19 @@ export class TasksContainer extends React.Component<TasksContainerProps,TasksCon
     const todayPlaceholder: string = 'Новая задача на сегодня...';
     const everydayPlaceholder: string = 'Новая задача на каждый день...';
 
-    const everyDayTasksList = everyDayTasks ? everyDayTasks.map((item, i) => {
-      return (
-        <li className="tasks-list__item" key={i}>
-          <Item 
-            content={item} 
-            setTaskFinished={setTaskFinished} 
-            index={i} 
-          />
-        </li>
-      );
-    }) : null;
+    // const everyDayTasksList = everyDayTasks ? everyDayTasks.map((item, i) => {
+    //   return (
+    //     <li className="tasks-list__item" key={i}>
+    //       <Item 
+    //         content={item} 
+    //         setTaskFinished={setTaskFinished} 
+    //         index={i} 
+    //       />
+    //     </li>
+    //   );
+    // }) : null;
+
+    const list = <EveryDayTasksListProps everyDayTasks={everyDayTasks} setTaskFinished={setTaskFinished} />;
 
     const completedTasksList = completedTasks ? completedTasks.map((item, i) => {
       return (
@@ -97,7 +100,7 @@ export class TasksContainer extends React.Component<TasksContainerProps,TasksCon
       return everyDayTasks ? 
         (
           <div>
-            <ul className="tasks-list">{everyDayTasksList}</ul>
+            <ul className="tasks-list">{list}</ul>
           </div>
         ) 
         : null;
