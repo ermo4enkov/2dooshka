@@ -2,9 +2,9 @@ import * as React from 'react';
 import Button from '../../components/Button';
 import Item from '../../components/Item';
 import NewTask from '../../components/NewTask';
-import EveryDayTasksList from '../../blocks/EveryDayTasksList';
-import TodayTasksList from '../../blocks/TodayTasksList';
-import CompletedTasksList from '../../blocks/CompletedTasksList';
+import EverydayBlock from '../../blocks/EverydayBlock';
+import TodayBlock from '../../blocks/TodayBlock';
+import CompletedBlock from '../../blocks/CompletedBlock';
 
 interface TasksContainerState {
   greetingsIsHide: boolean;
@@ -62,52 +62,6 @@ export class TasksContainer extends React.Component<TasksContainerProps,TasksCon
     const { greetingsIsHide } = this.state;
     const todayPlaceholder: string = 'Новая задача на сегодня...';
     const everydayPlaceholder: string = 'Новая задача на каждый день...';
-      
-    const EverydayBlock = () => {
-      return everyDayTasks ? 
-        (
-          <div>
-            <ul className="tasks-list">
-              <EveryDayTasksList 
-                everyDayTasks={everyDayTasks} 
-                setTaskFinished={setTaskFinished} 
-              />
-            </ul>
-          </div>
-        ) 
-        : null;
-    };
-
-    const TodayBlock = () => {
-      return todayTasks ? 
-       (
-        <div>
-          <h2 className="subtitile">ДОПОЛНИТЕЛЬНЫЕ НА СЕГОДНЯ</h2>
-          <ul className="tasks-list">
-            <TodayTasksList
-              todayTasks={everyDayTasks} 
-              setTaskFinished={setTaskFinished} 
-            />
-          </ul>
-        </div>
-      ) 
-      : null;
-    };
-
-    const CompletedBlock = () => {
-      return completedTasks ? 
-        (
-          <div>
-            <h2 className="subtitile">ВЫПОЛНЕННЫЕ</h2>
-            <ul className="tasks-list">
-              <CompletedTasksList
-                completedTasks={completedTasks}
-              />
-            </ul>
-          </div>
-        ) 
-        : null;
-    };
 
     const Greetings: React.StatelessComponent = props => (
       <div className="tasks-conteiner">
@@ -126,8 +80,14 @@ export class TasksContainer extends React.Component<TasksContainerProps,TasksCon
 
     return (
       <div>
-        <EverydayBlock />
-        <TodayBlock />
+        <EverydayBlock 
+          everyDayTasks={everyDayTasks} 
+          setTaskFinished={setTaskFinished} 
+        />
+        <TodayBlock 
+          todayTasks={todayTasks} 
+          setTaskFinished={setTaskFinished} 
+        />
         <NewTask 
           addTask = { addTask }
           taskType = { 
@@ -139,7 +99,9 @@ export class TasksContainer extends React.Component<TasksContainerProps,TasksCon
             todayPlaceholder : everydayPlaceholder
           }
         />
-        <CompletedBlock />
+        <CompletedBlock 
+          completedTasks={completedTasks}
+        />
       </div>
     );
   }
