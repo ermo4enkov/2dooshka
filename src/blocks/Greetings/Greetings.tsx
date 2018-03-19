@@ -5,7 +5,7 @@ interface GreetingsProps {
   setGreetingsHide: void;
 }
 
-class Greetings extends React.PureComponent<any>{
+class Greetings extends React.PureComponent<GreetingsProps>{
   
   render() {
     return(
