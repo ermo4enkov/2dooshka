@@ -2083,17 +2083,17 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "withTheme", function() { return wrapWithTheme; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ServerStyleSheet", function() { return ServerStyleSheet; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StyleSheetManager", function() { return StyleSheetManager; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_is_plain_object__ = __webpack_require__(313);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_is_plain_object__ = __webpack_require__(314);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_is_plain_object___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_is_plain_object__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_stylis__ = __webpack_require__(315);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_stylis__ = __webpack_require__(316);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_stylis___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_stylis__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_is_function__ = __webpack_require__(316);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_is_function__ = __webpack_require__(317);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_is_function___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_is_function__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_hoist_non_react_statics__ = __webpack_require__(317);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_hoist_non_react_statics__ = __webpack_require__(318);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_hoist_non_react_statics___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_hoist_non_react_statics__);
 
 
@@ -4321,7 +4321,7 @@ var styled = _styled(StyledComponent, constructWithOptions);
 
 /* harmony default export */ __webpack_exports__["default"] = (styled);
 
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(1), __webpack_require__(312)(module)))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(1), __webpack_require__(313)(module)))
 
 /***/ }),
 /* 50 */
@@ -14809,26 +14809,15 @@ exports.default = exports.DB;
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-var Button_1 = __webpack_require__(311);
-exports.default = Button_1.default;
-
-
-/***/ }),
-/* 104 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
 /* WEBPACK VAR INJECTION */(function(process) {
 
 exports.__esModule = true;
 
-var _shouldUpdate = __webpack_require__(321);
+var _shouldUpdate = __webpack_require__(320);
 
 var _shouldUpdate2 = _interopRequireDefault(_shouldUpdate);
 
-var _shallowEqual = __webpack_require__(105);
+var _shallowEqual = __webpack_require__(104);
 
 var _shallowEqual2 = _interopRequireDefault(_shallowEqual);
 
@@ -14858,7 +14847,7 @@ exports.default = pure;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 105 */
+/* 104 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14875,7 +14864,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 exports.default = _shallowEqual2.default;
 
 /***/ }),
-/* 106 */
+/* 105 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14886,13 +14875,24 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = undefined;
 
-var _SvgIcon = __webpack_require__(324);
+var _SvgIcon = __webpack_require__(323);
 
 var _SvgIcon2 = _interopRequireDefault(_SvgIcon);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = _SvgIcon2.default;
+
+/***/ }),
+/* 106 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var Button_1 = __webpack_require__(327);
+exports.default = Button_1.default;
+
 
 /***/ }),
 /* 107 */
@@ -17538,7 +17538,7 @@ exports.default = TasksContainer_1.default;
 
 exports.__esModule = true;
 
-var _setStatic = __webpack_require__(322);
+var _setStatic = __webpack_require__(321);
 
 var _setStatic2 = _interopRequireDefault(_setStatic);
 
@@ -17559,7 +17559,7 @@ exports.default = setDisplayName;
 
 exports.__esModule = true;
 
-var _getDisplayName = __webpack_require__(323);
+var _getDisplayName = __webpack_require__(322);
 
 var _getDisplayName2 = _interopRequireDefault(_getDisplayName);
 
@@ -17575,7 +17575,7 @@ exports.default = wrapDisplayName;
 /* 158 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = { "default": __webpack_require__(325), __esModule: true };
+module.exports = { "default": __webpack_require__(324), __esModule: true };
 
 /***/ }),
 /* 159 */
@@ -17860,7 +17860,7 @@ module.exports = exports['default'];
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var Calendar_1 = __webpack_require__(357);
+var Calendar_1 = __webpack_require__(359);
 exports.default = Calendar_1.default;
 
 
@@ -45350,8 +45350,8 @@ var react_redux_1 = __webpack_require__(146);
 var redux_1 = __webpack_require__(98);
 var Header_1 = __webpack_require__(304);
 var Main_1 = __webpack_require__(307);
-var addTask_1 = __webpack_require__(366);
-var setTaskFinished_1 = __webpack_require__(367);
+var addTask_1 = __webpack_require__(368);
+var setTaskFinished_1 = __webpack_require__(369);
 var App = (function (_super) {
     __extends(App, _super);
     function App(props) {
@@ -45511,8 +45511,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(0);
 var react_router_dom_1 = __webpack_require__(45);
 var EveryDayView_1 = __webpack_require__(308);
-var TodayView_1 = __webpack_require__(355);
-var StoryBookView_1 = __webpack_require__(358);
+var TodayView_1 = __webpack_require__(357);
+var StoryBookView_1 = __webpack_require__(360);
 var appMain = function (props) { return (React.createElement("main", null,
     React.createElement(react_router_dom_1.Switch, null,
         React.createElement(react_router_dom_1.Route, { exact: true, path: "/today", render: function (routeProps) { return React.createElement(TodayView_1.default, __assign({ routeProps: routeProps }, props)); } }),
@@ -45590,11 +45590,11 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(0);
-var Button_1 = __webpack_require__(103);
-var NewTask_1 = __webpack_require__(318);
+var NewTask_1 = __webpack_require__(311);
 var EverydayBlock_1 = __webpack_require__(328);
 var TodayBlock_1 = __webpack_require__(351);
 var CompletedBlock_1 = __webpack_require__(353);
+var Greetings_1 = __webpack_require__(355);
 var TasksContainer = (function (_super) {
     __extends(TasksContainer, _super);
     function TasksContainer(props) {
@@ -45602,6 +45602,7 @@ var TasksContainer = (function (_super) {
         _this.state = {
             greetingsIsHide: false,
         };
+        _this.setGreetingsHide = _this.setGreetingsHide.bind(_this);
         return _this;
     }
     TasksContainer.prototype.checkTasks = function () {
@@ -45617,22 +45618,18 @@ var TasksContainer = (function (_super) {
     };
     TasksContainer.prototype.componentWillMount = function () {
         localStorage.setItem('bgcolor', 'red');
+        localStorage.clear();
         this.setState({
             greetingsIsHide: this.checkTasks(),
         });
     };
     TasksContainer.prototype.render = function () {
-        var _this = this;
         var _a = this.props, setTaskFinished = _a.setTaskFinished, addTask = _a.addTask, typeOfList = _a.typeOfList, everyDayTasks = _a.everyDayTasks, completedTasks = _a.completedTasks, todayTasks = _a.todayTasks;
         var greetingsIsHide = this.state.greetingsIsHide;
         var todayPlaceholder = 'Новая задача на сегодня...';
         var everydayPlaceholder = 'Новая задача на каждый день...';
-        var Greetings = function (props) { return (React.createElement("div", { className: "tasks-conteiner" },
-            React.createElement("img", { className: "tasks-conteiner__logo", src: "./empty.png" }),
-            React.createElement("div", { className: "tasks-conteiner__text" }, "\u0417\u0430\u043F\u043B\u0430\u043D\u0438\u0440\u0443\u0439\u0442\u0435 \u043E\u0431\u044F\u0437\u0430\u0442\u0435\u043B\u044C\u043D\u044B\u0435 \u0437\u0430\u0434\u0430\u0447\u0438 \u043D\u0430 \u043A\u0430\u0436\u0434\u044B\u0439 \u0434\u0435\u043D\u044C \u0438 \u043E\u043D\u0438 \u043E\u0442\u043E\u0431\u0440\u0430\u0437\u044F\u0442\u0441\u044F \u0437\u0434\u0435\u0441\u044C"),
-            React.createElement(Button_1.default, { text: "Запланировать на каждый день", onClick: _this.setGreetingsHide.bind(_this) }))); };
         if (!greetingsIsHide) {
-            return React.createElement(Greetings, null);
+            return React.createElement(Greetings_1.default, { setGreetingsHide: this.setGreetingsHide });
         }
         return (React.createElement("div", null,
             React.createElement(EverydayBlock_1.default, { everyDayTasks: everyDayTasks, setTaskFinished: setTaskFinished }),
@@ -45654,6 +45651,17 @@ exports.default = TasksContainer;
 
 "use strict";
 
+Object.defineProperty(exports, "__esModule", { value: true });
+var NewTask_1 = __webpack_require__(312);
+exports.default = NewTask_1.default;
+
+
+/***/ }),
+/* 312 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
 var __makeTemplateObject = (this && this.__makeTemplateObject) || function (cooked, raw) {
     if (Object.defineProperty) { Object.defineProperty(cooked, "raw", { value: raw }); } else { cooked.raw = raw; }
     return cooked;
@@ -45668,66 +45676,66 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-var __assign = (this && this.__assign) || Object.assign || function(t) {
-    for (var s, i = 1, n = arguments.length; i < n; i++) {
-        s = arguments[i];
-        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-            t[p] = s[p];
-    }
-    return t;
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(0);
 var styled_components_1 = __webpack_require__(49);
-var STYLEDBUTTON = styled_components_1.default.div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n    border-radius: 5px;\n    font-size: 16px;\n    text-align: center;\n    padding: 10px 20px;\n    display: inline-block;\n    cursor: ", ";\n    color: ", ";\n    background-color: ", ";\n    margin-right: ", ";\n    border: ", ";\n    background-color: ", ";\n    min-width: 80px;\n    box-shadow: ", ";\n    filter: ", ";\n    \n        &:hover{\n            box-shadow: ", "\n            filter: brightness(90%);\n        }    \n"], ["\n    border-radius: 5px;\n    font-size: 16px;\n    text-align: center;\n    padding: 10px 20px;\n    display: inline-block;\n    cursor: ",
-    ";\n    color: ",
-    ";\n    background-color: ",
-    ";\n    margin-right: ", ";\n    border: ",
-    ";\n    background-color: ",
-    ";\n    min-width: 80px;\n    box-shadow: ",
-    ";\n    filter: ",
-    ";\n    \n        &:hover{\n            box-shadow: ",
-    "\n            filter: brightness(90%);\n        }    \n"])), function (props) {
-    return props.disabled || props.isLoading ? 'default' : 'pointer';
-}, function (props) {
-    return props.cancel || props.disabled ? '#93a4ad' : '#fff';
-}, function (props) {
-    return props.cancel ? '#f6f7f8' : '#00b0ff';
-}, function (props) { return (props.example ? '20px' : '0'); }, function (props) {
-    return props.disabled || props.isLoading ? 'solid 1px #d0d8dc;' : 'none';
-}, function (props) {
-    return props.disabled || props.isLoading ? '#f6f7f8' : '';
-}, function (props) {
-    return props.hover === true ? 'inset 0 -2px 0 0 rgba(0, 0, 0, 0.1);' : 'none';
-}, function (props) {
-    return props.hover === true ? 'brightness(90%);' : 'none';
-}, function (props) {
-    return props.disabled || props.isLoading
-        ? 'none'
-        : 'inset 0 -2px 0 0 rgba(0, 0, 0, 0.1);';
-});
-var Button = (function (_super) {
-    __extends(Button, _super);
-    function Button(props) {
-        var _this = _super.call(this, props) || this;
+var Add_1 = __webpack_require__(319);
+var Button_1 = __webpack_require__(106);
+var StyledItem = styled_components_1.default.div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  width: auto;\n  border-radius: 3px;\n  padding: 18px 16px;\n  font-size: 16px;\n  background-color: rgba(208, 216, 220, 0.5);\n  color: #d0d8dc;\n  display: flex;\n  padding: 10px;\n  align-items: center;\n  min-height: 40px;\n"], ["\n  width: auto;\n  border-radius: 3px;\n  padding: 18px 16px;\n  font-size: 16px;\n  background-color: rgba(208, 216, 220, 0.5);\n  color: #d0d8dc;\n  display: flex;\n  padding: 10px;\n  align-items: center;\n  min-height: 40px;\n"])));
+var StyledInput = styled_components_1.default.input(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n  border: none;\n  background: none;\n  width: 100%;\n  font-family: Source Sans Pro;\n  font-size: 16px;\n"], ["\n  border: none;\n  background: none;\n  width: 100%;\n  font-family: Source Sans Pro;\n  font-size: 16px;\n"])));
+var StyledButtonCont = styled_components_1.default.div(templateObject_3 || (templateObject_3 = __makeTemplateObject(["\n  display: flex;\n"], ["\n  display: flex;\n"])));
+var plusStyles = {
+    color: '#93A4AD',
+    cursor: 'pointer',
+};
+var NewTask = (function (_super) {
+    __extends(NewTask, _super);
+    function NewTask(newTaskProps, newTaskState) {
+        var _this = _super.call(this, newTaskProps) || this;
         _this.state = {
-            isBlocked: false,
-            isLoaded: false,
+            content: '',
         };
         return _this;
     }
-    Button.prototype.render = function () {
-        return (React.createElement(STYLEDBUTTON, __assign({}, this.props, { disabled: this.props.disabled ? this.props.disabled : this.state.isBlocked, isLoading: this.props.isLoading ? this.props.isLoading : this.state.isLoaded }), this.props.isLoading ? (React.createElement("div", { className: this.props.isLoading ? 'loader' : '' }, "Loading...")) : (this.props.text)));
+    NewTask.prototype.addNewTask = function (event) {
+        var type = event.target.attributes['aria-details']['nodeValue'];
+        var value = this.state.content;
+        this.props.addTask(value, type);
+        this.setState({
+            content: '',
+        });
     };
-    return Button;
+    NewTask.prototype.changeContent = function (event) {
+        this.setState({
+            content: event.target.value,
+        });
+    };
+    NewTask.prototype.deleteContent = function () {
+        this.setState({
+            content: '',
+        });
+    };
+    NewTask.prototype.render = function () {
+        var _this = this;
+        var _a = this.props, placeholder = _a.placeholder, taskType = _a.taskType;
+        var ButtonsBlock = function () {
+            return _this.state.content ? (React.createElement(StyledButtonCont, null,
+                React.createElement(Button_1.default, { text: "Добавить", onClick: _this.addNewTask.bind(_this), "aria-details": taskType }),
+                React.createElement(Button_1.default, { text: "Отмена", cancel: true, onClick: _this.deleteContent.bind(_this) }))) : null;
+        };
+        return (React.createElement(StyledItem, null,
+            React.createElement(Add_1.default, { style: plusStyles }),
+            React.createElement(StyledInput, { type: "text", placeholder: placeholder, onChange: this.changeContent.bind(this), value: this.state.content }),
+            React.createElement(ButtonsBlock, null)));
+    };
+    return NewTask;
 }(React.Component));
-exports.Button = Button;
-exports.default = Button;
-var templateObject_1;
+exports.default = NewTask;
+var templateObject_1, templateObject_2, templateObject_3;
 
 
 /***/ }),
-/* 312 */
+/* 313 */
 /***/ (function(module, exports) {
 
 module.exports = function(originalModule) {
@@ -45757,7 +45765,7 @@ module.exports = function(originalModule) {
 
 
 /***/ }),
-/* 313 */
+/* 314 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45770,7 +45778,7 @@ module.exports = function(originalModule) {
 
 
 
-var isObject = __webpack_require__(314);
+var isObject = __webpack_require__(315);
 
 function isObjectObject(o) {
   return isObject(o) === true
@@ -45801,7 +45809,7 @@ module.exports = function isPlainObject(o) {
 
 
 /***/ }),
-/* 314 */
+/* 315 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45820,7 +45828,7 @@ module.exports = function isObject(val) {
 
 
 /***/ }),
-/* 315 */
+/* 316 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -47434,7 +47442,7 @@ module.exports = function isObject(val) {
 
 
 /***/ }),
-/* 316 */
+/* 317 */
 /***/ (function(module, exports) {
 
 module.exports = isFunction
@@ -47455,7 +47463,7 @@ function isFunction (fn) {
 
 
 /***/ }),
-/* 317 */
+/* 318 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -47512,96 +47520,7 @@ module.exports = function hoistNonReactStatics(targetComponent, sourceComponent,
 
 
 /***/ }),
-/* 318 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-var NewTask_1 = __webpack_require__(319);
-exports.default = NewTask_1.default;
-
-
-/***/ }),
 /* 319 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var __makeTemplateObject = (this && this.__makeTemplateObject) || function (cooked, raw) {
-    if (Object.defineProperty) { Object.defineProperty(cooked, "raw", { value: raw }); } else { cooked.raw = raw; }
-    return cooked;
-};
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-Object.defineProperty(exports, "__esModule", { value: true });
-var React = __webpack_require__(0);
-var styled_components_1 = __webpack_require__(49);
-var Add_1 = __webpack_require__(320);
-var Button_1 = __webpack_require__(103);
-var StyledItem = styled_components_1.default.div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  width: auto;\n  border-radius: 3px;\n  padding: 18px 16px;\n  font-size: 16px;\n  background-color: rgba(208, 216, 220, 0.5);\n  color: #d0d8dc;\n  display: flex;\n  padding: 10px;\n  align-items: center;\n  min-height: 40px;\n"], ["\n  width: auto;\n  border-radius: 3px;\n  padding: 18px 16px;\n  font-size: 16px;\n  background-color: rgba(208, 216, 220, 0.5);\n  color: #d0d8dc;\n  display: flex;\n  padding: 10px;\n  align-items: center;\n  min-height: 40px;\n"])));
-var StyledInput = styled_components_1.default.input(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n  border: none;\n  background: none;\n  width: 100%;\n  font-family: Source Sans Pro;\n  font-size: 16px;\n"], ["\n  border: none;\n  background: none;\n  width: 100%;\n  font-family: Source Sans Pro;\n  font-size: 16px;\n"])));
-var StyledButtonCont = styled_components_1.default.div(templateObject_3 || (templateObject_3 = __makeTemplateObject(["\n  display: flex;\n"], ["\n  display: flex;\n"])));
-var plusStyles = {
-    color: '#93A4AD',
-    cursor: 'pointer',
-};
-var NewTask = (function (_super) {
-    __extends(NewTask, _super);
-    function NewTask(newTaskProps, newTaskState) {
-        var _this = _super.call(this, newTaskProps) || this;
-        _this.state = {
-            content: '',
-        };
-        return _this;
-    }
-    NewTask.prototype.addNewTask = function (event) {
-        var type = event.target.attributes['aria-details']['nodeValue'];
-        var value = this.state.content;
-        this.props.addTask(value, type);
-        this.setState({
-            content: '',
-        });
-    };
-    NewTask.prototype.changeContent = function (event) {
-        this.setState({
-            content: event.target.value,
-        });
-    };
-    NewTask.prototype.deleteContent = function () {
-        this.setState({
-            content: '',
-        });
-    };
-    NewTask.prototype.render = function () {
-        var _this = this;
-        var _a = this.props, placeholder = _a.placeholder, taskType = _a.taskType;
-        var ButtonsBlock = function () {
-            return _this.state.content ? (React.createElement(StyledButtonCont, null,
-                React.createElement(Button_1.default, { text: "Добавить", onClick: _this.addNewTask.bind(_this), "aria-details": taskType }),
-                React.createElement(Button_1.default, { text: "Отмена", cancel: true, onClick: _this.deleteContent.bind(_this) }))) : null;
-        };
-        return (React.createElement(StyledItem, null,
-            React.createElement(Add_1.default, { style: plusStyles }),
-            React.createElement(StyledInput, { type: "text", placeholder: placeholder, onChange: this.changeContent.bind(this), value: this.state.content }),
-            React.createElement(ButtonsBlock, null)));
-    };
-    return NewTask;
-}(React.Component));
-exports.default = NewTask;
-var templateObject_1, templateObject_2, templateObject_3;
-
-
-/***/ }),
-/* 320 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -47615,11 +47534,11 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _pure = __webpack_require__(104);
+var _pure = __webpack_require__(103);
 
 var _pure2 = _interopRequireDefault(_pure);
 
-var _SvgIcon = __webpack_require__(106);
+var _SvgIcon = __webpack_require__(105);
 
 var _SvgIcon2 = _interopRequireDefault(_SvgIcon);
 
@@ -47639,7 +47558,7 @@ ContentAdd.muiName = 'SvgIcon';
 exports.default = ContentAdd;
 
 /***/ }),
-/* 321 */
+/* 320 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -47700,7 +47619,7 @@ exports.default = shouldUpdate;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 322 */
+/* 321 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -47719,7 +47638,7 @@ var setStatic = function setStatic(key, value) {
 exports.default = setStatic;
 
 /***/ }),
-/* 323 */
+/* 322 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -47741,7 +47660,7 @@ var getDisplayName = function getDisplayName(Component) {
 exports.default = getDisplayName;
 
 /***/ }),
-/* 324 */
+/* 323 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -47913,25 +47832,25 @@ exports.default = SvgIcon;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 325 */
+/* 324 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(326);
+__webpack_require__(325);
 module.exports = __webpack_require__(4).Object.assign;
 
 
 /***/ }),
-/* 326 */
+/* 325 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.3.1 Object.assign(target, source)
 var $export = __webpack_require__(16);
 
-$export($export.S + $export.F, 'Object', { assign: __webpack_require__(327) });
+$export($export.S + $export.F, 'Object', { assign: __webpack_require__(326) });
 
 
 /***/ }),
-/* 327 */
+/* 326 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -47969,6 +47888,84 @@ module.exports = !$assign || __webpack_require__(26)(function () {
     while (length > j) if (isEnum.call(S, key = keys[j++])) T[key] = S[key];
   } return T;
 } : $assign;
+
+
+/***/ }),
+/* 327 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __makeTemplateObject = (this && this.__makeTemplateObject) || function (cooked, raw) {
+    if (Object.defineProperty) { Object.defineProperty(cooked, "raw", { value: raw }); } else { cooked.raw = raw; }
+    return cooked;
+};
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __assign = (this && this.__assign) || Object.assign || function(t) {
+    for (var s, i = 1, n = arguments.length; i < n; i++) {
+        s = arguments[i];
+        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+            t[p] = s[p];
+    }
+    return t;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var React = __webpack_require__(0);
+var styled_components_1 = __webpack_require__(49);
+var STYLEDBUTTON = styled_components_1.default.div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n    border-radius: 5px;\n    font-size: 16px;\n    text-align: center;\n    padding: 10px 20px;\n    display: inline-block;\n    cursor: ", ";\n    color: ", ";\n    background-color: ", ";\n    margin-right: ", ";\n    border: ", ";\n    background-color: ", ";\n    min-width: 80px;\n    box-shadow: ", ";\n    filter: ", ";\n    \n        &:hover{\n            box-shadow: ", "\n            filter: brightness(90%);\n        }    \n"], ["\n    border-radius: 5px;\n    font-size: 16px;\n    text-align: center;\n    padding: 10px 20px;\n    display: inline-block;\n    cursor: ",
+    ";\n    color: ",
+    ";\n    background-color: ",
+    ";\n    margin-right: ", ";\n    border: ",
+    ";\n    background-color: ",
+    ";\n    min-width: 80px;\n    box-shadow: ",
+    ";\n    filter: ",
+    ";\n    \n        &:hover{\n            box-shadow: ",
+    "\n            filter: brightness(90%);\n        }    \n"])), function (props) {
+    return props.disabled || props.isLoading ? 'default' : 'pointer';
+}, function (props) {
+    return props.cancel || props.disabled ? '#93a4ad' : '#fff';
+}, function (props) {
+    return props.cancel ? '#f6f7f8' : '#00b0ff';
+}, function (props) { return (props.example ? '20px' : '0'); }, function (props) {
+    return props.disabled || props.isLoading ? 'solid 1px #d0d8dc;' : 'none';
+}, function (props) {
+    return props.disabled || props.isLoading ? '#f6f7f8' : '';
+}, function (props) {
+    return props.hover === true ? 'inset 0 -2px 0 0 rgba(0, 0, 0, 0.1);' : 'none';
+}, function (props) {
+    return props.hover === true ? 'brightness(90%);' : 'none';
+}, function (props) {
+    return props.disabled || props.isLoading
+        ? 'none'
+        : 'inset 0 -2px 0 0 rgba(0, 0, 0, 0.1);';
+});
+var Button = (function (_super) {
+    __extends(Button, _super);
+    function Button(props) {
+        var _this = _super.call(this, props) || this;
+        _this.state = {
+            isBlocked: false,
+            isLoaded: false,
+        };
+        return _this;
+    }
+    Button.prototype.render = function () {
+        return (React.createElement(STYLEDBUTTON, __assign({}, this.props, { disabled: this.props.disabled ? this.props.disabled : this.state.isBlocked, isLoading: this.props.isLoading ? this.props.isLoading : this.state.isLoaded }), this.props.isLoading ? (React.createElement("div", { className: this.props.isLoading ? 'loader' : '' }, "Loading...")) : (this.props.text)));
+    };
+    return Button;
+}(React.Component));
+exports.Button = Button;
+exports.default = Button;
+var templateObject_1;
 
 
 /***/ }),
@@ -49362,7 +49359,7 @@ var _reactDom = __webpack_require__(33);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _shallowEqual = __webpack_require__(105);
+var _shallowEqual = __webpack_require__(104);
 
 var _shallowEqual2 = _interopRequireDefault(_shallowEqual);
 
@@ -50378,7 +50375,7 @@ var _reactDom = __webpack_require__(33);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _shallowEqual = __webpack_require__(105);
+var _shallowEqual = __webpack_require__(104);
 
 var _shallowEqual2 = _interopRequireDefault(_shallowEqual);
 
@@ -50736,11 +50733,11 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _pure = __webpack_require__(104);
+var _pure = __webpack_require__(103);
 
 var _pure2 = _interopRequireDefault(_pure);
 
-var _SvgIcon = __webpack_require__(106);
+var _SvgIcon = __webpack_require__(105);
 
 var _SvgIcon2 = _interopRequireDefault(_SvgIcon);
 
@@ -50774,11 +50771,11 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _pure = __webpack_require__(104);
+var _pure = __webpack_require__(103);
 
 var _pure2 = _interopRequireDefault(_pure);
 
-var _SvgIcon = __webpack_require__(106);
+var _SvgIcon = __webpack_require__(105);
 
 var _SvgIcon2 = _interopRequireDefault(_SvgIcon);
 
@@ -50878,12 +50875,58 @@ exports.default = CompletedBlock;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var todayView_1 = __webpack_require__(356);
-exports.default = todayView_1.default;
+var Greetings_1 = __webpack_require__(356);
+exports.default = Greetings_1.default;
 
 
 /***/ }),
 /* 356 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+var React = __webpack_require__(0);
+var Button_1 = __webpack_require__(106);
+var Greetings = (function (_super) {
+    __extends(Greetings, _super);
+    function Greetings() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    Greetings.prototype.render = function () {
+        return (React.createElement("div", { className: "tasks-conteiner" },
+            React.createElement("img", { className: "tasks-conteiner__logo", src: "./empty.png" }),
+            React.createElement("div", { className: "tasks-conteiner__text" }, "\u0417\u0430\u043F\u043B\u0430\u043D\u0438\u0440\u0443\u0439\u0442\u0435 \u043E\u0431\u044F\u0437\u0430\u0442\u0435\u043B\u044C\u043D\u044B\u0435 \u0437\u0430\u0434\u0430\u0447\u0438 \u043D\u0430 \u043A\u0430\u0436\u0434\u044B\u0439 \u0434\u0435\u043D\u044C \u0438 \u043E\u043D\u0438 \u043E\u0442\u043E\u0431\u0440\u0430\u0437\u044F\u0442\u0441\u044F \u0437\u0434\u0435\u0441\u044C"),
+            React.createElement(Button_1.default, { text: "Запланировать на каждый день", onClick: this.props.setGreetingsHide })));
+    };
+    return Greetings;
+}(React.PureComponent));
+exports.default = Greetings;
+
+
+/***/ }),
+/* 357 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var todayView_1 = __webpack_require__(358);
+exports.default = todayView_1.default;
+
+
+/***/ }),
+/* 358 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -50926,7 +50969,7 @@ exports.default = TodayView;
 
 
 /***/ }),
-/* 357 */
+/* 359 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -50984,18 +51027,18 @@ exports.default = Calendar;
 
 
 /***/ }),
-/* 358 */
+/* 360 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var StoryBookView_1 = __webpack_require__(359);
+var StoryBookView_1 = __webpack_require__(361);
 exports.default = StoryBookView_1.default;
 
 
 /***/ }),
-/* 359 */
+/* 361 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -51012,9 +51055,9 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(0);
-var ColorsPallet_1 = __webpack_require__(360);
-var ButtonsCollection_1 = __webpack_require__(362);
-var ItemsCollection_1 = __webpack_require__(364);
+var ColorsPallet_1 = __webpack_require__(362);
+var ButtonsCollection_1 = __webpack_require__(364);
+var ItemsCollection_1 = __webpack_require__(366);
 var Calendar_1 = __webpack_require__(160);
 var StoryBook = (function (_super) {
     __extends(StoryBook, _super);
@@ -51042,18 +51085,18 @@ exports.default = StoryBook;
 
 
 /***/ }),
-/* 360 */
+/* 362 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var ColorsPallet_1 = __webpack_require__(361);
+var ColorsPallet_1 = __webpack_require__(363);
 exports.default = ColorsPallet_1.default;
 
 
 /***/ }),
-/* 361 */
+/* 363 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -51129,18 +51172,18 @@ var templateObject_1;
 
 
 /***/ }),
-/* 362 */
+/* 364 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var ButtonsCollection_1 = __webpack_require__(363);
+var ButtonsCollection_1 = __webpack_require__(365);
 exports.default = ButtonsCollection_1.default;
 
 
 /***/ }),
-/* 363 */
+/* 365 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -51157,7 +51200,7 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(0);
-var Button_1 = __webpack_require__(103);
+var Button_1 = __webpack_require__(106);
 var ButtonsCollection = (function (_super) {
     __extends(ButtonsCollection, _super);
     function ButtonsCollection(props) {
@@ -51189,18 +51232,18 @@ exports.default = ButtonsCollection;
 
 
 /***/ }),
-/* 364 */
+/* 366 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var Itemscollection_1 = __webpack_require__(365);
+var Itemscollection_1 = __webpack_require__(367);
 exports.default = Itemscollection_1.default;
 
 
 /***/ }),
-/* 365 */
+/* 367 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -51248,7 +51291,7 @@ exports.default = ItemsCollection;
 
 
 /***/ }),
-/* 366 */
+/* 368 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -51271,7 +51314,7 @@ function updateTaskState() {
 
 
 /***/ }),
-/* 367 */
+/* 369 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";

@@ -5,17 +5,18 @@ import NewTask from '../../components/NewTask';
 import EverydayBlock from '../../blocks/EverydayBlock';
 import TodayBlock from '../../blocks/TodayBlock';
 import CompletedBlock from '../../blocks/CompletedBlock';
+import Greetings from '../../blocks/Greetings';
 
 interface TasksContainerState {
   greetingsIsHide: boolean;
 }
 
 interface TasksContainerProps {
-  everyDayTasks?: any;
-  setTaskFinished?: any;
-  completedTasks?: any;
+  everyDayTasks: any;
+  setTaskFinished: any;
+  completedTasks: any;
   todayTasks?: any;
-  addTask?: any;
+  addTask: any;
   typeOfList?: string;
 }
 
@@ -25,6 +26,9 @@ export class TasksContainer extends React.Component<TasksContainerProps,TasksCon
     this.state = {
       greetingsIsHide: false,
     };
+    
+    this.setGreetingsHide = this.setGreetingsHide.bind(this);
+    
   }
 
   checkTasks(): boolean {
@@ -42,11 +46,12 @@ export class TasksContainer extends React.Component<TasksContainerProps,TasksCon
 
   componentWillMount() {
     localStorage.setItem('bgcolor', 'red');
-    // localStorage.clear();
+    localStorage.clear();
 
     this.setState({
       greetingsIsHide: this.checkTasks(),
     });
+    
   }
 
   render() {
@@ -63,19 +68,9 @@ export class TasksContainer extends React.Component<TasksContainerProps,TasksCon
     const todayPlaceholder: string = 'Новая задача на сегодня...';
     const everydayPlaceholder: string = 'Новая задача на каждый день...';
 
-    const Greetings: React.StatelessComponent = props => (
-      <div className="tasks-conteiner">
-        <img className="tasks-conteiner__logo" src="./empty.png" />
-        <div className="tasks-conteiner__text">
-          Запланируйте обязательные задачи на каждый день и они отобразятся здесь
-        </div>
-        <Button text="Запланировать на каждый день" onClick={this.setGreetingsHide.bind(this)}/>
-      </div>
-    );
-
 
     if (!greetingsIsHide) {
-      return <Greetings />;
+      return <Greetings setGreetingsHide={this.setGreetingsHide}/>;
     }
 
     return (

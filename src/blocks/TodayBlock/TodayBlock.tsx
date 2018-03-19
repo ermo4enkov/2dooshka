@@ -4,7 +4,7 @@ import Item from  '../../components/Item';
 interface TasksListProps {
   any?: any;
   setTaskFinished?: any;
-  todayTasks: any;
+  todayTasks?: any;
 }
 
 
