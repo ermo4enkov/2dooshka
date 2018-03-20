@@ -7,8 +7,8 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 const paths = {
     npm: path.resolve(__dirname, './node_modules'),
-    src: path.resolve(__dirname, './src'),
-    dist: path.resolve(__dirname, './dist'),
+    client: path.resolve(__dirname, './client'),
+    public: path.resolve(__dirname, './public'),
     destination: path.resolve(__dirname, 'build'),
 };
 
@@ -20,7 +20,7 @@ const config = {
     devtool: 'source-map',
     entry: {
         app: [
-            path.join(paths.src, 'index.tsx'),
+            path.join(paths.client, 'index.tsx'),
         ],
     },
     output: {
@@ -125,8 +125,8 @@ const config = {
                 removeTagWhitespace: true,
                 title: 'Join.Chat',
             },
-            favicon: path.join(paths.dist, 'favicon.ico'),
-            template: path.join(paths.dist, 'index.html'),
+            favicon: path.join(paths.public, 'favicon.ico'),
+            template: path.join(paths.public, 'index.html'),
         }),
         new ExtractTextPlugin({
             allChunks: true,
@@ -136,8 +136,8 @@ const config = {
     resolve: {
         alias: {
             npm: paths['npm'],
-            views: path.join(paths.src, 'views'),
-            components: path.join(paths.src, 'components'),
+            views: path.join(paths.client, 'views'),
+            components: path.join(paths.client, 'components'),
         },
         extensions: ['.js', '.jsx','.tsx', '.ts'],
     },

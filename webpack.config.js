@@ -13,8 +13,8 @@ webpackConfig = {
         styles: "./src/assets/scss/styles.scss",
     },
     output: {
-        path: path.resolve(__dirname, './dist'),
-        publicPath: './dist',
+        path: path.resolve(__dirname, './public'),
+        publicPath: './public',
         filename: '[name].js',
         library: '[name]',
     },
@@ -80,7 +80,7 @@ webpackConfig = {
         new WriteFilePlugin(),
         new webpack.LoaderOptionsPlugin({
             options: {
-                contentBase: path.join(__dirname, "./dist"),
+                contentBase: path.join(__dirname, "./public"),
             }
         })
     ]
