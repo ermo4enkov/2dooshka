@@ -9,7 +9,7 @@ const paths = {
     npm: path.resolve(__dirname, './node_modules'),
     client: path.resolve(__dirname, './client'),
     public: path.resolve(__dirname, './public'),
-    destination: path.resolve(__dirname, 'build'),
+    destination: path.resolve(__dirname, './public/build'),
 };
 
 const limits = {
