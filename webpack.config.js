@@ -9,8 +9,8 @@ const limits = {
 
 webpackConfig = {
     entry: {
-        bundle: "./src/index.tsx",
-        styles: "./src/assets/scss/styles.scss",
+        bundle: "./client/index.tsx",
+        styles: "./client/assets/scss/styles.scss",
     },
     output: {
         path: path.resolve(__dirname, './public'),
