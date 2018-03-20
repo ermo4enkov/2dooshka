@@ -45605,7 +45605,7 @@ var TasksContainer = (function (_super) {
         _this.setGreetingsHide = _this.setGreetingsHide.bind(_this);
         return _this;
     }
-    TasksContainer.prototype.checkTasks = function () {
+    TasksContainer.prototype.checkTasksExist = function () {
         if (localStorage.getItem('bgcolor')) {
             return true;
         }
@@ -45620,7 +45620,7 @@ var TasksContainer = (function (_super) {
         localStorage.setItem('bgcolor', 'red');
         localStorage.clear();
         this.setState({
-            greetingsIsHide: this.checkTasks(),
+            greetingsIsHide: this.checkTasksExist(),
         });
     };
     TasksContainer.prototype.render = function () {

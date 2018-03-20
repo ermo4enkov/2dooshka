@@ -2,7 +2,7 @@ import * as React from 'react';
 import Button from '../../components/Button';
 
 interface GreetingsProps {
-  setGreetingsHide: void;
+  setGreetingsHide: any;
 }
 
 class Greetings extends React.PureComponent<GreetingsProps>{

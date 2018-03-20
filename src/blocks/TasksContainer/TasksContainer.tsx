@@ -31,7 +31,7 @@ export class TasksContainer extends React.Component<TasksContainerProps,TasksCon
     
   }
 
-  checkTasks(): boolean {
+  checkTasksExist(): boolean {
     if (localStorage.getItem('bgcolor')) {
       return true;
     }
@@ -49,7 +49,7 @@ export class TasksContainer extends React.Component<TasksContainerProps,TasksCon
     localStorage.clear();
 
     this.setState({
-      greetingsIsHide: this.checkTasks(),
+      greetingsIsHide: this.checkTasksExist(),
     });
     
   }
