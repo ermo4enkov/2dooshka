@@ -5,6 +5,7 @@ export const FETCH_ERROR = 'FETCH_ERROR';
 export const SET_USER = 'SET_USER';
 
 export const UPDATE_TASK_STATE = 'UPDATE_TASK_STATE';
+export const GET_TASK_LIST = 'GET_TASK_LIST';
 
 // export const CODE_RECIEVED_SUCCESS = "CODE_RECIEVED_SUCCESS";
 // export const CODE_RECIEVED_FAIL = "CODE_RECIEVED_FAIL";

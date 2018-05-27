@@ -1,4 +1,4 @@
-import { UPDATE_TASK_STATE } from '../../utils/constants/user';
+import { UPDATE_TASK_STATE, GET_TASK_LIST } from '../../utils/constants/user';
 import { DB } from '../../utils/constants/db';
 
 const initialState = {
@@ -7,7 +7,7 @@ const initialState = {
   user_type: 'guest',
   fetching: false,
   data: '',
-  data_user: DB,
+  data_user: {},
   succesVerifyCode: false,
 };
 
@@ -25,7 +25,17 @@ export default function userState(state: any = initialState, action: any) {
         error: '',
         fetching: false,
         user_type: 'guest',
-        data_user: { ...DB },
+        data_user: { ...DB},
+        type_of_input: 'code',
+      };
+
+    case GET_TASK_LIST:
+      return {
+        ...state,
+        error: '',
+        fetching: false,
+        user_type: 'guest',
+        data_user: {...action.payload},
         type_of_input: 'code',
       };
 

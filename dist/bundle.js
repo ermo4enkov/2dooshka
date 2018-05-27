@@ -14403,6 +14403,7 @@ exports.FETCH_SUCCESS = 'FETCH_SUCCESS';
 exports.FETCH_ERROR = 'FETCH_ERROR';
 exports.SET_USER = 'SET_USER';
 exports.UPDATE_TASK_STATE = 'UPDATE_TASK_STATE';
+exports.GET_TASK_LIST = 'GET_TASK_LIST';
 
 
 /***/ }),
@@ -45275,7 +45276,7 @@ var initialState = {
     user_type: 'guest',
     fetching: false,
     data: '',
-    data_user: db_1.DB,
+    data_user: {},
     succesVerifyCode: false,
 };
 function userState(state, action) {
@@ -45283,6 +45284,8 @@ function userState(state, action) {
     switch (action.type) {
         case user_1.UPDATE_TASK_STATE:
             return __assign({}, state, { error: '', fetching: false, user_type: 'guest', data_user: __assign({}, db_1.DB), type_of_input: 'code' });
+        case user_1.GET_TASK_LIST:
+            return __assign({}, state, { error: '', fetching: false, user_type: 'guest', data_user: __assign({}, action.payload), type_of_input: 'code' });
         default:
             return state;
     }
@@ -45352,13 +45355,18 @@ var Header_1 = __webpack_require__(304);
 var Main_1 = __webpack_require__(307);
 var addTask_1 = __webpack_require__(368);
 var setTaskFinished_1 = __webpack_require__(369);
+var getTaskList_1 = __webpack_require__(375);
 var App = (function (_super) {
     __extends(App, _super);
     function App(props) {
         return _super.call(this, props) || this;
     }
+    App.prototype.componentDidMount = function () {
+        var getTask = this.props['getTaskList'];
+        getTask();
+    };
     App.prototype.render = function () {
-        var _a = this.props, data_user = _a.data_user, setTaskFinished = _a.setTaskFinished, addTask = _a.addTask;
+        var _a = this.props, data_user = _a.data_user, setTaskFinished = _a.setTaskFinished, addTask = _a.addTask, getTaskList = _a.getTaskList;
         return (React.createElement("div", null,
             React.createElement(Header_1.default, null),
             React.createElement(Main_1.default, { data_user: data_user, setTaskFinished: setTaskFinished, addTask: addTask })));
@@ -45383,6 +45391,7 @@ function mapDispatchProps(dispatch) {
     return {
         setTaskFinished: redux_1.bindActionCreators(setTaskFinished_1.setTaskFinished, dispatch),
         addTask: redux_1.bindActionCreators(addTask_1.addTask, dispatch),
+        getTaskList: redux_1.bindActionCreators(getTaskList_1.getTaskList, dispatch),
     };
 }
 exports.default = react_router_1.withRouter(react_redux_1.connect(mapStateToProps, mapDispatchProps)(App));
@@ -51001,9 +51010,6 @@ var Calendar = (function (_super) {
     };
     Calendar.prototype.render = function () {
         var days = this.props.days;
-        var CAL = days.map(function (index, i) {
-            return React.createElement("li", { "data-level": index, key: i });
-        });
         return (React.createElement("div", { className: "graph" },
             React.createElement("ul", { className: "months" },
                 React.createElement("li", null, "Jan"),
@@ -51025,8 +51031,7 @@ var Calendar = (function (_super) {
                 React.createElement("li", null, "Wed"),
                 React.createElement("li", null, "Thu"),
                 React.createElement("li", null, "Fri"),
-                React.createElement("li", null, "Sat")),
-            React.createElement("ul", { className: "squares" }, CAL)));
+                React.createElement("li", null, "Sat"))));
     };
     return Calendar;
 }(React.Component));
@@ -51341,6 +51346,38 @@ exports.setTaskFinished = setTaskFinished;
 function updateTaskState() {
     return {
         type: user_1.UPDATE_TASK_STATE,
+    };
+}
+
+
+/***/ }),
+/* 370 */,
+/* 371 */,
+/* 372 */,
+/* 373 */,
+/* 374 */,
+/* 375 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var user_1 = __webpack_require__(100);
+function getTaskList() {
+    return function (dispatch) {
+        return fetch('https://dooshka-69dc0.firebaseio.com/users/admin.json')
+            .then(function (response) {
+            return response.json();
+        }).then(function (response) {
+            dispatch(updateTasksList(response['tasks']));
+        });
+    };
+}
+exports.getTaskList = getTaskList;
+function updateTasksList(data) {
+    return {
+        type: user_1.GET_TASK_LIST,
+        payload: data,
     };
 }
 
