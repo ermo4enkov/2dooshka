@@ -12,11 +12,25 @@
     <body>
         <div id="root"></div>
         <script type="text/javascript" src="./bundle.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+        <script>
+            // Initialize Firebase
+            var config = {
+                apiKey: "AIzaSyCemUTqNEQahMIgiN00szOzGSNNBsfW4VU",
+                authDomain: "dooshka-69dc0.firebaseapp.com",
+                databaseURL: "https://dooshka-69dc0.firebaseio.com",
+                projectId: "dooshka-69dc0",
+                storageBucket: "",
+                messagingSenderId: "728016158867"
+            };
+            firebase.initializeApp(config);
+        </script>
+
     </body>
 </html>
 
 
-        
+
         <!-- Dependencies -->
         <!-- <script src="../node_modules/react/umd/react.development.js"></script>
         <script src="../node_modules/react-dom/umd/react-dom-server.browser.development.js"></script> -->
