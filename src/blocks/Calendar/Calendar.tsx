@@ -8,6 +8,15 @@ export class Calendar extends React.Component<CalendarProps> {
   constructor(props: any) {
     super(props);
   }
+
+  componentDidMount(){
+    fetch('https://dooshka-69dc0.firebaseio.com/users/admin.json')
+        .then(function(response) {
+          return response.json();
+        }).then(response => {
+            console.log(response)
+        });
+  }
   
   render() {
     const { days } = this.props;

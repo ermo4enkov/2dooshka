@@ -50991,6 +50991,14 @@ var Calendar = (function (_super) {
     function Calendar(props) {
         return _super.call(this, props) || this;
     }
+    Calendar.prototype.componentDidMount = function () {
+        fetch('https://dooshka-69dc0.firebaseio.com/users/admin.json')
+            .then(function (response) {
+            return response.json();
+        }).then(function (response) {
+            console.log(response);
+        });
+    };
     Calendar.prototype.render = function () {
         var days = this.props.days;
         var CAL = days.map(function (index, i) {
