@@ -29,7 +29,7 @@ const TodayBlock: React.StatelessComponent<TasksListProps> = (props) => {
         <h2 className="subtitile">ДОПОЛНИТЕЛЬНЫЕ НА СЕГОДНЯ</h2>
         <ul className="tasks-list">
           <TasksList
-            todayTasks={props['todayTasks']} 
+            todayTasks={props['todayTasks']}
             setTaskFinished={props['setTaskFinished']} 
           />
         </ul>

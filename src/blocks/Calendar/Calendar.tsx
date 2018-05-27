@@ -20,9 +20,9 @@ export class Calendar extends React.Component<CalendarProps> {
   
   render() {
     const { days } = this.props;
-    // const CAL = days.map((index, i) => {
-    //   return <li data-level={index} key={i} />;
-    // });
+    const CAL = days? days.map((index, i) => {
+      return <li data-level={index} key={i} />;
+    }): null;
 
     return (
       <div className="graph">
@@ -49,7 +49,7 @@ export class Calendar extends React.Component<CalendarProps> {
           <li>Fri</li>
           <li>Sat</li>
         </ul>
-        {/*<ul className="squares">{CAL}</ul>*/}
+        <ul className="squares">{CAL}</ul>
       </div>
     );
   }

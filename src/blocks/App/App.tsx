@@ -23,7 +23,7 @@ export class App extends React.Component<AppProps> {
 
   componentDidMount(){
     const getTask = this.props['getTaskList']
-    getTask();
+    getTask('admin');
   }
 
   render() {
