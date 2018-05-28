@@ -4,7 +4,7 @@ import Item from '../../components/Item';
 import NewTask from '../../components/NewTask';
 import EverydayBlock from '../../blocks/EverydayBlock';
 import TodayBlock from '../../blocks/TodayBlock';
-// import CompletedBlock from '../../blocks/CompletedBlock';
+import CompletedBlock from '../../blocks/CompletedBlock';
 import Greetings from '../../blocks/Greetings';
 
 interface TasksContainerState {
@@ -14,7 +14,7 @@ interface TasksContainerState {
 interface TasksContainerProps {
   everyDayTasks: any;
   setTaskFinished: any;
-  completedTasks?: any;
+  completedTasks: any;
   todayTasks?: any;
   addTask: any;
   typeOfList?: string;
@@ -60,6 +60,7 @@ export class TasksContainer extends React.Component<TasksContainerProps,TasksCon
       addTask, 
       typeOfList, 
       everyDayTasks,
+      completedTasks,
       todayTasks,
     } = this.props;
 
@@ -92,6 +93,9 @@ export class TasksContainer extends React.Component<TasksContainerProps,TasksCon
             typeOfList === 'today' ?
             todayPlaceholder : everydayPlaceholder
           }
+        />
+        <CompletedBlock
+          completedTasks={completedTasks}
         />
       </div>
     );
