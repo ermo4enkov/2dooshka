@@ -19,6 +19,12 @@ const STYLEDITEM = styled.div`
   display: flex;
 `;
 
+const StyledButton = styled.button`
+  background: url("../delete.svg");
+  border: none;
+  padding: 10px;
+`;
+
 const checkboxStyle = {
   fontFamily: 'Source Sans Pro',
   fontSize: 16,
@@ -89,7 +95,7 @@ export class Item extends React.Component<ItemProps, ItemState> {
           value={index}
           aria-details={todayTask ? 'todayTasks' : 'everydayTasks'}
         />
-        <ActionDeleteForever onClick={this.deleteTask} name={content}/>
+        <StyledButton onClick={this.deleteTask} aria-details={content}></StyledButton>
       </STYLEDITEM>
     );
   }
