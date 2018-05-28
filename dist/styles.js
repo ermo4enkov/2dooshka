@@ -61,12 +61,12 @@ var styles =
 /******/ 	__webpack_require__.p = "./dist";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 372);
+/******/ 	return __webpack_require__(__webpack_require__.s = 370);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 104:
+/***/ 101:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
@@ -327,16 +327,16 @@ module.exports = Html5Entities;
 
 /***/ }),
 
-/***/ 372:
+/***/ 370:
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(54);
-module.exports = __webpack_require__(104);
+__webpack_require__(50);
+module.exports = __webpack_require__(101);
 
 
 /***/ }),
 
-/***/ 54:
+/***/ 50:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -345,11 +345,11 @@ module.exports = __webpack_require__(104);
 /* global __resourceQuery WorkerGlobalScope self */
 /* eslint prefer-destructuring: off */
 
-const url = __webpack_require__(55);
-const stripAnsi = __webpack_require__(61);
-const log = __webpack_require__(63).getLogger('webpack-dev-server');
-const socket = __webpack_require__(64);
-const overlay = __webpack_require__(66);
+const url = __webpack_require__(51);
+const stripAnsi = __webpack_require__(57);
+const log = __webpack_require__(59).getLogger('webpack-dev-server');
+const socket = __webpack_require__(60);
+const overlay = __webpack_require__(62);
 
 function getCurrentScriptSource() {
   // `document.currentScript` is the most accurate way to find the current script,
@@ -433,7 +433,7 @@ const onSocketMsg = {
     sendMsg('StillOk');
   },
   'log-level': function logLevel(level) {
-    const hotCtx = __webpack_require__(71);
+    const hotCtx = __webpack_require__(67);
     if (hotCtx.keys().indexOf('./log') !== -1) {
       hotCtx('./log').setLogLevel(level);
     }
@@ -553,7 +553,7 @@ function reloadApp() {
   if (hot) {
     log.info('[WDS] App hot update...');
     // eslint-disable-next-line global-require
-    const hotEmitter = __webpack_require__(73);
+    const hotEmitter = __webpack_require__(69);
     hotEmitter.emit('webpackHotUpdate', currentHash);
     if (typeof self !== 'undefined' && self.window) {
       // broadcast update to window
@@ -587,7 +587,7 @@ function reloadApp() {
 
 /***/ }),
 
-/***/ 55:
+/***/ 51:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -614,8 +614,8 @@ function reloadApp() {
 
 
 
-var punycode = __webpack_require__(56);
-var util = __webpack_require__(57);
+var punycode = __webpack_require__(52);
+var util = __webpack_require__(53);
 
 exports.parse = urlParse;
 exports.resolve = urlResolve;
@@ -690,7 +690,7 @@ var protocolPattern = /^([a-z0-9.+-]+:)/i,
       'gopher:': true,
       'file:': true
     },
-    querystring = __webpack_require__(58);
+    querystring = __webpack_require__(54);
 
 function urlParse(url, parseQueryString, slashesDenoteHost) {
   if (url && util.isObject(url) && url instanceof Url) return url;
@@ -1327,7 +1327,7 @@ Url.prototype.parseHost = function() {
 
 /***/ }),
 
-/***/ 56:
+/***/ 52:
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(module, global) {var __WEBPACK_AMD_DEFINE_RESULT__;/*! https://mths.be/punycode v1.4.1 by @mathias */
@@ -1867,7 +1867,7 @@ Url.prototype.parseHost = function() {
 
 /***/ }),
 
-/***/ 57:
+/***/ 53:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1891,19 +1891,19 @@ module.exports = {
 
 /***/ }),
 
-/***/ 58:
+/***/ 54:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-exports.decode = exports.parse = __webpack_require__(59);
-exports.encode = exports.stringify = __webpack_require__(60);
+exports.decode = exports.parse = __webpack_require__(55);
+exports.encode = exports.stringify = __webpack_require__(56);
 
 
 /***/ }),
 
-/***/ 59:
+/***/ 55:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1995,7 +1995,7 @@ var isArray = Array.isArray || function (xs) {
 
 /***/ }),
 
-/***/ 60:
+/***/ 56:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2088,12 +2088,12 @@ var objectKeys = Object.keys || function (obj) {
 
 /***/ }),
 
-/***/ 61:
+/***/ 57:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var ansiRegex = __webpack_require__(62)();
+var ansiRegex = __webpack_require__(58)();
 
 module.exports = function (str) {
 	return typeof str === 'string' ? str.replace(ansiRegex, '') : str;
@@ -2102,7 +2102,7 @@ module.exports = function (str) {
 
 /***/ }),
 
-/***/ 62:
+/***/ 58:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2114,7 +2114,7 @@ module.exports = function () {
 
 /***/ }),
 
-/***/ 63:
+/***/ 59:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/*
@@ -2375,13 +2375,13 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/*
 
 /***/ }),
 
-/***/ 64:
+/***/ 60:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-const SockJS = __webpack_require__(65);
+const SockJS = __webpack_require__(61);
 
 let retries = 0;
 let sock = null;
@@ -2425,7 +2425,7 @@ module.exports = socket;
 
 /***/ }),
 
-/***/ 65:
+/***/ 61:
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {var require;var require;/* sockjs-client v1.1.4 | http://sockjs.org | MIT license */
@@ -8165,7 +8165,7 @@ module.exports = function lolcation(loc) {
 
 /***/ }),
 
-/***/ 66:
+/***/ 62:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8174,8 +8174,8 @@ module.exports = function lolcation(loc) {
 // The error overlay is inspired (and mostly copied) from Create React App (https://github.com/facebookincubator/create-react-app)
 // They, in turn, got inspired by webpack-hot-middleware (https://github.com/glenjamin/webpack-hot-middleware).
 
-const ansiHTML = __webpack_require__(67);
-const Entities = __webpack_require__(68).AllHtmlEntities;
+const ansiHTML = __webpack_require__(63);
+const Entities = __webpack_require__(64).AllHtmlEntities;
 
 const entities = new Entities();
 
@@ -8301,7 +8301,7 @@ exports.showMessage = function handleMessage(messages) {
 
 /***/ }),
 
-/***/ 67:
+/***/ 63:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8485,12 +8485,12 @@ ansiHTML.reset()
 
 /***/ }),
 
-/***/ 68:
+/***/ 64:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
-  XmlEntities: __webpack_require__(69),
-  Html4Entities: __webpack_require__(70),
+  XmlEntities: __webpack_require__(65),
+  Html4Entities: __webpack_require__(66),
   Html5Entities: __webpack_require__(30),
   AllHtmlEntities: __webpack_require__(30)
 };
@@ -8498,7 +8498,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 69:
+/***/ 65:
 /***/ (function(module, exports) {
 
 var ALPHA_INDEX = {
@@ -8660,7 +8660,7 @@ module.exports = XmlEntities;
 
 /***/ }),
 
-/***/ 70:
+/***/ 66:
 /***/ (function(module, exports) {
 
 var HTML_ALPHA = ['apos', 'nbsp', 'iexcl', 'cent', 'pound', 'curren', 'yen', 'brvbar', 'sect', 'uml', 'copy', 'ordf', 'laquo', 'not', 'shy', 'reg', 'macr', 'deg', 'plusmn', 'sup2', 'sup3', 'acute', 'micro', 'para', 'middot', 'cedil', 'sup1', 'ordm', 'raquo', 'frac14', 'frac12', 'frac34', 'iquest', 'Agrave', 'Aacute', 'Acirc', 'Atilde', 'Auml', 'Aring', 'Aelig', 'Ccedil', 'Egrave', 'Eacute', 'Ecirc', 'Euml', 'Igrave', 'Iacute', 'Icirc', 'Iuml', 'ETH', 'Ntilde', 'Ograve', 'Oacute', 'Ocirc', 'Otilde', 'Ouml', 'times', 'Oslash', 'Ugrave', 'Uacute', 'Ucirc', 'Uuml', 'Yacute', 'THORN', 'szlig', 'agrave', 'aacute', 'acirc', 'atilde', 'auml', 'aring', 'aelig', 'ccedil', 'egrave', 'eacute', 'ecirc', 'euml', 'igrave', 'iacute', 'icirc', 'iuml', 'eth', 'ntilde', 'ograve', 'oacute', 'ocirc', 'otilde', 'ouml', 'divide', 'oslash', 'ugrave', 'uacute', 'ucirc', 'uuml', 'yacute', 'thorn', 'yuml', 'quot', 'amp', 'lt', 'gt', 'OElig', 'oelig', 'Scaron', 'scaron', 'Yuml', 'circ', 'tilde', 'ensp', 'emsp', 'thinsp', 'zwnj', 'zwj', 'lrm', 'rlm', 'ndash', 'mdash', 'lsquo', 'rsquo', 'sbquo', 'ldquo', 'rdquo', 'bdquo', 'dagger', 'Dagger', 'permil', 'lsaquo', 'rsaquo', 'euro', 'fnof', 'Alpha', 'Beta', 'Gamma', 'Delta', 'Epsilon', 'Zeta', 'Eta', 'Theta', 'Iota', 'Kappa', 'Lambda', 'Mu', 'Nu', 'Xi', 'Omicron', 'Pi', 'Rho', 'Sigma', 'Tau', 'Upsilon', 'Phi', 'Chi', 'Psi', 'Omega', 'alpha', 'beta', 'gamma', 'delta', 'epsilon', 'zeta', 'eta', 'theta', 'iota', 'kappa', 'lambda', 'mu', 'nu', 'xi', 'omicron', 'pi', 'rho', 'sigmaf', 'sigma', 'tau', 'upsilon', 'phi', 'chi', 'psi', 'omega', 'thetasym', 'upsih', 'piv', 'bull', 'hellip', 'prime', 'Prime', 'oline', 'frasl', 'weierp', 'image', 'real', 'trade', 'alefsym', 'larr', 'uarr', 'rarr', 'darr', 'harr', 'crarr', 'lArr', 'uArr', 'rArr', 'dArr', 'hArr', 'forall', 'part', 'exist', 'empty', 'nabla', 'isin', 'notin', 'ni', 'prod', 'sum', 'minus', 'lowast', 'radic', 'prop', 'infin', 'ang', 'and', 'or', 'cap', 'cup', 'int', 'there4', 'sim', 'cong', 'asymp', 'ne', 'equiv', 'le', 'ge', 'sub', 'sup', 'nsub', 'sube', 'supe', 'oplus', 'otimes', 'perp', 'sdot', 'lceil', 'rceil', 'lfloor', 'rfloor', 'lang', 'rang', 'loz', 'spades', 'clubs', 'hearts', 'diams'];
@@ -8814,11 +8814,11 @@ module.exports = Html4Entities;
 
 /***/ }),
 
-/***/ 71:
+/***/ 67:
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./log": 72
+	"./log": 68
 };
 function webpackContext(req) {
 	return __webpack_require__(webpackContextResolve(req));
@@ -8834,11 +8834,11 @@ webpackContext.keys = function webpackContextKeys() {
 };
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
-webpackContext.id = 71;
+webpackContext.id = 67;
 
 /***/ }),
 
-/***/ 72:
+/***/ 68:
 /***/ (function(module, exports) {
 
 var logLevel = "info";
@@ -8889,16 +8889,16 @@ module.exports.setLogLevel = function(level) {
 
 /***/ }),
 
-/***/ 73:
+/***/ 69:
 /***/ (function(module, exports, __webpack_require__) {
 
-var EventEmitter = __webpack_require__(74);
+var EventEmitter = __webpack_require__(70);
 module.exports = new EventEmitter();
 
 
 /***/ }),
 
-/***/ 74:
+/***/ 70:
 /***/ (function(module, exports) {
 
 // Copyright Joyent, Inc. and other Node contributors.

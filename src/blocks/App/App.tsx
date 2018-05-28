@@ -21,43 +21,14 @@ export class App extends React.Component<AppProps> {
     super(props);
   }
 
-  componentDidMount(){
-    const getTask = this.props['getTaskList']
-    getTask('admin');
-  }
-
   render() {
-    const { data_user, setTaskFinished, addTask, getTaskList } = this.props;
-
     return (
       <div>
         <Header />
-        <Main data_user={data_user} setTaskFinished={setTaskFinished} addTask={addTask} />
+        <Main/>
       </div>
     );
   }
 }
 
-function mapStateToProps(state) {
-  return {
-    error: state.error,
-    login: state.login,
-    user_type: state.user_type,
-    fetching: state.fetching,
-    data: state.data,
-    data_user: state.data_user,
-    succesVerifyCode: state.succesVerifyCode,
-    type_of_input: state.type_of_input,
-    checkTypeOfUser: state.checkTypeOfUser,
-  };
-}
-
-function mapDispatchProps(dispatch: any) {
-  return {
-    setTaskFinished: bindActionCreators(setTaskFinished, dispatch),
-    addTask: bindActionCreators(addTask, dispatch),
-    getTaskList: bindActionCreators(getTaskList, dispatch),
-  };
-}
-
-export default withRouter(connect(mapStateToProps, mapDispatchProps)(App));
+export default App;
