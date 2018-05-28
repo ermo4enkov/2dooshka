@@ -11,20 +11,16 @@ const appMain = props => (
       <Route
         exact
         path="/today"
-        render={routeProps => <TodayView routeProps={routeProps} {...props} />}
+        component={TodayView}
       />
       <Route
         exact
         path="/everyday"
-        render={routeProps => (
-          <EveryDayView routeProps={routeProps} {...props} />
-        )}
+        component={EveryDayView}
       />
       <Route
         path="/storybook"
-        render={routeProps => (
-          <StoryBookView routeProps={routeProps} {...props} />
-        )}
+        component={StoryBookView}
       />
     </Switch>
   </main>
