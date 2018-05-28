@@ -12,11 +12,11 @@ interface TasksContainerState {
 }
 
 interface TasksContainerProps {
-  everyDayTasks: any;
-  setTaskFinished: any;
-  completedTasks: any;
+  everyDayTasks?: any;
+  setTaskFinished?: any;
+  completedTasks?: any;
   todayTasks?: any;
-  addTask: any;
+  addTask?: any;
   typeOfList?: string;
 }
 

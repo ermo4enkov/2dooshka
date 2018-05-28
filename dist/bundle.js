@@ -45349,17 +45349,15 @@ var initialState = {
     login: false,
     user_type: 'guest',
     fetching: false,
-    data: '',
     data_user: {},
-    succesVerifyCode: false,
 };
 function userState(state, action) {
     if (state === void 0) { state = initialState; }
     switch (action.type) {
         case user_1.UPDATE_TASK_STATE:
-            return __assign({}, state, { error: '', fetching: false, user_type: 'guest', data_user: __assign({}, db_1.DB), type_of_input: 'code' });
+            return __assign({}, state, { error: '', fetching: false, data_user: __assign({}, db_1.DB) });
         case user_1.GET_TASK_LIST:
-            return __assign({}, state, { error: '', fetching: false, user_type: 'guest', data_user: __assign({}, action.payload), type_of_input: 'code' });
+            return __assign({}, state, { error: '', fetching: false, data_user: __assign({}, action.payload) });
         default:
             return state;
     }
@@ -45549,7 +45547,8 @@ var EveryDayView = (function (_super) {
         getTask('admin');
     };
     EveryDayView.prototype.render = function () {
-        var _a = this.props['data_user'], everyday = _a.everyday, completed = _a.completed, additionalTasks = _a.additionalTasks;
+        var everyday = this.props['data_user']['tasks'] ? this.props['data_user']['tasks']['everyday'] : null;
+        var completed = this.props['data_user']['tasks'] ? this.props['data_user']['tasks']['completed'] : null;
         var completedTasks = completed ? completed['everyday'].concat(completed['today']) : [];
         var setTaskFinished = this.props['setTaskFinished'];
         var addTask = this.props['addTask'];
@@ -45564,13 +45563,8 @@ function mapStateToProps(state) {
     return {
         error: state.error,
         login: state.login,
-        user_type: state.user_type,
         fetching: state.fetching,
-        data: state.data,
         data_user: state.data_user,
-        succesVerifyCode: state.succesVerifyCode,
-        type_of_input: state.type_of_input,
-        checkTypeOfUser: state.checkTypeOfUser,
     };
 }
 function mapDispatchProps(dispatch) {
@@ -50976,7 +50970,9 @@ var TodayView = (function (_super) {
         getTask('admin');
     };
     TodayView.prototype.render = function () {
-        var _a = this.props['data_user']['tasks'], everyday = _a.everyday, completed = _a.completed, today = _a.today;
+        var everyday = this.props['data_user']['tasks'] ? this.props['data_user']['tasks']['everyday'] : null;
+        var completed = this.props['data_user']['tasks'] ? this.props['data_user']['tasks']['completed'] : null;
+        var today = this.props['data_user']['tasks'] ? this.props['data_user']['tasks']['today'] : null;
         var days = this.props['data_user'].days;
         var completedTasks = completed ? completed['everyday'].concat(completed['today']) : [];
         var setTaskFinished = this.props['setTaskFinished'];

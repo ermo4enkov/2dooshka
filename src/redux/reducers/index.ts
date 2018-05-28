@@ -6,9 +6,7 @@ const initialState = {
   login: false,
   user_type: 'guest',
   fetching: false,
-  data: '',
   data_user: {},
-  succesVerifyCode: false,
 };
 
 export default function userState(state: any = initialState, action: any) {
@@ -24,9 +22,7 @@ export default function userState(state: any = initialState, action: any) {
         ...state,
         error: '',
         fetching: false,
-        user_type: 'guest',
         data_user: { ...DB},
-        type_of_input: 'code',
       };
 
     case GET_TASK_LIST:
@@ -34,9 +30,7 @@ export default function userState(state: any = initialState, action: any) {
         ...state,
         error: '',
         fetching: false,
-        user_type: 'guest',
         data_user: {...action.payload},
-        type_of_input: 'code',
       };
 
     // case CODE_RECIEVED_FAIL:

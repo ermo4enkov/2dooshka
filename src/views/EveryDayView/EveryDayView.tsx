@@ -17,7 +17,8 @@ export class EveryDayView extends React.Component {
   }
 
   render() {
-    const { everyday, completed, additionalTasks } = this.props['data_user'];
+    const everyday = this.props['data_user']['tasks']? this.props['data_user']['tasks']['everyday']: null;
+    const completed = this.props['data_user']['tasks']? this.props['data_user']['tasks']['completed']: null;
     const completedTasks = completed ? [...completed['everyday'], ...completed['today']] : [];
     const setTaskFinished = this.props['setTaskFinished'];
     const addTask = this.props['addTask'];
@@ -40,13 +41,8 @@ function mapStateToProps(state) {
     return {
         error: state.error,
         login: state.login,
-        user_type: state.user_type,
         fetching: state.fetching,
-        data: state.data,
         data_user: state.data_user,
-        succesVerifyCode: state.succesVerifyCode,
-        type_of_input: state.type_of_input,
-        checkTypeOfUser: state.checkTypeOfUser,
     };
 }
 
