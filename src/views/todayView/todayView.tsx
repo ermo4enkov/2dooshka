@@ -12,6 +12,11 @@ export class TodayView extends React.Component {
     super(props);
   }
 
+  componentDidMount() {
+     const getTask = this.props['getTaskList'];
+     getTask('admin');
+  }
+
   render() {
 
     const { everyday, completed, today, days } = this.props['data_user'];
@@ -25,7 +30,6 @@ export class TodayView extends React.Component {
         <TasksContainer
           everyDayTasks={everyday}
           setTaskFinished={setTaskFinished}
-          completedTasks={completed}
           todayTasks={today}
           addTask={addTask}
           typeOfList="today"
