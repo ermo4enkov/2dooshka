@@ -6,8 +6,7 @@ export function getTaskList(user) {
             .then(function(response) {
                 return response.json();
             }).then(response => {
-                console.log(response)
-                    dispatch(updateTasksList(response['tasks']));
+                dispatch(updateTasksList(response));
             });
     }
 }

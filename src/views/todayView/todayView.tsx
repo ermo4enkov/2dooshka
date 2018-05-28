@@ -18,12 +18,11 @@ export class TodayView extends React.Component {
   }
 
   render() {
-
-    const { everyday, completed, today, days } = this.props['data_user'];
+    const { everyday, completed, today } = this.props['data_user']['tasks'];
+    const { days } = this.props['data_user'];
     const completedTasks = completed ? [...completed['everyday'], ...completed['today']] : [];
     const setTaskFinished = this.props['setTaskFinished'];
     const addTask = this.props['addTask'];
-
     return (
       <div className="conteiner">
         <h1 className="title">Сегодня</h1>

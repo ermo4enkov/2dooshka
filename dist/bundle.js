@@ -16992,8 +16992,7 @@ function getTaskList(user) {
             .then(function (response) {
             return response.json();
         }).then(function (response) {
-            console.log(response);
-            dispatch(updateTasksList(response['tasks']));
+            dispatch(updateTasksList(response));
         });
     };
 }
@@ -50977,7 +50976,8 @@ var TodayView = (function (_super) {
         getTask('admin');
     };
     TodayView.prototype.render = function () {
-        var _a = this.props['data_user'], everyday = _a.everyday, completed = _a.completed, today = _a.today, days = _a.days;
+        var _a = this.props['data_user']['tasks'], everyday = _a.everyday, completed = _a.completed, today = _a.today;
+        var days = this.props['data_user'].days;
         var completedTasks = completed ? completed['everyday'].concat(completed['today']) : [];
         var setTaskFinished = this.props['setTaskFinished'];
         var addTask = this.props['addTask'];
@@ -51035,14 +51035,6 @@ var Calendar = (function (_super) {
     function Calendar(props) {
         return _super.call(this, props) || this;
     }
-    Calendar.prototype.componentDidMount = function () {
-        fetch('https://dooshka-69dc0.firebaseio.com/users/admin.json')
-            .then(function (response) {
-            return response.json();
-        }).then(function (response) {
-            console.log(response);
-        });
-    };
     Calendar.prototype.render = function () {
         var days = this.props.days;
         var CAL = days ? days.map(function (index, i) {
