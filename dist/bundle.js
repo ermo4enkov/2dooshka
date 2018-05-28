@@ -45566,14 +45566,13 @@ var EveryDayView = (function (_super) {
         return _super.call(this, props) || this;
     }
     EveryDayView.prototype.render = function () {
-        var everyDayTasks = this.props['data_user']['everydayTasks'];
-        var completedTasks = this.props['data_user']['completedTasks'];
+        var _a = this.props['data_user'], everyday = _a.everyday, completed = _a.completed;
         var additionalTasks = this.props['data_user']['additionalTasks'];
         var setTaskFinished = this.props['setTaskFinished'];
         var addTask = this.props['addTask'];
         return (React.createElement("div", { className: "conteiner" },
             React.createElement("h1", { className: "title" }, "\u041A\u0430\u0436\u0434\u044B\u0439 \u0434\u0435\u043D\u044C"),
-            React.createElement(TasksContainer_1.default, { everyDayTasks: everyDayTasks, setTaskFinished: setTaskFinished, completedTasks: completedTasks, addTask: addTask })));
+            React.createElement(TasksContainer_1.default, { everyDayTasks: everyday, setTaskFinished: setTaskFinished, completedTasks: completed, addTask: addTask })));
     };
     return EveryDayView;
 }(React.Component));
