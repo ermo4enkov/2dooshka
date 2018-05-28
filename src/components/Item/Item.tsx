@@ -95,7 +95,8 @@ export class Item extends React.Component<ItemProps, ItemState> {
           value={index}
           aria-details={todayTask ? 'todayTasks' : 'everydayTasks'}
         />
-        <StyledButton onClick={this.deleteTask} aria-details={content}></StyledButton>
+        {completedTask ? null : <StyledButton onClick={this.deleteTask} aria-details={content}></StyledButton>}
+
       </STYLEDITEM>
     );
   }
