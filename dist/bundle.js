@@ -48044,10 +48044,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(0);
 var styled_components_1 = __webpack_require__(50);
 var Checkbox_1 = __webpack_require__(331);
-var STYLEDITEM = styled_components_1.default.div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  width: ", ";\n  border-radius: 3px;\n  padding: 18px 16px;\n  font-size: 16px;\n  background-color: ", ";\n  color: ", ";\n  border: ", ";\n  border-color: ", ";\n"], ["\n  width: ", ";\n  border-radius: 3px;\n  padding: 18px 16px;\n  font-size: 16px;\n  background-color: ",
+var delete_forever_1 = __webpack_require__(376);
+var STYLEDITEM = styled_components_1.default.div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  width: ", ";\n  border-radius: 3px;\n  padding: 18px 16px;\n  font-size: 16px;\n  background-color: ", ";\n  color: ", ";\n  border: ", ";\n  border-color: ", ";\n  display: flex;\n"], ["\n  width: ", ";\n  border-radius: 3px;\n  padding: 18px 16px;\n  font-size: 16px;\n  background-color: ",
     ";\n  color: ", ";\n  border: ",
     ";\n  border-color: ",
-    ";\n"])), function (props) { return (props.example ? '70%' : 'auto'); }, function (props) {
+    ";\n  display: flex;\n"])), function (props) { return (props.example ? '70%' : 'auto'); }, function (props) {
     return props.completedTask ? '#f2fef8' : '#ffffff';
 }, function (props) { return (props.completedTask ? '#a9f6d0' : '#000'); }, function (props) {
     return props.todayTask ? 'dashed 1px' : 'solid 1px';
@@ -48065,22 +48066,26 @@ var Item = (function (_super) {
     __extends(Item, _super);
     function Item(props) {
         var _this = _super.call(this, props) || this;
+        _this.switchChecked = function (event) {
+            var type = event.target.attributes['aria-details']['nodeValue'];
+            var name = event.target.name;
+            var value = event.target.value;
+            _this.props.setTaskFinished(name, value, type);
+        };
+        _this.deleteTask = function (event) {
+            console.log(event.target);
+        };
         _this.state = {
             checked: false,
         };
         return _this;
     }
-    Item.prototype.switchChecked = function (event) {
-        var type = event.target.attributes['aria-details']['nodeValue'];
-        var name = event.target.name;
-        var value = event.target.value;
-        this.props.setTaskFinished(name, value, type);
-    };
     Item.prototype.render = function () {
         var _a = this.props, content = _a.content, newTask = _a.newTask, redaction = _a.redaction, index = _a.index, completedTask = _a.completedTask, todayTask = _a.todayTask, setTaskFinished = _a.setTaskFinished;
         var check = this.state.checked;
         return (React.createElement(STYLEDITEM, __assign({}, this.props, this.state),
-            React.createElement(Checkbox_1.default, { disabled: completedTask ? true : false, checked: completedTask ? true : false, labelStyle: completedTask ? checkboxStyleDisable : checkboxStyle, label: content, onCheck: this.switchChecked.bind(this), name: content, value: index, "aria-details": todayTask ? 'todayTasks' : 'everydayTasks' })));
+            React.createElement(Checkbox_1.default, { disabled: completedTask ? true : false, checked: completedTask ? true : false, labelStyle: completedTask ? checkboxStyleDisable : checkboxStyle, label: content, onCheck: this.switchChecked, name: content, value: index, "aria-details": todayTask ? 'todayTasks' : 'everydayTasks' }),
+            React.createElement(delete_forever_1.default, { onClick: this.deleteTask, name: content })));
     };
     return Item;
 }(React.Component));
@@ -51377,6 +51382,49 @@ function updateTasksList(data) {
     };
 }
 
+
+/***/ }),
+/* 371 */,
+/* 372 */,
+/* 373 */,
+/* 374 */,
+/* 375 */,
+/* 376 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _pure = __webpack_require__(103);
+
+var _pure2 = _interopRequireDefault(_pure);
+
+var _SvgIcon = __webpack_require__(105);
+
+var _SvgIcon2 = _interopRequireDefault(_SvgIcon);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var ActionDeleteForever = function ActionDeleteForever(props) {
+  return _react2.default.createElement(
+    _SvgIcon2.default,
+    props,
+    _react2.default.createElement('path', { d: 'M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12l1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z' })
+  );
+};
+ActionDeleteForever = (0, _pure2.default)(ActionDeleteForever);
+ActionDeleteForever.displayName = 'ActionDeleteForever';
+ActionDeleteForever.muiName = 'SvgIcon';
+
+exports.default = ActionDeleteForever;
 
 /***/ })
 /******/ ]);

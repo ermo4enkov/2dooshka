@@ -2,6 +2,7 @@ import * as React from 'react';
 import styled from 'styled-components';
 import Button from '../Button/Button';
 import Checkbox from 'material-ui/Checkbox';
+import ActionDeleteForever from 'material-ui/svg-icons/action/delete-forever';
 
 const STYLEDITEM = styled.div`
   width: ${(props: ItemProps) => (props.example ? '70%' : 'auto')};
@@ -15,6 +16,7 @@ const STYLEDITEM = styled.div`
     props.todayTask ? 'dashed 1px' : 'solid 1px'};
   border-color: ${(props: ItemProps) =>
     props.completedTask ? '#a9f6d0' : '#516166'};
+  display: flex;
 `;
 
 const checkboxStyle = {
@@ -49,14 +51,19 @@ export class Item extends React.Component<ItemProps, ItemState> {
     this.state = {
       checked: false,
     };
+
   }
 
-  switchChecked(event) {
+  switchChecked = (event) => {
     const type = event.target.attributes['aria-details']['nodeValue'];
     const name = event.target.name;
     const value = event.target.value;
     this.props.setTaskFinished(name, value, type);
-  }
+  };
+
+  deleteTask = (event) => {
+    console.log(event.target);
+  };
 
   render() {
     const {
@@ -77,11 +84,12 @@ export class Item extends React.Component<ItemProps, ItemState> {
           checked={completedTask ? true : false}
           labelStyle={completedTask ? checkboxStyleDisable : checkboxStyle}
           label={content}
-          onCheck={this.switchChecked.bind(this)}
+          onCheck={this.switchChecked}
           name={content}
           value={index}
           aria-details={todayTask ? 'todayTasks' : 'everydayTasks'}
         />
+        <ActionDeleteForever onClick={this.deleteTask} name={content}/>
       </STYLEDITEM>
     );
   }
