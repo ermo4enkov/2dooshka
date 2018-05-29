@@ -44966,7 +44966,7 @@ function userState(state, action) {
         case user_1.UPDATE_TASK_STATE:
             return __assign({}, state, { error: '', fetching: false, data_user: __assign({}, "tasks"["completed"][action.payload['type']].push(action.payload['name'])) });
         case user_1.GET_TASK_LIST:
-            return __assign({}, state, { error: '', fetching: false, everydayTasks: action.payload['everydayTasks'].slice(), completedToday: action.payload['completedToday'].slice(), completedEvery: action.payload['completedEvery'].slice(), todayTasks: action.payload['todayTasks'].slice() });
+            return __assign({}, state, { error: '', fetching: false, everydayTasks: action.payload['everydayTasks'].slice(), completedToday: action.payload['completedToday'].slice(), completedEvery: action.payload['completedEvery'].slice(), todayTasks: action.payload['todayTasks'].slice(), days: action.payload['days'].slice() });
         default:
             return state;
     }
@@ -50971,16 +50971,17 @@ var TodayView = (function (_super) {
         getTask('admin');
     };
     TodayView.prototype.render = function () {
-        var everyday = this.props['data_user']['tasks'] ? this.props['data_user']['tasks']['everyday'] : null;
-        var completed = this.props['data_user']['tasks'] ? this.props['data_user']['tasks']['completed'] : null;
-        var today = this.props['data_user']['tasks'] ? this.props['data_user']['tasks']['today'] : null;
-        var days = this.props['data_user'].days;
-        var completedTasks = completed ? completed['everyday'].concat(completed['today']) : [];
+        var everydayTasks = this.props['everydayTasks'] ? this.props['everydayTasks'] : null;
+        var completedEveryTasks = this.props['completedEvery'] ? this.props['completedEvery'] : null;
+        var completedTodayTasks = this.props['completedToday'] ? this.props['completedToday'] : null;
+        var todayTasks = this.props['todayTasks'] ? this.props['todayTasks'] : null;
+        var days = this.props['days'];
+        var completedTasks = completedEveryTasks.concat(completedTodayTasks);
         var setTaskFinished = this.props['setTaskFinished'];
         var addTask = this.props['addTask'];
         return (React.createElement("div", { className: "conteiner" },
             React.createElement("h1", { className: "title" }, "\u0421\u0435\u0433\u043E\u0434\u043D\u044F"),
-            React.createElement(TasksContainer_1.default, { everyDayTasks: everyday, setTaskFinished: setTaskFinished, completedTasks: completedTasks, todayTasks: today, addTask: addTask, typeOfList: "today" }),
+            React.createElement(TasksContainer_1.default, { everyDayTasks: everydayTasks, setTaskFinished: setTaskFinished, completedTasks: completedTasks, todayTasks: todayTasks, addTask: addTask, typeOfList: "today" }),
             React.createElement(Calendar_1.default, { days: days })));
     };
     return TodayView;
@@ -50990,13 +50991,12 @@ function mapStateToProps(state) {
     return {
         error: state.error,
         login: state.login,
-        user_type: state.user_type,
         fetching: state.fetching,
-        data: state.data,
-        data_user: state.data_user,
-        succesVerifyCode: state.succesVerifyCode,
-        type_of_input: state.type_of_input,
-        checkTypeOfUser: state.checkTypeOfUser,
+        todayTasks: state.todayTasks,
+        everydayTasks: state.everydayTasks,
+        completedEvery: state.completedEvery,
+        completedToday: state.completedToday,
+        days: state.days
     };
 }
 function mapDispatchProps(dispatch) {

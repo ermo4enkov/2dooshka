@@ -18,11 +18,12 @@ export class TodayView extends React.Component {
   }
 
   render() {
-    const everyday = this.props['data_user']['tasks']? this.props['data_user']['tasks']['everyday'] : null;
-    const completed = this.props['data_user']['tasks']? this.props['data_user']['tasks']['completed'] : null;
-    const today = this.props['data_user']['tasks']? this.props['data_user']['tasks']['today'] : null;
-    const { days } = this.props['data_user'];
-    const completedTasks = completed ? [...completed['everyday'], ...completed['today']] : [];
+    const everydayTasks = this.props['everydayTasks'] ? this.props['everydayTasks'] : null;
+    const completedEveryTasks = this.props['completedEvery'] ? this.props['completedEvery'] : null;
+    const completedTodayTasks = this.props['completedToday'] ? this.props['completedToday'] : null;
+    const todayTasks = this.props['todayTasks'] ? this.props['todayTasks'] : null;
+    const days  = this.props['days'];
+    const completedTasks = [...completedEveryTasks, ...completedTodayTasks];
     const setTaskFinished = this.props['setTaskFinished'];
     const addTask = this.props['addTask'];
 
@@ -30,10 +31,10 @@ export class TodayView extends React.Component {
       <div className="conteiner">
         <h1 className="title">Сегодня</h1>
         <TasksContainer
-          everyDayTasks={everyday}
+          everyDayTasks={everydayTasks}
           setTaskFinished={setTaskFinished}
           completedTasks={completedTasks}
-          todayTasks={today}
+          todayTasks={todayTasks}
           addTask={addTask}
           typeOfList="today"
         />
@@ -47,13 +48,12 @@ function mapStateToProps(state) {
     return {
         error: state.error,
         login: state.login,
-        user_type: state.user_type,
         fetching: state.fetching,
-        data: state.data,
-        data_user: state.data_user,
-        succesVerifyCode: state.succesVerifyCode,
-        type_of_input: state.type_of_input,
-        checkTypeOfUser: state.checkTypeOfUser,
+        todayTasks: state.todayTasks,
+        everydayTasks: state.everydayTasks,
+        completedEvery: state.completedEvery,
+        completedToday: state.completedToday,
+        days: state.days
     };
 }
 

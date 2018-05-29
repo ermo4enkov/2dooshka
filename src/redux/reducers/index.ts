@@ -32,6 +32,7 @@ export default function userState(state: any = initialState, action: any) {
         completedToday: [...action.payload['completedToday']],
         completedEvery: [...action.payload['completedEvery']],
         todayTasks: [...action.payload['todayTasks']],
+        days:[...action.payload['days']]
       };
 
     default:
