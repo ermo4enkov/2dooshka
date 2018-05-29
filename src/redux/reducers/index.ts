@@ -1,4 +1,4 @@
-import { GET_TASK_LIST, UPDATE_COMPLETED_TODAY, UPDATE_COMPLETED_EVERYDAY } from '../../utils/constants/user';
+import { GET_TASK_LIST, ADD_COMPLETED_TODAY, ADD_COMPLETED_EVERYDAY } from '../../utils/constants/user';
 
 const initialState = {
   error: '',
@@ -26,16 +26,16 @@ export default function userState(state: any = initialState, action: any) {
               days: [...action.payload['days']]
           };
 
-      case UPDATE_COMPLETED_EVERYDAY:
+      case ADD_COMPLETED_EVERYDAY:
         return {
             ...state,
-            completedEvery: [...action.payload.name]
+            completedEvery: [...state.completedEvery, action.payload.name]
         };
 
-      case UPDATE_COMPLETED_TODAY:
+      case ADD_COMPLETED_TODAY:
           return {
               ...state,
-              completedToday: [action.payload.name]
+              completedToday: [...state.completedToday, ...action.payload.name]
           };
 
 

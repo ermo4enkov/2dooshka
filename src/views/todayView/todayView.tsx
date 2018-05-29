@@ -19,8 +19,8 @@ export class TodayView extends React.Component {
 
   render() {
     const everydayTasks = this.props['everydayTasks'] ? this.props['everydayTasks'] : null;
-    const completedEveryTasks = this.props['completedEvery'] ? this.props['completedEvery'] : null;
-    const completedTodayTasks = this.props['completedToday'] ? this.props['completedToday'] : null;
+    const completedEveryTasks = this.props['completedEvery'] ? this.props['completedEvery'] : [];
+    const completedTodayTasks = this.props['completedToday'] ? this.props['completedToday'] : [];
     const todayTasks = this.props['todayTasks'] ? this.props['todayTasks'] : null;
     const days  = this.props['days'];
     const completedTasks = [...completedEveryTasks, ...completedTodayTasks];

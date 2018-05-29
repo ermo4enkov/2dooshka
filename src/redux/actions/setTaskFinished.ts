@@ -1,4 +1,4 @@
-import { UPDATE_COMPLETED_TODAY, UPDATE_COMPLETED_EVERYDAY } from '../../utils/constants/user';
+import { ADD_COMPLETED_TODAY, ADD_COMPLETED_EVERYDAY } from '../../utils/constants/user';
 
 export function setTaskFinished(name, value, type) {
   const data = { "type": type, "name": name, "value": value}
@@ -10,14 +10,14 @@ export function setTaskFinished(name, value, type) {
 
 function updateCompletedEveryday(data) {
   return {
-    type: UPDATE_COMPLETED_EVERYDAY,
+    type: ADD_COMPLETED_EVERYDAY,
     payload: data
   };
 }
 
 function updateCompletedToday(data) {
   return {
-    type: UPDATE_COMPLETED_TODAY,
+    type: ADD_COMPLETED_TODAY,
     payload: data
   };
 }

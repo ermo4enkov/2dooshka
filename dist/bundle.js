@@ -1921,8 +1921,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.FETCH_REQUEST = 'FETCH_REQUEST';
 exports.FETCH_SUCCESS = 'FETCH_SUCCESS';
 exports.FETCH_ERROR = 'FETCH_ERROR';
-exports.UPDATE_COMPLETED_TODAY = 'UPDATE_COMPLETED_TODAY';
-exports.UPDATE_COMPLETED_EVERYDAY = 'UPDATE_COMPLETED_EVERYDAY';
+exports.ADD_COMPLETED_TODAY = 'ADD_COMPLETED_TODAY';
+exports.ADD_COMPLETED_EVERYDAY = 'ADD_COMPLETED_EVERYDAY';
 exports.UPDATE_TASK_STATE = 'UPDATE_TASK_STATE';
 exports.GET_TASK_LIST = 'GET_TASK_LIST';
 
@@ -16580,13 +16580,13 @@ function setTaskFinished(name, value, type) {
 exports.setTaskFinished = setTaskFinished;
 function updateCompletedEveryday(data) {
     return {
-        type: user_1.UPDATE_COMPLETED_EVERYDAY,
+        type: user_1.ADD_COMPLETED_EVERYDAY,
         payload: data
     };
 }
 function updateCompletedToday(data) {
     return {
-        type: user_1.UPDATE_COMPLETED_TODAY,
+        type: user_1.ADD_COMPLETED_TODAY,
         payload: data
     };
 }
@@ -44973,10 +44973,10 @@ function userState(state, action) {
     switch (action.type) {
         case user_1.GET_TASK_LIST:
             return __assign({}, state, { error: '', fetching: false, everydayTasks: action.payload['everydayTasks'].slice(), completedToday: action.payload['completedToday'].slice(), completedEvery: action.payload['completedEvery'].slice(), todayTasks: action.payload['todayTasks'].slice(), days: action.payload['days'].slice() });
-        case user_1.UPDATE_COMPLETED_EVERYDAY:
-            return __assign({}, state, { completedEvery: action.payload.name.slice() });
-        case user_1.UPDATE_COMPLETED_TODAY:
-            return __assign({}, state, { completedToday: [action.payload.name] });
+        case user_1.ADD_COMPLETED_EVERYDAY:
+            return __assign({}, state, { completedEvery: state.completedEvery.concat([action.payload.name]) });
+        case user_1.ADD_COMPLETED_TODAY:
+            return __assign({}, state, { completedToday: state.completedToday.concat(action.payload.name) });
         default:
             return state;
     }
@@ -50982,8 +50982,8 @@ var TodayView = (function (_super) {
     };
     TodayView.prototype.render = function () {
         var everydayTasks = this.props['everydayTasks'] ? this.props['everydayTasks'] : null;
-        var completedEveryTasks = this.props['completedEvery'] ? this.props['completedEvery'] : null;
-        var completedTodayTasks = this.props['completedToday'] ? this.props['completedToday'] : null;
+        var completedEveryTasks = this.props['completedEvery'] ? this.props['completedEvery'] : [];
+        var completedTodayTasks = this.props['completedToday'] ? this.props['completedToday'] : [];
         var todayTasks = this.props['todayTasks'] ? this.props['todayTasks'] : null;
         var days = this.props['days'];
         var completedTasks = completedEveryTasks.concat(completedTodayTasks);
