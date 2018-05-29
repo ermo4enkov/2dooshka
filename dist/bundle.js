@@ -1921,6 +1921,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.FETCH_REQUEST = 'FETCH_REQUEST';
 exports.FETCH_SUCCESS = 'FETCH_SUCCESS';
 exports.FETCH_ERROR = 'FETCH_ERROR';
+exports.UPDATE_COMPLETED_TODAY = 'UPDATE_COMPLETED_TODAY';
+exports.UPDATE_COMPLETED_EVERYDAY = 'UPDATE_COMPLETED_EVERYDAY';
 exports.UPDATE_TASK_STATE = 'UPDATE_TASK_STATE';
 exports.GET_TASK_LIST = 'GET_TASK_LIST';
 
@@ -16569,16 +16571,22 @@ function updateTaskState() {
 Object.defineProperty(exports, "__esModule", { value: true });
 var user_1 = __webpack_require__(48);
 function setTaskFinished(name, value, type) {
-    var data = { "type": type, "name": name };
-    console.log(data);
+    var data = { "type": type, "name": name, "value": value };
+    console.log(data.type);
     return function (dispatch) {
-        return dispatch(updateTaskState(data));
+        return data.type === 'completedEveryday' ? dispatch(updateCompletedEveryday(data)) : dispatch(updateCompletedToday(data));
     };
 }
 exports.setTaskFinished = setTaskFinished;
-function updateTaskState(data) {
+function updateCompletedEveryday(data) {
     return {
-        type: user_1.UPDATE_TASK_STATE,
+        type: user_1.UPDATE_COMPLETED_EVERYDAY,
+        payload: data
+    };
+}
+function updateCompletedToday(data) {
+    return {
+        type: user_1.UPDATE_COMPLETED_TODAY,
         payload: data
     };
 }
@@ -44963,10 +44971,12 @@ var initialState = {
 function userState(state, action) {
     if (state === void 0) { state = initialState; }
     switch (action.type) {
-        case user_1.UPDATE_TASK_STATE:
-            return __assign({}, state, { error: '', fetching: false, data_user: __assign({}, "tasks"["completed"][action.payload['type']].push(action.payload['name'])) });
         case user_1.GET_TASK_LIST:
             return __assign({}, state, { error: '', fetching: false, everydayTasks: action.payload['everydayTasks'].slice(), completedToday: action.payload['completedToday'].slice(), completedEvery: action.payload['completedEvery'].slice(), todayTasks: action.payload['todayTasks'].slice(), days: action.payload['days'].slice() });
+        case user_1.UPDATE_COMPLETED_EVERYDAY:
+            return __assign({}, state, { completedEvery: action.payload.name.slice() });
+        case user_1.UPDATE_COMPLETED_TODAY:
+            return __assign({}, state, { completedToday: [action.payload.name] });
         default:
             return state;
     }
@@ -48082,7 +48092,7 @@ var Item = (function (_super) {
         var _a = this.props, content = _a.content, newTask = _a.newTask, redaction = _a.redaction, index = _a.index, completedTask = _a.completedTask, todayTask = _a.todayTask, setTaskFinished = _a.setTaskFinished;
         var check = this.state.checked;
         return (React.createElement(STYLEDITEM, __assign({}, this.props, this.state),
-            React.createElement(Checkbox_1.default, { disabled: completedTask ? true : false, checked: completedTask ? true : false, labelStyle: completedTask ? checkboxStyleDisable : checkboxStyle, label: content, onCheck: this.switchChecked, name: content, value: index, "aria-details": todayTask ? 'today' : 'everyday' }),
+            React.createElement(Checkbox_1.default, { disabled: completedTask ? true : false, checked: completedTask ? true : false, labelStyle: completedTask ? checkboxStyleDisable : checkboxStyle, label: content, onCheck: this.switchChecked, name: content, value: index, "aria-details": todayTask ? 'completedToday' : 'completedEveryday' }),
             completedTask ? null : React.createElement(StyledButton, { onClick: this.deleteTask, "aria-details": content })));
     };
     return Item;

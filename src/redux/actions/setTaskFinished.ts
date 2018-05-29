@@ -1,18 +1,24 @@
-import { UPDATE_TASK_STATE } from '../../utils/constants/user';
-import { DB } from '../../utils/constants/db';
+import { UPDATE_COMPLETED_TODAY, UPDATE_COMPLETED_EVERYDAY } from '../../utils/constants/user';
 
 export function setTaskFinished(name, value, type) {
-  // DB.completedTasks.push(name);
-  const data = { "type": type, "name": name}
-  console.log(data)
+  const data = { "type": type, "name": name, "value": value}
+  console.log(data.type)
   return (dispatch: any) => {
-    return dispatch(updateTaskState(data));
+    return data.type === 'completedEveryday' ? dispatch(updateCompletedEveryday(data)): dispatch(updateCompletedToday(data));
   };
 }
 
-function updateTaskState(data) {
+function updateCompletedEveryday(data) {
   return {
-    type: UPDATE_TASK_STATE,
+    type: UPDATE_COMPLETED_EVERYDAY,
     payload: data
   };
 }
+
+function updateCompletedToday(data) {
+  return {
+    type: UPDATE_COMPLETED_TODAY,
+    payload: data
+  };
+}
+

@@ -1,5 +1,4 @@
-import { UPDATE_TASK_STATE, GET_TASK_LIST } from '../../utils/constants/user';
-import { DB } from '../../utils/constants/db';
+import { GET_TASK_LIST, UPDATE_COMPLETED_TODAY, UPDATE_COMPLETED_EVERYDAY } from '../../utils/constants/user';
 
 const initialState = {
   error: '',
@@ -15,25 +14,30 @@ const initialState = {
 
 export default function userState(state: any = initialState, action: any) {
   switch (action.type) {
-    case UPDATE_TASK_STATE:
-      return {
-        ...state,
-        error: '',
-        fetching: false,
-        data_user: {..."tasks"["completed"][action.payload['type']].push(action.payload['name'])}
-      };
+      case GET_TASK_LIST:
+          return {
+              ...state,
+              error: '',
+              fetching: false,
+              everydayTasks: [...action.payload['everydayTasks']],
+              completedToday: [...action.payload['completedToday']],
+              completedEvery: [...action.payload['completedEvery']],
+              todayTasks: [...action.payload['todayTasks']],
+              days: [...action.payload['days']]
+          };
 
-    case GET_TASK_LIST:
-      return {
-        ...state,
-        error: '',
-        fetching: false,
-        everydayTasks: [...action.payload['everydayTasks']],
-        completedToday: [...action.payload['completedToday']],
-        completedEvery: [...action.payload['completedEvery']],
-        todayTasks: [...action.payload['todayTasks']],
-        days:[...action.payload['days']]
-      };
+      case UPDATE_COMPLETED_EVERYDAY:
+        return {
+            ...state,
+            completedEvery: [...action.payload.name]
+        };
+
+      case UPDATE_COMPLETED_TODAY:
+          return {
+              ...state,
+              completedToday: [action.payload.name]
+          };
+
 
     default:
       return state;

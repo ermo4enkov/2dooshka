@@ -3,7 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="63065591-dc1a-4a46-bd7c-33effbc5b00e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/bundle.js" afterPath="$PROJECT_DIR$/dist/bundle.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/bundle.js.map" afterPath="$PROJECT_DIR$/dist/bundle.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/styles.js.map" afterPath="$PROJECT_DIR$/dist/styles.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Item/Item.tsx" afterPath="$PROJECT_DIR$/src/components/Item/Item.tsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/redux/actions/setTaskFinished.ts" afterPath="$PROJECT_DIR$/src/redux/actions/setTaskFinished.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/redux/reducers/index.ts" afterPath="$PROJECT_DIR$/src/redux/reducers/index.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/utils/constants/user.ts" afterPath="$PROJECT_DIR$/src/utils/constants/user.ts" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -34,10 +40,20 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="setTaskFinished.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/redux/actions/setTaskFinished.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="EveryDayView.tsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/views/EveryDayView/EveryDayView.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="81">
+            <state relative-caret-position="300">
               <caret line="20" column="94" lean-forward="false" selection-start-line="19" selection-start-column="4" selection-end-line="20" selection-end-column="94" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
@@ -46,11 +62,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TodayView.tsx" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/views/TodayView/TodayView.tsx">
+      <file leaf-file-name="Item.tsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Item/Item.tsx">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="90">
-              <caret line="25" column="76" lean-forward="false" selection-start-line="25" selection-start-column="76" selection-end-line="25" selection-end-column="76" />
+              <caret line="66" column="37" lean-forward="true" selection-start-line="66" selection-start-column="37" selection-end-line="66" selection-end-column="44" />
+              <folding>
+                <element signature="e#0#31#0" expanded="true" />
+                <marker date="1527626483187" expanded="true" signature="2040:2567" ph="..." />
+                <marker date="1527626483187" expanded="true" signature="2059:2383" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TodayView.tsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/views/TodayView/TodayView.tsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="480">
+              <caret line="32" column="23" lean-forward="true" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="23" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
@@ -58,14 +88,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.ts" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.ts" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/redux/reducers/index.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="34" column="37" lean-forward="false" selection-start-line="34" selection-start-column="37" selection-end-line="34" selection-end-column="37" />
-              <folding>
-                <element signature="e#0#78#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="231">
+              <caret line="31" column="32" lean-forward="false" selection-start-line="31" selection-start-column="32" selection-end-line="31" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/utils/constants/user.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="39" lean-forward="true" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="61" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -143,14 +181,14 @@
         <option value="$PROJECT_DIR$/src/blocks/App/App.tsx" />
         <option value="$PROJECT_DIR$/src/blocks/Calendar/Calendar.tsx" />
         <option value="$PROJECT_DIR$/src/blocks/TasksContainer/TasksContainer.tsx" />
-        <option value="$PROJECT_DIR$/src/components/Item/Item.tsx" />
-        <option value="$PROJECT_DIR$/src/redux/actions/setTaskFinished.ts" />
         <option value="$PROJECT_DIR$/src/redux/actions/getEverydayTaskList.ts" />
         <option value="$PROJECT_DIR$/src/redux/actions/getTaskList.ts" />
-        <option value="$PROJECT_DIR$/src/utils/constants/user.ts" />
         <option value="$PROJECT_DIR$/src/views/EveryDayView/EveryDayView.tsx" />
-        <option value="$PROJECT_DIR$/src/redux/reducers/index.ts" />
         <option value="$PROJECT_DIR$/src/views/TodayView/TodayView.tsx" />
+        <option value="$PROJECT_DIR$/src/components/Item/Item.tsx" />
+        <option value="$PROJECT_DIR$/src/utils/constants/user.ts" />
+        <option value="$PROJECT_DIR$/src/redux/actions/setTaskFinished.ts" />
+        <option value="$PROJECT_DIR$/src/redux/reducers/index.ts" />
       </list>
     </option>
   </component>
@@ -398,6 +436,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Item" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2dooshka" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2dooshka" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="blocks" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -421,28 +481,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="TasksContainer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="2dooshka" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="2dooshka" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blocks" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EverydayBlock" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -588,12 +626,12 @@
       <workItem from="1527450254351" duration="3290000" />
       <workItem from="1527499734903" duration="8498000" />
       <workItem from="1527605000790" duration="3589000" />
-      <workItem from="1527621834798" duration="3311000" />
+      <workItem from="1527621834798" duration="4566000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91799000" />
+    <option name="totallyTimeSpent" value="93054000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -975,22 +1013,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/constants/user.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/redux/actions/getTaskList.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="38" lean-forward="false" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/blocks/TasksContainer/TasksContainer.tsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-870">
@@ -1007,31 +1029,55 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/redux/actions/setTaskFinished.ts">
+    <entry file="file://$PROJECT_DIR$/src/utils/constants/user.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="43" lean-forward="false" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="43" />
+        <state relative-caret-position="60">
+          <caret line="4" column="39" lean-forward="true" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/TodayView/TodayView.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="32" column="23" lean-forward="true" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="23" />
           <folding>
-            <element signature="e#0#63#0" expanded="true" />
+            <element signature="e#0#31#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Item/Item.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="63" column="32" lean-forward="false" selection-start-line="63" selection-start-column="32" selection-end-line="63" selection-end-column="32" />
+        <state relative-caret-position="90">
+          <caret line="66" column="37" lean-forward="true" selection-start-line="66" selection-start-column="37" selection-end-line="66" selection-end-column="44" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
-            <marker date="1527605823812" expanded="true" signature="2040:2549" ph="..." />
-            <marker date="1527605823812" expanded="true" signature="2059:2383" ph="..." />
+            <marker date="1527626483187" expanded="true" signature="2040:2567" ph="..." />
+            <marker date="1527626483187" expanded="true" signature="2059:2383" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/redux/actions/getTaskList.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="38" lean-forward="false" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/redux/actions/setTaskFinished.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/views/EveryDayView/EveryDayView.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
+        <state relative-caret-position="300">
           <caret line="20" column="94" lean-forward="false" selection-start-line="19" selection-start-column="4" selection-end-line="20" selection-end-column="94" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
@@ -1041,21 +1087,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/redux/reducers/index.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="34" column="37" lean-forward="false" selection-start-line="34" selection-start-column="37" selection-end-line="34" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#78#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/TodayView/TodayView.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="25" column="76" lean-forward="false" selection-start-line="25" selection-start-column="76" selection-end-line="25" selection-end-column="76" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="231">
+          <caret line="31" column="32" lean-forward="false" selection-start-line="31" selection-start-column="32" selection-end-line="31" selection-end-column="32" />
+          <folding />
         </state>
       </provider>
     </entry>
