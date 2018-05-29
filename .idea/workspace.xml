@@ -5,8 +5,11 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/bundle.js" afterPath="$PROJECT_DIR$/dist/bundle.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/bundle.js.map" afterPath="$PROJECT_DIR$/dist/bundle.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/styles.js" afterPath="$PROJECT_DIR$/dist/styles.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/styles.js.map" afterPath="$PROJECT_DIR$/dist/styles.js.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/blocks/TasksContainer/TasksContainer.tsx" afterPath="$PROJECT_DIR$/src/blocks/TasksContainer/TasksContainer.tsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Item/Item.tsx" afterPath="$PROJECT_DIR$/src/components/Item/Item.tsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/redux/actions/setTaskFinished.ts" afterPath="$PROJECT_DIR$/src/redux/actions/setTaskFinished.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/redux/reducers/index.ts" afterPath="$PROJECT_DIR$/src/redux/reducers/index.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/EveryDayView/EveryDayView.tsx" afterPath="$PROJECT_DIR$/src/views/EveryDayView/EveryDayView.tsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/todayView/todayView.tsx" afterPath="$PROJECT_DIR$/src/views/todayView/todayView.tsx" />
@@ -40,23 +43,49 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EveryDayView.tsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/views/EveryDayView/EveryDayView.tsx">
+      <file leaf-file-name="setTaskFinished.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/redux/actions/setTaskFinished.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="186">
-              <caret line="18" column="12" lean-forward="false" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
+            <state relative-caret-position="75">
+              <caret line="5" column="43" lean-forward="false" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="43" />
               <folding>
-                <element signature="e#0#31#0" expanded="true" />
+                <element signature="e#0#63#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TodayView.tsx" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Item.tsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Item/Item.tsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="156">
+              <caret line="63" column="32" lean-forward="false" selection-start-line="63" selection-start-column="32" selection-end-line="63" selection-end-column="32" />
+              <folding>
+                <element signature="e#0#31#0" expanded="true" />
+                <marker date="1527605823812" expanded="true" signature="2040:2549" ph="..." />
+                <marker date="1527605823812" expanded="true" signature="2059:2383" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.ts" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/redux/reducers/index.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="16" lean-forward="true" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+              <folding>
+                <element signature="e#0#78#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TodayView.tsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/views/TodayView/TodayView.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="27" column="6" lean-forward="false" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="6" />
+            <state relative-caret-position="285">
+              <caret line="26" column="42" lean-forward="false" selection-start-line="26" selection-start-column="42" selection-end-line="26" selection-end-column="42" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
@@ -94,7 +123,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/assets/scss/styles.scss" />
         <option value="$PROJECT_DIR$/src/components/button/button.tsx" />
         <option value="$PROJECT_DIR$/src/components/item/index.tsx" />
         <option value="$PROJECT_DIR$/src/blocks/buttonscollection/index.tsx" />
@@ -138,13 +166,14 @@
         <option value="$PROJECT_DIR$/dist/delete.svg" />
         <option value="$PROJECT_DIR$/src/blocks/Main/Main.tsx" />
         <option value="$PROJECT_DIR$/src/blocks/App/App.tsx" />
-        <option value="$PROJECT_DIR$/src/components/Item/Item.tsx" />
         <option value="$PROJECT_DIR$/src/blocks/Calendar/Calendar.tsx" />
         <option value="$PROJECT_DIR$/src/redux/actions/getTaskList.ts" />
-        <option value="$PROJECT_DIR$/src/redux/reducers/index.ts" />
-        <option value="$PROJECT_DIR$/src/blocks/TasksContainer/TasksContainer.tsx" />
-        <option value="$PROJECT_DIR$/src/views/EveryDayView/EveryDayView.tsx" />
         <option value="$PROJECT_DIR$/src/views/TodayView/TodayView.tsx" />
+        <option value="$PROJECT_DIR$/src/views/EveryDayView/EveryDayView.tsx" />
+        <option value="$PROJECT_DIR$/src/blocks/TasksContainer/TasksContainer.tsx" />
+        <option value="$PROJECT_DIR$/src/components/Item/Item.tsx" />
+        <option value="$PROJECT_DIR$/src/redux/actions/setTaskFinished.ts" />
+        <option value="$PROJECT_DIR$/src/redux/reducers/index.ts" />
       </list>
     </option>
   </component>
@@ -228,10 +257,6 @@
               <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TodayView" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -248,6 +273,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EveryDayView" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -328,6 +357,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2dooshka" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2dooshka" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Item" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -488,12 +539,13 @@
       <workItem from="1521406821812" duration="6000" />
       <workItem from="1527447328221" duration="1809000" />
       <workItem from="1527450254351" duration="3290000" />
-      <workItem from="1527499734903" duration="8059000" />
+      <workItem from="1527499734903" duration="8498000" />
+      <workItem from="1527605000790" duration="3437000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="84460000" />
+    <option name="totallyTimeSpent" value="88336000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -723,7 +775,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="43" lean-forward="false" selection-start-line="4" selection-start-column="43" selection-end-line="4" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -745,7 +796,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1455">
           <caret line="97" column="34" lean-forward="false" selection-start-line="97" selection-start-column="34" selection-end-line="97" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -791,19 +841,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#53#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/redux/actions/setTaskFinished.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#63#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -821,16 +858,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="13" lean-forward="true" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/blocks/EverydayBlock/EveryDayBlock.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#31#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -855,7 +882,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="249">
           <caret line="31" column="18" lean-forward="false" selection-start-line="31" selection-start-column="18" selection-end-line="31" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -863,7 +889,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -871,7 +896,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="49" lean-forward="true" selection-start-line="1" selection-start-column="49" selection-end-line="1" selection-end-column="49" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -879,7 +903,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="31" lean-forward="false" selection-start-line="0" selection-start-column="31" selection-end-line="0" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -888,19 +911,7 @@
         <state relative-caret-position="180">
           <caret line="12" column="6" lean-forward="true" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
           <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Item/Item.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="97" column="64" lean-forward="false" selection-start-line="97" selection-start-column="64" selection-end-line="97" selection-end-column="64" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-            <marker date="1527513569106" expanded="true" signature="2040:2559" ph="..." />
-            <marker date="1527513569106" expanded="true" signature="2059:2383" ph="..." />
+            <element signature="e#0#31#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -917,7 +928,42 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/TodayView/TodayView.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="26" column="42" lean-forward="false" selection-start-line="26" selection-start-column="42" selection-end-line="26" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/EveryDayView/EveryDayView.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-45">
+          <caret line="10" column="17" lean-forward="true" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/blocks/TasksContainer/TasksContainer.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-360">
+          <caret line="49" column="0" lean-forward="true" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/blocks/EverydayBlock/EveryDayBlock.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-75">
+          <caret line="0" column="7" lean-forward="true" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#31#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -929,40 +975,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/redux/actions/setTaskFinished.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="43" lean-forward="false" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#63#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Item/Item.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="63" column="32" lean-forward="false" selection-start-line="63" selection-start-column="32" selection-end-line="63" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+            <marker date="1527605823812" expanded="true" signature="2040:2549" ph="..." />
+            <marker date="1527605823812" expanded="true" signature="2059:2383" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/redux/reducers/index.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="74" column="24" lean-forward="true" selection-start-line="74" selection-start-column="24" selection-end-line="74" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/blocks/TasksContainer/TasksContainer.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="18" column="10" lean-forward="false" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
+        <state relative-caret-position="120">
+          <caret line="8" column="16" lean-forward="true" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
           <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/EveryDayView/EveryDayView.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="18" column="12" lean-forward="false" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/TodayView/TodayView.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="27" column="6" lean-forward="false" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="6" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
+            <element signature="e#0#78#0" expanded="true" />
           </folding>
         </state>
       </provider>

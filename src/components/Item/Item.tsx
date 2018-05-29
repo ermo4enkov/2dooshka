@@ -93,7 +93,7 @@ export class Item extends React.Component<ItemProps, ItemState> {
           onCheck={this.switchChecked}
           name={content}
           value={index}
-          aria-details={todayTask ? 'todayTasks' : 'everydayTasks'}
+          aria-details={todayTask ? 'today' : 'everyday'}
         />
         {completedTask ? null : <StyledButton onClick={this.deleteTask} aria-details={content}></StyledButton>}
 

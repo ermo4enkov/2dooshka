@@ -11,18 +11,15 @@ const initialState = {
 
 export default function userState(state: any = initialState, action: any) {
   switch (action.type) {
-    // case FETCH_REQUEST:
-    //     return state;
-
-    // case SET_USER:
-    //     return {...state, user_type: action.payload};
-
     case UPDATE_TASK_STATE:
+      console.log(state);
+      console.log(action.payload['type']);
+      console.log(action.payload['name']);
       return {
         ...state,
         error: '',
         fetching: false,
-        data_user: { ...DB},
+        data_user: {..."tasks"["completed"][action.payload['type']].push(action.payload['name'])}
       };
 
     case GET_TASK_LIST:

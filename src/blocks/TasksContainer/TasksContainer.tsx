@@ -46,7 +46,7 @@ export class TasksContainer extends React.Component<TasksContainerProps,TasksCon
 
   componentWillMount() {
     localStorage.setItem('bgcolor', 'red');
-    localStorage.clear();
+    // localStorage.clear();
 
     this.setState({
       greetingsIsHide: this.checkTasksExist(),
