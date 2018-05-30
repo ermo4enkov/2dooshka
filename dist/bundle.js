@@ -16572,7 +16572,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var user_1 = __webpack_require__(48);
 function setTaskFinished(name, value, type) {
     var data = { "type": type, "name": name, "value": value };
-    console.log(data.type);
+    var myInit = { method: 'POST',
+        body: name };
+    fetch('https://dooshka-69dc0.firebaseio.com/users/admin/completedEvery.json', myInit).then(function (response) { return response.json(); }).then(function (response) { return console.log(response); });
     return function (dispatch) {
         return data.type === 'completedEveryday' ? dispatch(updateCompletedEveryday(data)) : dispatch(updateCompletedToday(data));
     };
