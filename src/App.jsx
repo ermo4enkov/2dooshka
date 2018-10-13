@@ -15,8 +15,7 @@ class App extends Component {
             {' '}
 and save to reload.
           </p>
-          <a
-          >
+          <a>
             Learn
           </a>
         </header>
