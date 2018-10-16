@@ -1,5 +1,10 @@
-const sum = require("./sum");
+test("two plus two is four", () => {
+  expect(2 + 2).toBe(4);
+});
 
-test("adds 1 + 2 to equal 3", () => {
-  expect(sum(1, 2)).toBe(3);
+test("three plua three", () => {
+  const value = 3 + 3;
+  expect(value).toBeGreaterThan(5);
+  expect(value).toBe(6);
+  expect(value).toEqual(6);
 });
